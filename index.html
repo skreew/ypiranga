@@ -33,17 +33,29 @@
         @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
         @keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
         @keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
+        @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
         
         .animate-fade-in { animation: fadeIn 0.3s ease-out; }
         .animate-fade-out { animation: fadeOut 0.3s ease-out forwards; }
         .animate-scale-in { animation: scaleIn 0.3s ease-out; }
         .animate-slide-in-left { animation: slideInLeft 0.3s ease-out; }
         .animate-slide-in-right { animation: slideInRight 0.3s ease-out; }
+        .animate-slide-down { animation: slideDown 0.3s ease-out forwards; }
         
         /* Scrollbar customizada */
         #category-nav::-webkit-scrollbar, #modal-addons-container::-webkit-scrollbar, #order-summary-items::-webkit-scrollbar { height: 4px; width: 4px; }
         #category-nav::-webkit-scrollbar-track, #modal-addons-container::-webkit-scrollbar-track, #order-summary-items::-webkit-scrollbar-track { background: transparent; }
         #category-nav::-webkit-scrollbar-thumb, #modal-addons-container::-webkit-scrollbar-thumb, #order-summary-items::-webkit-scrollbar-thumb { background-color: #FFD100; border-radius: 20px; }
+
+        /* Garante que a barra de navegação móvel fique no topo */
+        #mobile-sticky-nav.is-sticky {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 20; /* Abaixo do header principal, mas acima do conteúdo */
+        }
     </style>
 </head>
 <body class="bg-stone-50 dark:bg-gray-900 text-gray-800 dark:text-stone-200 transition-colors duration-300">
@@ -52,7 +64,6 @@
     <header id="header" class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md sticky top-0 z-30 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-3">
-                <!-- Informações da Empresa e Botão de Menu (Mobile) -->
                 <div class="flex items-center min-w-0">
                     <button id="category-drawer-button" class="md:hidden mr-3 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors">
                         <i class="fas fa-bars text-xl text-[#0033A0] dark:text-[#FFD100]"></i>
@@ -60,27 +71,38 @@
                     <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" alt="Logo do CAFÉ YPIRANGA" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200 dark:border-gray-600 flex-shrink-0 object-cover">
                     <div class="min-w-0">
                         <h1 class="text-xl sm:text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] truncate">CAFÉ YPIRANGA</h1>
-                        <div class="flex items-center space-x-4 mt-1">
-                            <a href="https://api.whatsapp.com/send?phone=554532681492" target="_blank" aria-label="WhatsApp" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
-                            <a href="https://www.instagram.com/postorabaioli" target="_blank" aria-label="Instagram" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-instagram text-xl"></i></a>
-                            <a href="https://www.facebook.com/Posto Rabaioli" target="_blank" aria-label="Facebook" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-facebook-f text-xl"></i></a>
+                         <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center">
+                            <i class="fas fa-map-marker-alt mr-1.5"></i>
+                            <span>Avenida Brasil, 751, Santa Helena, PR</span>
+                        </div>
+                        <div class="flex items-center space-x-4 mt-2">
+                            <a href="https://wa.me/554532681492" target="_blank" aria-label="WhatsApp" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
+                            <a href="https://www.instagram.com/postorabaioli/" target="_blank" aria-label="Instagram" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Seletor de Tema -->
                 <label for="theme-toggle" class="relative inline-flex items-center cursor-pointer flex-shrink-0 ml-2">
                     <input type="checkbox" value="" id="theme-toggle" class="sr-only peer">
                     <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#0033A0]"></div>
                 </label>
             </div>
         </div>
-
-        <!-- Navegação de Categorias (Desktop) -->
         <nav id="category-nav" class="hidden md:flex bg-[#0033A0] dark:bg-blue-900/80 overflow-x-auto whitespace-nowrap shadow-inner">
             <div id="category-links-desktop" class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 flex list-none py-2 space-x-2"></div>
         </nav>
     </header>
+
+    <!-- ========== NAVEGAÇÃO DE CATEGORIA FIXA (MOBILE) ========== -->
+    <div id="mobile-sticky-nav" class="md:hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md w-full px-4 py-2 transition-transform duration-300 -translate-y-full">
+        <div class="flex justify-between items-center text-sm">
+            <span class="font-bold text-gray-800 dark:text-gray-200" id="current-category-sticky"></span>
+            <a href="#" id="next-category-link" class="flex items-center text-[#0033A0] dark:text-[#FFD100] font-semibold">
+                <span id="next-category-sticky"></span>
+                <i class="fas fa-chevron-down ml-1 text-xs"></i>
+            </a>
+        </div>
+    </div>
+
 
     <main id="menu-container" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"></main>
 
@@ -124,9 +146,7 @@
                     <i class="fas fa-times text-xl"></i>
                 </button>
             </div>
-            <div id="order-summary-items" class="flex-1 overflow-y-auto p-4 space-y-4">
-                <!-- Itens do pedido serão inseridos aqui -->
-            </div>
+            <div id="order-summary-items" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
             <div class="p-4 border-t border-gray-200 dark:border-gray-700">
                 <div class="flex justify-between items-center text-xl font-bold">
                     <span>Total:</span>
@@ -137,9 +157,7 @@
     </div>
     
     <!-- ========== NOTIFICAÇÃO (TOAST) ========== -->
-    <div id="toast-notification" class="hidden fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg z-50">
-        <!-- Mensagem da notificação -->
-    </div>
+    <div id="toast-notification" class="hidden fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg z-50"></div>
 
     <!-- ========== MODAL DE PRODUTO ========== -->
     <div id="product-modal" class="hidden fixed inset-0 bg-black/70 z-40 flex items-center justify-center p-4">
@@ -225,19 +243,18 @@
 
     <script>
         const app = {
+            // ... (Dados do menu como na versão anterior) ...
             menuData: { "Cafés": {"emoji": "☕️", "items": [{"name":"ESPRESSO","description":"Café puro","price":"R$ 9,50","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/a2073e59-6ea5-4f7d-a523-5a986f3fed6d.webp"},{"name":"EXPRESSO DUPLO","description":"Duplo expresso","price":"R$ 11,00","image":"https://placehold.co/800x800/EEE/333?text=Expresso+Duplo"},{"name":"COADINHO","description":"Café coado","price":"R$ 9,50","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/50257f13-0013-41f1-8f16-289caee159c6.jpeg"},{"name":"CAFÉ COM LEITE","description":"Café expresso com leite","price":"R$ 10,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/d16c689d-ea67-40db-a0b8-6d205c3884a9.jpeg"},{"name":"MACCHIATO","description":"Duplo expresso e espuma de leite vaporizado.","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/b32fc7af-df30-46c4-b038-c07a98fc1ba7.jpeg"}]}, "Cappuccinos": {"emoji": "☕️", "items": [{"name":"TRADICIONAL","description":"Café, leite vaporizado e canela","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/8238a6b1-78f0-41ca-a84b-61cbb0f06d5c.jpeg"},{"name":"BRASILEIRO","description":"Café, chocolate, leite vaporizado e canela","price":"R$ 13,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/f0566d3f-6448-44e7-b52d-e38ac795849a.jpeg"},{"name":"NUTELLA","description":"Café, leite vaporizado, canela e nutella","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/1ea71e88-1951-4d12-a4bd-098336bca706.jpeg"}]}, "Especiais": {"emoji": "⭐", "items": [{"name":"MOCHA CARAMELO","description":"Café, calda de caramelo e leite vaporizado","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/d1c92e5a-4d67-445d-be9e-f94e9a70776c.jpeg"},{"name":"MOCHA CHOCOLATE","description":"Café, calda de chocolate e leite vaporizado","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/f8c80c9a-1c4f-49b3-84b4-b23a9e850466.jpeg"},{"name":"MOCHA MARSHMALLOW","description":"Café, calda de chocolate, leite vaporizado e marshmallow maçaricado","price":"R$ 15,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/3ae3dbeb-05c8-4b58-8965-a72732e5f439.webp"},{"name":"CAFÉ RABAIOLI","description":"Café, licor baileys, leite vaporizado e chantilly","price":"R$ 17,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/06e8d11a-81a0-4a3e-91f0-d47ff2bc0903.webp"},{"name":"IRISH COFFEE","description":"Café, whisky irlandês, açúcar mascavo e chantilly","price":"R$ 17,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/fd677f75-143d-4191-a5c7-70ca29b8ccd1.webp"},{"name":"SUBMARINO","description":"Chocolate quente, whisky, chantilly e lascas de chocolate","price":"R$ 22,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ec3a91ab-8160-413f-92ab-db7b9dda9597.webp"}]}, "Chocolates Quentes": {"emoji": "🍫", "items": [{"name":"CHOCOLATE EUROPEU","description":"Leite e chocolate europeu","price":"R$ 17,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/f5d40bef-fff7-427c-b7a5-b37feea67981.webp"},{"name":"CHOCOLATE EUROPEU COM NUTELLA","description":"Leite, chocolate europeu e nutella nas bordas","price":"R$ 20,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/6425809b-a741-438d-b1ff-8a3c2f89f407.webp"},{"name":"ACHOCOLATADO","description":"Leite quente ou frio e chocolate em pó","price":"R$ 9,50","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e45a0dd8-929b-49a0-ae33-848e7bf615a3.webp"}]}, "Chás": {"emoji": "🍵", "items": [{"name":"CAMOMILA","description":"Infusão suave e calmante de flores de camomila, ideal para relaxar a qualquer hora do dia.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/7205cf78-45ff-4e3c-9133-5b8d3f4d0767.webp"},{"name":"ABACAXI COM HORTELÃ","description":"Uma combinação refrescante e digestiva, perfeita para depois das refeições.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ec3176a0-3fbc-4fcb-b60e-38e3c1385fd7.webp"},{"name":"GENGIBRE COM ESPECIARIAS","description":"Chá aromático e levemente picante com gengibre e uma seleção de especiarias.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ad3e7afc-a55c-4d45-a1f1-9db2963f560c.webp"},{"name":"FRUTAS VERMELHAS","description":"Uma infusão vibrante e antioxidante com o delicioso sabor de um mix de frutas vermelhas.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/c7014903-4f08-4b41-8123-e76a017569cf.webp"},{"name":"ERVA DOCE E ESPECIARIAS","description":"Chá aromático de erva doce e uma seleção de especiarias, ótimo para aquecer.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/d02f3692-288a-4400-b609-fc938f2f84f0.webp"},{"name":"CHAI LATTE","description":"Bebida tradicional indiana que combina chá preto aromático, leite vaporizado e especiarias.","price":"R$ 13,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/a3bdd1a6-2e4c-4ffb-b55c-26915b01e9bb.webp"}]}, "Cafés Gelados": {"emoji": "🧊", "items": [{"name":"AFFOGATO","description":"Café, sorvete de creme, ovomaltine e chantilly.","price":"R$ 17,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/a4f8da25-e26b-43ad-a18a-ecf9c4eac4d8.webp"},{"name":"ESPRESSO COM TÔNICA","description":"Café expresso e água tonica","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e3a99484-6eb6-4e8c-82b8-1fc46a812a98.webp"},{"name":"CAPPUCCINO GELADO","description":"Leite gelado e mistura para cappuccino gelado","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4498eddf-9ae6-4c73-8e13-cb27574f977d.webp"},{"name":"RABAIOLI FREDO","description":"Nosso cappuccino gelado especial, com sorvete de creme, calda de chocolate e ovomaltine.","price":"R$ 17,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e973b520-93ea-45ae-ac92-f557cd68546e.webp"}]}, "Sucos Naturais": {"emoji": "🧃", "items": [{"name":"ABACAXI","description":"Suco puro e refrescante de abacaxi, uma explosão tropical de sabor.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Abacaxi"},{"name":"ABACAXI E HORTELÃ","description":"A combinação clássica e revigorante do abacaxi com o toque fresco da hortelã.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/7d886e0e-89da-4986-b259-eade23cd5a66.webp"},{"name":"LIMÃO","description":"Suco cítrico e refrescante de limão espremido na hora, perfeito para matar a sede.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Limão"},{"name":"LARANJA","description":"Puro suco de laranja natural, rico em vitamina C e sabor.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/c9bfd3ed-fafd-46a7-96c8-1684586a3404.webp"},{"name":"MARACUJÁ","description":"Suco calmante e saboroso de maracujá fresco, ideal para relaxar.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Maracujá"},{"name":"MORANGO","description":"Delicioso e vibrante suco de morangos frescos e selecionados.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/3a2c4a53-22c5-4bd9-b7c5-e248ccf8cdb4.webp"},{"name":"LARANJA COM MORANGO","description":"A doçura do morango encontra a acidez da laranja numa combinação perfeita.","price":"R$ 15,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ef87098b-2f3f-43f8-9fb9-9b61f7f3e716.webp"},{"name":"FRUTAS VERMELHAS","description":"Um mix antioxidante e delicioso de suco com nossas melhores frutas vermelhas.","price":"R$ 15,00","image":"https://placehold.co/800x800/EEE/333?text=Frutas+Vermelhas"}]}, "Frapês": {"emoji": "🥤", "items": [{"name":"Baunilha","description":"A suavidade clássica da baunilha em uma bebida gelada e cremosa.","price":"R$ 23,00","image":"https://placehold.co/800x800/EEE/333?text=Baunilha"},{"name":"Cappuccino","description":"Seu cappuccino favorito transformado em um frapê gelado e delicioso.","price":"R$ 23,00","image":"https://placehold.co/800x800/EEE/333?text=Cappuccino"},{"name":"Morango","description":"A doçura do morango em uma textura de frapê incrivelmente refrescante.","price":"R$ 23,00","image":"https://placehold.co/800x800/EEE/333?text=Morango"},{"name":"Maracujá","description":"O sabor tropical e levemente ácido do maracujá em um frapê cremoso.","price":"R$ 23,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/31bdc343-8306-42f3-8ebf-ae1d7790b5bf.webp"},{"name":"Menta com limão","description":"Uma explosão de frescor com a combinação vibrante de menta e limão.","price":"R$ 23,00","image":"https://placehold.co/800x800/EEE/333?text=Menta+Limão"},{"name":"Frutas vermelhas","description":"Um mix delicioso e gelado das nossas melhores frutas vermelhas.","price":"R$ 23,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4279afe5-88b8-4bec-9f2c-17bf9a103ef6.webp"},{"name":"Chocolate","description":"Para os amantes de chocolate, um frapê rico, cremoso e irresistível.","price":"R$ 23,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/13581447-5ba1-438e-8ed5-7bfb16529a6a.webp"},{"name":"Nutella","description":"Aveludado frapê com o sabor inconfundível de Nutella. Pura tentação!","price":"R$ 26,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/39201254-9c1d-435d-958e-d98c0cfc928b.webp"}]}, "Sanduíches & Lanches": {"emoji": "🥪", "items": [{"name":"MISTO QUENTE","description":"O clássico sanduíche de pão de forma com presunto e queijo derretido na chapa.","price":"R$ 11,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/1fc06b73-2a02-432b-be63-e2a7dbaa7be1.webp"},{"name":"QUEIJO QUENTE","description":"Simples e delicioso: pão de forma com uma generosa porção dupla de queijo derretido.","price":"R$ 11,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/7db0ba9e-953f-42d2-b80c-268d64fbf9c0.webp"},{"name":"BAURU","description":"Tradicional sanduíche no pão francês com presunto, queijo mussarela, tomate e orégano.","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/8dafa4ec-4965-429d-a382-7d12bb588ca3.webp"},{"name":"BAURU COM OVO","description":"O nosso Bauru clássico, incrementado com um ovo frito na perfeição.","price":"R$ 13,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/8b225a85-03fe-4a6c-8c06-a8091d9d491b.webp"},{"name":"OMELETE","description":"Omelete fofinha feita com ovos frescos, tomate picado, queijo derretido e um toque de orégano.","price":"R$ 12,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/5e721935-9f93-4deb-b7dd-ccb7e7c6f8a0.webp"},{"name":"OVO CREMOSO","description":"Ovos mexidos com creme de leite, orégano, pão tostado e bacon crocante.","price":"R$ 22,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ff537d67-e2ed-44c4-aeeb-600e350c6065.webp"},{"name":"CROQUE MADAME","description":"Pão de forma com queijo, presunto, molho bechamel, queijo gratinado e um ovo estrelado.","price":"R$ 22,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/3ab65826-7e7a-4980-895c-3c059b196945.webp"},{"name":"PRIME BURGUER","description":"Hambúrguer Artesanal 150g, defumado, pão brioche, maionese da casa e mussarela.","price":"R$ 28,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/1d563520-9fe6-417a-ba2d-2d966175b4ca.webp"},{"name":"COMBO PRIME BURGUER","description":"Prime Burger + 100g de batata supercrisp + Coca-Cola 250ml.","price":"R$ 39,50","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/73101548-e33c-4ed3-97fe-7d7cf4b020a6.webp"},{"name":"SANDUICHE IPIRANGA","description":"Pulled pork, maionese especial da casa e queijo derretido, servido em pão baguete crocante.","price":"R$ 24,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/c6666f83-bcaa-470e-b334-53d42d1e0bf7.webp"},{"name":"COMBO IPIRANGA","description":"Sanduíche Ipiranga + 100g de batatas fritas + Coca-Cola 250ml.","price":"R$ 35,50","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ef3dace9-e257-41c4-be76-1044ae8e3f55.webp"},{"name":"EMPADÃO DE FRANGO CATUPIRY","description":"Empadão cremoso de frango com Catupiry.","price":"R$ 15,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/f2af3d79-fc9e-46ad-98fd-06e1edf75487.webp"}]},
             "Pães de Queijo & Porções": {"emoji": "🧀", "items": [{"name":"PÃO DE QUEIJO TRADICIONAL","description":"O autêntico pão de queijo, quentinho e macio por dentro, com casquinha crocante.","price":"R$ 6,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/3175184f-70cf-42d7-9667-110972a189af.webp"},{"name":"PÃO DE QUEIJO RECHEADO COM SALAME","description":"Nosso delicioso pão de queijo tradicional recheado com fatias de salame de primeira qualidade.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4493baa9-7240-4ac0-9d07-3b11cad8f251.webp"},{"name":"PÃO DE QUEIJO RECHEADO COM NUTELLA","description":"Uma combinação surpreendente e deliciosa: pão de queijo quentinho recheado com Nutella cremosa.","price":"R$ 7,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/9659f578-ab6f-4551-9c36-a72cb66819a6.webp"},{"name":"FRITAS 100g","description":"Porção individual de batatas fritas crocantes e sequinhas.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/6c6e567a-7364-4d7a-add4-4c522e403229.webp"},{"name":"FRITAS 400g","description":"Generosa porção de batatas fritas crocantes e douradas, ideal para compartilhar.","price":"R$ 32,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/93ccb4e5-432a-4c54-aa26-5750c3af988a.webp"},{"name":"BOLINHO DE CARNE 300g","description":"Bolinhos de carne temperada, fritos até ficarem douradinhos.","price":"R$ 38,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/62de289f-546e-4156-9f0c-b87343806b5c.webp"},{"name":"CROQUETE PULLED PORK","description":"Croquetes recheados com porco desfiado e temperado.","price":"R$ 42,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/6920138e-1baf-459b-9937-2275946a92f1.webp"},{"name":"DADINHO DE TAPIOCA 12un","description":"Dadinhos de tapioca com queijo, acompanha geleia de pimenta.","price":"R$ 22,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e29d9982-ab9d-491a-b32d-9d06b9aa2998.webp"},{"name":"TIRAS DE FRANGO 6un","description":"Saborosas tiras de frango empanadas e fritas.","price":"R$ 22,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/102c12ac-551e-455b-8718-3111e091db84.webp"},{"name":"ONION RINGS 12un","description":"Porção de anéis de cebola com 12 unidades.","price":"R$ 18,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/601a599b-e7ee-431e-a208-30d714c13fe7.webp"},{"name":"PASTELZINHO DE CUPIM 8un","description":"Massa de pastel crocante com delicioso recheio de cupim defumado.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/57976eb1-526e-41f6-93ba-aa8b9b49f643.webp"}]},
             "Pratos Principais": {"emoji": "🍝", "items": [{"name":"ESPAGUETE BOLONHESA","description":"Generosa porção de espaguete italiano coberto com nosso saboroso molho à bolonhesa.","price":"R$ 28,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/5163b523-40fd-4a72-bbc1-43c9267b1aa9.webp"},{"name":"ESPAGUETE MOLHO BRANCO","description":"Espaguete ao dente servido com cremoso molho branco e suculentas tiras de frango à milanesa.","price":"R$ 28,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/5bb066a6-e92a-4163-8ba5-02cce0c770c2.webp", "addons": [{"title": "+ ADICIONAIS", "items": [{"name": "Bacon 3 fatias", "price": "R$ 5,00"}, {"name": "Fritas 100g", "price": "R$ 10,00"}, {"name": "Queijo", "price": "R$ 2,00"}, {"name": "Hambúrguer", "price": "R$ 8,00"}, {"name": "Taça de vinho", "price": "R$ 10,00"}]}]},{"name":"COSTELINHA BBQ","description":"Suculenta costelinha de porco (500g) assada lentamente e regada com molho barbecue. Acompanha 400g de fritas.","price":"R$ 88,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e6dda687-d2cb-4651-aea0-237cad819c4d.webp"},{"name":"COSTELA GOLDEN RIB","description":"Costela defumada 12h coberta com molho demi glacê e 350g de espaguete ao molho branco.","price":"R$ 78,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/826dffce-b7d3-4f7b-8762-76ca0c2d5015.webp"},{"name":"POLPETONE","description":"Suculenta almôndega recheada com parmesão, empanada e crocante. Servida com molho de tomate e fritas.","price":"R$ 35,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/b558ccee-c3a7-4188-86dc-190ce474ccf5.webp"}]},
             "Espetinhos": {"emoji": "🍢", "items": [{"name":"ESPETINHO MEDALHÃO MANDIOCA 2UN","description":"Dois espetinhos de medalhão de mandioca.","price":"R$ 21,00","image":"https://placehold.co/800x800/EEE/333?text=Medalhão"},{"name":"ESPETINHO MEDALHÃO FRANGO 2UN","description":"Dois espetinhos de medalhão de frango.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Medalhão"},{"name":"ESPETINHO MEDALHÃO BOVINO 2UN","description":"Dois espetinhos de medalhão bovino.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Medalhão"},{"name":"ACOMPANHAMENTO","description":"MANDIOCA E FAROFA.","price":"R$ 7,00","image":"https://placehold.co/800x800/EEE/333?text=Acompanha"}]},
             "Pizzas": {"emoji": "🍕", "schedule": {"start": "18:00", "end": "21:45"}, "items": [{"name":"01 PORTUGUESA","description":"Molho de tomate, mussarela, presunto, ovos, azeitona verde, cebola e orégano.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/10920976-cf74-4945-9ea2-abe6b0578890.webp"},{"name":"06 QUATRO QUEIJOS","description":"Molho de tomate, mussarela, gorgonzola, provolone e catupiry.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/79df672b-9de7-49ce-a3be-a546f98adb31.webp"},{"name":"11 RÚCULA COM TOMATE SECO","description":"Molho de tomate, mussarela, rúcula e tomate seco.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/366a7444-06e0-4502-a0f3-f1df7ec8be68.webp"},{"name":"17 ARGENTINA","description":"Molho de tomate, mussarela, catupiry, bacon, milho, palmito e azeitona fatiada.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/8ed3bc64-6d1b-4711-8efd-4c10f2799bc1.webp"},{"name":"18 FRANGO COM CATUPIRY","description":"Molho de tomate, mussarela, frango desfiado, catupiry e milho.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/5e121bda-fc37-4aaa-b625-9854327d4f58.webp"},{"name":"21 LOMBO COM ABACAXI","description":"Molho de tomate, mussarela, abacaxi e lombo canadense.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/8cd08593-e283-44e3-8682-7d30d861ec46.webp"},{"name":"29 MARGUERITA","description":"Molho de tomate, mussarela, manjericão, tomate, azeitona e parmesão.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/174505e4-6cab-4282-a1ae-267e68d05930.webp"},{"name":"30 CALABRESA","description":"Molho de tomate, mussarela, calabresa.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/fc3c14dc-d338-4b4e-af03-5e53d7a4c67d.webp"},{"name":"32 BRÓCOLIS COM BACON","description":"Molho de tomate, mussarela, brócolis, bacon, palmito e azeitona.","price":"R$ 59,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/d5372247-7f72-4529-925f-03de9a49aac9.webp"},{"name":"35 STROGONOFF DE CARNE","description":"Molho de tomate, mussarela, carne bovina e batata palha.","price":"R$ 65,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/7a20aea5-aa1f-48e0-a4fb-485ebfd6f449.webp"},{"name":"41 SUPREME","description":"Molho, mussarela, tomate seco, carne, pepperoni, champignon, pimentão, cebola, azeitona e orégano.","price":"R$ 65,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/a6497154-68fb-44c0-84c7-6087a4163d53.webp"},{"name":"44 COSTELA","description":"Molho de tomate, mussarela, bacon, carne de costela desfiada, tomate seco, cebola e orégano.","price":"R$ 65,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/c0137cca-c4ce-4fc8-a3b5-b0679207b4e1.webp"},{"name":"154 SENSAÇÃO","description":"Mussarela, chocolate preto, morango e leite condensado.","price":"R$ 65,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/25dcf441-1c61-4949-ab38-4495d3fd277a.webp"},{"name":"156 CAROLINA","description":"Mussarela, abacaxi, chocolate branco e canela.","price":"R$ 65,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/19180537-fbef-4a85-80c5-db882719d324.webp"},{"name":"164 SEDUÇÃO","description":"Mussarela, chocolate branco, morango e leite condensado.","price":"R$ 65,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/9ae11e2e-f320-483f-a996-6f2090b22fa8.webp"}]},
-            "Soda Italiana & Drinks": {"emoji": "🍹", "items": [{"name":"SODA - CRAMBERRY","description":"Xarope de cramberry, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/b1f805b7-1dc8-4293-b6a2-e10866401a33.webp"},{"name":"SODA - MAÇÃ VERDE","description":"Xarope de maçã verde, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4cb00595-419c-428b-8007-5db4f60d4101.webp"},{"name":"SODA - LIMÃO","description":"Xarope de limão, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/af095a0c-a537-4732-8363-c50dd6bffa56.webp"},{"name":"SODA - MENTA","description":"Xarope de menta, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/56840eac-f336-42e2-aea9-ad2e22bf19c5.webp"},{"name":"SODA - MORANGO","description":"Xarope de morango, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ab0ea880-c3a1-4a85-bf65-c80cd005b9cf.webp"},{"name":"SODA - MARACUJÁ","description":"Xarope de maracujá, água com gás e gelo.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Maracujá"},{"name":"SODA - BAUNILHA","description":"xarope de baunilha, água com gás e gelo.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Baunilha"},{"name":"CAIPIRINHA DE LIMÃO","description":"Opções: Vodka ou cachaça. Com limão, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/f53c3ddc-0b21-4dfa-98c4-1de07a86d39b.webp","options":true},{"name":"CAIPIRINHA DE MORANGO","description":"Opções: Vodka ou cachaça. Com morango, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4204678b-fabd-4c43-8139-b42bd3a4fcbc.webp","options":true},{"name":"CAIPIRINHA DE VINHO","description":"Opções: Vodka ou cachaça. Com vinho, limão, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/26c4dd49-d181-4577-bb5f-1ada90dc550e.webp","options":true},{"name":"CAIPIRINHA DE FRUTAS VERMELHAS","description":"Opções: Vodka ou cachaça. Com frutas vermelhas, limão, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/dba6ad97-f30a-458e-aeb5-e0d581f70906.webp","options":true},{"name":"CAIPIRINHA DE ABACAXI","description":"Opções: Vodka ou cachaça. Com abacaxi, limão, açúcar e gelo.","price":"R$ 25,00","image":"https://placehold.co/800x800/EEE/333?text=Caip.Abacaxi","options":true},{"name":"MOSCOW MULE","description":"Gelo, água com gás, espuma de gengibre, limão e vodka.","price":"R$ 20,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/787b41e4-6f33-4893-b4a8-b3d4409c3f94.webp"},{"name":"PINK MULE","description":"Variação do Moscow Mule com adição de Frutas Vermelhas.","price":"R$ 20,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/72872a33-07e3-4da1-aab9-87100eee6778.webp"},{"name":"COSMOPOLITAN","description":"Vodka, licor de laranja, cranberry e limão.","price":"R$ 20,00","image":"https://placehold.co/800x800/EEE/333?text=Cosmopolitan"},{"name":"MATE","description":"Vodka, mate tostado, guaraná e limão.","price":"R$ 20,00","image":"https://placehold.co/800x800/EEE/333?text=Mate"},{"name":"MARACUFIRE","description":"Polpa de maracujá, licor fire (canela), vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Maracufire"},{"name":"FIRE ABACAXI","description":"Abacaxi, licor fire (canela), vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Fire+Abacaxi"},{"name":"CAIPININA","description":"Licor de banana, vodka, limão, açúcar e gelo.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipinina"},{"name":"CAIPININA DE MORANGO","description":"Licor de banana, morangos, vodka, limão, açúcar e gelo.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipinina+Morango"},{"name":"MIDEN ZERO","description":"Destilado sem álcool Miden sabor laranja, água tônica ou sprite e gelo.","price":"R$ 35,00","image":"https://placehold.co/800x800/EEE/333?text=Miden+Zero","options":true},{"name":"CAIPI JAMBU MARACUJÁ","description":"Maracujá, jambu, vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipi+Jambu"},{"name":"CAIPI JAMBU","description":"Limão, jambu, vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipi+Jambu"},{"name":"NUTELKA E LARANJA","description":"Licor de avelã, vodka, laranja, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Nutelka"},{"name":"CAMPARI COM LARANJA","description":"Dose de Campari com suco natural de laranja.","price":"R$ 40,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e3c5807d-da28-4063-b118-6b6ab324cbb9.webp"}]}
+            "Soda Italiana & Drinks": {"emoji": "🍹", "items": [{"name":"SODA - CRAMBERRY","description":"Xarope de cramberry, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/b1f805b7-1dc8-4293-b6a2-e10866401a33.webp"},{"name":"SODA - MAÇÃ VERDE","description":"Xarope de maçã verde, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4cb00595-419c-428b-8007-5db4f60d4101.webp"},{"name":"SODA - LIMÃO","description":"Xarope de limão, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/af095a0c-a537-4732-8363-c50dd6bffa56.webp"},{"name":"SODA - MENTA","description":"Xarope de menta, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/56840eac-f336-42e2-aea9-ad2e22bf19c5.webp"},{"name":"SODA - MORANGO","description":"Xarope de morango, água com gás e gelo.","price":"R$ 14,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/ab0ea880-c3a1-4a85-bf65-c80cd005b9cf.webp"},{"name":"SODA - MARACUJÁ","description":"Xarope de maracujá, água com gás e gelo.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Maracujá"},{"name":"SODA - BAUNILHA","description":"xarope de baunilha, água com gás e gelo.","price":"R$ 14,00","image":"https://placehold.co/800x800/EEE/333?text=Baunilha"},{"name":"CAIPIRINHA DE LIMÃO","description":"Opções: Vodka ou cachaça. Com limão, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/f53c3ddc-0b21-4dfa-98c4-1de07a86d39b.webp","options":true},{"name":"CAIPIRINHA DE MORANGO","description":"Opções: Vodka ou cachaça. Com morango, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/4204678b-fabd-4c43-8139-b42bd3a4fcbc.webp","options":true},{"name":"CAIPIRINHA DE VINHO","description":"Opções: Vodka ou cachaça. Com vinho, limão, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/26c4dd49-d181-4577-bb5f-1ada90dc550e.webp","options":true},{"name":"CAIPIRINHA DE FRUTAS VERMELHAS","description":"Opções: Vodka ou cachaça. Com frutas vermelhas, limão, açúcar e gelo.","price":"R$ 25,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/dba6ad97-f30a-458e-aeb5-e0d581f70906.webp","options":true},{"name":"CAIPIRINHA DE ABACAXI","description":"Opções: Vodka ou cachaça. Com abacaxi, limão, açúcar e gelo.","price":"R$ 25,00","image":"https://placehold.co/800x800/EEE/333?text=Caip.Abacaxi","options":true},{"name":"MOSCOW MULE","description":"Gelo, água com gás, espuma de gengibre, limão e vodka.","price":"R$ 20,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/787b41e4-6f33-4893-b4a8-b3d4409c3f94.webp"},{"name":"PINK MULE","description":"Variação do Moscow Mule com adição de Frutas Vermelhas.","price":"R$ 20,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/72872a33-07e3-4da1-aab9-87100eee6778.webp"},{"name":"COSMOPOLITAN","description":"Vodka, licor de laranja, cranberry e limão.","price":"R$ 20,00","image":"https://placehold.co/800x800/EEE/333?text=Cosmopolitan"},{"name":"MATE","description":"Vodka, mate tostado, guaraná e limão.","price":"R$ 20,00","image":"https://placehold.co/800x800/EEE/333?text=Mate"},{"name":"MARACUFIRE","description":"Polpa de maracujá, licor fire (canela), vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Maracufire"},{"name":"FIRE ABACAXI","description":"Abacaxi, licor fire (canela), vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Fire+Abacaxi"},{"name":"CAIPININA","description":"Licor de banana, vodka, limão, açúcar e gelo.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipinina"},{"name":"CAIPININA DE MORANGO","description":"Licor de banana, morangos, vodka, limão, açúcar e gelo.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipinina+Morango"},{"name":"MIDEN ZERO","description":"Destilado sem álcool Miden sabor laranja, água tônica ou sprite e gelo.","price":"R$ 35,00","image":"https://placehold.co/800x800/EEE/333?text=Miden+Zero","options":true},{"name":"CAIPI JAMBU MARACUJÁ","description":"Maracujá, jambu, vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipi+Jambu"},{"name":"CAIPI JAMBU","description":"Limão, jambu, vodka, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Caipi+Jambu"},{"name":"NUTELKA E LARANJA","description":"Licor de avelã, vodka, laranja, gelo e açúcar.","price":"R$ 30,00","image":"https://placehold.co/800x800/EEE/333?text=Nutelka"},{"name":"CAMPARI COM LARANJA","description":"Dose de Campari com suco natural de laranja.","price":"R$ 40,00","image":"https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/800/e3c5807d-da28-4063-b118-6b6ab324cbb9.webp"}]},
         },
-        
         categoryOrder: [ "Cafés", "Cappuccinos", "Especiais", "Chocolates Quentes", "Chás", "Cafés Gelados", "Sucos Naturais", "Frapês", "Sanduíches & Lanches", "Pães de Queijo & Porções", "Pratos Principais", "Espetinhos", "Pizzas", "Soda Italiana & Drinks" ],
         orderItems: [],
         currentProductData: null,
-
-        // --- PONTO DE PARTIDA DA APLICAÇÃO ---
+        
         init() {
             document.addEventListener('DOMContentLoaded', () => {
                 this.renderMenu();
@@ -250,11 +267,10 @@
             });
         },
         
-        // --- FUNÇÕES UTILITÁRIAS ---
         utils: {
-            parsePrice: (priceString) => parseFloat(String(priceString).replace('R$', '').replace(',', '.').trim()),
-            formatCurrency: (value) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
-            generateCategoryId: (name) => name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, ""),
+            parsePrice(priceString) { return parseFloat(String(priceString).replace('R$', '').replace(',', '.').trim()); },
+            formatCurrency(value) { return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); },
+            generateCategoryId(name) { return name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, ""); },
             isTimeInRange(startTime, endTime) {
                 const now = new Date();
                 const [startHour, startMinute] = startTime.split(':').map(Number);
@@ -278,7 +294,6 @@
             }
         },
 
-        // --- RENDERIZAÇÃO E LÓGICA DO MENU ---
         renderMenu() {
             const menuContainer = document.getElementById('menu-container');
             const desktopLinksContainer = document.getElementById('category-links-desktop');
@@ -349,7 +364,6 @@
             });
         },
         
-        // --- INICIALIZAÇÃO DOS COMPONENTES DA UI ---
         initTheme() {
             const themeToggle = document.getElementById('theme-toggle');
             const htmlElement = document.documentElement;
@@ -378,14 +392,8 @@
             const orderDrawerBackdrop = document.getElementById('order-drawer-backdrop');
             const orderItemsContainer = document.getElementById('order-summary-items');
             const grandTotalEl = document.getElementById('order-grand-total');
-            const finalizeOrderButton = document.getElementById('finalize-order-button');
             const orderItemTemplate = document.getElementById('order-item-template');
             
-            // Removendo o botão de finalizar pedido do HTML
-            if (finalizeOrderButton) {
-                finalizeOrderButton.parentElement.remove();
-            }
-
             const renderSummary = () => {
                 orderItemsContainer.innerHTML = '';
                 if (this.orderItems.length === 0) {
@@ -418,7 +426,7 @@
                            addonsList.appendChild(addonP);
                         });
                     } else {
-                        addonsList.remove();
+                        addonsList.innerHTML = ''; // Limpa se não houver adicionais
                     }
                     
                     orderItemsContainer.appendChild(itemClone);
@@ -477,7 +485,7 @@
                 const orderItem = {
                     id: Date.now(),
                     name: this.currentProductData.name,
-                    image: this.currentProductData.image, // Adicionando a imagem ao item do pedido
+                    image: this.currentProductData.image,
                     basePrice: this.utils.parsePrice(this.currentProductData.price),
                     addons: selectedAddons,
                     itemTotal: this.utils.parsePrice(totalPriceEl.textContent)
@@ -570,22 +578,37 @@
 
         initScrollObserver() {
             const header = document.getElementById('header');
+            const mobileStickyNav = document.getElementById('mobile-sticky-nav');
+            const currentCategoryStickyEl = document.getElementById('current-category-sticky');
+            const nextCategoryStickyEl = document.getElementById('next-category-sticky');
+            const nextCategoryLink = document.getElementById('next-category-link');
             if (!header) return;
 
             const checkAndObserve = () => {
                 const sections = document.querySelectorAll('.category-section');
                 if (sections.length === 0) {
-                     setTimeout(checkAndObserve, 100);
+                     setTimeout(checkAndObserve.bind(this), 100);
                      return;
                 }
 
+                // Lógica para a barra de navegação fixa móvel
+                const headerHeight = header.offsetHeight;
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > headerHeight) {
+                        mobileStickyNav.style.transform = 'translateY(0)';
+                    } else {
+                        mobileStickyNav.style.transform = 'translateY(-100%)';
+                    }
+                });
+
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
+                        const id = entry.target.getAttribute('id');
+                        const desktopLinks = document.querySelectorAll('#category-links-desktop a');
+                        const mobileLinks = document.querySelectorAll('#category-links-mobile a');
+                        
                         if (entry.isIntersecting) {
-                            const id = entry.target.getAttribute('id');
-                            const desktopLinks = document.querySelectorAll('#category-links-desktop a');
-                            const mobileLinks = document.querySelectorAll('#category-links-mobile a');
-                            
+                            // Atualiza os links de navegação
                             desktopLinks.forEach(link => {
                                 const isActive = link.hash === `#${id}`;
                                 link.classList.toggle('bg-[#FFD100]', isActive);
@@ -599,14 +622,29 @@
                                link.classList.toggle('bg-gray-200', isActive);
                                link.classList.toggle('dark:bg-gray-700', isActive);
                             });
+
+                            // Atualiza a barra de navegação móvel fixa
+                            const currentCategory = this.categoryOrder.find(cat => this.utils.generateCategoryId(cat) === id);
+                            const currentIndex = this.categoryOrder.indexOf(currentCategory);
+                            
+                            currentCategoryStickyEl.textContent = currentCategory;
+                            
+                            if (currentIndex < this.categoryOrder.length - 1) {
+                                const nextCategoryName = this.categoryOrder[currentIndex + 1];
+                                nextCategoryStickyEl.textContent = `Próximo: ${nextCategoryName}`;
+                                nextCategoryLink.href = `#${this.utils.generateCategoryId(nextCategoryName)}`;
+                                nextCategoryLink.style.display = 'flex';
+                            } else {
+                                nextCategoryLink.style.display = 'none';
+                            }
                         }
                     });
-                }, { rootMargin: `-120px 0px -50% 0px`, threshold: 0 });
+                }, { rootMargin: `-${header.offsetHeight}px 0px -${window.innerHeight - header.offsetHeight - 100}px 0px`, threshold: 0 });
 
                 sections.forEach(section => observer.observe(section));
             };
 
-            checkAndObserve();
+            checkAndObserve.call(this);
         }
     };
 
