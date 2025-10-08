@@ -8,20 +8,16 @@
     <meta name="author" content="CAFÉ YPIRANGA">
     <title>Cardápio Digital - CAFÉ YPIRANGA</title>
 
-    <!-- Tailwind CSS Configuration (MUST be before the Tailwind CDN script) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <script>
         tailwind.config = {
             darkMode: 'class', // Enable dark mode based on the 'dark' class on the HTML element
-            // You can add other Tailwind configurations here if needed
         }
     </script>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Font Awesome para Ícones -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
@@ -66,7 +62,6 @@
 </head>
 <body class="bg-stone-50 dark:bg-gray-900 text-gray-800 dark:text-stone-200 transition-colors duration-300">
 
-    <!-- ========== HEADER ========== -->
     <header id="header" class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md sticky top-0 z-30 transition-colors duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-3">
@@ -88,7 +83,6 @@
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <!-- Search Toggle Button -->
                     <button id="search-toggle-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors mr-2">
                         <i class="fas fa-search text-xl text-[#0033A0] dark:text-[#FFD100]"></i>
                     </button>
@@ -98,7 +92,6 @@
                     </label>
                 </div>
             </div>
-            <!-- Search Input Field (initially hidden) -->
             <div id="search-input-container" class="hidden py-2">
                 <div class="relative">
                     <input type="text" id="search-input" placeholder="Buscar no cardápio..." class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FFD100] dark:focus:ring-[#0033A0] text-gray-800 dark:text-white transition-all duration-300">
@@ -114,7 +107,6 @@
         </nav>
     </header>
 
-    <!-- ========== NAVEGAÇÃO DE CATEGORIA FIXA (MOBILE) ========== -->
     <div id="mobile-sticky-nav" class="md:hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md w-full px-4 py-2 transition-transform duration-300 -translate-y-full">
         <div class="flex justify-between items-center text-sm">
             <span class="font-bold text-gray-800 dark:text-gray-200" id="current-category-sticky"></span>
@@ -130,10 +122,9 @@
 
     <footer class="bg-gray-800 dark:bg-black text-gray-300 dark:text-gray-400 py-6 text-center">
         <p>© 2024 CAFÉ YPIRANGA. Todos os direitos reservados.</p>
-        <p class="text-xs mt-1">Desenvolvido por Gabriel Alves ❤️</p>
+        <p class="text-xs mt-1">Desenvolvido por Gabriel Alves </p>
     </footer>
 
-    <!-- ========== BOTÕES FLUTUANTES ========== -->
     <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-4">
         <button id="cart-fab" class="hidden relative bg-[#FFD100] text-[#0033A0] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95">
             <i class="fas fa-shopping-cart"></i>
@@ -144,7 +135,6 @@
         </button>
     </div>
 
-    <!-- ========== GAVETA DE CATEGORIAS (MOBILE) ========== -->
     <div id="category-drawer" class="hidden fixed inset-0 z-50">
         <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 animate-fade-in"></div>
         <div class="relative w-4/5 max-w-sm h-full bg-stone-50 dark:bg-gray-900 shadow-xl flex flex-col animate-slide-in-left">
@@ -158,7 +148,6 @@
         </div>
     </div>
 
-    <!-- ========== GAVETA DE RESUMO DO PEDIDO ========== -->
     <div id="order-summary-drawer" class="hidden fixed inset-0 z-50">
         <div id="order-drawer-backdrop" class="fixed inset-0 bg-black/50 animate-fade-in"></div>
         <div class="relative ml-auto w-full max-w-sm h-full bg-white dark:bg-gray-900 shadow-xl flex flex-col animate-slide-in-right">
@@ -178,17 +167,15 @@
         </div>
     </div>
 
-    <!-- ========== NOTIFICAÇÃO (TOAST) ========== -->
     <div id="toast-notification" class="hidden fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg z-50"></div>
 
-    <!-- ========== MODAL DE PRODUTO ========== -->
     <div id="product-modal" class="hidden fixed inset-0 bg-black/70 z-40 flex items-center justify-center p-4">
         <div id="modal-content" class="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row animate-scale-in">
             <img id="modal-image" src="" alt="Imagem do Produto" class="w-full md:w-1/2 h-64 md:h-auto object-cover md:rounded-l-lg md:rounded-r-none rounded-t-lg cursor-pointer">
             <div class="flex flex-col p-6 flex-1 overflow-hidden">
                 <div class="flex justify-between items-start mb-4">
                     <h3 id="modal-name" class="text-2xl md:text-3xl font-bold text-[#0033A0] dark:text-[#FFD100] pr-4"></h3>
-                    <button class="close-button md:hidden text-gray-500 dark:text-gray-400 text-2xl font-bold hover:text-black dark:hover:text-white cursor-pointer">&times;</button>
+                    <button class="close-button md:hidden text-gray-500 dark:text-gray-400 text-2xl font-bold hover:text-black dark:hover:text-white cursor-pointer">×</button>
                 </div>
                 <p id="modal-description" class="text-base text-gray-600 dark:text-gray-400 mb-4 overflow-y-auto max-h-28"></p>
                 <div id="modal-addons-container" class="space-y-4 flex-1 overflow-y-auto pr-2"></div>
@@ -202,17 +189,15 @@
                     </button>
                 </div>
             </div>
-            <button class="close-button hidden md:block absolute top-4 right-4 text-gray-500 dark:text-gray-400 text-3xl font-bold hover:text-black dark:hover:text-white cursor-pointer">&times;</button>
+            <button class="close-button hidden md:block absolute top-4 right-4 text-gray-500 dark:text-gray-400 text-3xl font-bold hover:text-black dark:hover:text-white cursor-pointer">×</button>
         </div>
     </div>
 
-    <!-- Fullscreen Image Overlay -->
     <div id="fullscreen-image-overlay" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
         <img id="fullscreen-image" src="" alt="Imagem em tela cheia" class="max-w-full max-h-full object-contain">
-        <button id="close-fullscreen-button" class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 cursor-pointer">&times;</button>
+        <button id="close-fullscreen-button" class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 cursor-pointer">×</button>
     </div>
 
-    <!-- ========== TEMPLATES ========== -->
     <template id="product-card-template">
         <div class="product-card flex items-start space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 cursor-pointer group active:scale-[0.98]">
             <img loading="lazy" alt="" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/112x112/EEE/333?text=Imagem';">
@@ -275,7 +260,7 @@
             categoryOrder: [
                 "Cafés", "Cappuccinos", "Especiais", "Chocolates Quentes", "Chás", "Cafés Gelados",
                 "Sucos Naturais", "Frapês", "Sanduíches & Lanches", "Pães de Queijo & Porções",
-                "Pratos Principais", "Espetinhos", "Pizzas", "Soda Italiana & Drinks"
+                "Pratos Principais", "Espetinhos", "Pizzas", "Bebidas", "Soda Italiana & Drinks"
             ],
             orderItems: [],
             currentProductData: null,
@@ -285,7 +270,7 @@
 
             async init() {
                 const self = this; // Salva o contexto 'this'
-                // Load menu data from JSON file
+                // Load menu data from JSON file (RESTAURADO)
                 try {
                     const response = await fetch('menu.json');
                     if (!response.ok) {
@@ -300,7 +285,7 @@
                         <div class="text-center p-8 bg-red-100 dark:bg-red-900/50 rounded-lg border-2 border-dashed border-red-300 dark:border-red-700">
                             <i class="fas fa-exclamation-triangle text-4xl text-red-400 dark:text-red-500 mb-4"></i>
                             <h4 class="text-xl font-bold text-red-700 dark:text-red-300">Erro ao carregar o cardápio.</h4>
-                            <p class="text-red-500 dark:text-gray-400">Por favor, tente novamente mais tarde.</p>
+                            <p class="text-red-500 dark:text-gray-400">Por favor, tente novamente mais tarde. (Verifique se o arquivo menu.json está presente).</p>
                         </div>
                     `;
                     return; // Stop initialization if data fails to load
@@ -351,6 +336,12 @@
                         toast.addEventListener('animationend', () => toast.classList.add('hidden'), { once: true });
                     }, 2000);
                 },
+                // ADIÇÃO ESSENCIAL: Função para remover acentos para a busca
+                normalizeText(text) {
+                    if (!text) return '';
+                    // Normaliza para NFD e remove diacríticos (acentos)
+                    return String(text).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+                },
                 // Nova função para obter URL de imagem em alta resolução
                 getImageHighResUrl(url) {
                     if (url && url.includes('/images/150/')) {
@@ -361,7 +352,7 @@
             },
 
             renderMenu() {
-                const self = this; // Salva o contexto 'this'
+                const self = this;
                 const menuContainer = document.getElementById('menu-container');
                 const desktopLinksContainer = document.getElementById('category-links-desktop');
                 const mobileLinksContainer = document.getElementById('category-links-mobile');
@@ -371,9 +362,9 @@
                 menuContainer.innerHTML = '';
                 desktopLinksContainer.innerHTML = '';
                 mobileLinksContainer.innerHTML = '';
-
-                // If searching, only render search results
-                if (self.isSearching) {
+                
+                // If searching and there's a query, render results. Otherwise, render full menu.
+                if (self.isSearching && self.searchQuery.length > 0) {
                     self.renderSearchResults();
                     return;
                 }
@@ -408,12 +399,12 @@
                     const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
 
                     if (isOpen) {
-                        const listContainer = document.createElement('div');
-                        listContainer.className = 'space-y-4';
+                        const grid = document.createElement('div');
+                        grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
                         category.items.forEach(product => {
                             const cardClone = productCardTemplate.content.cloneNode(true);
                             const cardElement = cardClone.querySelector('.product-card');
-                            cardElement.productData = product;
+                            cardElement.productData = product; 
                             cardElement.querySelector('img').src = product.image;
                             cardElement.querySelector('img').alt = product.name;
                             cardElement.querySelector('h3').textContent = product.name;
@@ -424,9 +415,9 @@
                                 cardElement.querySelector('.options-badge').classList.remove('hidden');
                             }
 
-                            listContainer.appendChild(cardElement);
+                            grid.appendChild(cardElement);
                         });
-                        section.appendChild(listContainer);
+                        section.appendChild(grid);
                     } else {
                         const closedMessageClone = closedMessageTemplate.content.cloneNode(true);
                         closedMessageClone.querySelector('.time-start').textContent = category.schedule.start;
@@ -750,18 +741,19 @@
                     if (self.isSearching) {
                         searchInput.focus();
                         categoryNav.classList.add('hidden');
-                        mobileStickyNav.classList.add('hidden');
+                        mobileStickyNav.style.transform = 'translateY(-100%)';
                     } else {
                         searchInput.value = '';
+                        self.searchQuery = '';
                         clearSearchButton.classList.add('hidden');
                         categoryNav.classList.remove('hidden');
-                        // mobileStickyNav is handled by scroll observer
                     }
                     self.renderMenu();
                 };
 
                 const performSearch = () => {
-                    const query = searchInput.value.trim().toLowerCase();
+                    // Normaliza a query do usuário (remove acentos e converte para minúsculas)
+                    const query = self.utils.normalizeText(searchInput.value);
                     self.searchQuery = query;
 
                     if (query === '') {
@@ -774,7 +766,12 @@
                             if (self.menuData.hasOwnProperty(categoryName)) {
                                 const category = self.menuData[categoryName];
                                 category.items.forEach(product => {
-                                    if (product.name.toLowerCase().includes(query) || product.description.toLowerCase().includes(query)) {
+                                    // Normaliza o nome e a descrição do produto antes de comparar
+                                    const normalizedProductName = self.utils.normalizeText(product.name);
+                                    const normalizedProductDescription = self.utils.normalizeText(product.description);
+                                    
+                                    // Compara as versões normalizadas
+                                    if (normalizedProductName.includes(query) || normalizedProductDescription.includes(query)) {
                                         self.searchResults.push(product);
                                     }
                                 });
@@ -798,11 +795,11 @@
                         title.innerHTML = `🔎 Resultados da Busca para "<strong>${self.searchQuery}</strong>"`;
                         searchResultsSection.appendChild(title);
 
-                        const listContainer = document.createElement('div');
-                        listContainer.className = 'space-y-4';
+                        const grid = document.createElement('div');
+                        grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
                         self.searchResults.forEach(product => {
                             const cardClone = productCardTemplate.content.cloneNode(true);
-                            cardElement = cardClone.querySelector('.product-card');
+                            const cardElement = cardClone.querySelector('.product-card');
                             cardElement.productData = product;
                             cardElement.querySelector('img').src = product.image;
                             cardElement.querySelector('img').alt = product.name;
@@ -812,16 +809,16 @@
                             if (product.options || product.addons) {
                                 cardElement.querySelector('.options-badge').classList.remove('hidden');
                             }
-                            listContainer.appendChild(cardElement);
+                            grid.appendChild(cardElement);
                         });
-                        searchResultsSection.appendChild(listContainer);
+                        searchResultsSection.appendChild(grid);
                     } else {
-                            searchResultsSection.innerHTML = `
-                                <div class="text-center p-8 bg-gray-100 dark:bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700">
-                                    <i class="fas fa-exclamation-circle text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>
-                                    <h4 class="text-xl font-bold text-gray-700 dark:text-gray-300">Nenhum resultado para "<strong>${self.searchQuery}</strong>"</h4>
-                                    <p class="text-gray-500 dark:text-gray-400">Tente outra palavra-chave.</p>
-                                </div>`;
+                        searchResultsSection.innerHTML = `
+                            <div class="text-center p-8 bg-gray-100 dark:bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700">
+                                <i class="fas fa-exclamation-circle text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>
+                                <h4 class="text-xl font-bold text-gray-700 dark:text-gray-300">Nenhum resultado para "<strong>${self.searchQuery}</strong>"</h4>
+                                <p class="text-gray-500 dark:text-gray-400">Tente outra palavra-chave.</p>
+                            </div>`;
                     }
                     menuContainer.appendChild(searchResultsSection);
                 };
