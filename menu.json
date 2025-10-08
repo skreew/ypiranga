@@ -73,6 +73,12 @@
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/f8c80c9a-1c4f-49b3-84b4-b23a9e850466.webp"
             },
             {
+                "name": "MOCHA MARSHMALLOW",
+                "description": "Adicione um toque gourmet à sua bebida! Nossos marshmallows são delicadamente tostados com maçarico, criando uma casquinha dourada e caramelizada por fora e um interior irresistivelmente derretido.",
+                "price": "R$ 15,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/3ae3dbeb-05c8-4b58-8965-a72732e5f439.webp"
+            },
+            {
                 "name": "MOCHA PISTACHE",
                 "description": "",
                 "price": "R$ 25,00",
@@ -147,6 +153,12 @@
                 "description": "Uma infusão vibrantemente colorida e cheia de sabor. Desfrute da doçura natural e dos benefícios antioxidantes de um delicioso mix de frutas vermelhas, perfeito para um momento revigorante e saudável.",
                 "price": "R$ 7,00",
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c7014903-4f08-4b41-8123-e76a017569cf.webp"
+            },
+            {
+                "name": "ERVA DOCE E ESPECIARIAS",
+                "description": "Uma infusão delicadamente aromática e reconfortante. A doçura suave da erva doce harmoniza-se com uma seleção de especiarias, criando uma bebida perfeita para acalmar e auxiliar na digestão.",
+                "price": "R$ 7,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/d02f3692-288a-4400-b609-fc938f2f84f0.webp"
             },
             {
                 "name": "CHAI LATTE",
@@ -349,6 +361,12 @@
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/102c12ac-551e-455b-8718-3111e091db84.webp"
             },
             {
+                "name": "ONION RINGS 12un",
+                "description": "crocância que você ama em cada mordida! 🧅😋 Nossa porção generosa de 12 anéis de cebola é perfeitamente empanada e frita até atingir o dourado ideal. Crocantes por fora, macios e saborosos por dentro, são o petisco perfeito ou um acompanhamento irresistível.",
+                "price": "R$ 18,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/601a599b-e7ee-431e-a208-30d714c13fe7.webp"
+            },
+            {
                 "name": "PASTELZINHO DE CUPIM 8un",
                 "description": "O sabor que encanta! 🥟✨ Experimente a crocância inigualável da nossa massa de pastel, que abraça um recheio simplesmente espetacular: suculento cupim defumado e desfiado, preparado artesanalmente para uma maciez sem igual, com um leve toque de queijo cremoso",
                 "price": "R$ 14,00",
@@ -495,7 +513,7 @@
             },
             {
                 "name": "COSTELA GOLDEN RIB",
-                "description": "A Joia da Nossa Culinária! ✨ Apresentamos a nossa espetacular Costela Golden Rib: uma costela bovina defumada lentamente por inacreditáveis 12 horas, garantindo uma maciez incomparável e um sabor profundo. Para elevar ainda mais a experiência, ela é coberta com o nosso luxuoso molho demi-glacê. Acompanha uma generosa porção de 350g de espaguete ao molho branco, que harmoniza perfeitamente com a intensidade da carne. Uma obra-prima para os paladares mais exigentes.",
+                "description": "A Joia da Nossa Culinária! ✨ Apresentamos a nossa espetacular Costela Golden Rib: uma costela bovina defumada lentamente por inacreditáveis 12 horas, garantindo uma maciez incomparável e um sabor profundo. Para elevar ainda mais a experiência, ela é coberta com o nosso luxuoso molho demi-glace. Acompanha uma generosa porção de 350g de espaguete ao molho branco, que harmoniza perfeitamente com a intensidade da carne. Uma obra-prima para os paladares mais exigentes.",
                 "price": "R$ 78,00",
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/826dffce-b7d3-4f7b-8762-76ca0c2d5015.webp"
             },
@@ -622,6 +640,210 @@
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c0137cca-c4ce-4fc8-a3b5-b0679207b4e1.webp"
             },
             {
+                "name": "45 ALHO E OLEO",
+                "description": "Molho de tomate, mussarela, alho e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/669f3bef-6897-4838-8f08-2502ab9f23d5.webp"
+            },
+            {
+                "name": "46 BAIANA",
+                "description": "Molho de tomate, mussarela, calabresa moída, pimenta, ovo, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/32aa5617-f5b3-4050-b669-f7e24f80394a.webp"
+            },
+            {
+                "name": "47 ATUM",
+                "description": "Molho de tomate, mussarela, atum, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/22899028-66de-4299-9432-25ad799a28ca.webp"
+            },
+            {
+                "name": "48 BACON E MILHO",
+                "description": "Molho de tomate, mussarela, bacon, milho e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/178c42b2-c894-4851-9bc9-2d765a4afb0d.webp"
+            },
+            {
+                "name": "49 BELEZURA",
+                "description": "Molho de tomate, mussarela, tomate seco, molho de alho, calabresa, azeitona e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c7479519-667e-44ec-98e9-de73c6e10d5e.webp"
+            },
+            {
+                "name": "59 BRÓCOLIS COM CARNE",
+                "description": "Molho de tomate, mussarela, carne bovina , brócolis, milho verde e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/1fb0292a-a741-401a-9215-cc98d32dc654.webp"
+            },
+            {
+                "name": "60 CALABACON",
+                "description": "Molho de tomate, mussarela, calabresa, bacon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/8a13acaa-7a16-47c1-b59f-6409befb2ddc.webp"
+            },
+            {
+                "name": "61 CALABRESA COM CEBOLA",
+                "description": "Molho de tomate, mussarela, calabresa, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e3f95a9a-f518-4bdb-80ae-e5eb5db71bb7.webp"
+            },
+            {
+                "name": "62 CALAFRITAS",
+                "description": "Molho de tomate, mussarela, calabresa, batata frita e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/2ad4071e-7725-4e73-b1d0-e24bc6bfe20c.webp"
+            },
+            {
+                "name": "63 CATUFILÉ COM ALHO",
+                "description": "Molho de tomate, mussarela, carne bovina, catupiry, alho e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/f65c684c-2224-41d4-ba7c-0eb31a364b95.webp"
+            },
+            {
+                "name": "64 CHIQUITA",
+                "description": "Molho de tomate, mussarela, peperoni, ovos, pimentão e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/18351902-4b2a-4332-ab11-6521ace5d6b8.webp"
+            },
+            {
+                "name": "65 DA MAMÃE",
+                "description": "Molho de tomate, mussarela, frango desfiado, bacon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/920fc592-0976-4993-afdf-a8486ec44d41.webp"
+            },
+            {
+                "name": "66 CROTONE",
+                "description": "Molho de tomate, mussarela, purê de batata, bacon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/1d29b1a3-da13-4075-9cae-b3dcfc9090a3.webp"
+            },
+            {
+                "name": "67 FAUSTÃO",
+                "description": "Molho de tomate, mussarela, presunto, calabresa, lombo, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/7ff5d12d-1eb7-43c2-ba4c-52ee454048b7.webp"
+            },
+            {
+                "name": "68 FRANGO/BACON E CREAM CHEESE",
+                "description": "Molho de tomate, mussarela, frango desfiado, bacon, cream cheese e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/7aba41ab-e1cb-4878-878e-e5af304b883f.webp"
+            },
+            {
+                "name": "69 FRANGO XADREZ",
+                "description": "Molho de tomate, mussarela, frango picado em cubos ao molho pimentão e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/f8f00121-c1ba-4d84-bd8c-f03146adc09f.webp"
+            },
+            {
+                "name": "70 GOSTOSÃO",
+                "description": "Molho de tomate, mussarela, presunto, calabresa, catupiry, tomate, parmesão e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/9a71f1ae-f54d-4779-81e7-41b1e5b6029a.webp"
+            },
+            {
+                "name": "71 ITALIANA",
+                "description": "Molho de tomate, mussarela, lombo, pimentão e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e3c48094-16a6-4614-8356-0b6956bfd3f8.webp"
+            },
+            {
+                "name": "72 LOMBO CANADENSE",
+                "description": "Molho de tomate, mussarela, lombo, catupiry, champignon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/ff66dd45-2d9a-4894-a1d0-7650b7a1ce25.webp"
+            },
+            {
+                "name": "72 MILHO CREMOSO",
+                "description": "Molho de tomate, mussarela, milho cremoso e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/66bc8ae2-7196-4039-adb4-01269ef315bc.webp"
+            },
+            {
+                "name": "73 NACHO",
+                "description": "Molho de tomate, mussarela, carne moída apimentada, orégano e Doritos.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/de2795a0-658c-4c07-a78f-c2c96c25c766.webp"
+            },
+            {
+                "name": "74 PALMITO ESPECIAL",
+                "description": "Molho de tomate, mussarela, rodelas de palmito pupunha, tomate seco, azeitona preta sem caroço, cream cheese e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/8f0fcc58-6cd3-4df1-b26c-47ab09a52597.webp"
+            },
+            {
+                "name": "75 PALMITO",
+                "description": "Molho de tomate, mussarela, palmito e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/5039d7c6-20ee-41be-952b-1f626650551e.webp"
+            },
+            {
+                "name": "76 PEPECHEESE",
+                "description": "Molho de tomate, mussarela, peperoni, cream cheese e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/b56d5324-d6c2-490a-bb56-0b81ae6667a3.webp"
+            },
+            {
+                "name": "77 PEPPERONI",
+                "description": "Molho de tomate, mussarela, pepperoni e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/8d47a5a3-e96e-4cb0-b089-4716481c21b9.webp"
+            },
+            {
+                "name": "78 TOSCANA",
+                "description": "Molho de tomate, mussarela, calabresa, champignon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/2567b6ef-f23e-4281-b6d4-36a9c53e1594.webp"
+            },
+            {
+                "name": "79 BANANA NEVADA",
+                "description": "Mussarela, leite condensado, banana, chocolate branco e canela.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/6ea98bb1-a94c-4371-9eab-da715fea3266.webp"
+            },
+            {
+                "name": "80 BRIGADEIRO",
+                "description": "Mussarela, chocolate ao leite e granulado.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/8d628947-6f0d-4cf3-8406-17275be523a1.webp"
+            },
+            {
+                "name": "81 CALIFORNIA",
+                "description": "Mussarela, creme de leite, leite condensado, figo, pêssego e abacaxi em calda.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/bf50915f-e7ca-4eb9-a2af-284683433280.webp"
+            },
+            {
+                "name": "83 CHARGE",
+                "description": "Mussarela, chocolate ao leite e amendoim moído.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e9d59c87-9bca-410e-b6e5-b28034b7b396.webp"
+            },
+            {
+                "name": "84 DOIS AMORES",
+                "description": "Mussarela, chocolate branco, chocolate preto ao leite e morango.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/bfed57a1-cf48-4f32-8615-c4efd96ba7aa.webp"
+            },
+            {
+                "name": "85 KIDS",
+                "description": "Mussarela, chocolate preto e confeitos coloridos.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/f07005c9-8bcb-4c4e-ad37-4ee96bc697f2.webp"
+            },
+            {
+                "name": "86 PRESTÍGIO",
+                "description": "Mussarela, creme de leite, chocolate preto ao leite e coco ralado.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/7a174344-3500-41e1-880f-125c289b1d40.webp"
+            },
+            {
+                "name": "87 ROMEU E JULIETA",
+                "description": "Mussarela e goiabada.",
+                "price": "R$ 59,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/0973fbd0-235f-49e5-9707-654950b93e23.webp"
+            },
+            {
                 "name": "154 SENSAÇÃO",
                 "description": "Mussarela, chocolate preto, morango e leite condensado.",
                 "price": "R$ 65,00",
@@ -638,6 +860,101 @@
                 "description": "Mussarela, chocolate branco, morango e leite condensado.",
                 "price": "R$ 65,00",
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/9ae11e2e-f320-483f-a996-6f2090b22fa8.webp"
+            }
+        ]
+    },
+    "Bebidas": {
+        "emoji": "🥤",
+        "items": [
+            {
+                "name": "ÁGUA",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/8a7b9e1-2f3f-4e1a-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "ÁGUA COM GÁS",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/1b1c3e1d-8a7b-4e1a-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "COCA-COLA",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a9d1b1c3-e1d8-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "COCA-COLA ZERO",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/b1c3e1d8-a7b4-4e1a-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "GUARANÁ",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c3e1d8a7-b4e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "FANTA LARANJA",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e1d8a7b4-e1a8-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "SPRITE",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/d8a7b4e1-a8c3-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "SCHWEPPES",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a7b4e1a8-c3e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "HEINEKEN",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/b4e1a8c3-e1d8-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "HEINEKEN ZERO",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e1a8c3e1-d8a7-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "EISENBAHN",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a8c3e1d8-a7b4-4e1a-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "STELLA ARTOIS",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c3e1d8a7-b4e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "BUDWEISER",
+                "description": "",
+                "price": "R$ 10,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e1d8a7b4-e1a8-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "SPATEN",
+                "description": "",
+                "price": "R$ 10,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/d8a7b4e1-a8c3-4a7b-8c3c-8a9d1b1c3e1d.webp"
+            },
+            {
+                "name": "CORONA",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a7b4e1a8-c3e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
             }
         ]
     },
