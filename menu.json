@@ -863,101 +863,6 @@
             }
         ]
     },
-    "Bebidas": {
-        "emoji": "🥤",
-        "items": [
-            {
-                "name": "ÁGUA",
-                "description": "",
-                "price": "R$ 4,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/8a7b9e1-2f3f-4e1a-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "ÁGUA COM GÁS",
-                "description": "",
-                "price": "R$ 5,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/1b1c3e1d-8a7b-4e1a-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "COCA-COLA",
-                "description": "",
-                "price": "R$ 6,50",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a9d1b1c3-e1d8-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "COCA-COLA ZERO",
-                "description": "",
-                "price": "R$ 6,50",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/b1c3e1d8-a7b4-4e1a-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "GUARANÁ",
-                "description": "",
-                "price": "R$ 6,50",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c3e1d8a7-b4e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "FANTA LARANJA",
-                "description": "",
-                "price": "R$ 6,50",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e1d8a7b4-e1a8-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "SPRITE",
-                "description": "",
-                "price": "R$ 6,50",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/d8a7b4e1-a8c3-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "SCHWEPPES",
-                "description": "",
-                "price": "R$ 6,50",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a7b4e1a8-c3e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "HEINEKEN",
-                "description": "",
-                "price": "R$ 14,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/b4e1a8c3-e1d8-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "HEINEKEN ZERO",
-                "description": "",
-                "price": "R$ 14,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e1a8c3e1-d8a7-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "EISENBAHN",
-                "description": "",
-                "price": "R$ 12,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a8c3e1d8-a7b4-4e1a-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "STELLA ARTOIS",
-                "description": "",
-                "price": "R$ 12,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/c3e1d8a7-b4e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "BUDWEISER",
-                "description": "",
-                "price": "R$ 10,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/e1d8a7b4-e1a8-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "SPATEN",
-                "description": "",
-                "price": "R$ 10,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/d8a7b4e1-a8c3-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            },
-            {
-                "name": "CORONA",
-                "description": "",
-                "price": "R$ 12,00",
-                "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/a7b4e1a8-c3e1-4a7b-8c3c-8a9d1b1c3e1d.webp"
-            }
-        ]
-    },
     "Soda Italiana & Drinks": {
         "emoji": "🍹",
         "items": [
@@ -1102,3 +1007,4 @@
         ]
     }
 }
+
