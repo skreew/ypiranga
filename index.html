@@ -58,6 +58,19 @@
             right: 0;
             z-index: 20; /* Abaixo do header principal, mas acima do conteúdo */
         }
+        
+        /* NOVO: Estilo para itens fora do horário de funcionamento */
+        .product-card.closed-visual-only {
+            opacity: 0.6; /* Diminui a opacidade para indicar indisponibilidade */
+            cursor: default; /* Remove o cursor de link */
+            /* Remove os efeitos de hover */
+            transform: none !important;
+            transition: none !important;
+        }
+        .product-card.closed-visual-only:hover {
+            box-shadow: none;
+            background-color: transparent !important;
+        }
     </style>
 </head>
 <body class="bg-stone-50 dark:bg-gray-900 text-gray-800 dark:text-stone-200 transition-colors duration-300">
@@ -122,7 +135,7 @@
 
     <footer class="bg-gray-800 dark:bg-black text-gray-300 dark:text-gray-400 py-6 text-center">
         <p>© 2024 CAFÉ YPIRANGA. Todos os direitos reservados.</p>
-        <p class="text-xs mt-1">Desenvolvido por Gabriel Alves </p>
+        <p class="text-xs mt-1">Desenvolvido por Gabriel Alves ❤️</p>
     </footer>
 
     <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-4">
@@ -336,7 +349,7 @@
                         toast.addEventListener('animationend', () => toast.classList.add('hidden'), { once: true });
                     }, 2000);
                 },
-                // ADIÇÃO ESSENCIAL: Função para remover acentos para a busca
+                // Correção de Acentuação
                 normalizeText(text) {
                     if (!text) return '';
                     // Normaliza para NFD e remove diacríticos (acentos)
@@ -398,32 +411,50 @@
                     const isScheduled = category.schedule;
                     const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
 
-                    if (isOpen) {
-                        const grid = document.createElement('div');
-                        grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
-                        category.items.forEach(product => {
-                            const cardClone = productCardTemplate.content.cloneNode(true);
-                            const cardElement = cardClone.querySelector('.product-card');
-                            cardElement.productData = product; 
-                            cardElement.querySelector('img').src = product.image;
-                            cardElement.querySelector('img').alt = product.name;
-                            cardElement.querySelector('h3').textContent = product.name;
-                            cardElement.querySelector('p').textContent = product.description;
-                            cardElement.querySelector('.price').textContent = product.price;
+                    
+                    const grid = document.createElement('div');
+                    grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
 
-                            if (product.options || product.addons) {
-                                cardElement.querySelector('.options-badge').classList.remove('hidden');
-                            }
-
-                            grid.appendChild(cardElement);
-                        });
-                        section.appendChild(grid);
-                    } else {
+                    // NOVO: Renderiza a mensagem de fechado SE a categoria estiver agendada e fechada
+                    if (!isOpen && isScheduled) {
                         const closedMessageClone = closedMessageTemplate.content.cloneNode(true);
                         closedMessageClone.querySelector('.time-start').textContent = category.schedule.start;
                         closedMessageClone.querySelector('.time-end').textContent = category.schedule.end;
                         section.appendChild(closedMessageClone);
+                        
+                        // Adiciona um separador visual
+                        const spacer = document.createElement('div');
+                        spacer.className = 'my-6';
+                        section.appendChild(spacer);
                     }
+
+                    // Loop para renderizar todos os produtos, independentemente do status
+                    category.items.forEach(product => {
+                        const cardClone = productCardTemplate.content.cloneNode(true);
+                        const cardElement = cardClone.querySelector('.product-card');
+                        cardElement.productData = product; 
+                        
+                        // Marca o status da categoria no cartão para controle de clique/estilo
+                        cardElement.dataset.isOpen = isOpen.toString(); // Garante que seja a string 'true' ou 'false'
+                        if (!isOpen) {
+                            // Adiciona classe para desativar visualmente
+                            cardElement.classList.add('closed-visual-only');
+                        }
+                        
+                        cardElement.querySelector('img').src = product.image;
+                        cardElement.querySelector('img').alt = product.name;
+                        cardElement.querySelector('h3').textContent = product.name;
+                        cardElement.querySelector('p').textContent = product.description;
+                        cardElement.querySelector('.price').textContent = product.price;
+
+                        if (product.options || product.addons) {
+                            cardElement.querySelector('.options-badge').classList.remove('hidden');
+                        }
+
+                        grid.appendChild(cardElement);
+                    });
+                    
+                    section.appendChild(grid);
                     menuContainer.appendChild(section);
                 });
             },
@@ -614,9 +645,17 @@
                 closeFullscreenButton.addEventListener('click', closeFullscreenImage);
                 fullscreenOverlay.addEventListener('click', (e) => { if (e.target === fullscreenOverlay) closeFullscreenImage(); });
                 
+                // CORREÇÃO FINAL: Verifica se o item está disponível antes de abrir o modal, usando a capitalização correta.
                 menuContainer.addEventListener('click', (event) => {
                     const card = event.target.closest('.product-card');
-                    if (card) openModal(card);
+                    if (card) {
+                         // Acesso corrigido para 'dataset.isOpen' (com 'O' maiúsculo)
+                        if (card.dataset.isOpen === 'false') {
+                             self.utils.showToast(`O item "${card.querySelector('h3').textContent}" não está disponível para pedido agora.`);
+                             return; 
+                        }
+                        openModal(card);
+                    }
                 });
 
                 closeModalButtons.forEach(btn => btn.addEventListener('click', closeModal));
@@ -765,6 +804,11 @@
                         for (const categoryName in self.menuData) {
                             if (self.menuData.hasOwnProperty(categoryName)) {
                                 const category = self.menuData[categoryName];
+                                
+                                // Determina o status de abertura da categoria AQUI
+                                const isScheduled = category.schedule;
+                                const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
+
                                 category.items.forEach(product => {
                                     // Normaliza o nome e a descrição do produto antes de comparar
                                     const normalizedProductName = self.utils.normalizeText(product.name);
@@ -772,7 +816,11 @@
                                     
                                     // Compara as versões normalizadas
                                     if (normalizedProductName.includes(query) || normalizedProductDescription.includes(query)) {
-                                        self.searchResults.push(product);
+                                        // MUDANÇA: Armazena o produto e seu status de abertura real
+                                        self.searchResults.push({ 
+                                            productData: product,
+                                            isOpen: isOpen
+                                        });
                                     }
                                 });
                             }
@@ -797,10 +845,21 @@
 
                         const grid = document.createElement('div');
                         grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
-                        self.searchResults.forEach(product => {
+                        self.searchResults.forEach(result => {
+                            const product = result.productData;
+                            const isOpen = result.isOpen; // Usa o status armazenado
+
                             const cardClone = productCardTemplate.content.cloneNode(true);
                             const cardElement = cardClone.querySelector('.product-card');
                             cardElement.productData = product;
+                            
+                            // CORREÇÃO: Define o status real para o bloqueio de clique
+                            // Garante que o dataset.isOpen receba 'true' ou 'false' como string.
+                            cardElement.dataset.isOpen = isOpen.toString();
+                            if (!isOpen) {
+                                cardElement.classList.add('closed-visual-only');
+                            }
+                            
                             cardElement.querySelector('img').src = product.image;
                             cardElement.querySelector('img').alt = product.name;
                             cardElement.querySelector('h3').textContent = product.name;
