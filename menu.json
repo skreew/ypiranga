@@ -754,7 +754,7 @@
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/ff66dd45-2d9a-4894-a1d0-7650b7a1ce25.webp"
             },
             {
-                "name": "72 MILHO CREMOSO",
+                "name": "88 MILHO CREMOSO",
                 "description": "Molho de tomate, mussarela, milho cremoso e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://olaclick-assets-prod.s3.amazonaws.com/companies/products/images/150/66bc8ae2-7196-4039-adb4-01269ef315bc.webp"
@@ -1007,4 +1007,3 @@
         ]
     }
 }
-
