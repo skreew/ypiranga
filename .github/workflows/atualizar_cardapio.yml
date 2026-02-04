@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           ref: main
-          fetch-depth: 0
+          fetch-depth: 0 # Baixa todo o histórico para permitir o rebase corretamente
 
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -32,7 +32,8 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git pull origin main --rebase
+          # Puxa as alterações mais recentes do GitHub antes de rodar o robô
+          git pull --rebase origin main
 
       - name: Rodar robô de atualização
         run: python atualizar_cardapio.py
