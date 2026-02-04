@@ -85,7 +85,7 @@
                     <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" alt="Logo do CAFÉ YPIRANGA" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200 dark:border-gray-600 flex-shrink-0 object-cover">
                     <div class="min-w-0">
                         <h1 class="text-xl sm:text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] truncate">CAFÉ YPIRANGA</h1>
-                       <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center">
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center">
                             <i class="fas fa-map-marker-alt mr-1.5"></i>
                             <span>Avenida Brasil, 751, Santa Helena, PR</span>
                         </div>
@@ -283,9 +283,12 @@
 
             async init() {
                 const self = this; // Salva o contexto 'this'
-                // Load menu data from JSON file (RESTAURADO)
+                // Load menu data from JSON file (MODIFICADO PARA IGNORAR CACHE)
                 try {
-                    const response = await fetch('menu.json');
+                    // Adiciona um timestamp para evitar que o navegador use uma versão antiga (cache) do arquivo
+                    const timestamp = new Date().getTime(); 
+                    const response = await fetch(`menu.json?v=${timestamp}`);
+                    
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
@@ -298,7 +301,7 @@
                         <div class="text-center p-8 bg-red-100 dark:bg-red-900/50 rounded-lg border-2 border-dashed border-red-300 dark:border-red-700">
                             <i class="fas fa-exclamation-triangle text-4xl text-red-400 dark:text-red-500 mb-4"></i>
                             <h4 class="text-xl font-bold text-red-700 dark:text-red-300">Erro ao carregar o cardápio.</h4>
-                            <p class="text-red-500 dark:text-gray-400">Por favor, tente novamente mais tarde. (Verifique se o arquivo menu.json está presente).</p>
+                            <p class="text-red-500 dark:text-gray-400">Verifique se o arquivo "menu.json" foi gerado corretamente.</p>
                         </div>
                     `;
                     return; // Stop initialization if data fails to load
@@ -353,7 +356,7 @@
                 normalizeText(text) {
                     if (!text) return '';
                     // Normaliza para NFD e remove diacríticos (acentos)
-                    return String(text).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+                    return String(text).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
                 },
                 // Nova função para obter URL de imagem em alta resolução
                 getImageHighResUrl(url) {
@@ -382,7 +385,12 @@
                     return;
                 }
 
-                self.categoryOrder.forEach(categoryName => {
+                // Lógica Dinâmica: Combina a ordem preferida com novas categorias que podem aparecer no JSON
+                const jsonKeys = Object.keys(self.menuData);
+                const dynamicCategories = jsonKeys.filter(key => !self.categoryOrder.includes(key));
+                const finalCategoryOrder = [...self.categoryOrder, ...dynamicCategories];
+
+                finalCategoryOrder.forEach(categoryName => {
                     const category = self.menuData[categoryName];
                     if (!category) return;
 
@@ -742,12 +750,19 @@
                                 });
                                 
                                 const currentCategory = self.categoryOrder.find(cat => self.utils.generateCategoryId(cat) === id);
-                                const currentIndex = self.categoryOrder.indexOf(currentCategory);
+                                // Fallback para categorias dinâmicas que não estão na lista fixa
+                                const finalCategoryName = currentCategory || Object.keys(self.menuData).find(cat => self.utils.generateCategoryId(cat) === id);
+                                
+                                currentCategoryStickyEl.textContent = finalCategoryName;
 
-                                currentCategoryStickyEl.textContent = currentCategory;
+                                // Lógica de "Próximo" adaptada para lista dinâmica
+                                const jsonKeys = Object.keys(self.menuData);
+                                const dynamicCategories = jsonKeys.filter(key => !self.categoryOrder.includes(key));
+                                const fullList = [...self.categoryOrder, ...dynamicCategories];
+                                const currentIndex = fullList.indexOf(finalCategoryName);
 
-                                if (currentIndex < self.categoryOrder.length - 1) {
-                                    const nextCategoryName = self.categoryOrder[currentIndex + 1];
+                                if (currentIndex !== -1 && currentIndex < fullList.length - 1) {
+                                    const nextCategoryName = fullList[currentIndex + 1];
                                     nextCategoryStickyEl.textContent = `Próximo: ${nextCategoryName}`;
                                     nextCategoryLink.href = `#${self.utils.generateCategoryId(nextCategoryName)}`;
                                     nextCategoryLink.style.display = 'flex';
