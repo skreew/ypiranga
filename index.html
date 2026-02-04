@@ -282,21 +282,19 @@
             isSearching: false,
 
             async init() {
-                const self = this; // Salva o contexto 'this'
-                // Load menu data from JSON file (MODIFICADO PARA IGNORAR CACHE)
+                const self = this;
+                // Load menu data from JSON file with timestamp to prevent caching
                 try {
-                    // Adiciona um timestamp para evitar que o navegador use uma versão antiga (cache) do arquivo
                     const timestamp = new Date().getTime(); 
                     const response = await fetch(`menu.json?v=${timestamp}`);
                     
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
-                    self.menuData = await response.json(); // Usa 'self'
-                    console.log('Menu data loaded:', self.menuData); // Usa 'self'
+                    self.menuData = await response.json();
+                    console.log('Menu data loaded:', self.menuData);
                 } catch (error) {
                     console.error('Failed to load menu data:', error);
-                    // Optionally display an error message to the user
                     document.getElementById('menu-container').innerHTML = `
                         <div class="text-center p-8 bg-red-100 dark:bg-red-900/50 rounded-lg border-2 border-dashed border-red-300 dark:border-red-700">
                             <i class="fas fa-exclamation-triangle text-4xl text-red-400 dark:text-red-500 mb-4"></i>
@@ -304,15 +302,13 @@
                             <p class="text-red-500 dark:text-gray-400">Verifique se o arquivo "menu.json" foi gerado corretamente.</p>
                         </div>
                     `;
-                    return; // Stop initialization if data fails to load
+                    return;
                 }
 
-                // Ensure DOMContentLoaded is handled after menuData is loaded
-                // This ensures that elements exist before trying to manipulate them
                 if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', () => self.onDomReady()); // Usa 'self'
+                    document.addEventListener('DOMContentLoaded', () => self.onDomReady());
                 } else {
-                    self.onDomReady(); // Usa 'self'
+                    self.onDomReady();
                 }
             },
 
@@ -324,7 +320,7 @@
                 this.initCategoryDrawer();
                 this.initBackToTopButton();
                 this.initScrollObserver();
-                this.initSearch(); // Initialize search functionality
+                this.initSearch();
             },
 
             utils: {
@@ -352,13 +348,10 @@
                         toast.addEventListener('animationend', () => toast.classList.add('hidden'), { once: true });
                     }, 2000);
                 },
-                // Correção de Acentuação
                 normalizeText(text) {
                     if (!text) return '';
-                    // Normaliza para NFD e remove diacríticos (acentos)
                     return String(text).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
                 },
-                // Nova função para obter URL de imagem em alta resolução
                 getImageHighResUrl(url) {
                     if (url && url.includes('/images/150/')) {
                         return url.replace('/images/150/', '/images/800/');
@@ -379,13 +372,11 @@
                 desktopLinksContainer.innerHTML = '';
                 mobileLinksContainer.innerHTML = '';
                 
-                // If searching and there's a query, render results. Otherwise, render full menu.
                 if (self.isSearching && self.searchQuery.length > 0) {
                     self.renderSearchResults();
                     return;
                 }
 
-                // Lógica Dinâmica: Combina a ordem preferida com novas categorias que podem aparecer no JSON
                 const jsonKeys = Object.keys(self.menuData);
                 const dynamicCategories = jsonKeys.filter(key => !self.categoryOrder.includes(key));
                 const finalCategoryOrder = [...self.categoryOrder, ...dynamicCategories];
@@ -419,33 +410,27 @@
                     const isScheduled = category.schedule;
                     const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
 
-                    
                     const grid = document.createElement('div');
                     grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
 
-                    // NOVO: Renderiza a mensagem de fechado SE a categoria estiver agendada e fechada
                     if (!isOpen && isScheduled) {
                         const closedMessageClone = closedMessageTemplate.content.cloneNode(true);
                         closedMessageClone.querySelector('.time-start').textContent = category.schedule.start;
                         closedMessageClone.querySelector('.time-end').textContent = category.schedule.end;
                         section.appendChild(closedMessageClone);
                         
-                        // Adiciona um separador visual
                         const spacer = document.createElement('div');
                         spacer.className = 'my-6';
                         section.appendChild(spacer);
                     }
 
-                    // Loop para renderizar todos os produtos, independentemente do status
                     category.items.forEach(product => {
                         const cardClone = productCardTemplate.content.cloneNode(true);
                         const cardElement = cardClone.querySelector('.product-card');
                         cardElement.productData = product; 
                         
-                        // Marca o status da categoria no cartão para controle de clique/estilo
-                        cardElement.dataset.isOpen = isOpen.toString(); // Garante que seja a string 'true' ou 'false'
+                        cardElement.dataset.isOpen = isOpen.toString();
                         if (!isOpen) {
-                            // Adiciona classe para desativar visualmente
                             cardElement.classList.add('closed-visual-only');
                         }
                         
@@ -455,7 +440,7 @@
                         cardElement.querySelector('p').textContent = product.description;
                         cardElement.querySelector('.price').textContent = product.price;
 
-                        if (product.options || product.addons) {
+                        if (product.options || (product.addons && product.addons.length > 0)) {
                             cardElement.querySelector('.options-badge').classList.remove('hidden');
                         }
 
@@ -574,26 +559,49 @@
 
                 const updateTotalPrice = () => {
                     let total = currentProductBasePrice;
-                    const selectedAddons = addonsContainer.querySelectorAll('.addon-checkbox:checked');
-                    selectedAddons.forEach(checkbox => {
-                        total += self.utils.parsePrice(checkbox.dataset.price);
+                    const selectedAddons = addonsContainer.querySelectorAll('input:checked');
+                    selectedAddons.forEach(input => {
+                        total += self.utils.parsePrice(input.dataset.price);
                     });
                     totalPriceEl.textContent = self.utils.formatCurrency(total);
                 };
 
                 addToOrderButton.onclick = () => {
                     const selectedAddons = [];
-                    addonsContainer.querySelectorAll('.addon-checkbox:checked').forEach(checkbox => {
+                    // Validação de itens obrigatórios
+                    let valid = true;
+                    const groups = addonsContainer.querySelectorAll('.addon-section');
+                    
+                    groups.forEach(group => {
+                        const isRequired = group.dataset.required === 'true';
+                        if (isRequired) {
+                            const hasSelection = group.querySelector('input:checked');
+                            if (!hasSelection) {
+                                valid = false;
+                                group.classList.add('border-red-500', 'border-2');
+                            } else {
+                                group.classList.remove('border-red-500', 'border-2');
+                            }
+                        }
+                    });
+
+                    if (!valid) {
+                        self.utils.showToast("Por favor, selecione os itens obrigatórios.");
+                        return;
+                    }
+
+                    addonsContainer.querySelectorAll('input:checked').forEach(input => {
+                        const nameEl = input.closest('label').querySelector('.addon-name');
                         selectedAddons.push({
-                            name: checkbox.parentElement.querySelector('.addon-name').textContent,
-                            price: checkbox.dataset.price
+                            name: nameEl.textContent,
+                            price: input.dataset.price
                         });
                     });
 
                     const orderItem = {
                         id: Date.now(),
                         name: self.currentProductData.name,
-                        image: self.utils.getImageHighResUrl(self.currentProductData.image), // Use high-res for order summary
+                        image: self.utils.getImageHighResUrl(self.currentProductData.image),
                         basePrice: self.utils.parsePrice(self.currentProductData.price),
                         addons: selectedAddons,
                         itemTotal: self.utils.parsePrice(totalPriceEl.textContent)
@@ -610,28 +618,66 @@
                     if (!product) return;
                     self.currentProductData = product;
 
-                    modalImage.src = self.utils.getImageHighResUrl(product.image); // Usa a nova função
+                    modalImage.src = self.utils.getImageHighResUrl(product.image);
                     document.getElementById('modal-name').textContent = product.name;
                     document.getElementById('modal-description').textContent = product.description;
                     currentProductBasePrice = self.utils.parsePrice(product.price);
 
                     addonsContainer.innerHTML = '';
+                    
+                    // =========================================================
+                    // LÓGICA CORRIGIDA: Usa 'group_name' e 'options' do Python
+                    // =========================================================
                     if (product.addons && product.addons.length > 0) {
-                        product.addons.forEach(addonCategory => {
+                        product.addons.forEach((addonGroup, groupIndex) => {
                             const sectionTemplate = document.getElementById('addon-section-template').content.cloneNode(true);
                             const sectionEl = sectionTemplate.querySelector('.addon-section');
-                            sectionEl.querySelector('.addon-header span').textContent = addonCategory.title;
+                            
+                            // 1. Título e Obrigatoriedade (Lê 'group_name' e 'required')
+                            const isRequired = addonGroup.required;
+                            const maxSelect = addonGroup.max || 99;
+                            const groupTitle = `${addonGroup.group_name} ${isRequired ? '<span class="text-red-500 text-xs font-bold">(Obrigatório)</span>' : '<span class="text-gray-400 text-xs">(Opcional)</span>'}`;
+                            
+                            sectionEl.dataset.required = isRequired;
+                            sectionEl.querySelector('.addon-header span').innerHTML = groupTitle;
+                            
                             const itemsContainer = sectionEl.querySelector('.addon-items');
-                            addonCategory.items.forEach(item => {
-                                const itemTemplate = document.getElementById('addon-item-template').content.cloneNode(true);
-                                const itemEl = itemTemplate.querySelector('.addon-item');
-                                itemEl.querySelector('.addon-name').textContent = item.name;
-                                itemEl.querySelector('.addon-price').textContent = `+ ${item.price}`;
-                                const checkbox = itemEl.querySelector('.addon-checkbox');
-                                checkbox.dataset.price = item.price;
-                                checkbox.addEventListener('change', updateTotalPrice);
-                                itemsContainer.appendChild(itemEl);
-                            });
+                            
+                            // Define se é Radio (1 escolha) ou Checkbox (Vários)
+                            const inputType = maxSelect === 1 ? 'radio' : 'checkbox';
+                            const groupNameId = `addon-group-${groupIndex}`; 
+
+                            // 2. Renderiza as Opções (Lê 'options' do Python)
+                            if (addonGroup.options) {
+                                addonGroup.options.forEach(item => {
+                                    const itemTemplate = document.getElementById('addon-item-template').content.cloneNode(true);
+                                    const itemEl = itemTemplate.querySelector('.addon-item');
+                                    
+                                    itemEl.querySelector('.addon-name').textContent = item.name;
+                                    
+                                    const priceText = item.price.includes('Grátis') ? 'Grátis' : item.price;
+                                    itemEl.querySelector('.addon-price').textContent = item.price === 'Grátis' ? '+ R$ 0,00' : `+ ${item.price}`;
+                                    
+                                    const input = itemEl.querySelector('input');
+                                    input.type = inputType;
+                                    input.name = groupNameId; 
+                                    input.dataset.price = item.price;
+                                    
+                                    if (inputType === 'checkbox') {
+                                        input.addEventListener('change', () => {
+                                            const checkedCount = itemsContainer.querySelectorAll(`input[name="${groupNameId}"]:checked`).length;
+                                            if (checkedCount > maxSelect) {
+                                                input.checked = false;
+                                                self.utils.showToast(`Máximo de ${maxSelect} opções.`);
+                                                updateTotalPrice();
+                                            }
+                                        });
+                                    }
+
+                                    input.addEventListener('change', updateTotalPrice);
+                                    itemsContainer.appendChild(itemEl);
+                                });
+                            }
                             addonsContainer.appendChild(sectionEl);
                         });
                     }
@@ -643,7 +689,7 @@
                 const closeModal = () => modal.classList.add('hidden');
                 
                 const openFullscreenImage = () => {
-                    fullscreenImage.src = modalImage.src; // Usa a imagem já carregada em alta resolução
+                    fullscreenImage.src = modalImage.src;
                     fullscreenOverlay.classList.remove('hidden');
                 };
 
@@ -653,11 +699,9 @@
                 closeFullscreenButton.addEventListener('click', closeFullscreenImage);
                 fullscreenOverlay.addEventListener('click', (e) => { if (e.target === fullscreenOverlay) closeFullscreenImage(); });
                 
-                // CORREÇÃO FINAL: Verifica se o item está disponível antes de abrir o modal, usando a capitalização correta.
                 menuContainer.addEventListener('click', (event) => {
                     const card = event.target.closest('.product-card');
                     if (card) {
-                         // Acesso corrigido para 'dataset.isOpen' (com 'O' maiúsculo)
                         if (card.dataset.isOpen === 'false') {
                              self.utils.showToast(`O item "${card.querySelector('h3').textContent}" não está disponível para pedido agora.`);
                              return; 
@@ -750,12 +794,10 @@
                                 });
                                 
                                 const currentCategory = self.categoryOrder.find(cat => self.utils.generateCategoryId(cat) === id);
-                                // Fallback para categorias dinâmicas que não estão na lista fixa
                                 const finalCategoryName = currentCategory || Object.keys(self.menuData).find(cat => self.utils.generateCategoryId(cat) === id);
                                 
                                 currentCategoryStickyEl.textContent = finalCategoryName;
 
-                                // Lógica de "Próximo" adaptada para lista dinâmica
                                 const jsonKeys = Object.keys(self.menuData);
                                 const dynamicCategories = jsonKeys.filter(key => !self.categoryOrder.includes(key));
                                 const fullList = [...self.categoryOrder, ...dynamicCategories];
@@ -806,7 +848,6 @@
                 };
 
                 const performSearch = () => {
-                    // Normaliza a query do usuário (remove acentos e converte para minúsculas)
                     const query = self.utils.normalizeText(searchInput.value);
                     self.searchQuery = query;
 
@@ -819,19 +860,14 @@
                         for (const categoryName in self.menuData) {
                             if (self.menuData.hasOwnProperty(categoryName)) {
                                 const category = self.menuData[categoryName];
-                                
-                                // Determina o status de abertura da categoria AQUI
                                 const isScheduled = category.schedule;
                                 const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
 
                                 category.items.forEach(product => {
-                                    // Normaliza o nome e a descrição do produto antes de comparar
                                     const normalizedProductName = self.utils.normalizeText(product.name);
                                     const normalizedProductDescription = self.utils.normalizeText(product.description);
                                     
-                                    // Compara as versões normalizadas
                                     if (normalizedProductName.includes(query) || normalizedProductDescription.includes(query)) {
-                                        // MUDANÇA: Armazena o produto e seu status de abertura real
                                         self.searchResults.push({ 
                                             productData: product,
                                             isOpen: isOpen
@@ -862,14 +898,12 @@
                         grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
                         self.searchResults.forEach(result => {
                             const product = result.productData;
-                            const isOpen = result.isOpen; // Usa o status armazenado
+                            const isOpen = result.isOpen;
 
                             const cardClone = productCardTemplate.content.cloneNode(true);
                             const cardElement = cardClone.querySelector('.product-card');
                             cardElement.productData = product;
                             
-                            // CORREÇÃO: Define o status real para o bloqueio de clique
-                            // Garante que o dataset.isOpen receba 'true' ou 'false' como string.
                             cardElement.dataset.isOpen = isOpen.toString();
                             if (!isOpen) {
                                 cardElement.classList.add('closed-visual-only');
@@ -880,7 +914,7 @@
                             cardElement.querySelector('h3').textContent = product.name;
                             cardElement.querySelector('p').textContent = product.description;
                             cardElement.querySelector('.price').textContent = product.price;
-                            if (product.options || product.addons) {
+                            if (product.options || (product.addons && product.addons.length > 0)) {
                                 cardElement.querySelector('.options-badge').classList.remove('hidden');
                             }
                             grid.appendChild(cardElement);
@@ -896,7 +930,6 @@
                     }
                     menuContainer.appendChild(searchResultsSection);
                 };
-
 
                 searchToggleButton.addEventListener('click', toggleSearchVisibility);
 
