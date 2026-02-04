@@ -3,237 +3,185 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Cardápio digital do CAFÉ YPIRANGA. Veja nossos cafés, lanches, porções e muito mais.">
-    <meta name="keywords" content="café, cafeteria, lanches, cardápio digital, CAFÉ YPIRANGA, tailwind css">
-    <meta name="author" content="CAFÉ YPIRANGA">
+    <meta name="description" content="Cardápio digital do CAFÉ YPIRANGA.">
     <title>Cardápio Digital - CAFÉ YPIRANGA</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <script>
-        tailwind.config = {
-            darkMode: 'class', 
-        }
+        tailwind.config = { darkMode: 'class' }
     </script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
-
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { transform: scale(1); } }
-        @keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
-        @keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
-
-        .animate-fade-in { animation: fadeIn 0.3s ease-out; }
-        .animate-scale-in { animation: scaleIn 0.3s ease-out; }
-        .animate-slide-in-left { animation: slideInLeft 0.3s ease-out; }
-        .animate-slide-in-right { animation: slideInRight 0.3s ease-out; }
-
-        #category-nav::-webkit-scrollbar, #modal-addons-container::-webkit-scrollbar, #order-summary-items::-webkit-scrollbar { height: 4px; width: 4px; }
-        #category-nav::-webkit-scrollbar-track, #modal-addons-container::-webkit-scrollbar-track, #order-summary-items::-webkit-scrollbar-track { background: transparent; }
-        #category-nav::-webkit-scrollbar-thumb, #modal-addons-container::-webkit-scrollbar-thumb, #order-summary-items::-webkit-scrollbar-thumb { background-color: #FFD100; border-radius: 20px; }
-
-        #mobile-sticky-nav.is-sticky { position: fixed; top: 0; left: 0; right: 0; z-index: 20; }
-        
-        .product-card.closed-visual-only {
-            opacity: 0.6; 
-            cursor: default; 
-            transform: none !important;
-            transition: none !important;
-        }
-        .product-card.closed-visual-only:hover {
-            box-shadow: none;
-            background-color: transparent !important;
-        }
+        .product-card.closed-visual-only { opacity: 0.6; cursor: default; transform: none !important; }
+        #category-nav::-webkit-scrollbar { height: 4px; }
+        #category-nav::-webkit-scrollbar-thumb { background-color: #FFD100; border-radius: 20px; }
     </style>
 </head>
 <body class="bg-stone-50 dark:bg-gray-900 text-gray-800 dark:text-stone-200 transition-colors duration-300">
 
-    <header id="header" class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md sticky top-0 z-30 transition-colors duration-300">
+    <header id="header" class="bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md sticky top-0 z-30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between py-3">
                 <div class="flex items-center min-w-0">
-                    <button id="category-drawer-button" class="md:hidden mr-3 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors">
-                        <i class="fas fa-bars text-xl text-[#0033A0] dark:text-[#FFD100]"></i>
-                    </button>
-                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" alt="Logo" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200 dark:border-gray-600 flex-shrink-0 object-cover">
+                    <button id="category-drawer-button" class="md:hidden mr-3 text-[#0033A0] dark:text-[#FFD100] text-xl"><i class="fas fa-bars"></i></button>
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200">
                     <div class="min-w-0">
-                        <h1 class="text-xl sm:text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] truncate">CAFÉ YPIRANGA</h1>
-                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center">
-                            <i class="fas fa-map-marker-alt mr-1.5"></i>
-                            <span>Avenida Brasil, 751, Santa Helena, PR</span>
-                        </div>
-                        <div class="flex items-center space-x-4 mt-2">
-                            <a href="https://wa.me/554532681492" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
-                            <a href="https://www.instagram.com/postorabaioli/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-instagram text-xl"></i></a>
-                        </div>
+                        <h1 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100] truncate">CAFÉ YPIRANGA</h1>
+                        <div class="text-xs text-gray-500 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Santa Helena, PR</div>
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <button id="search-toggle-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors mr-2">
-                        <i class="fas fa-search text-xl text-[#0033A0] dark:text-[#FFD100]"></i>
-                    </button>
-                    <label for="theme-toggle" class="relative inline-flex items-center cursor-pointer flex-shrink-0 ml-2">
+                    <button id="search-toggle-button" class="p-2 mr-2 text-[#0033A0] dark:text-[#FFD100]"><i class="fas fa-search text-xl"></i></button>
+                    <label for="theme-toggle" class="relative inline-flex items-center cursor-pointer ml-2">
                         <input type="checkbox" value="" id="theme-toggle" class="sr-only peer">
-                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-yellow-300 dark:peer-focus:ring-yellow-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#0033A0]"></div>
+                        <div class="w-11 h-6 bg-gray-200 peer-focus:ring-4 peer-focus:ring-yellow-300 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#0033A0]"></div>
                     </label>
                 </div>
             </div>
             <div id="search-input-container" class="hidden py-2">
                 <div class="relative">
-                    <input type="text" id="search-input" placeholder="Buscar..." class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FFD100] dark:focus:ring-[#0033A0] text-gray-800 dark:text-white transition-all duration-300">
-                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300"></i>
-                    <button id="clear-search-button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 hidden"><i class="fas fa-times-circle"></i></button>
+                    <input type="text" id="search-input" placeholder="Buscar..." class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFD100]">
+                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                    <button id="clear-search-button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hidden"><i class="fas fa-times-circle"></i></button>
                 </div>
             </div>
         </div>
         <nav id="category-nav" class="hidden md:flex bg-[#0033A0] dark:bg-blue-900/80 overflow-x-auto whitespace-nowrap shadow-inner">
-            <div id="category-links-desktop" class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-6 flex list-none py-2 space-x-2"></div>
+            <div id="category-links-desktop" class="max-w-7xl mx-auto px-4 flex py-2 space-x-2"></div>
         </nav>
     </header>
 
-    <div id="mobile-sticky-nav" class="md:hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md w-full px-4 py-2 transition-transform duration-300 -translate-y-full">
+    <div id="mobile-sticky-nav" class="md:hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md w-full px-4 py-2 fixed top-0 left-0 right-0 z-20 transition-transform duration-300 -translate-y-full">
         <div class="flex justify-between items-center text-sm">
-            <span class="font-bold text-gray-800 dark:text-gray-200" id="current-category-sticky"></span>
-            <a href="#" id="next-category-link" class="flex items-center text-[#0033A0] dark:text-[#FFD100] font-semibold">
-                <span id="next-category-sticky"></span>
-                <i class="fas fa-chevron-down ml-1 text-xs"></i>
-            </a>
+            <span class="font-bold" id="current-category-sticky"></span>
+            <a href="#" id="next-category-link" class="text-[#0033A0] dark:text-[#FFD100] font-semibold"><span id="next-category-sticky"></span> <i class="fas fa-chevron-down ml-1"></i></a>
         </div>
     </div>
 
-    <main id="menu-container" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"></main>
+    <main id="menu-container" class="max-w-7xl mx-auto px-4 py-10"></main>
 
-    <footer class="bg-gray-800 dark:bg-black text-gray-300 dark:text-gray-400 py-6 text-center">
-        <p>© 2024 CAFÉ YPIRANGA. Todos os direitos reservados.</p>
+    <footer class="bg-gray-800 dark:bg-black text-gray-300 py-6 text-center">
+        <p>© 2024 CAFÉ YPIRANGA.</p>
         <p class="text-xs mt-1">Desenvolvido por Gabriel Alves ❤️</p>
     </footer>
 
     <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-4">
-        <button id="cart-fab" class="hidden relative bg-[#FFD100] text-[#0033A0] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg cursor-pointer transition-all duration-300 hover:scale-110 active:scale-95">
+        <button id="cart-fab" class="hidden relative bg-[#FFD100] text-[#0033A0] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 active:scale-95 transition-all">
             <i class="fas fa-shopping-cart"></i>
             <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
         </button>
-        <button id="back-to-top" class="hidden bg-[#0033A0] hover:bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg cursor-pointer transition-opacity duration-300 active:scale-90">
+        <button id="back-to-top" class="hidden bg-[#0033A0] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg active:scale-90 transition-all">
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
 
+    <div id="product-modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden relative">
+            <button class="close-button absolute top-4 right-4 z-10 text-gray-500 bg-white/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-2xl font-bold">×</button>
+            
+            <img id="modal-image" src="" class="w-full md:w-1/2 h-64 md:h-auto object-cover cursor-pointer">
+            
+            <div class="flex flex-col p-6 flex-1 overflow-hidden">
+                <h3 id="modal-name" class="text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] mb-2 pr-8"></h3>
+                <p id="modal-description" class="text-gray-600 dark:text-gray-400 mb-4 overflow-y-auto max-h-24"></p>
+                
+                <div id="modal-addons-container" class="space-y-4 flex-1 overflow-y-auto pr-2 mb-4 border-t border-b border-gray-200 dark:border-gray-700 py-4"></div>
+                
+                <div class="mt-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="flex items-center gap-2">
+                        <span class="text-lg">Total:</span>
+                        <span id="modal-total-price" class="text-2xl font-bold text-[#0033A0] dark:text-[#FFD100]"></span>
+                    </div>
+                    <button id="add-to-order-button" class="w-full sm:w-auto bg-[#FFD100] text-[#0033A0] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors">
+                        Adicionar ao Pedido
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="category-drawer" class="hidden fixed inset-0 z-50">
-        <div id="drawer-backdrop" class="fixed inset-0 bg-black/50 animate-fade-in"></div>
-        <div class="relative w-4/5 max-w-sm h-full bg-stone-50 dark:bg-gray-900 shadow-xl flex flex-col animate-slide-in-left">
-            <div class="flex items-center justify-between p-4 border-b border-stone-200 dark:border-gray-700">
+        <div id="drawer-backdrop" class="fixed inset-0 bg-black/50"></div>
+        <div class="relative w-4/5 max-w-sm h-full bg-stone-50 dark:bg-gray-900 shadow-xl flex flex-col">
+            <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
                 <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Categorias</h2>
-                <button id="close-drawer-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors"><i class="fas fa-times text-xl"></i></button>
+                <button id="close-drawer-button" class="text-2xl"><i class="fas fa-times"></i></button>
             </div>
             <nav id="category-links-mobile" class="flex-1 overflow-y-auto"></nav>
         </div>
     </div>
 
     <div id="order-summary-drawer" class="hidden fixed inset-0 z-50">
-        <div id="order-drawer-backdrop" class="fixed inset-0 bg-black/50 animate-fade-in"></div>
-        <div class="relative ml-auto w-full max-w-sm h-full bg-white dark:bg-gray-900 shadow-xl flex flex-col animate-slide-in-right">
+        <div id="order-drawer-backdrop" class="fixed inset-0 bg-black/50"></div>
+        <div class="relative ml-auto w-full max-w-sm h-full bg-white dark:bg-gray-900 shadow-xl flex flex-col">
             <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-                <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Resumo do Pedido</h2>
-                <button id="close-order-drawer-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors"><i class="fas fa-times text-xl"></i></button>
+                <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Seu Pedido</h2>
+                <button id="close-order-drawer-button" class="text-2xl"><i class="fas fa-times"></i></button>
             </div>
             <div id="order-summary-items" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
             <div class="p-4 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex justify-between items-center text-xl font-bold">
+                <div class="flex justify-between items-center text-xl font-bold mb-4">
                     <span>Total:</span>
                     <span id="order-grand-total">R$ 0,00</span>
                 </div>
+                <button onclick="enviarPedidoWhatsApp()" class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700">
+                    <i class="fab fa-whatsapp mr-2"></i> Enviar Pedido
+                </button>
             </div>
-        </div>
-    </div>
-
-    <div id="toast-notification" class="hidden fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg z-50"></div>
-
-    <div id="product-modal" class="hidden fixed inset-0 bg-black/70 z-40 flex items-center justify-center p-4">
-        <div id="modal-content" class="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row animate-scale-in">
-            <img id="modal-image" src="" alt="Imagem do Produto" class="w-full md:w-1/2 h-64 md:h-auto object-cover md:rounded-l-lg md:rounded-r-none rounded-t-lg cursor-pointer">
-            <div class="flex flex-col p-6 flex-1 overflow-hidden">
-                <div class="flex justify-between items-start mb-4">
-                    <h3 id="modal-name" class="text-2xl md:text-3xl font-bold text-[#0033A0] dark:text-[#FFD100] pr-4"></h3>
-                    <button class="close-button md:hidden text-gray-500 dark:text-gray-400 text-2xl font-bold hover:text-black dark:hover:text-white cursor-pointer">×</button>
-                </div>
-                <p id="modal-description" class="text-base text-gray-600 dark:text-gray-400 mb-4 overflow-y-auto max-h-28"></p>
-                <div id="modal-addons-container" class="space-y-4 flex-1 overflow-y-auto pr-2"></div>
-                <div class="mt-auto pt-6 border-t border-gray-200 dark:border-gray-700 flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-4">
-                        <span class="text-lg font-medium">Total do Item:</span>
-                        <span id="modal-total-price" class="price text-2xl font-bold text-[#0033A0] dark:text-[#FFD100]"></span>
-                    </div>
-                    <button id="add-to-order-button" class="w-full sm:w-auto bg-[#FFD100] text-[#0033A0] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors duration-300">
-                        Adicionar ao pedido
-                    </button>
-                </div>
-            </div>
-            <button class="close-button hidden md:block absolute top-4 right-4 text-gray-500 dark:text-gray-400 text-3xl font-bold hover:text-black dark:hover:text-white cursor-pointer">×</button>
         </div>
     </div>
 
     <div id="fullscreen-image-overlay" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-        <img id="fullscreen-image" src="" alt="Imagem em tela cheia" class="max-w-full max-h-full object-contain">
-        <button id="close-fullscreen-button" class="absolute top-4 right-4 text-white text-4xl font-bold hover:text-gray-300 cursor-pointer">×</button>
+        <img id="fullscreen-image" src="" class="max-w-full max-h-full object-contain">
+        <button id="close-fullscreen-button" class="absolute top-4 right-4 text-white text-4xl cursor-pointer">×</button>
     </div>
 
+    <div id="toast-notification" class="hidden fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg z-50"></div>
+
     <template id="product-card-template">
-        <div class="product-card flex items-start space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 cursor-pointer group active:scale-[0.98]">
-            <img loading="lazy" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/112x112/EEE/333?text=Imagem';">
-            <div class="flex-1 flex flex-col h-full">
-                <h3 class="text-lg font-bold mb-1 truncate group-hover:text-[#0033A0] dark:group-hover:text-[#FFD100]"></h3>
-                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2 text-ellipsis overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical;"></p>
-                <div class="mt-auto flex justify-between items-end">
-                    <span class="price text-xl font-extrabold text-[#0033A0] dark:text-[#FFD100]"></span>
-                    <span class="options-badge hidden text-xs font-bold bg-yellow-300 text-yellow-800 dark:bg-yellow-400 dark:text-yellow-900 px-2 py-1 rounded-full">Adicionais</span>
+        <div class="product-card flex items-start space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all cursor-pointer hover:shadow-xl active:scale-[0.98]">
+            <img class="w-24 h-24 object-cover rounded-md flex-shrink-0 bg-gray-200" onerror="this.src='https://placehold.co/112x112?text=Foto';">
+            <div class="flex-1 flex flex-col h-full justify-between">
+                <div>
+                    <h3 class="text-lg font-bold mb-1 text-gray-800 dark:text-gray-100 leading-tight"></h3>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2"></p>
+                </div>
+                <div class="flex justify-between items-end mt-2">
+                    <span class="price text-lg font-bold text-[#0033A0] dark:text-[#FFD100]"></span>
+                    <span class="options-badge hidden text-[10px] font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full uppercase tracking-wide">Opções</span>
                 </div>
             </div>
         </div>
     </template>
 
-    <template id="closed-message-template">
-        <div class="text-center p-8 bg-gray-100 dark:bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700">
-            <i class="fas fa-clock text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>
-            <h4 class="text-xl font-bold text-gray-700 dark:text-gray-300">Indisponível no momento</h4>
-            <p class="text-gray-500 dark:text-gray-400">Esta categoria está disponível apenas das <span class="font-bold time-start"></span> às <span class="font-bold time-end"></span>.</p>
+    <template id="addon-section-template">
+        <div class="addon-section border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
+            <div class="addon-header bg-gray-50 dark:bg-gray-700/50 p-3 font-semibold text-sm flex justify-between">
+                <span></span>
+            </div>
+            <div class="addon-items p-2 space-y-1"></div>
         </div>
     </template>
 
-    <template id="addon-section-template">
-        <details class="addon-section group border border-gray-200 dark:border-gray-700 rounded-lg" open>
-            <summary class="addon-header flex justify-between items-center p-3 cursor-pointer list-none">
-                <span class="font-semibold text-gray-700 dark:text-gray-300"></span>
-                <i class="fas fa-chevron-down transition-transform duration-300 group-open:rotate-180"></i>
-            </summary>
-            <div class="addon-items p-3 border-t border-gray-200 dark:border-gray-700 space-y-2"></div>
-        </details>
-    </template>
-
     <template id="addon-item-template">
-        <label class="addon-item flex justify-between items-center cursor-pointer p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-700">
-            <span>
-                <input type="checkbox" class="addon-checkbox mr-2 accent-yellow-400">
-                <span class="addon-name text-sm"></span>
-            </span>
-            <span class="addon-price text-sm font-medium"></span>
+        <label class="addon-item flex justify-between items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
+            <div class="flex items-center">
+                <input type="checkbox" class="addon-checkbox w-4 h-4 text-[#0033A0] rounded focus:ring-[#0033A0]">
+                <span class="addon-name ml-2 text-sm"></span>
+            </div>
+            <span class="addon-price text-sm font-medium text-gray-600 dark:text-gray-300"></span>
         </label>
     </template>
 
     <template id="order-item-template">
-        <div class="order-item bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex items-center space-x-3">
-            <img src="" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+        <div class="order-item bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex gap-3 relative group">
             <div class="flex-1">
-                <p class="font-bold text-md"></p>
-                <div class="text-xs text-gray-500 dark:text-gray-400 space-y-1 mt-1"></div>
+                <p class="font-bold text-sm name"></p>
+                <div class="addons text-xs text-gray-500 mt-1"></div>
+                <p class="font-bold text-[#0033A0] dark:text-[#FFD100] mt-1 price"></p>
             </div>
-            <div class="text-right">
-                <p class="font-semibold"></p>
-                <button class="remove-item-btn text-red-500 hover:text-red-700 text-xs font-semibold mt-1">Remover</button>
-            </div>
+            <button class="remove-item-btn text-red-500 hover:text-red-700 self-start p-1"><i class="fas fa-trash"></i></button>
         </div>
     </template>
 
@@ -247,153 +195,97 @@
             ],
             orderItems: [],
             currentProductData: null,
-            searchQuery: '',
-            searchResults: [],
-            isSearching: false,
 
             async init() {
-                const self = this;
                 try {
-                    const timestamp = new Date().getTime(); 
-                    const response = await fetch(`menu.json?v=${timestamp}`);
-                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-                    self.menuData = await response.json();
-                    console.log('Menu loaded:', self.menuData);
-                } catch (error) {
-                    console.error('Failed to load menu:', error);
-                    document.getElementById('menu-container').innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg">Erro ao carregar cardápio.</div>`;
-                    return;
-                }
-
-                if (document.readyState === 'loading') {
-                    document.addEventListener('DOMContentLoaded', () => self.onDomReady());
-                } else {
-                    self.onDomReady();
+                    const ts = new Date().getTime();
+                    const res = await fetch(`menu.json?v=${ts}`);
+                    if (!res.ok) throw new Error();
+                    this.menuData = await res.json();
+                    this.onDomReady();
+                } catch (e) {
+                    document.getElementById('menu-container').innerHTML = `<div class="text-center p-10 text-red-500">Erro ao carregar cardápio.</div>`;
                 }
             },
 
             onDomReady() {
                 this.renderMenu();
+                this.initEvents();
                 this.initTheme();
-                this.initOrderSummary();
-                this.initModal();
-                this.initCategoryDrawer();
-                this.initBackToTopButton();
-                this.initScrollObserver();
-                this.initSearch();
             },
 
             utils: {
-                parsePrice(priceString) { return parseFloat(String(priceString).replace('R$', '').replace(',', '.').trim()) || 0; },
-                formatCurrency(value) { return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); },
-                generateCategoryId(name) { return name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, ""); },
-                isTimeInRange(startTime, endTime) {
-                    const now = new Date();
-                    const [sh, sm] = startTime.split(':').map(Number);
-                    const [eh, em] = endTime.split(':').map(Number);
-                    const start = new Date(); start.setHours(sh, sm, 0, 0);
-                    const end = new Date(); end.setHours(eh, em, 0, 0);
-                    return now >= start && now <= end;
-                },
-                showToast(message) {
-                    const toast = document.getElementById('toast-notification');
-                    if(!toast) return;
-                    toast.textContent = message;
-                    toast.classList.remove('hidden', 'animate-fade-out');
-                    toast.classList.add('animate-fade-in');
-                    setTimeout(() => {
-                        toast.classList.add('animate-fade-out');
-                        toast.addEventListener('animationend', () => toast.classList.add('hidden'), { once: true });
-                    }, 2000);
-                },
-                normalizeText(text) { return text ? String(text).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase() : ''; },
-                getImageHighResUrl(url) { return url && url.includes('/images/150/') ? url.replace('/images/150/', '/images/800/') : url; }
+                parsePrice(str) { return parseFloat(String(str).replace('R$', '').replace(',', '.').trim()) || 0; },
+                fmtPrice(val) { return val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); },
+                genId(str) { return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-'); },
+                highRes(url) { return url && url.includes('/150/') ? url.replace('/150/', '/800/') : url; }
             },
 
             renderMenu() {
-                const self = this;
-                const menuContainer = document.getElementById('menu-container');
+                const container = document.getElementById('menu-container');
                 const desktopLinks = document.getElementById('category-links-desktop');
                 const mobileLinks = document.getElementById('category-links-mobile');
-                const cardTemplate = document.getElementById('product-card-template');
-                const closedTemplate = document.getElementById('closed-message-template');
+                const tplCard = document.getElementById('product-card-template');
 
-                menuContainer.innerHTML = ''; desktopLinks.innerHTML = ''; mobileLinks.innerHTML = '';
-                
-                if (self.isSearching && self.searchQuery.length > 0) {
-                    self.renderSearchResults();
-                    return;
-                }
+                container.innerHTML = ''; desktopLinks.innerHTML = ''; mobileLinks.innerHTML = '';
 
-                const jsonKeys = Object.keys(self.menuData);
-                const dynamicCats = jsonKeys.filter(key => !self.categoryOrder.includes(key));
-                const finalOrder = [...self.categoryOrder, ...dynamicCats];
+                // Mescla ordem fixa com categorias extras que vierem no JSON
+                const allCats = [...this.categoryOrder, ...Object.keys(this.menuData).filter(k => !this.categoryOrder.includes(k))];
 
-                finalOrder.forEach(catName => {
-                    const category = self.menuData[catName];
-                    if (!category) return;
+                allCats.forEach(catName => {
+                    const catData = this.menuData[catName];
+                    if (!catData) return;
 
-                    const catId = self.utils.generateCategoryId(catName);
-                    const linkClass = "block shrink-0 py-2 px-4 text-white font-medium rounded-full transition-all duration-300 hover:bg-[#FFD100] hover:text-[#0033A0]";
+                    const catId = this.utils.genId(catName);
                     
-                    const dLink = document.createElement('a');
-                    dLink.href = `#${catId}`; dLink.className = linkClass;
-                    dLink.innerHTML = `${category.emoji} ${catName}`;
-                    desktopLinks.appendChild(dLink);
+                    // Links de Navegação
+                    const linkHTML = `<a href="#${catId}" class="whitespace-nowrap px-4 py-2 rounded-full text-white hover:bg-[#FFD100] hover:text-[#0033A0] transition-colors">${catData.emoji || ''} ${catName}</a>`;
+                    desktopLinks.insertAdjacentHTML('beforeend', linkHTML);
+                    
+                    const mobLink = document.createElement('a');
+                    mobLink.href = `#${catId}`;
+                    mobLink.className = "drawer-link block p-4 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800";
+                    mobLink.innerHTML = `${catData.emoji || ''} ${catName}`;
+                    mobileLinks.appendChild(mobLink);
 
-                    const mLink = dLink.cloneNode(true);
-                    mLink.className = "drawer-link block text-lg font-medium p-4 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 w-full text-left text-gray-800 dark:text-white";
-                    mobileLinks.appendChild(mLink);
-
+                    // Seção
                     const section = document.createElement('section');
-                    section.id = catId; section.className = 'category-section pt-24 -mt-24 mb-12 scroll-mt-24';
-                    
-                    const title = document.createElement('h2');
-                    title.className = 'text-3xl font-bold mb-6 pb-2 border-b-2 border-[#0033A0] dark:border-[#FFD100]';
-                    title.innerHTML = `${category.emoji} ${catName}`;
-                    section.appendChild(title);
-
-                    const isOpen = category.schedule ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
-
-                    if (!isOpen && category.schedule) {
-                        const closedMsg = closedTemplate.content.cloneNode(true);
-                        closedMsg.querySelector('.time-start').textContent = category.schedule.start;
-                        closedMsg.querySelector('.time-end').textContent = category.schedule.end;
-                        section.appendChild(closedMsg);
-                        section.appendChild(document.createElement('div')).className = 'my-6';
-                    }
+                    section.id = catId;
+                    section.className = "category-section py-6 scroll-mt-24";
+                    section.innerHTML = `<h2 class="text-2xl font-bold mb-4 border-b-2 border-[#FFD100] inline-block pb-1">${catData.emoji || ''} ${catName}</h2>`;
 
                     const grid = document.createElement('div');
-                    grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
+                    grid.className = "grid grid-cols-1 md:grid-cols-2 gap-4";
 
-                    category.items.forEach(prod => {
-                        const card = cardTemplate.content.cloneNode(true);
-                        const el = card.querySelector('.product-card');
-                        el.productData = prod;
-                        el.dataset.isOpen = isOpen.toString();
+                    catData.items.forEach(prod => {
+                        const clone = tplCard.content.cloneNode(true);
+                        const card = clone.querySelector('.product-card');
+                        card.productData = prod; // Guarda dados no elemento
+
+                        card.querySelector('h3').textContent = prod.name;
+                        card.querySelector('p').textContent = prod.description;
+                        card.querySelector('.price').textContent = prod.price;
                         
-                        if (!isOpen) el.classList.add('closed-visual-only');
+                        const img = card.querySelector('img');
+                        if(prod.image) img.src = prod.image;
+                        else img.style.display = 'none';
 
-                        el.querySelector('img').src = prod.image;
-                        el.querySelector('h3').textContent = prod.name;
-                        el.querySelector('p').textContent = prod.description;
-                        el.querySelector('.price').textContent = prod.price;
-
-                        if (prod.addons && prod.addons.length > 0) {
-                            el.querySelector('.options-badge').classList.remove('hidden');
+                        // VERIFICAÇÃO DE ADICIONAIS (Compatível com formato antigo e novo)
+                        // Aceita 'addons' ou 'options' (como na caipirinha)
+                        if ((prod.addons && prod.addons.length > 0) || prod.options) {
+                            card.querySelector('.options-badge').classList.remove('hidden');
                         }
-                        grid.appendChild(el);
+
+                        grid.appendChild(card);
                     });
+
                     section.appendChild(grid);
-                    menuContainer.appendChild(section);
+                    container.appendChild(section);
                 });
             },
 
             initModal() {
-                const self = this;
                 const modal = document.getElementById('product-modal');
-                if (!modal) return;
-                
                 const els = {
                     img: document.getElementById('modal-image'),
                     name: document.getElementById('modal-name'),
@@ -402,296 +294,210 @@
                     total: document.getElementById('modal-total-price'),
                     addBtn: document.getElementById('add-to-order-button')
                 };
-                
                 let basePrice = 0;
 
                 const updateTotal = () => {
                     let total = basePrice;
-                    els.addons.querySelectorAll('input:checked').forEach(i => total += self.utils.parsePrice(i.dataset.price));
-                    els.total.textContent = self.utils.formatCurrency(total);
+                    els.addons.querySelectorAll('input:checked').forEach(el => total += parseFloat(el.dataset.price));
+                    els.total.textContent = this.utils.fmtPrice(total);
                 };
 
-                els.addBtn.onclick = () => {
-                    const selected = [];
-                    let valid = true;
+                // Lógica de abrir modal
+                this.openModal = (prod) => {
+                    this.currentProductData = prod;
+                    basePrice = this.utils.parsePrice(prod.price);
                     
-                    els.addons.querySelectorAll('.addon-section').forEach(group => {
-                        if (group.dataset.required === 'true' && !group.querySelector('input:checked')) {
-                            valid = false;
-                            group.classList.add('border-red-500', 'border-2');
-                        } else {
-                            group.classList.remove('border-red-500', 'border-2');
-                        }
-                    });
-
-                    if (!valid) return self.utils.showToast("Selecione os itens obrigatórios.");
-
-                    els.addons.querySelectorAll('input:checked').forEach(i => {
-                        selected.push({ name: i.closest('label').querySelector('.addon-name').textContent, price: i.dataset.price });
-                    });
-
-                    self.orderItems.push({
-                        id: Date.now(),
-                        name: self.currentProductData.name,
-                        image: self.utils.getImageHighResUrl(self.currentProductData.image),
-                        basePrice: self.utils.parsePrice(self.currentProductData.price),
-                        addons: selected,
-                        itemTotal: self.utils.parsePrice(els.total.textContent)
-                    });
-
-                    modal.classList.add('hidden');
-                    self.utils.showToast("Adicionado ao pedido!");
-                    window.renderOrderSummary();
-                };
-
-                const openModal = (card) => {
-                    const p = card.productData;
-                    self.currentProductData = p;
-                    els.img.src = self.utils.getImageHighResUrl(p.image);
-                    els.name.textContent = p.name;
-                    els.desc.textContent = p.description;
-                    basePrice = self.utils.parsePrice(p.price);
+                    els.img.src = this.utils.highRes(prod.image);
+                    els.name.textContent = prod.name;
+                    els.desc.textContent = prod.description;
                     els.addons.innerHTML = '';
 
-                    // LÓGICA DE ADICIONAIS CORRIGIDA
-                    if (p.addons && p.addons.length > 0) {
-                        p.addons.forEach((group, idx) => {
+                    // === LÓGICA HÍBRIDA DE ADICIONAIS ===
+                    // O JSON do usuário tem "addons" com "title" e "items".
+                    // O Python gera "addons" com "group_name" e "options".
+                    // Vamos suportar os dois.
+                    
+                    if (prod.addons && Array.isArray(prod.addons)) {
+                        prod.addons.forEach((group, idx) => {
                             const tmpl = document.getElementById('addon-section-template').content.cloneNode(true);
-                            const sec = tmpl.querySelector('.addon-section');
-                            const reqHtml = group.required ? '<span class="text-red-500 text-xs font-bold">(Obrigatório)</span>' : '<span class="text-gray-400 text-xs">(Opcional)</span>';
                             
-                            sec.dataset.required = group.required;
-                            sec.querySelector('.addon-header span').innerHTML = `${group.group_name} ${reqHtml}`;
-                            
-                            const container = sec.querySelector('.addon-items');
-                            const type = (group.max === 1) ? 'radio' : 'checkbox';
-                            const gName = `g-${idx}`;
+                            // Normaliza nomes das chaves
+                            const title = group.group_name || group.title || "Opções";
+                            const items = group.options || group.items || [];
+                            const isRequired = group.required === true;
+                            const max = group.max || 99;
 
-                            if (group.options) {
-                                group.options.forEach(opt => {
-                                    const itm = document.getElementById('addon-item-template').content.cloneNode(true);
-                                    const lbl = itm.querySelector('.addon-item');
-                                    lbl.querySelector('.addon-name').textContent = opt.name;
-                                    lbl.querySelector('.addon-price').textContent = opt.price.includes('Grátis') ? '+ R$ 0,00' : `+ ${opt.price}`;
-                                    
-                                    const inp = lbl.querySelector('input');
-                                    inp.type = type;
-                                    inp.name = gName;
-                                    inp.dataset.price = opt.price;
-                                    
-                                    if (type === 'checkbox') {
-                                        inp.addEventListener('change', () => {
-                                            if (container.querySelectorAll(`input[name="${gName}"]:checked`).length > (group.max || 99)) {
-                                                inp.checked = false;
-                                                self.utils.showToast(`Máximo de ${group.max} opções.`);
-                                                updateTotal();
-                                            }
-                                        });
-                                    }
-                                    inp.addEventListener('change', updateTotal);
-                                    container.appendChild(lbl);
-                                });
-                            }
-                            els.addons.appendChild(sec);
+                            const headerText = `${title} ${isRequired ? '<span class="text-red-500 text-xs ml-2">*Obrigatório</span>' : ''}`;
+                            tmpl.querySelector('.addon-header span').innerHTML = headerText;
+                            
+                            const container = tmpl.querySelector('.addon-items');
+                            // Se max=1 usa Radio, senão Checkbox
+                            const type = max === 1 ? 'radio' : 'checkbox';
+                            const groupName = `addon-grp-${idx}`;
+
+                            items.forEach(opt => {
+                                const itmTmpl = document.getElementById('addon-item-template').content.cloneNode(true);
+                                const lbl = itmTmpl.querySelector('label');
+                                const inp = itmTmpl.querySelector('input');
+                                
+                                itmTmpl.querySelector('.addon-name').textContent = opt.name;
+                                itmTmpl.querySelector('.addon-price').textContent = opt.price.includes('Grátis') ? '' : `+ ${opt.price}`;
+                                
+                                inp.type = type;
+                                inp.name = groupName;
+                                // Normaliza preço do item
+                                inp.dataset.price = this.utils.parsePrice(opt.price);
+                                inp.dataset.name = opt.name;
+                                inp.dataset.optPriceStr = opt.price;
+
+                                inp.addEventListener('change', updateTotal);
+                                container.appendChild(itmTmpl);
+                            });
+                            
+                            // Salva metadados para validação
+                            const sectionDiv = tmpl.querySelector('.addon-section');
+                            sectionDiv.dataset.required = isRequired;
+                            
+                            els.addons.appendChild(tmpl);
                         });
                     }
+
                     updateTotal();
                     modal.classList.remove('hidden');
                 };
 
-                document.getElementById('menu-container').addEventListener('click', e => {
-                    const card = e.target.closest('.product-card');
-                    if (card) {
-                        if (card.dataset.isOpen === 'false') return self.utils.showToast("Indisponível no momento.");
-                        openModal(card);
-                    }
+                // Adicionar ao pedido
+                els.addBtn.onclick = () => {
+                    const selected = [];
+                    let valid = true;
+
+                    // Validação simples
+                    els.addons.querySelectorAll('.addon-section').forEach(sec => {
+                        if (sec.dataset.required === 'true' && !sec.querySelector('input:checked')) {
+                            valid = false;
+                            sec.classList.add('border', 'border-red-500');
+                        } else {
+                            sec.classList.remove('border', 'border-red-500');
+                        }
+                    });
+
+                    if (!valid) return alert("Selecione os itens obrigatórios.");
+
+                    els.addons.querySelectorAll('input:checked').forEach(inp => {
+                        selected.push({ name: inp.dataset.name, price: inp.dataset.optPriceStr });
+                    });
+
+                    this.orderItems.push({
+                        ...this.currentProductData,
+                        finalPrice: this.utils.parsePrice(els.total.textContent),
+                        selectedAddons: selected
+                    });
+
+                    this.updateCartUI();
+                    modal.classList.add('hidden');
+                };
+            },
+
+            updateCartUI() {
+                const list = document.getElementById('order-summary-items');
+                const totalEl = document.getElementById('order-grand-total');
+                const badge = document.getElementById('cart-badge');
+                
+                list.innerHTML = '';
+                let grandTotal = 0;
+
+                this.orderItems.forEach((item, idx) => {
+                    const tmpl = document.getElementById('order-item-template').content.cloneNode(true);
+                    tmpl.querySelector('.name').textContent = item.name;
+                    tmpl.querySelector('.price').textContent = this.utils.fmtPrice(item.finalPrice);
+                    
+                    const addonsDiv = tmpl.querySelector('.addons');
+                    item.selectedAddons.forEach(add => {
+                        addonsDiv.innerHTML += `<div>+ ${add.name}</div>`;
+                    });
+
+                    tmpl.querySelector('.remove-item-btn').onclick = () => {
+                        this.orderItems.splice(idx, 1);
+                        this.updateCartUI();
+                    };
+
+                    list.appendChild(tmpl);
+                    grandTotal += item.finalPrice;
                 });
 
-                modal.querySelectorAll('.close-button').forEach(b => b.onclick = () => modal.classList.add('hidden'));
-                modal.onclick = e => { if(e.target === modal) modal.classList.add('hidden'); };
+                totalEl.textContent = this.utils.fmtPrice(grandTotal);
+                badge.textContent = this.orderItems.length;
                 
-                // Fullscreen Image Logic
-                const fsOverlay = document.getElementById('fullscreen-image-overlay');
-                const fsImg = document.getElementById('fullscreen-image');
-                els.img.onclick = () => { fsImg.src = els.img.src; fsOverlay.classList.remove('hidden'); };
-                document.getElementById('close-fullscreen-button').onclick = () => fsOverlay.classList.add('hidden');
-                fsOverlay.onclick = e => { if(e.target === fsOverlay) fsOverlay.classList.add('hidden'); };
+                const fab = document.getElementById('cart-fab');
+                if (this.orderItems.length > 0) fab.classList.remove('hidden');
+                else fab.classList.add('hidden');
+            },
+
+            initEvents() {
+                // Clique no card abre modal
+                document.getElementById('menu-container').addEventListener('click', e => {
+                    const card = e.target.closest('.product-card');
+                    if(card) this.openModal(card.productData);
+                });
+
+                // Fechar Modais
+                document.querySelectorAll('.close-button, #product-modal').forEach(el => {
+                    el.addEventListener('click', e => {
+                        if (e.target === el) document.getElementById('product-modal').classList.add('hidden');
+                    });
+                });
+
+                // Drawer Categorias
+                const catDrawer = document.getElementById('category-drawer');
+                document.getElementById('category-drawer-button').onclick = () => catDrawer.classList.remove('hidden');
+                document.getElementById('close-drawer-button').onclick = () => catDrawer.classList.add('hidden');
+                document.getElementById('drawer-backdrop').onclick = () => catDrawer.classList.add('hidden');
+                document.getElementById('category-links-mobile').onclick = () => catDrawer.classList.add('hidden');
+
+                // Drawer Pedido
+                const orderDrawer = document.getElementById('order-summary-drawer');
+                document.getElementById('cart-fab').onclick = () => orderDrawer.classList.remove('hidden');
+                document.getElementById('close-order-drawer-button').onclick = () => orderDrawer.classList.add('hidden');
+                document.getElementById('order-drawer-backdrop').onclick = () => orderDrawer.classList.add('hidden');
+
+                // Botão topo
+                const btnTop = document.getElementById('back-to-top');
+                window.onscroll = () => btnTop.classList.toggle('hidden', window.scrollY < 300);
+                btnTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+
+                // Scroll spy (Menu Sticky)
+                window.addEventListener('scroll', () => {
+                    const header = document.getElementById('header');
+                    const sticky = document.getElementById('mobile-sticky-nav');
+                    if (window.scrollY > header.offsetHeight) sticky.classList.remove('-translate-y-full');
+                    else sticky.classList.add('-translate-y-full');
+                });
             },
 
             initTheme() {
                 const toggle = document.getElementById('theme-toggle');
-                const set = (t) => { document.documentElement.classList.toggle('dark', t === 'dark'); toggle.checked = t === 'dark'; };
-                toggle.onchange = () => { const t = toggle.checked ? 'dark' : 'light'; localStorage.setItem('theme', t); set(t); };
-                set(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
-            },
-
-            initOrderSummary() {
-                const self = this;
-                const drawer = document.getElementById('order-summary-drawer');
-                const list = document.getElementById('order-summary-items');
-                const totalEl = document.getElementById('order-grand-total');
-                const badge = document.getElementById('cart-badge');
-                const fab = document.getElementById('cart-fab');
-
-                const render = () => {
-                    list.innerHTML = '';
-                    if (self.orderItems.length === 0) {
-                        list.innerHTML = '<p class="text-center text-gray-500 mt-4">Vazio</p>';
-                        fab.classList.add('hidden');
-                        totalEl.textContent = self.utils.formatCurrency(0);
-                        return;
-                    }
-                    fab.classList.remove('hidden');
-                    badge.textContent = self.orderItems.length;
-                    
-                    let gTotal = 0;
-                    self.orderItems.forEach((item, i) => {
-                        const el = document.getElementById('order-item-template').content.cloneNode(true).querySelector('.order-item');
-                        el.dataset.index = i;
-                        el.querySelector('img').src = item.image;
-                        el.querySelector('.flex-1 p').textContent = item.name;
-                        el.querySelector('.text-right p').textContent = self.utils.formatCurrency(item.itemTotal);
-                        
-                        const sub = el.querySelector('.text-xs');
-                        item.addons.forEach(a => {
-                            const p = document.createElement('p');
-                            p.textContent = `+ ${a.name} (${a.price})`;
-                            sub.appendChild(p);
-                        });
-                        
-                        el.querySelector('.remove-item-btn').onclick = () => {
-                            self.orderItems.splice(i, 1);
-                            render();
-                        };
-                        list.appendChild(el);
-                        gTotal += item.itemTotal;
-                    });
-                    totalEl.textContent = self.utils.formatCurrency(gTotal);
+                const set = (dark) => {
+                    document.documentElement.classList.toggle('dark', dark);
+                    toggle.checked = dark;
                 };
-                window.renderOrderSummary = render;
-                
-                fab.onclick = () => drawer.classList.remove('hidden');
-                document.getElementById('close-order-drawer-button').onclick = () => drawer.classList.add('hidden');
-                document.getElementById('order-drawer-backdrop').onclick = () => drawer.classList.add('hidden');
-            },
-
-            initCategoryDrawer() {
-                const d = document.getElementById('category-drawer');
-                const open = () => d.classList.remove('hidden');
-                const close = () => d.classList.add('hidden');
-                document.getElementById('category-drawer-button').onclick = open;
-                document.getElementById('close-drawer-button').onclick = close;
-                document.getElementById('drawer-backdrop').onclick = close;
-                document.getElementById('category-links-mobile').onclick = e => { if(e.target.closest('a')) close(); };
-            },
-
-            initBackToTopButton() {
-                const btn = document.getElementById('back-to-top');
-                window.onscroll = () => btn.classList.toggle('hidden', window.scrollY <= 300);
-                btn.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
-            },
-
-            initScrollObserver() {
-                const header = document.getElementById('header');
-                const sticky = document.getElementById('mobile-sticky-nav');
-                const cur = document.getElementById('current-category-sticky');
-                
-                const check = () => {
-                    const sects = document.querySelectorAll('.category-section');
-                    if(!sects.length) return setTimeout(check, 100);
-                    
-                    window.onscroll = () => {
-                        sticky.style.transform = window.scrollY > header.offsetHeight ? 'translateY(0)' : 'translateY(-100%)';
-                        
-                        let current = '';
-                        sects.forEach(s => {
-                            if (window.scrollY >= (s.offsetTop - 150)) current = s.id;
-                        });
-                        
-                        if(current) {
-                            document.querySelectorAll('#category-links-desktop a').forEach(a => {
-                                const active = a.getAttribute('href') === '#'+current;
-                                a.classList.toggle('bg-[#FFD100]', active);
-                                a.classList.toggle('text-[#0033A0]', active);
-                            });
-                            const activeLink = document.querySelector(`#category-links-desktop a[href="#${current}"]`);
-                            if(activeLink) cur.textContent = activeLink.textContent.trim();
-                        }
-                    };
-                };
-                check();
-            },
-
-            initSearch() {
-                const self = this;
-                const input = document.getElementById('search-input');
-                const container = document.getElementById('search-input-container');
-                const btn = document.getElementById('search-toggle-button');
-                
-                btn.onclick = () => {
-                    container.classList.toggle('hidden');
-                    if(!container.classList.contains('hidden')) {
-                        input.focus();
-                        self.isSearching = true;
-                        document.getElementById('category-nav').classList.add('hidden');
-                    } else {
-                        self.isSearching = false;
-                        self.searchQuery = '';
-                        input.value = '';
-                        document.getElementById('category-nav').classList.remove('hidden');
-                        self.renderMenu();
-                    }
-                };
-
-                let timeout;
-                input.oninput = () => {
-                    clearTimeout(timeout);
-                    timeout = setTimeout(() => {
-                        const q = self.utils.normalizeText(input.value);
-                        self.searchQuery = q;
-                        self.searchResults = [];
-                        
-                        if(q) {
-                            Object.values(self.menuData).forEach(cat => {
-                                const isOpen = cat.schedule ? self.utils.isTimeInRange(cat.schedule.start, cat.schedule.end) : true;
-                                cat.items.forEach(p => {
-                                    if(self.utils.normalizeText(p.name).includes(q) || self.utils.normalizeText(p.description).includes(q)) {
-                                        self.searchResults.push({ productData: p, isOpen: isOpen });
-                                    }
-                                });
-                            });
-                        }
-                        self.renderSearchResults();
-                    }, 300);
-                };
-
-                self.renderSearchResults = () => {
-                    const cont = document.getElementById('menu-container');
-                    cont.innerHTML = `<h2 class="text-3xl font-bold mb-6">Resultados para "${self.searchQuery}"</h2>`;
-                    const grid = document.createElement('div');
-                    grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
-                    
-                    if(!self.searchResults.length) {
-                        cont.innerHTML += '<p class="text-gray-500">Nenhum resultado.</p>';
-                        return;
-                    }
-
-                    self.searchResults.forEach(res => {
-                        const el = document.getElementById('product-card-template').content.cloneNode(true).querySelector('.product-card');
-                        const p = res.productData;
-                        el.productData = p;
-                        el.dataset.isOpen = res.isOpen;
-                        if(!res.isOpen) el.classList.add('closed-visual-only');
-                        
-                        el.querySelector('img').src = p.image;
-                        el.querySelector('h3').textContent = p.name;
-                        el.querySelector('p').textContent = p.description;
-                        el.querySelector('.price').textContent = p.price;
-                        grid.appendChild(el);
-                    });
-                    cont.appendChild(grid);
-                };
+                toggle.onchange = () => set(toggle.checked);
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) set(true);
             }
+        };
+
+        // Função global para enviar zap
+        window.enviarPedidoWhatsApp = () => {
+            if (app.orderItems.length === 0) return;
+            let msg = "*Olá! Gostaria de fazer um pedido:*\n\n";
+            let total = 0;
+            app.orderItems.forEach(item => {
+                msg += `*1x ${item.name}*\n`;
+                item.selectedAddons.forEach(a => msg += `  + ${a.name}\n`);
+                msg += `  Valor: ${app.utils.fmtPrice(item.finalPrice)}\n\n`;
+                total += item.finalPrice;
+            });
+            msg += `*Total: ${app.utils.fmtPrice(total)}*`;
+            window.open(`https://wa.me/554532681492?text=${encodeURIComponent(msg)}`, '_blank');
         };
 
         app.init();
