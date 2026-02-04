@@ -11,35 +11,160 @@
                 "description": "A marca nasceu em 1986 na Fazenda Santa Monica, localizada em Machado, sul de Minas Gerais, uma das regiões produtoras de café mais renomadas do Brasil. A família responsável pela fazenda já tinha uma longa tradição no cultivo de café, e o Café Santa Monica surgiu do desejo de levar diretamente ao consumidor um produto de alta qualidade, controlado desde o plantio até a xícara.",
                 "price": "R$ 9,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/150/a2073e59-6ea5-4f7d-a523-5a986f3fed6d.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "EXPRESSO DUPLO",
                 "description": "Nosso café Santa Monica: grãos moídos na hora e extraídos sob pressão para uma xícara perfeita e aromática.\"",
                 "price": "R$ 11,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/150/d4368313-615f-4263-b5d6-e260648a9865.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "COADINHO",
                 "description": "Cada gole é uma celebração: nosso café Santa Monica, moído na hora e cuidadosamente passado, oferece uma experiência mais leve e de intensidade suave, ideal para quem aprecia a delicadeza na xícara.",
                 "price": "R$ 9,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/150/50257f13-0013-41f1-8f16-289caee159c6.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "CAFÉ COM LEITE",
                 "description": "Café com Leite: o abraço cremoso da combinação perfeita, com leite aerado na máquina para uma textura aveludada",
                 "price": "R$ 10,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d16c689d-ea67-40db-a0b8-6d205c3884a9.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "MACCHIATO",
                 "description": "O clássico 'manchado' de sabor! Uma dose dupla do nosso espresso intenso e aromático, delicadamente marcada com uma camada aveludada de espuma de leite vaporizado. Para quem aprecia a pureza do café com um toque sutil de cremosidade.",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b32fc7af-df30-46c4-b038-c07a98fc1ba7.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -55,21 +180,96 @@
                 "description": "A combinação clássica do nosso espresso intenso com leite vaporizado, uma camada generosa de espuma cremosa e um toque sutil de canela",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8238a6b1-78f0-41ca-a84b-61cbb0f06d5c.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "BRASILEIRO",
                 "description": "A versão que abraça o paladar! Nosso espresso encontra o leite cremoso, um toque de chocolate e o calor da canela.",
                 "price": "R$ 13,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f0566d3f-6448-44e7-b52d-e38ac795849a.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "NUTELLA",
                 "description": "O abraço quente do café encontra a cremosidade do leite e a indulgência inconfundível da Nutella. Uma xícara de puro praze",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1ea71e88-1951-4d12-a4bd-098336bca706.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -85,42 +285,192 @@
                 "description": "A união perfeita do nosso espresso intenso com chocolate rico, leite vaporizado cremoso e um delicioso toque de caramelo. Criando uma experiência quente e aconchegante para o seu paladar",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d1c92e5a-4d67-445d-be9e-f94e9a70776c.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "MOCHA CHOCOLATE",
                 "description": "Fusão perfeita do nosso espresso marcante com uma dose generosa de chocolate puro e o leite cremoso.",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f8c80c9a-1c4f-49b3-84b4-b23a9e850466.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "MOCHA MARSHMALLOW",
                 "description": "Adicione um toque gourmet à sua bebida! Nossos marshmallows são delicadamente tostados com maçarico, criando uma casquinha dourada e caramelizada por fora e um interior irresistivelmente derretido.",
                 "price": "R$ 15,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3ae3dbeb-05c8-4b58-8965-a72732e5f439.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "CAFÉ RABAIOLI",
                 "description": "Nosso Café Rabaioli: uma obra-prima em xícara. Espresso marcante, licor Baileys para um toque adocicado e cremoso, leite vaporizado e o frescor do chantilly. Uma celebração de sabores que você só encontra aqui.",
                 "price": "R$ 17,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/06e8d11a-81a0-4a3e-91f0-d47ff2bc0903.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "IRISH COFFEE",
                 "description": "A clássica e reconfortante combinação do nosso café quente e encorpado com o calor suave do autêntico whisky irlandês e a doçura do açúcar mascavo, finalizado com uma generosa camada de chantilly. Perfeito para aquecer a alma.",
                 "price": "R$ 17,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/fd677f75-143d-4191-a5c7-70ca29b8ccd1.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "SUBMARINO",
                 "description": "Prepare-se para mergulhar em uma experiência de sabor! Nosso chocolate quente cremoso e reconfortante é a base perfeita para o toque ousado do whisky, coroado por uma generosa nuvem de chantilly e finalizado com deliciosas lascas de chocolate. Uma explosão de prazer a cada gole.",
                 "price": "R$ 22,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ec3a91ab-8160-413f-92ab-db7b9dda9597.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -136,21 +486,96 @@
                 "description": "Renda-se à sofisticação do Chocolate Quente Europeu. Elaborado com o exclusivo chocolate cremoso da Santa Monica, cada gole é uma viagem de sabor, com a textura aveludada, rica e delicadamente aerada que só um chocolate de alta qualidade pode oferecer. Perfeito para momentos de puro prazer, elevando sua experiência com uma leveza única.",
                 "price": "R$ 17,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f5d40bef-fff7-427c-b7a5-b37feea67981.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "CHOCOLATE EUROPEU COM NUTELLA",
                 "description": "osso Chocolate Quente Europeu: O clássico cremoso e aerado da Santa Monica. Perfeito puro, ou com adição irresistível de Nutella",
                 "price": "R$ 20,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6425809b-a741-438d-b1ff-8a3c2f89f407.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "ACHOCOLATADO",
                 "description": "Achocolatado: A pedida perfeita para quem busca um chocolate mais leve e refrescante. Com 32% de cacau, nossa bebida tem uma textura fluida e deliciosa, ideal para ser apreciada quente ou gelada.",
                 "price": "R$ 9,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e45a0dd8-929b-49a0-ae33-848e7bf615a3.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -217,28 +642,128 @@
                 "description": "Mergulhe nesta experiência onde o café quente se encontra com o sorvete de creme gelado, criando um contraste irresistível. Finalizado com o toque crocante do Ovomaltine e a leveza do chantilly, é a sobremesa perfeita em forma de bebida.",
                 "price": "R$ 17,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a4f8da25-e26b-43ad-a18a-ecf9c4eac4d8.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "ESPRESSO COM TÔNICA",
                 "description": "Uma experiência refrescante e inusitada. O encontro surpreendente do café espresso puro com a efervescência tônica, criando uma bebida levemente cítrica e estimulante. Perfeito para quem busca um sabor diferente e revigorante.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e3a99484-6eb6-4e8c-82b8-1fc46a812a98.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "CAPPUCCINO GELADO",
                 "description": "A refrescância perfeita para o seu dia! Uma combinação deliciosa de leite gelado e nossa mistura especial para cappuccino, resultando em uma bebida cremosa, leve e irresistivelmente fria. Ideal para refrescar com sabor.",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4498eddf-9ae6-4c73-8e13-cb27574f977d.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "RABAIOLI FREDO",
                 "description": "fusão perfeita entre café, cremosidade e puro prazer! Nosso exclusivo Cappuccino Gelado ganha um toque especial com a adição de sorvete de creme, uma generosa calda de chocolate e o inconfundível crocante do Ovomaltine. Uma sobremesa em forma de bebida, irresistível a cada gole.",
                 "price": "R$ 17,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e973b520-93ea-45ae-ac92-f557cd68546e.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -319,63 +844,288 @@
                 "description": "A suavidade clássica da baunilha em uma bebida gelada e cremosa.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1341ffbf-d448-4683-b320-ff40bf3e6639.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Cappuccino",
                 "description": "Seu cappuccino favorito transformado em um frapê gelado e delicioso.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/fe932254-2714-4c1e-81b5-4cec2628d173.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Morango",
                 "description": "A doçura do morango em uma textura de frapê incrivelmente refrescante.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ae213a2d-6cf0-472e-8be9-d5feab6eb37b.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Maracujá",
                 "description": "O sabor tropical e levemente ácido do maracujá em um frapê cremoso.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/31bdc343-8306-42f3-8ebf-ae1d7790b5bf.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Menta com limão",
                 "description": "Uma explosão de frescor com a combinação vibrante de menta e limão.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ef0b5f4e-d3b3-47d5-a041-9681f51112fb.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Frutas vermelhas",
                 "description": "Um mix delicioso e gelado das nossas melhores frutas vermelhas.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4279afe5-88b8-4bec-9f2c-17bf9a103ef6.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Chocolate",
                 "description": "Para os amantes de chocolate, um frapê rico, cremoso e irresistível.",
                 "price": "R$ 26,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/13581447-5ba1-438e-8ed5-7bfb16529a6a.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "Nutella",
                 "description": "Aveludado frapê com o sabor inconfundível de Nutella. Pura tentação!",
                 "price": "R$ 26,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/39201254-9c1d-435d-958e-d98c0cfc928b.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "SHAKE DE AÇAÍ",
                 "description": "Açaí batido com morango.",
                 "price": "R$ 35,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -486,56 +1236,448 @@
                 "description": "A combinação que nunca decepciona: a crocância do pão de forma tostado encontra a maciez do presunto e o sabor irresistível do queijo derretido. Um clássico que todo mundo ama e que entrega o máximo de sabor com o mínimo de complicação.",
                 "price": "R$ 11,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1fc06b73-2a02-432b-be63-e2a7dbaa7be1.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "QUEIJO QUENTE",
                 "description": "A Simplicidade Que Encanta! Derreta-se com o clássico que nunca sai de moda. Nosso queijo quente traz a combinação perfeita do pão de forma fresquinho e uma generosa porção DUPLA de queijo derretido.",
                 "price": "R$ 11,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7db0ba9e-953f-42d2-b80c-268d64fbf9c0.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "BAURU",
                 "description": "O Clássico que Conquista! 🥖Nosso Bauru é recheado com presunto fatiado, queijo mussarela perfeitamente derretido, rodelas frescas de tomate e finalizado com aquele toque aromático de orégano.",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8dafa4ec-4965-429d-a382-7d12bb588ca3.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "BAURU COM OVO",
                 "description": "O Seu Clássico Favorito, Ainda Melhor e Mais Saudável! 🤤 Se você já amava nosso Bauru tradicional, prepare-se para se apaixonar novamente! Mantemos a receita original e adicionamos um ovo feito no forno, transformando seu lanche em uma refeição ainda mais completa, deliciosa e sem gordura do preparo.",
                 "price": "R$ 13,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8b225a85-03fe-4a6c-8c06-a8091d9d491b.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "OMELETE",
                 "description": "Omelete Enrolada: Sabor e Leveza em Cada Garfada! 🍳🍅Desfrute da nossa omelete, preparada com 3 ovos frescos e o toque vibrante do tomate picado. Por dentro, o queijo derretido abraça tudo, enquanto o orégano adiciona aquele aroma especial. Perfeita para um café da manhã reforçado, um almoço leve ou um jantar rápido e delicioso. Uma opção cheia de sabor e praticidade.",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5e721935-9f93-4deb-b7dd-ccb7e7c6f8a0.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "OVO CREMOSO",
                 "description": "🥓 Delicie-se com a perfeição dos nossos ovos mexidos, preparados com creme de leite para alcançar uma suavidade e cremosidade incomparáveis. Acompanhados de pão tostado quentinho e fatias de bacon crocante, este é o prato ideal para transformar seu café da manhã ou brunch em um momento de puro prazer.",
                 "price": "R$ 22,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ff537d67-e2ed-44c4-aeeb-600e350c6065.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "OVO CARBONARA",
                 "description": "Uma combinação deliciosa de ovo, queijo parmesão e bacon em cubos. Acompanha pão de forma crocante.",
                 "price": "R$ 22,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/61da7f61-7cf8-468f-8c21-2e73288da324.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "CROQUE MADAME",
                 "description": "A Elegância Francesa em Cada Camada! Deixe-se seduzir por este clássico sanduíche de pão de forma, recheado com queijo duplo e presunto. A magia acontece com a cobertura generosa de molho bechamel cremoso, queijo gratinado à perfeição. Sabor, sofisticação e indulgência garantidos.",
                 "price": "R$ 22,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3ab65826-7e7a-4980-895c-3c059b196945.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -551,28 +1693,264 @@
                 "description": "Nosso Hambúrguer Artesanal: 150g de blend exclusivo Brisket e Acém, moído na cozinha e temperado com nosso hub especial. Defumado em lenha frutífera, servido em pão brioche macio, com maionese da casa e mussarela derretida. Uma experiência de sabor inigualável a cada mordida!",
                 "price": "R$ 29,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1d563520-9fe6-417a-ba2d-2d966175b4ca.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "COMBO PRIME BURGUER",
                 "description": "Nosso Hambúrguer Artesanal: 150g de blend exclusivo Brisket/Acém, moído na casa e temperado com nosso hub especial. Defumado em lenha frutífera, servido em pão brioche macio, com maionese da casa e mussarela derretida. Acompanha 100g de batata supercrisp e uma Coca-Cola 250ml (vidro). Uma experiência completa e sabor inigualável!",
                 "price": "R$ 39,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/73101548-e33c-4ed3-97fe-7d7cf4b020a6.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "SANDUICHE IPIRANGA",
                 "description": "Um Sabor Que Você Nunca Esquece! 🥖🐷 Apresentamos a nossa criação especial: o Sanduíche Ipiranga! Mergulhe no sabor inconfundível do pulled pork suculento e temperado, harmonizado com a nossa maionese especial da casa e o queijo derretido que abraça tudo. Servido em um pão baguete crocante, cada mordida é uma explosão de texturas e sabores. Uma experiência única que você precisa provar.",
                 "price": "R$ 28,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c6666f83-bcaa-470e-b334-53d42d1e0bf7.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "COMBO IPIRANGA",
                 "description": "A Experiência Completa de Sabor! 🥖🐷🍟🥤 Prepare-se para o melhor do sabor com o nosso Combo Ipiranga! Desfrute do delicioso Sanduíche Ipiranga – com pulled pork suculento, maionese especial e queijo derretido no pão baguete crocante – acompanhado de 100g de batata crocante, sequinha e irresistível, e uma Coca-Cola geladíssima de 250ml em garrafa de vidro.",
                 "price": "R$ 39,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ef3dace9-e257-41c4-be76-1044ae8e3f55.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -609,7 +1987,28 @@
                 "description": "A Joia da Nossa Culinária! ✨ Apresentamos a nossa espetacular Costela Golden Rib: uma costela bovina defumada lentamente por inacreditáveis 12 horas, garantindo uma maciez incomparável e um sabor profundo. Para elevar ainda mais a experiência, ela é coberta com o nosso luxuoso molho demi-glacê. Acompanha uma generosa porção de 350g de espaguete ao molho branco, que harmoniza perfeitamente com a intensidade da carne. Uma obra-prima para os paladares mais exigentes.",
                 "price": "R$ 88,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/826dffce-b7d3-4f7b-8762-76ca0c2d5015.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "POLPETONE",
@@ -630,7 +2029,28 @@
                 "description": "Steak ancho, 250g purê de batata, mix de vegetais e molho demi glacê.",
                 "price": "R$ 88,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
@@ -792,11 +2212,11 @@
             }
         ]
     },
-    "PIZZA 18:00-21:45": {
+    "PIZZA": {
         "emoji": "🍕",
         "schedule": {
-            "start": "00:00",
-            "end": "23:59"
+            "start": "18:00",
+            "end": "21:45"
         },
         "items": [
             {
@@ -804,343 +2224,1568 @@
                 "description": "Molho de tomate, mussarela, presunto, ovos, azeitona verde, cebola e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/10920976-cf74-4945-9ea2-abe6b0578890.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "06 QUATRO QUEIJOS",
                 "description": "Molho de tomate, mussarela, gorgonzola, provolone e catupiry.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/79df672b-9de7-49ce-a3be-a546f98adb31.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "11 RÚCULA COM TOMATE SECO",
                 "description": "Molho de tomate, mussarela, rúcula e tomate seco.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/366a7444-06e0-4502-a0f3-f1df7ec8be68.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "17 ARGENTINA",
                 "description": "Molho de tomate, mussarela, catupiry, bacon, milho, palmito e azeitona fatiada.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8ed3bc64-6d1b-4711-8efd-4c10f2799bc1.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "18 FRANGO COM CATUPIRY",
                 "description": "Molho de tomate, mussarela, frango desfiado, catupiry e milho.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5e121bda-fc37-4aaa-b625-9854327d4f58.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "21 LOMBO COM ABACAXI",
                 "description": "Molho de tomate, mussarela, abacaxi e lombo canadense.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8cd08593-e283-44e3-8682-7d30d861ec46.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "29 MARGUERITA",
                 "description": "Molho de tomate, mussarela, manjericão, tomate, azeitona e parmesão.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/174505e4-6cab-4282-a1ae-267e68d05930.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "30 CALABRESA",
                 "description": "Molho de tomate, mussarela, calabresa.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/fc3c14dc-d338-4b4e-af03-5e53d7a4c67d.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "32 BRÓCOLIS COM BACON",
                 "description": "Molho de tomate, mussarela, brócolis, bacon, palmito e azeitona.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d5372247-7f72-4529-925f-03de9a49aac9.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "35 STROGONOFF DE CARNE",
                 "description": "Molho de tomate, mussarela, carne bovina e batata palha.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7a20aea5-aa1f-48e0-a4fb-485ebfd6f449.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "41 SUPREME",
                 "description": "Molho de tomate, mussarela, tomate seco, carne bovina, pepperoni, champignon, pimentão, cebola, azeitona fatiada e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a6497154-68fb-44c0-84c7-6087a4163d53.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "44 COSTELA",
                 "description": "Molho de tomate, mussarela, bacon, carne de costela desfiada, tomate seco, cebola e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c0137cca-c4ce-4fc8-a3b5-b0679207b4e1.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "45 ALHO E OLEO",
                 "description": "Molho de tomate, mussarela, alho e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/669f3bef-6897-4838-8f08-2502ab9f23d5.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "46 BAIANA",
                 "description": "Molho de tomate, mussarela, calabresa moída, pimenta, ovo, cebola e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/32aa5617-f5b3-4050-b669-f7e24f80394a.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "47 ATUM",
                 "description": "Molho de tomate, mussarela, atum, cebola e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/22899028-66de-4299-9432-25ad799a28ca.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "48 BACON E MILHO",
                 "description": "Molho de tomate, mussarela, bacon, milho e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/178c42b2-c894-4851-9bc9-2d765a4afb0d.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "49 BELEZURA",
                 "description": "Molho de tomate, mussarela, tomate seco, molho de alho, calabresa, azeitona e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c7479519-667e-44ec-98e9-de73c6e10d5e.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "59 BRÓCOLIS COM CARNE",
                 "description": "Molho de tomate, mussarela, carne bovina , brócolis, milho verde e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1fb0292a-a741-401a-9215-cc98d32dc654.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "60 CALABACON",
                 "description": "Molho de tomate, mussarela, calabresa, bacon e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8a13acaa-7a16-47c1-b59f-6409befb2ddc.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "61 CALABRESA COM CEBOLA",
                 "description": "Molho de tomate, mussarela, calabresa, cebola e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e3f95a9a-f518-4bdb-80ae-e5eb5db71bb7.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "62 CALAFRITAS",
                 "description": "Molho de tomate, mussarela, calabresa, batata frita e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2ad4071e-7725-4e73-b1d0-e24bc6bfe20c.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "63 CATUFILÉ COM ALHO",
                 "description": "Molho de tomate, mussarela, carne bovina, catupiry, alho e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f65c684c-2224-41d4-ba7c-0eb31a364b95.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "64 CHIQUITA",
                 "description": "Molho de tomate, mussarela, peperoni, ovos, pimentão e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/18351902-4b2a-4332-ab11-6521ace5d6b8.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "65 DA MAMÃE",
                 "description": "Molho de tomate, mussarela, frango desfiado, bacon e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/920fc592-0976-4993-afdf-a8486ec44d41.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "66 CROTONE",
                 "description": "Molho de tomate, mussarela, purê de batata, bacon e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1d29b1a3-da13-4075-9cae-b3dcfc9090a3.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "67 FAUSTÃO",
                 "description": "Molho de tomate, mussarela, presunto, calabresa, lombo, cebola e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7ff5d12d-1eb7-43c2-ba4c-52ee454048b7.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "68 FRANGO/BACON E CREAM CHEESE",
                 "description": "Molho de tomate, mussarela, frango desfiado, bacon, cream cheese e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7aba41ab-e1cb-4878-878e-e5af304b883f.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "69 FRANGO XADREZ",
                 "description": "Molho de tomate, mussarela, frango picado em cubos ao molho pimentão e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f8f00121-c1ba-4d84-bd8c-f03146adc09f.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "70 GOSTOSÃO",
                 "description": "Molho de tomate, mussarela, presunto, calabresa, catupiry, tomate, parmesão e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9a71f1ae-f54d-4779-81e7-41b1e5b6029a.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "71 ITALIANA",
                 "description": "Molho de tomate, mussarela, lombo, pimentão e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e3c48094-16a6-4614-8356-0b6956bfd3f8.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "72 LOMBO CANADENSE",
                 "description": "Molho de tomate, mussarela, lombo, catupiry, champignon e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ff66dd45-2d9a-4894-a1d0-7650b7a1ce25.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "73 NACHO",
                 "description": "Molho de tomate, mussarela, carne moída apimentada, orégano e Doritos.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/de2795a0-658c-4c07-a78f-c2c96c25c766.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "74 PALMITO ESPECIAL",
                 "description": "Molho de tomate, mussarela, rodelas de palmito pupunha, tomate seco, azeitona preta sem caroço, cream cheese e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8f0fcc58-6cd3-4df1-b26c-47ab09a52597.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "75 PALMITO",
                 "description": "Molho de tomate, mussarela, palmito e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5039d7c6-20ee-41be-952b-1f626650551e.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "76 PEPECHEESE",
                 "description": "Molho de tomate, mussarela, peperoni, cream cheese e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b56d5324-d6c2-490a-bb56-0b81ae6667a3.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "77 PEPPERONI",
                 "description": "Molho de tomate, mussarela, pepperoni e orégano.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8d47a5a3-e96e-4cb0-b089-4716481c21b9.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "78 TOSCANA",
                 "description": "Molho de tomate, mussarela, calabresa, champignon e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2567b6ef-f23e-4281-b6d4-36a9c53e1594.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "79 BANANA NEVADA",
                 "description": "Mussarela, leite condensado, banana, chocolate branco e canela.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6ea98bb1-a94c-4371-9eab-da715fea3266.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "88 MILHO CREMOSO",
                 "description": "Molho de tomate, mussarela, milho cremoso e orégano.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/66bc8ae2-7196-4039-adb4-01269ef315bc.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "164 SEDUÇÃO",
                 "description": "Mussarela, chocolate branco, morango e leite condensado.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9ae11e2e-f320-483f-a996-6f2090b22fa8.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "156 CAROLINA",
                 "description": "Mussarela, abacaxi, chocolate branco e canela.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/19180537-fbef-4a85-80c5-db882719d324.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "154 SENSAÇÃO",
                 "description": "Mussarela, chocolate preto, morango e leite condensado.",
                 "price": "R$ 65,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/25dcf441-1c61-4949-ab38-4495d3fd277a.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "80 BRIGADEIRO",
                 "description": "Mussarela, chocolate ao leite e granulado.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8d628947-6f0d-4cf3-8406-17275be523a1.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "81 CALIFORNIA",
                 "description": "Mussarela, creme de leite, leite condensado, figo, pêssego e abacaxi em calda.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/bf50915f-e7ca-4eb9-a2af-284683433280.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "83 CHARGE",
                 "description": "Mussarela, chocolate ao leite e amendoim moído.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e9d59c87-9bca-410e-b6e5-b28034b7b396.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "84 DOIS AMORES",
                 "description": "Mussarela, chocolate branco, chocolate preto ao leite e morango.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/bfed57a1-cf48-4f32-8615-c4efd96ba7aa.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "85 KIDS",
                 "description": "Mussarela, chocolate preto e confeitos coloridos.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f07005c9-8bcb-4c4e-ad37-4ee96bc697f2.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "86 PRESTÍGIO",
                 "description": "Mussarela, creme de leite, chocolate preto ao leite e coco ralado.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7a174344-3500-41e1-880f-125c289b1d40.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             },
             {
                 "name": "87 ROMEU E JULIETA",
                 "description": "Mussarela e goiabada.",
                 "price": "R$ 59,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/0973fbd0-235f-49e5-9707-654950b93e23.webp",
-                "addons": []
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     }
