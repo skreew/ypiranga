@@ -7,8 +7,7 @@ import time
 URL_SITE = "https://cafe-ipiranga.ola.click/products"
 
 # ==============================================================================
-# 🛠️ CONFIGURAÇÃO ESTRUTURADA E INTERATIVA DOS ADICIONAIS
-# Agora com regras de interatividade (min/max/obrigatório)
+# 🛠️ CONFIGURAÇÃO ESTRUTURADA DOS ADICIONAIS
 # ==============================================================================
 
 # GRUPO: Ponto da Carne (Obrigatório, Escolha 1)
@@ -98,48 +97,53 @@ def extrair_horario(titulo_categoria):
     if match: return match.group(1), match.group(2)
     return "00:00", "23:59"
 
-def obter_adicionais_por_categoria(nome_categoria):
+def obter_adicionais(nome_categoria, nome_item):
     """
-    Lógica 'Cirúrgica': Só adiciona se tiver certeza absoluta.
-    Evita colocar adicionais em tudo.
+    Define os adicionais baseados na Categoria E no Nome do Item.
+    Isso evita colocar 'Ponto da Carne' num Espaguete só porque está na categoria Pratos.
     """
     cat = nome_categoria.upper()
-    grupos_finais = []
+    item = nome_item.upper()
+    grupos = []
 
-    # 1. PIZZAS (Apenas Borda)
+    # 1. PIZZAS
     if "PIZZA" in cat:
-        grupos_finais.append(GRP_BORDA)
+        grupos.append(GRP_BORDA)
+        return grupos
 
-    # 2. HAMBÚRGUERES (Ponto + Extras + Molhos)
-    # Exclui "Sanduíches" simples dessa regra pesada
-    elif "BURGUER" in cat or "PRIME" in cat:
-        grupos_finais.append(GRP_PONTO_CARNE)
-        grupos_finais.append(GRP_EXTRAS_LANCHE)
-        grupos_finais.append(GRP_MOLHOS)
-
-    # 3. CARNES / PRATOS COM STEAK (Ponto + Molhos)
-    elif "STEAK" in cat or "MIGNON" in cat or "COSTELA" in cat:
-        grupos_finais.append(GRP_PONTO_CARNE)
-        # Se quiser molhos no prato, descomente abaixo:
-        # grupos_finais.append(GRP_MOLHOS)
-
-    # 4. CAFÉS ESPECIAIS (Cappuccino, Mocha, etc - Evita café simples se quiser)
-    elif any(x in cat for x in ["CAPPUCCINO", "CHOCOLATE", "FRAPÊ", "ESPECIAIS"]):
-        grupos_finais.append(GRP_EXTRAS_CAFE)
-
-    # 5. LANCHES GERAIS (Só Molhos e Extras leves, sem ponto da carne)
-    elif "LANCHE" in cat or "SANDUÍCHE" in cat or "BAURU" in cat:
-        # Cria uma versão leve dos extras (sem batata 100g obrigatória, etc)
-        grupos_finais.append(GRP_EXTRAS_LANCHE) 
-        grupos_finais.append(GRP_MOLHOS)
-
-    # NOTA: Sucos, Drinks, Porções, Salgados NÃO entram aqui. 
-    # Ficarão com "addons": []
+    # 2. CARNES E HAMBÚRGUERES (Detecta por nome do item ou categoria específica)
+    # Palavras-chave que indicam carne que precisa de ponto
+    tem_carne_ponto = any(x in item for x in ["BURGUER", "STEAK", "MIGNON", "COSTELA", "PICANHA", "BIFE", "CHORIZO", "ANCHO"])
     
-    return grupos_finais
+    # Se for hambúrguer ou carne de corte, adiciona PONTO DA CARNE
+    if tem_carne_ponto:
+        grupos.append(GRP_PONTO_CARNE)
+        
+        # Se for especificamente Burguer ou estiver numa categoria de lanche/burger, adiciona extras
+        if "BURGUER" in item or "LANCHE" in cat or "SANDUÍCHE" in cat or "BURGUER" in cat:
+             grupos.append(GRP_EXTRAS_LANCHE)
+             grupos.append(GRP_MOLHOS)
+        
+        return grupos
+
+    # 3. CAFÉS E BEBIDAS QUENTES
+    # Detecta "CAFÉ" na categoria (ex: CAFÉS, CAFÉS GELADOS) ou no item
+    eh_cafe_cat = any(x in cat for x in ["CAFÉ", "CAPPUCCINO", "CHOCOLATE", "FRAPÊ", "ESPECIAIS"])
+    if eh_cafe_cat:
+        grupos.append(GRP_EXTRAS_CAFE)
+        return grupos
+
+    # 4. LANCHES GERAIS (Sem ponto da carne - ex: Misto Quente)
+    # Só entra aqui se NÃO caiu na regra de carne acima
+    if "LANCHE" in cat or "SANDUÍCHE" in cat or "BAURU" in cat:
+        grupos.append(GRP_EXTRAS_LANCHE)
+        grupos.append(GRP_MOLHOS)
+        return grupos
+
+    return grupos
 
 def run():
-    print("🔥 Iniciando Atualização (Modo Limpo e Interativo)...")
+    print("🔥 Iniciando Atualização (Modo Inteligente)...")
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -220,6 +224,7 @@ def run():
                     nome_raw = cat['category']
                     if nome_raw not in banco_dados_mestre:
                         inicio, fim = extrair_horario(nome_raw)
+                        # Limpeza profunda do nome da categoria
                         nome_limpo = re.sub(r'\d{2}:\d{2}.*', '', nome_raw).strip().replace('-', '').strip()
                         
                         banco_dados_mestre[nome_raw] = {
@@ -261,18 +266,18 @@ def run():
             for key_cat, dados_cat in banco_dados_mestre.items():
                 nome_categoria = dados_cat["clean_name"]
                 
-                # AQUI É O PULO DO GATO:
-                # Pegamos os grupos estruturados (obrigatório/opcional)
-                grupos_adicionais = obter_adicionais_por_categoria(nome_categoria)
-                
                 items_lista = []
                 for nome_item, item_raw in dados_cat["items_dict"].items():
+                    
+                    # AGORA CALCULAMOS ADICIONAIS POR ITEM, NÃO SÓ POR CATEGORIA
+                    grupos_adicionais = obter_adicionais(nome_categoria, nome_item)
+
                     items_lista.append({
                         "name": item_raw['name'],
                         "description": item_raw['description'],
                         "price": processar_preco(item_raw['price']),
                         "image": extrair_imagem(item_raw['imageStyle']),
-                        "addons": grupos_adicionais # Lista de grupos, não de itens soltos
+                        "addons": grupos_adicionais
                     })
                 
                 if items_lista:
@@ -290,7 +295,7 @@ def run():
             
             with open('menu.json', 'w', encoding='utf-8') as f:
                 json.dump(cardapio_final, f, ensure_ascii=False, indent=4)
-            print("✨ Sucesso.")
+            print("✨ Sucesso. Menu atualizado!")
 
         except Exception as e:
             print(f"❌ Erro fatal: {e}")
