@@ -7,63 +7,78 @@ import time
 URL_SITE = "https://cafe-ipiranga.ola.click/products"
 
 # ==============================================================================
-# 🛠️ CONFIGURAÇÃO DOS ADICIONAIS (Extraídos do HTML do Sistema)
+# 🛠️ CONFIGURAÇÃO ESTRUTURADA E INTERATIVA DOS ADICIONAIS
+# Agora com regras de interatividade (min/max/obrigatório)
 # ==============================================================================
 
-# 1. Adicionais de Cafés e Bebidas Quentes
-# Fonte: Categoria "+ ADICIONAIS" do HTML
-ADICIONAIS_CAFE = [
-    {"name": "Leite de Castanha", "price": "R$ 4,00"},
-    {"name": "Aveia e Zero Lactose", "price": "R$ 4,00"},
-    {"name": "Nutella", "price": "R$ 4,00"},
-    {"name": "Chantilly", "price": "R$ 4,00"}
-]
+# GRUPO: Ponto da Carne (Obrigatório, Escolha 1)
+GRP_PONTO_CARNE = {
+    "group_name": "Escolha o ponto da carne",
+    "required": True,
+    "min": 1,
+    "max": 1,
+    "options": [
+        {"name": "Mal Passado", "price": "Grátis"},
+        {"name": "Ao Ponto", "price": "Grátis"},
+        {"name": "Bem Passado", "price": "Grátis"}
+    ]
+}
 
-# 2. Adicionais de Lanches e Hambúrgueres
-# Fonte: Itens misturados na lista do HTML
-ADICIONAIS_LANCHE = [
-    {"name": "Bacon 3 fatias", "price": "R$ 5,00"},
-    {"name": "Queijo Extra", "price": "R$ 2,00"},
-    {"name": "Hambúrguer Extra", "price": "R$ 8,00"},
-    {"name": "Fritas 100g", "price": "R$ 10,00"}, # Ótimo upsell encontrado no código
-    {"name": "Maionese da Casa", "price": "R$ 3,00"}
-]
+# GRUPO: Bordas de Pizza (Opcional, Escolha 1)
+GRP_BORDA = {
+    "group_name": "Escolha a Borda",
+    "required": False,
+    "min": 0,
+    "max": 1,
+    "options": [
+        {"name": "Sem Borda", "price": "Grátis"},
+        {"name": "Catupiry", "price": "R$ 12,00"},
+        {"name": "Cheddar", "price": "R$ 12,00"},
+        {"name": "Chocolate", "price": "R$ 15,00"}
+    ]
+}
 
-# 3. Adicionais para Jantar/Pratos
-ADICIONAIS_PRATO = [
-    {"name": "Taça de Vinho", "price": "R$ 10,00"}, # Item encontrado no HTML
-    {"name": "Fritas 100g", "price": "R$ 10,00"}
-]
+# GRUPO: Extras de Lanche (Opcional, Vários)
+GRP_EXTRAS_LANCHE = {
+    "group_name": "Turbine seu lanche",
+    "required": False,
+    "min": 0,
+    "max": 5,
+    "options": [
+        {"name": "Bacon (3 fatias)", "price": "R$ 5,00"},
+        {"name": "Queijo Extra", "price": "R$ 2,00"},
+        {"name": "Hambúrguer Extra", "price": "R$ 8,00"},
+        {"name": "Fritas (100g)", "price": "R$ 10,00"}
+    ]
+}
 
-# 4. Ponto da Carne (Categoria "Escolha o ponto da carne" no HTML)
-PONTO_CARNE = [
-    {"name": "Mal Passado", "price": "Grátis"},
-    {"name": "Ao Ponto", "price": "Grátis"},
-    {"name": "Bem Passado", "price": "Grátis"}
-]
+# GRUPO: Molhos (Opcional, Vários)
+GRP_MOLHOS = {
+    "group_name": "Molhos",
+    "required": False,
+    "min": 0,
+    "max": 3,
+    "options": [
+        {"name": "Maionese da Casa", "price": "Grátis"},
+        {"name": "Ketchup", "price": "Grátis"},
+        {"name": "Barbecue", "price": "Grátis"},
+        {"name": "Mostarda", "price": "Grátis"}
+    ]
+}
 
-# 5. Molhos (Categoria "Escolha seus molhos" no HTML)
-MOLHOS = [
-    {"name": "Maionese da Casa", "price": "Grátis"},
-    {"name": "Ketchup", "price": "Grátis"},
-    {"name": "Barbecue", "price": "Grátis"},
-    {"name": "Mostarda", "price": "Grátis"}
-]
-
-# 6. Bordas de Pizza (Padrão de mercado, mantido pois não estava expandido no HTML)
-BORDAS_PIZZA = [
-    {"name": "Borda de Catupiry", "price": "R$ 12,00"},
-    {"name": "Borda de Cheddar", "price": "R$ 12,00"},
-    {"name": "Borda de Chocolate", "price": "R$ 15,00"},
-    {"name": "Massa Integral", "price": "R$ 5,00"}
-]
-
-# 7. Drinks (Padrão)
-ADICIONAIS_DRINK = [
-    {"name": "Gelo Extra", "price": "Grátis"},
-    {"name": "Adoçante", "price": "Grátis"},
-    {"name": "Sem Açúcar", "price": "Grátis"}
-]
+# GRUPO: Adicionais Café (Opcional, Vários)
+GRP_EXTRAS_CAFE = {
+    "group_name": "Personalize seu café",
+    "required": False,
+    "min": 0,
+    "max": 3,
+    "options": [
+        {"name": "Leite de Castanha", "price": "R$ 4,00"},
+        {"name": "Zero Lactose/Aveia", "price": "R$ 4,00"},
+        {"name": "Nutella", "price": "R$ 4,00"},
+        {"name": "Chantilly", "price": "R$ 4,00"}
+    ]
+}
 
 # ==============================================================================
 
@@ -75,64 +90,56 @@ def processar_preco(texto):
 def extrair_imagem(style):
     if not style: return "https://placehold.co/400x300?text=Sem+Imagem"
     match = re.search(r'url\("?\'?([^"\')]+)"?\'?\)', style)
-    if match:
-        return match.group(1)
+    if match: return match.group(1)
     return "https://placehold.co/400x300?text=Sem+Imagem"
 
 def extrair_horario(titulo_categoria):
     match = re.search(r'(\d{2}:\d{2})\s*[-àa]\s*(\d{2}:\d{2})', titulo_categoria)
-    if match:
-        return match.group(1), match.group(2)
+    if match: return match.group(1), match.group(2)
     return "00:00", "23:59"
 
 def obter_adicionais_por_categoria(nome_categoria):
-    """Define quais adicionais vão para qual categoria baseado no nome"""
+    """
+    Lógica 'Cirúrgica': Só adiciona se tiver certeza absoluta.
+    Evita colocar adicionais em tudo.
+    """
     cat = nome_categoria.upper()
+    grupos_finais = []
+
+    # 1. PIZZAS (Apenas Borda)
+    if "PIZZA" in cat:
+        grupos_finais.append(GRP_BORDA)
+
+    # 2. HAMBÚRGUERES (Ponto + Extras + Molhos)
+    # Exclui "Sanduíches" simples dessa regra pesada
+    elif "BURGUER" in cat or "PRIME" in cat:
+        grupos_finais.append(GRP_PONTO_CARNE)
+        grupos_finais.append(GRP_EXTRAS_LANCHE)
+        grupos_finais.append(GRP_MOLHOS)
+
+    # 3. CARNES / PRATOS COM STEAK (Ponto + Molhos)
+    elif "STEAK" in cat or "MIGNON" in cat or "COSTELA" in cat:
+        grupos_finais.append(GRP_PONTO_CARNE)
+        # Se quiser molhos no prato, descomente abaixo:
+        # grupos_finais.append(GRP_MOLHOS)
+
+    # 4. CAFÉS ESPECIAIS (Cappuccino, Mocha, etc - Evita café simples se quiser)
+    elif any(x in cat for x in ["CAPPUCCINO", "CHOCOLATE", "FRAPÊ", "ESPECIAIS"]):
+        grupos_finais.append(GRP_EXTRAS_CAFE)
+
+    # 5. LANCHES GERAIS (Só Molhos e Extras leves, sem ponto da carne)
+    elif "LANCHE" in cat or "SANDUÍCHE" in cat or "BAURU" in cat:
+        # Cria uma versão leve dos extras (sem batata 100g obrigatória, etc)
+        grupos_finais.append(GRP_EXTRAS_LANCHE) 
+        grupos_finais.append(GRP_MOLHOS)
+
+    # NOTA: Sucos, Drinks, Porções, Salgados NÃO entram aqui. 
+    # Ficarão com "addons": []
     
-    adicionais = []
-
-    # --- Lógica de Distribuição ---
-    
-    # Bebidas Quentes e Frias
-    if any(x in cat for x in ["CAFÉ", "CAPPUCCINO", "CHOCOLATE", "FRAPÊ", "SHAKE", "GELADO"]):
-        adicionais.extend(ADICIONAIS_CAFE)
-
-    # Carnes e Hambúrgueres (Adiciona Ponto + Molhos + Extras de Lanche)
-    if any(x in cat for x in ["STEAK", "BURGUER", "MIGNON", "CARNE"]):
-        if "BURGUER" in cat:
-            adicionais.extend(ADICIONAIS_LANCHE) # Bacon, Queijo, etc
-        adicionais.extend(PONTO_CARNE)
-        adicionais.extend(MOLHOS)
-
-    # Sanduíches e Lanches Diversos
-    elif any(x in cat for x in ["LANCHE", "SANDUÍCHE", "BAURU", "MISTO", "CROQUE"]):
-        adicionais.extend(ADICIONAIS_LANCHE)
-        adicionais.extend(MOLHOS)
-
-    # Pratos Principais (Jantar)
-    elif any(x in cat for x in ["PRATO", "RISOTO", "ESPAGUETE", "COSTELA", "POLPETONE"]):
-        adicionais.extend(ADICIONAIS_PRATO) # Vinho e Fritas
-        if "COSTELA" in cat or "STEAK" in cat:
-            adicionais.extend(PONTO_CARNE)
-
-    # Porções
-    elif any(x in cat for x in ["PORÇ", "FRITAS", "BOLINHO", "TIRA"]):
-        adicionais.extend(MOLHOS)
-        # Adiciona opção de Queijo extra nas porções também
-        adicionais.append({"name": "Queijo Extra", "price": "R$ 2,00"})
-
-    # Pizzas
-    elif "PIZZA" in cat:
-        adicionais.extend(BORDAS_PIZZA)
-
-    # Drinks
-    elif any(x in cat for x in ["DRINK", "CAIPIRINHA", "SODA", "SUCO", "VINHO"]):
-        adicionais.extend(ADICIONAIS_DRINK)
-
-    return adicionais
+    return grupos_finais
 
 def run():
-    print("🔥 Iniciando Atualização (Modo Final + Adicionais Extraídos)...")
+    print("🔥 Iniciando Atualização (Modo Limpo e Interativo)...")
     
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=True)
@@ -152,13 +159,13 @@ def run():
             try:
                 page.wait_for_selector('.product-card', timeout=20000)
             except:
-                print("⚠️ Demorou para carregar, mas seguindo...")
+                print("⚠️ Demorou para carregar...")
 
             banco_dados_mestre = {}
             previous_height = 0
             no_change_count = 0
             
-            print("🚜 Rolando página para capturar tudo...")
+            print("🚜 Rolando página...")
             
             while True:
                 dados_tela = page.evaluate("""() => {
@@ -211,12 +218,9 @@ def run():
 
                 for cat in dados_tela:
                     nome_raw = cat['category']
-                    
                     if nome_raw not in banco_dados_mestre:
                         inicio, fim = extrair_horario(nome_raw)
-                        
-                        nome_limpo = re.sub(r'\d{2}:\d{2}.*', '', nome_raw).strip()
-                        nome_limpo = nome_limpo.replace('-', '').strip()
+                        nome_limpo = re.sub(r'\d{2}:\d{2}.*', '', nome_raw).strip().replace('-', '').strip()
                         
                         banco_dados_mestre[nome_raw] = {
                             "clean_name": nome_limpo,
@@ -227,9 +231,8 @@ def run():
                         }
                     
                     for item in cat['items']:
-                        nome_item = item['name']
-                        if nome_item not in banco_dados_mestre[nome_raw]["items_dict"]:
-                            banco_dados_mestre[nome_raw]["items_dict"][nome_item] = item
+                        if item['name'] not in banco_dados_mestre[nome_raw]["items_dict"]:
+                            banco_dados_mestre[nome_raw]["items_dict"][item['name']] = item
 
                 page.evaluate("window.scrollBy(0, 600)")
                 time.sleep(1.5)
@@ -251,13 +254,16 @@ def run():
                     no_change_count = 0
                 previous_height = new_height
 
-            print("📦 Inserindo adicionais personalizados e salvando...")
+            print("📦 Aplicando regras de adicionais...")
             cardapio_final = {}
             total_items_count = 0
             
             for key_cat, dados_cat in banco_dados_mestre.items():
                 nome_categoria = dados_cat["clean_name"]
-                adicionais_cat = obter_adicionais_por_categoria(nome_categoria)
+                
+                # AQUI É O PULO DO GATO:
+                # Pegamos os grupos estruturados (obrigatório/opcional)
+                grupos_adicionais = obter_adicionais_por_categoria(nome_categoria)
                 
                 items_lista = []
                 for nome_item, item_raw in dados_cat["items_dict"].items():
@@ -266,7 +272,7 @@ def run():
                         "description": item_raw['description'],
                         "price": processar_preco(item_raw['price']),
                         "image": extrair_imagem(item_raw['imageStyle']),
-                        "addons": adicionais_cat
+                        "addons": grupos_adicionais # Lista de grupos, não de itens soltos
                     })
                 
                 if items_lista:
