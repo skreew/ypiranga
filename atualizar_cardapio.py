@@ -28,9 +28,7 @@ def buscar_dados():
     print(f"🔄 A iniciar acesso via curl_cffi para: {URL}")
     
     try:
-        # 'impersonate="chrome110"' é o segredo. Ele imita a assinatura digital exata do Chrome.
         response = requests.get(URL, impersonate="chrome110", timeout=30)
-        
         print(f"📡 Status Code: {response.status_code}")
         
         if response.status_code != 200:
@@ -38,22 +36,32 @@ def buscar_dados():
             return None
             
         soup = BeautifulSoup(response.content, 'html.parser')
-        cardapio = {}
         
-        # O site usa 'infinite-products' para agrupar categorias
+        # DEBUG: Verifica se o site retornou conteúdo vazio ou pede JS
+        if "You need to enable JavaScript" in response.text:
+            print("🚨 ALERTA: O site exige JavaScript e não entregou o HTML completo.")
+        
+        # Tenta encontrar os blocos de categorias
         blocos_categorias = soup.find_all('div', class_='infinite-products')
         
+        # Se não achou blocos, imprime o que achou para a gente debugar
         if not blocos_categorias:
-            print("⚠️ Aviso: HTML carregado, mas estrutura não encontrada.")
-            # Debug: Mostra o início do HTML para entender o que veio
-            print("HTML recebido (inicio):", soup.prettify()[:500])
+            print("⚠️ Aviso: Estrutura 'infinite-products' NÃO encontrada.")
+            print("--- INÍCIO DO HTML RECEBIDO ---")
+            print(soup.prettify()[:2000]) # Mostra os primeiros 2000 caracteres
+            print("--- FIM DO HTML PREVIEW ---")
             return None
         
+        print(f"🔍 Encontrados {len(blocos_categorias)} blocos de categorias (infinite-products).")
+        
+        cardapio = {}
         count_itens = 0
         
-        for bloco in blocos_categorias:
+        for i, bloco in enumerate(blocos_categorias):
             header = bloco.find('div', class_='category-view-handler')
-            if not header: continue
+            if not header:
+                print(f"   🔸 Bloco {i} ignorado: sem cabeçalho.")
+                continue
                 
             titulo_raw = header.find('h2').get_text(strip=True)
             emoji, nome_categoria = extrair_emoji_e_titulo(titulo_raw)
@@ -62,13 +70,20 @@ def buscar_dados():
 
             itens_categoria = []
             produtos_div = bloco.find('div', class_='products')
-            if not produtos_div: continue
+            
+            if not produtos_div:
+                print(f"   🔸 Categoria '{nome_categoria}' ignorada: div 'products' não encontrada.")
+                continue
                 
             cards = produtos_div.find_all('a', class_='product-card')
+            print(f"   🔹 Processando '{nome_categoria}': {len(cards)} cartões encontrados.")
             
             for card in cards:
                 try:
-                    nome = card.find('div', class_='product-card__title').get_text(strip=True)
+                    # Tenta extrair cada campo e avisa se falhar
+                    nome_elem = card.find('div', class_='product-card__title')
+                    if not nome_elem: raise Exception("Título não encontrado")
+                    nome = nome_elem.get_text(strip=True)
                     
                     desc_div = card.find('div', class_='product-card__description')
                     descricao = desc_div.get_text(strip=True) if desc_div else ""
@@ -88,7 +103,10 @@ def buscar_dados():
                         "addons": []
                     })
                     count_itens += 1
-                except: continue
+                except Exception as e:
+                    print(f"      ❌ Erro ao ler item: {e}")
+                    # print(f"      HTML do erro: {str(card)[:100]}...") # Descomente se precisar de muito detalhe
+                    continue
             
             if itens_categoria:
                 cardapio[nome_categoria] = {
@@ -96,13 +114,12 @@ def buscar_dados():
                     "schedule": {"start": "00:00", "end": "23:59"}, 
                     "items": itens_categoria
                 }
-                print(f"✅ Processado: {nome_categoria} ({len(itens_categoria)} itens)")
 
-        print(f"📊 Total de itens extraídos: {count_itens}")
+        print(f"📊 Total de itens extraídos com sucesso: {count_itens}")
         return cardapio
 
     except Exception as e:
-        print(f"❌ Erro fatal: {e}")
+        print(f"❌ Erro fatal no script: {e}")
         return None
 
 if __name__ == "__main__":
