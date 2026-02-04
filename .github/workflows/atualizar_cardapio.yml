@@ -23,6 +23,7 @@ jobs:
       - name: Instalar dependências
         run: |
           pip install -r requirements.txt
+          playwright install chromium
 
       - name: Rodar robô de atualização
         run: python atualizar_cardapio.py
@@ -30,5 +31,5 @@ jobs:
       - name: Salvar alterações no Git
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: "🤖 Atualização automática do cardápio"
+          commit_message: "🤖 Atualização automática do cardápio (Playwright)"
           file_pattern: menu.json
