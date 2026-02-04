@@ -1,4 +1,4 @@
-import cloudscraper
+from curl_cffi import requests
 from bs4 import BeautifulSoup
 import json
 import re
@@ -25,35 +25,28 @@ def extrair_imagem(style_attr):
     return "https://placehold.co/400x300?text=Sem+Imagem"
 
 def buscar_dados():
-    print(f"🔄 A iniciar CloudScraper para: {URL}")
+    print(f"🔄 A iniciar acesso via curl_cffi para: {URL}")
     
-    # Cria um raspador que simula um browser real (Chrome) para passar proteções
-    scraper = cloudscraper.create_scraper(
-        browser={
-            'browser': 'chrome',
-            'platform': 'windows',
-            'desktop': True
-        }
-    )
-
     try:
-        response = scraper.get(URL)
+        # 'impersonate="chrome110"' é o segredo. Ele imita a assinatura digital exata do Chrome.
+        response = requests.get(URL, impersonate="chrome110", timeout=30)
+        
         print(f"📡 Status Code: {response.status_code}")
         
         if response.status_code != 200:
-            print(f"❌ Erro: Bloqueio persistente. Código: {response.status_code}")
+            print(f"❌ Erro: O site bloqueou. Código: {response.status_code}")
             return None
             
         soup = BeautifulSoup(response.content, 'html.parser')
         cardapio = {}
         
-        # O site usa 'infinite-products'
+        # O site usa 'infinite-products' para agrupar categorias
         blocos_categorias = soup.find_all('div', class_='infinite-products')
         
         if not blocos_categorias:
             print("⚠️ Aviso: HTML carregado, mas estrutura não encontrada.")
-            # Debug: Salva o HTML para você ver o que o robô viu (opcional)
-            # print(soup.prettify()[:500])
+            # Debug: Mostra o início do HTML para entender o que veio
+            print("HTML recebido (inicio):", soup.prettify()[:500])
             return None
         
         count_itens = 0
