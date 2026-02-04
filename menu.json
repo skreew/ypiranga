@@ -1,0 +1,76 @@
+{
+    "CAFÉS": {
+        "emoji": "☕️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ESPRESSO",
+                "description": "A marca nasceu em 1986 na Fazenda Santa Monica, localizada em Machado, sul de Minas Gerais, uma das regiões produtoras de café mais renomadas do Brasil. A família responsável pela fazenda já tinha uma longa tradição no cultivo de café, e o Café Santa Monica surgiu do desejo de levar diretamente ao consumidor um produto de alta qualidade, controlado desde o plantio até a xícara.",
+                "price": "R$ 9,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a2073e59-6ea5-4f7d-a523-5a986f3fed6d.webp",
+                "addons": []
+            },
+            {
+                "name": "EXPRESSO DUPLO",
+                "description": "Nosso café Santa Monica: grãos moídos na hora e extraídos sob pressão para uma xícara perfeita e aromática.\"",
+                "price": "R$ 11,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d4368313-615f-4263-b5d6-e260648a9865.webp",
+                "addons": []
+            },
+            {
+                "name": "COADINHO",
+                "description": "Cada gole é uma celebração: nosso café Santa Monica, moído na hora e cuidadosamente passado, oferece uma experiência mais leve e de intensidade suave, ideal para quem aprecia a delicadeza na xícara.",
+                "price": "R$ 9,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/50257f13-0013-41f1-8f16-289caee159c6.webp",
+                "addons": []
+            }
+        ]
+    },
+    "PIZZA 18:00-21:45": {
+        "emoji": "🍕",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "83 CHARGE",
+                "description": "Mussarela, chocolate ao leite e amendoim moído.",
+                "price": "R$ 59,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e9d59c87-9bca-410e-b6e5-b28034b7b396.webp",
+                "addons": []
+            },
+            {
+                "name": "84 DOIS AMORES",
+                "description": "Mussarela, chocolate branco, chocolate preto ao leite e morango.",
+                "price": "R$ 59,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/bfed57a1-cf48-4f32-8615-c4efd96ba7aa.webp",
+                "addons": []
+            },
+            {
+                "name": "85 KIDS",
+                "description": "Mussarela, chocolate preto e confeitos coloridos.",
+                "price": "R$ 59,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f07005c9-8bcb-4c4e-ad37-4ee96bc697f2.webp",
+                "addons": []
+            },
+            {
+                "name": "86 PRESTÍGIO",
+                "description": "Mussarela, creme de leite, chocolate preto ao leite e coco ralado.",
+                "price": "R$ 59,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7a174344-3500-41e1-880f-125c289b1d40.webp",
+                "addons": []
+            },
+            {
+                "name": "87 ROMEU E JULIETA",
+                "description": "Mussarela e goiabada.",
+                "price": "R$ 59,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/0973fbd0-235f-49e5-9707-654950b93e23.webp",
+                "addons": []
+            }
+        ]
+    }
+}
