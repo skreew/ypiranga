@@ -4,111 +4,134 @@ import json
 import re
 import sys
 
-# URL do cardápio
-URL = "https://cafe-ipiranga.ola.click/products"
+# Configurações do Alvo
+SLUG = "cafe-ipiranga"
+COMPANY_ID = "5020ff7e-3077-4507-911a-7820e15488e3" # Extraído dos logs anteriores
+URL_SITE = f"https://{SLUG}.ola.click/products"
 
-def extrair_emoji_e_titulo(texto):
-    match = re.match(r'([^\w\s]+)?\s*(.*)', texto)
-    if match:
-        emoji = match.group(1) if match.group(1) else "🍽️"
-        titulo = match.group(2)
-        return emoji, titulo
-    return "🍽️", texto
+# APIs prováveis do OlaClick (v1 e v2)
+URL_API_V1 = f"https://api.olaclick.com/v1/companies/{COMPANY_ID}/products"
+URL_API_SLUG = f"https://api.olaclick.com/v1/companies/slug/{SLUG}/products"
 
-def buscar_dados():
-    print(f"🔄 Acessando: {URL}")
+def buscar_dados_api():
+    """Tenta pegar os dados direto da API (mais limpo e confiável)"""
+    print(f"🔄 Tentando acesso via API para ID: {COMPANY_ID}")
     
-    try:
-        # Tenta imitar um navegador mobile para garantir que o site carregue versão leve
-        response = requests.get(
-            URL, 
-            impersonate="chrome110", 
-            headers={
-                "User-Agent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Mobile Safari/537.36"
-            },
-            timeout=30
-        )
-        
-        if response.status_code != 200:
-            print(f"❌ Erro: Status {response.status_code}")
-            return None
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Origin": f"https://{SLUG}.ola.click",
+        "Referer": f"https://{SLUG}.ola.click/"
+    }
 
-        soup = BeautifulSoup(response.content, 'html.parser')
-        cardapio = {}
-        count_itens = 0
+    # Lista de tentativas de URL da API
+    urls_tentativa = [URL_API_V1, URL_API_SLUG]
 
-        # --- TENTATIVA 1: Busca Genérica por HTML (ignorando estrutura antiga) ---
-        print("🔎 Tentando encontrar cartões de produto no HTML...")
-        all_cards = soup.select('a.product-card') # Procura links com classe product-card em qualquer lugar
-        
-        if all_cards:
-            print(f"✅ Encontrados {len(all_cards)} cartões via busca genérica.")
+    for url in urls_tentativa:
+        try:
+            print(f"   📡 Testando endpoint: {url}")
+            response = requests.get(url, impersonate="chrome110", headers=headers, timeout=20)
             
-            # Agrupa tudo em uma categoria "Geral" temporária se não conseguir separar
-            itens_processados = []
-            for card in all_cards:
-                try:
-                    nome = card.find('div', class_='product-card__title').get_text(strip=True)
-                    desc = card.find('div', class_='product-card__description')
-                    descricao = desc.get_text(strip=True) if desc else ""
-                    
-                    preco_el = card.find('span', class_='product__price')
-                    preco = preco_el.get_text(strip=True).strip() if preco_el else "A consultar"
-                    
-                    img_div = card.find('div', class_='v-image__image')
-                    imagem = "https://placehold.co/400x300?text=Sem+Imagem"
-                    if img_div and img_div.get('style'):
-                        match_img = re.search(r'url\("?\'?([^"\')]+)"?\'?\)', img_div.get('style'))
-                        if match_img: imagem = match_img.group(1)
+            if response.status_code == 200:
+                data = response.json()
+                # Verifica se retornou uma lista de produtos ou um objeto com 'data'
+                produtos = data.get('data', data) if isinstance(data, dict) else data
+                
+                if produtos and isinstance(produtos, list) and len(produtos) > 0:
+                    print(f"   ✅ Sucesso! API retornou {len(produtos)} registros.")
+                    return processar_json_api(produtos)
+            else:
+                print(f"   ⚠️ Falha na API ({response.status_code}).")
+        except Exception as e:
+            print(f"   ❌ Erro ao conectar na API: {e}")
 
-                    itens_processados.append({
-                        "name": nome,
-                        "description": descricao,
-                        "price": preco,
-                        "image": imagem,
-                        "addons": []
-                    })
-                    count_itens += 1
-                except: continue
+    return None
+
+def processar_json_api(produtos_raw):
+    """Converte o JSON bruto da API para o formato do nosso menu.json"""
+    cardapio = {}
+    count = 0
+    
+    # Ordena para garantir consistência
+    # A estrutura do OlaClick geralmente tem 'category' dentro do produto ou agrupa
+    
+    for item in produtos_raw:
+        try:
+            # Proteção contra campos nulos
+            if not item.get('visible', True): continue 
+
+            categoria_obj = item.get('category', {})
+            nome_categoria = categoria_obj.get('name', 'Outros') if categoria_obj else 'Outros'
             
-            if itens_processados:
-                # Tenta agrupar por categorias se possível, senão joga em Destaques
-                cardapio["Destaques"] = {
-                    "emoji": "⭐",
-                    "schedule": {"start": "00:00", "end": "23:59"},
-                    "items": itens_processados
+            # Remove emojis duplicados do nome da categoria se houver
+            nome_categoria = re.sub(r'^[^\w\s]+', '', nome_categoria).strip()
+            
+            if nome_categoria not in cardapio:
+                cardapio[nome_categoria] = {
+                    "emoji": "🍽️", # Podemos tentar mapear emojis fixos depois
+                    "items": []
                 }
-                return cardapio
+            
+            # Tratamento de Imagem
+            imagem = "https://placehold.co/400x300?text=Sem+Imagem"
+            if item.get('image'):
+                imagem = item.get('image')
+            
+            # Tratamento de Preço
+            preco = item.get('price', 0)
+            preco_str = f"R$ {preco:.2f}".replace('.', ',')
 
-        # --- TENTATIVA 2: Busca por JSON (Dados ocultos) ---
-        print("🕵️ HTML vazio de produtos. Procurando dados JSON ocultos...")
-        scripts = soup.find_all('script')
-        for script in scripts:
-            if script.string and ('products' in script.string or 'menu' in script.string):
-                # Aqui tentariamos extrair JSON complexo, mas por enquanto vamos apenas avisar
-                print("   ⚠️ Encontrado script suspeito contendo 'products'.")
+            cardapio[nome_categoria]["items"].append({
+                "name": item.get('name', 'Sem Nome').strip(),
+                "description": item.get('description', '').strip(),
+                "price": preco_str,
+                "image": imagem,
+                "addons": [] # Futuramente podemos processar os 'optionGroups'
+            })
+            count += 1
+        except Exception as e:
+            print(f"Erro ao processar item: {e}")
+            continue
+
+    print(f"📊 Processamento concluído: {count} itens organizados.")
+    return cardapio
+
+def buscar_dados_html_fallback():
+    """Fallback: Tenta encontrar o JSON escondido no HTML (window.__NUXT__)"""
+    print("🕵️ API falhou. Tentando extrair estado oculto no HTML...")
+    try:
+        response = requests.get(URL_SITE, impersonate="chrome110", timeout=30)
+        content = response.text
         
-        # --- FALHA: Imprime HTML para debug ---
-        if count_itens == 0:
-            print("\n❌ NENHUM PRODUTO ENCONTRADO.")
-            print("👇 DUMP DO HTML (Copie isso se precisar de ajuda):")
-            print("-" * 20)
-            print(soup.prettify()[:4000]) # Imprime os primeiros 4000 caracteres
-            print("-" * 20)
-            print("👆 FIM DO DUMP")
-            return None
-
-        return cardapio
-
+        # Procura por JSON de produtos dentro do Javascript
+        # Padrão: "products":[ ... ]
+        match = re.search(r'["\']products["\']\s*:\s*(\[.*?\])', content)
+        if match:
+            print("   ✅ Encontrada lista de produtos no HTML!")
+            json_str = match.group(1)
+            # Tenta limpar o JSON se estiver mal formatado (comum em JS objects)
+            try:
+                produtos = json.loads(json_str)
+                return processar_json_api(produtos)
+            except:
+                print("   ⚠️ Conteúdo encontrado não é JSON válido.")
+        
+        return None
     except Exception as e:
-        print(f"❌ Erro fatal: {e}")
+        print(f"❌ Erro no fallback: {e}")
         return None
 
 if __name__ == "__main__":
-    dados = buscar_dados()
-    if dados:
+    # 1. Tenta via API (Melhor método)
+    dados = buscar_dados_api()
+    
+    # 2. Se falhar, tenta via HTML Scrape (Backup)
+    if not dados:
+        dados = buscar_dados_html_fallback()
+
+    if dados and len(dados) > 0:
         with open('menu.json', 'w', encoding='utf-8') as f:
             json.dump(dados, f, ensure_ascii=False, indent=4)
-        print("\n✨ Sucesso! menu.json salvo.")
+        print("\n✨ Sucesso! 'menu.json' atualizado.")
     else:
+        print("\n❌ Falha Fatal: Não foi possível obter dados nem por API nem por HTML.")
         sys.exit(1)
