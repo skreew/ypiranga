@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Baixar código do repositório
         uses: actions/checkout@v3
+        with:
+          ref: main
+          fetch-depth: 0
 
       - name: Configurar Python
         uses: actions/setup-python@v4
@@ -25,6 +28,12 @@ jobs:
           pip install -r requirements.txt
           playwright install chromium
 
+      - name: Sincronizar com GitHub (Evitar Conflitos)
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git pull origin main --rebase
+
       - name: Rodar robô de atualização
         run: python atualizar_cardapio.py
 
@@ -33,3 +42,4 @@ jobs:
         with:
           commit_message: "🤖 Atualização automática do cardápio (Playwright)"
           file_pattern: menu.json
+          branch: main
