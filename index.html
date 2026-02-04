@@ -16,6 +16,9 @@
         .product-card.closed-visual-only { opacity: 0.6; cursor: default; transform: none !important; }
         #category-nav::-webkit-scrollbar { height: 4px; }
         #category-nav::-webkit-scrollbar-thumb { background-color: #FFD100; border-radius: 20px; }
+        /* Esconde a barra de rolagem mas mantém funcionalidade */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 </head>
 <body class="bg-stone-50 dark:bg-gray-900 text-gray-800 dark:text-stone-200 transition-colors duration-300">
@@ -25,25 +28,17 @@
             <div class="flex items-center justify-between py-3">
                 <div class="flex items-center min-w-0">
                     <button id="category-drawer-button" class="md:hidden mr-3 text-[#0033A0] dark:text-[#FFD100] text-xl"><i class="fas fa-bars"></i></button>
-                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200">
+                    <img src="https://lh3.googleusercontent.com/a/ACg8ocL-fVj_S84XQ9X8d9d8Xq9X8d9d8Xq9X8d9d8Xq9X8=s96-c" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200" onerror="this.src='https://placehold.co/100x100?text=Logo'">
                     <div class="min-w-0">
                         <h1 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100] truncate">CAFÉ YPIRANGA</h1>
-                        <div class="text-xs text-gray-500 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Santa Helena, PR</div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400 mt-1"><i class="fas fa-map-marker-alt mr-1"></i> Santa Helena, PR</div>
                     </div>
                 </div>
                 <div class="flex items-center">
-                    <button id="search-toggle-button" class="p-2 mr-2 text-[#0033A0] dark:text-[#FFD100]"><i class="fas fa-search text-xl"></i></button>
                     <label for="theme-toggle" class="relative inline-flex items-center cursor-pointer ml-2">
                         <input type="checkbox" value="" id="theme-toggle" class="sr-only peer">
                         <div class="w-11 h-6 bg-gray-200 peer-focus:ring-4 peer-focus:ring-yellow-300 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-[#0033A0]"></div>
                     </label>
-                </div>
-            </div>
-            <div id="search-input-container" class="hidden py-2">
-                <div class="relative">
-                    <input type="text" id="search-input" placeholder="Buscar..." class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[#FFD100]">
-                    <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
-                    <button id="clear-search-button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hidden"><i class="fas fa-times-circle"></i></button>
                 </div>
             </div>
         </div>
@@ -52,136 +47,171 @@
         </nav>
     </header>
 
-    <div id="mobile-sticky-nav" class="md:hidden bg-white/80 dark:bg-gray-800/80 backdrop-blur-md shadow-md w-full px-4 py-2 fixed top-0 left-0 right-0 z-20 transition-transform duration-300 -translate-y-full">
+    <div id="mobile-sticky-nav" class="md:hidden bg-white/95 dark:bg-gray-800/95 backdrop-blur-md shadow-md w-full px-4 py-2 fixed top-0 left-0 right-0 z-20 transition-transform duration-300 -translate-y-full mt-[72px]">
         <div class="flex justify-between items-center text-sm">
-            <span class="font-bold" id="current-category-sticky"></span>
-            <a href="#" id="next-category-link" class="text-[#0033A0] dark:text-[#FFD100] font-semibold"><span id="next-category-sticky"></span> <i class="fas fa-chevron-down ml-1"></i></a>
+            <span class="font-bold text-[#0033A0] dark:text-[#FFD100]" id="current-category-sticky">Cardápio</span>
+            <i class="fas fa-chevron-down text-gray-400"></i>
         </div>
     </div>
 
-    <main id="menu-container" class="max-w-7xl mx-auto px-4 py-10"></main>
+    <main id="menu-container" class="max-w-7xl mx-auto px-4 py-6 pb-24"></main>
 
-    <footer class="bg-gray-800 dark:bg-black text-gray-300 py-6 text-center">
-        <p>© 2024 CAFÉ YPIRANGA.</p>
-        <p class="text-xs mt-1">Desenvolvido por Gabriel Alves ❤️</p>
+    <footer class="bg-gray-800 dark:bg-black text-gray-300 py-8 text-center pb-24">
+        <p class="font-bold text-lg">CAFÉ YPIRANGA</p>
+        <p class="text-sm mt-2 opacity-70">© 2024 Todos os direitos reservados.</p>
     </footer>
 
-    <div class="fixed bottom-5 right-5 z-40 flex flex-col items-center gap-4">
-        <button id="cart-fab" class="hidden relative bg-[#FFD100] text-[#0033A0] w-14 h-14 rounded-full flex items-center justify-center text-2xl shadow-lg hover:scale-110 active:scale-95 transition-all">
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col items-center gap-4">
+        <button id="cart-fab" class="hidden relative bg-[#FFD100] text-[#0033A0] w-16 h-16 rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-105 active:scale-95 transition-all border-4 border-white dark:border-gray-800">
             <i class="fas fa-shopping-cart"></i>
-            <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
+            <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-6 h-6 rounded-full flex items-center justify-center border-2 border-white dark:border-gray-800">0</span>
         </button>
-        <button id="back-to-top" class="hidden bg-[#0033A0] text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg active:scale-90 transition-all">
+        <button id="back-to-top" class="hidden bg-[#0033A0] text-white w-12 h-12 rounded-full flex items-center justify-center text-lg shadow-lg active:scale-90 transition-all opacity-80 hover:opacity-100">
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
 
-    <div id="product-modal" class="hidden fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
-        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden relative">
-            <button class="close-button absolute top-4 right-4 z-10 text-gray-500 bg-white/50 rounded-full w-8 h-8 flex items-center justify-center hover:bg-white text-2xl font-bold">×</button>
+    <div id="product-modal" class="hidden fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[90vh] flex flex-col md:flex-row overflow-hidden relative animate-fade-in">
+            <button class="close-button absolute top-4 right-4 z-10 bg-black/20 hover:bg-black/40 text-white rounded-full w-8 h-8 flex items-center justify-center backdrop-blur-md transition-colors">
+                <i class="fas fa-times"></i>
+            </button>
             
-            <img id="modal-image" src="" class="w-full md:w-1/2 h-64 md:h-auto object-cover cursor-pointer">
+            <div class="w-full md:w-1/2 h-48 md:h-auto relative bg-gray-100 dark:bg-gray-700">
+                <img id="modal-image" src="" class="absolute inset-0 w-full h-full object-cover">
+            </div>
             
             <div class="flex flex-col p-6 flex-1 overflow-hidden">
-                <h3 id="modal-name" class="text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] mb-2 pr-8"></h3>
-                <p id="modal-description" class="text-gray-600 dark:text-gray-400 mb-4 overflow-y-auto max-h-24"></p>
+                <div class="flex-shrink-0">
+                    <h3 id="modal-name" class="text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] mb-2 pr-8 leading-tight"></h3>
+                    <p id="modal-description" class="text-gray-600 dark:text-gray-300 text-sm mb-4 max-h-24 overflow-y-auto"></p>
+                </div>
                 
-                <div id="modal-addons-container" class="space-y-4 flex-1 overflow-y-auto pr-2 mb-4 border-t border-b border-gray-200 dark:border-gray-700 py-4"></div>
+                <div id="modal-addons-container" class="flex-1 overflow-y-auto pr-2 mb-4 space-y-5 border-t border-b border-gray-200 dark:border-gray-700 py-4 custom-scrollbar">
+                    </div>
                 
-                <div class="mt-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <div class="flex items-center gap-2">
-                        <span class="text-lg">Total:</span>
+                <div class="mt-auto flex flex-col gap-4 bg-gray-50 dark:bg-gray-700/30 -m-6 p-6 border-t border-gray-100 dark:border-gray-700">
+                    <div class="flex items-center justify-between">
+                        <span class="text-sm text-gray-500 dark:text-gray-400">Total do Item</span>
                         <span id="modal-total-price" class="text-2xl font-bold text-[#0033A0] dark:text-[#FFD100]"></span>
                     </div>
-                    <button id="add-to-order-button" class="w-full sm:w-auto bg-[#FFD100] text-[#0033A0] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors">
-                        Adicionar ao Pedido
-                    </button>
+                    
+                    <div class="flex gap-3">
+                        <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800">
+                            <button id="qty-minus" class="w-10 h-10 text-gray-500 hover:text-[#0033A0] text-lg font-bold">-</button>
+                            <span id="qty-value" class="w-8 text-center font-bold dark:text-white">1</span>
+                            <button id="qty-plus" class="w-10 h-10 text-gray-500 hover:text-[#0033A0] text-lg font-bold">+</button>
+                        </div>
+                        <button id="add-to-order-button" class="flex-1 bg-[#FFD100] text-[#0033A0] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors shadow-sm active:scale-[0.98]">
+                            Adicionar <span class="hidden sm:inline">ao Pedido</span>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
     <div id="category-drawer" class="hidden fixed inset-0 z-50">
-        <div id="drawer-backdrop" class="fixed inset-0 bg-black/50"></div>
-        <div class="relative w-4/5 max-w-sm h-full bg-stone-50 dark:bg-gray-900 shadow-xl flex flex-col">
-            <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-                <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Categorias</h2>
-                <button id="close-drawer-button" class="text-2xl"><i class="fas fa-times"></i></button>
+        <div id="drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity"></div>
+        <div class="relative w-4/5 max-w-xs h-full bg-white dark:bg-gray-900 shadow-2xl flex flex-col transform transition-transform duration-300">
+            <div class="flex items-center justify-between p-5 border-b border-gray-100 dark:border-gray-800 bg-[#0033A0] text-white">
+                <h2 class="text-lg font-bold">Categorias</h2>
+                <button id="close-drawer-button" class="text-white/80 hover:text-white"><i class="fas fa-times text-xl"></i></button>
             </div>
-            <nav id="category-links-mobile" class="flex-1 overflow-y-auto"></nav>
+            <nav id="category-links-mobile" class="flex-1 overflow-y-auto p-2 space-y-1"></nav>
         </div>
     </div>
 
     <div id="order-summary-drawer" class="hidden fixed inset-0 z-50">
-        <div id="order-drawer-backdrop" class="fixed inset-0 bg-black/50"></div>
-        <div class="relative ml-auto w-full max-w-sm h-full bg-white dark:bg-gray-900 shadow-xl flex flex-col">
-            <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
-                <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Seu Pedido</h2>
-                <button id="close-order-drawer-button" class="text-2xl"><i class="fas fa-times"></i></button>
+        <div id="order-drawer-backdrop" class="fixed inset-0 bg-black/60 backdrop-blur-sm"></div>
+        <div class="relative ml-auto w-full max-w-md h-full bg-white dark:bg-gray-900 shadow-2xl flex flex-col transform transition-transform duration-300">
+            <div class="flex items-center justify-between p-5 border-b border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 z-10">
+                <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]"><i class="fas fa-shopping-bag mr-2"></i>Seu Pedido</h2>
+                <button id="close-order-drawer-button" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center hover:bg-gray-200"><i class="fas fa-times"></i></button>
             </div>
-            <div id="order-summary-items" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
-            <div class="p-4 border-t border-gray-200 dark:border-gray-700">
-                <div class="flex justify-between items-center text-xl font-bold mb-4">
-                    <span>Total:</span>
+            
+            <div id="empty-cart-msg" class="hidden flex-1 flex flex-col items-center justify-center text-gray-400 p-8 text-center">
+                <i class="fas fa-shopping-basket text-6xl mb-4 opacity-30"></i>
+                <p>Sua sacola está vazia.</p>
+                <button onclick="document.getElementById('order-summary-drawer').classList.add('hidden')" class="mt-4 text-[#0033A0] dark:text-[#FFD100] font-bold text-sm hover:underline">Ver Cardápio</button>
+            </div>
+
+            <div id="order-summary-items" class="flex-1 overflow-y-auto p-4 space-y-3 bg-gray-50 dark:bg-black/20"></div>
+            
+            <div class="p-6 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] z-10">
+                <div class="flex justify-between items-center text-sm text-gray-500 mb-2">
+                    <span>Subtotal</span>
+                    <span id="order-subtotal">R$ 0,00</span>
+                </div>
+                <div class="flex justify-between items-center text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                    <span>Total</span>
                     <span id="order-grand-total">R$ 0,00</span>
                 </div>
-                <button onclick="enviarPedidoWhatsApp()" class="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700">
-                    <i class="fab fa-whatsapp mr-2"></i> Enviar Pedido
+                <button onclick="enviarPedidoWhatsApp()" class="w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#128C7E] transition-all shadow-lg hover:shadow-green-500/30 flex items-center justify-center text-lg">
+                    <i class="fab fa-whatsapp text-2xl mr-2"></i> Enviar Pedido
                 </button>
             </div>
         </div>
     </div>
 
-    <div id="fullscreen-image-overlay" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4">
-        <img id="fullscreen-image" src="" class="max-w-full max-h-full object-contain">
-        <button id="close-fullscreen-button" class="absolute top-4 right-4 text-white text-4xl cursor-pointer">×</button>
-    </div>
-
-    <div id="toast-notification" class="hidden fixed top-5 right-5 bg-green-500 text-white py-2 px-4 rounded-lg shadow-lg z-50"></div>
-
     <template id="product-card-template">
-        <div class="product-card flex items-start space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform transition-all cursor-pointer hover:shadow-xl active:scale-[0.98]">
-            <img class="w-24 h-24 object-cover rounded-md flex-shrink-0 bg-gray-200" onerror="this.src='https://placehold.co/112x112?text=Foto';">
-            <div class="flex-1 flex flex-col h-full justify-between">
+        <div class="product-card flex flex-col sm:flex-row p-4 bg-white dark:bg-gray-800 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700/50 hover:shadow-md hover:border-[#FFD100] transition-all cursor-pointer group h-full">
+            <div class="flex-1 flex flex-col justify-between order-2 sm:order-1 sm:pr-4 mt-3 sm:mt-0">
                 <div>
-                    <h3 class="text-lg font-bold mb-1 text-gray-800 dark:text-gray-100 leading-tight"></h3>
-                    <p class="text-sm text-gray-600 dark:text-gray-400 line-clamp-2"></p>
+                    <h3 class="text-base sm:text-lg font-bold text-gray-800 dark:text-gray-100 group-hover:text-[#0033A0] dark:group-hover:text-[#FFD100] transition-colors leading-tight mb-1"></h3>
+                    <p class="text-xs sm:text-sm text-gray-500 dark:text-gray-400 line-clamp-2 sm:line-clamp-3 leading-relaxed"></p>
                 </div>
-                <div class="flex justify-between items-end mt-2">
-                    <span class="price text-lg font-bold text-[#0033A0] dark:text-[#FFD100]"></span>
-                    <span class="options-badge hidden text-[10px] font-bold bg-yellow-100 text-yellow-800 px-2 py-0.5 rounded-full uppercase tracking-wide">Opções</span>
+                <div class="flex items-center justify-between mt-3">
+                    <span class="price text-base sm:text-lg font-bold text-[#0033A0] dark:text-[#FFD100]"></span>
+                    <span class="options-badge hidden text-[10px] font-bold bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full uppercase tracking-wide border border-yellow-200">
+                        <i class="fas fa-plus mr-1"></i>Opções
+                    </span>
                 </div>
+            </div>
+            <div class="relative w-full sm:w-28 h-32 sm:h-28 flex-shrink-0 order-1 sm:order-2 rounded-lg overflow-hidden bg-gray-100">
+                <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
             </div>
         </div>
     </template>
 
     <template id="addon-section-template">
-        <div class="addon-section border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden">
-            <div class="addon-header bg-gray-50 dark:bg-gray-700/50 p-3 font-semibold text-sm flex justify-between">
-                <span></span>
+        <div class="addon-section">
+            <div class="addon-header flex justify-between items-center mb-2">
+                <h4 class="font-bold text-gray-800 dark:text-gray-200 text-sm uppercase tracking-wide"></h4>
+                <span class="badge text-[10px] font-bold px-2 py-0.5 rounded text-white"></span>
             </div>
-            <div class="addon-items p-2 space-y-1"></div>
+            <div class="addon-items space-y-2"></div>
         </div>
     </template>
 
     <template id="addon-item-template">
-        <label class="addon-item flex justify-between items-center p-2 rounded hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer">
-            <div class="flex items-center">
-                <input type="checkbox" class="addon-checkbox w-4 h-4 text-[#0033A0] rounded focus:ring-[#0033A0]">
-                <span class="addon-name ml-2 text-sm"></span>
+        <label class="addon-item flex items-center justify-between p-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 hover:border-[#0033A0] dark:hover:border-[#FFD100] cursor-pointer transition-all select-none group">
+            <div class="flex items-center gap-3">
+                <div class="relative flex items-center">
+                    <input type="checkbox" class="peer w-5 h-5 border-2 border-gray-300 rounded text-[#0033A0] focus:ring-[#0033A0] checked:bg-[#0033A0] checked:border-[#0033A0]">
+                </div>
+                <span class="addon-name text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white"></span>
             </div>
-            <span class="addon-price text-sm font-medium text-gray-600 dark:text-gray-300"></span>
+            <span class="addon-price text-sm font-semibold text-gray-500 dark:text-gray-400"></span>
         </label>
     </template>
 
     <template id="order-item-template">
-        <div class="order-item bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex gap-3 relative group">
-            <div class="flex-1">
-                <p class="font-bold text-sm name"></p>
-                <div class="addons text-xs text-gray-500 mt-1"></div>
-                <p class="font-bold text-[#0033A0] dark:text-[#FFD100] mt-1 price"></p>
+        <div class="order-item bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700 flex gap-3 relative animate-fade-in-up">
+            <div class="w-8 flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-700 rounded text-xs font-bold text-gray-500">
+                <span class="qty-display">1</span>
+                <span>x</span>
             </div>
-            <button class="remove-item-btn text-red-500 hover:text-red-700 self-start p-1"><i class="fas fa-trash"></i></button>
+            <div class="flex-1 min-w-0">
+                <div class="flex justify-between items-start">
+                    <p class="font-bold text-gray-800 dark:text-gray-100 text-sm leading-tight pr-6 name truncate"></p>
+                    <button class="remove-item-btn text-gray-400 hover:text-red-500 transition-colors p-1 -mt-1 -mr-2"><i class="fas fa-trash-alt"></i></button>
+                </div>
+                <div class="addons text-xs text-gray-500 dark:text-gray-400 mt-1 space-y-0.5"></div>
+                <div class="flex justify-between items-end mt-2">
+                    <p class="font-bold text-[#0033A0] dark:text-[#FFD100] text-sm price"></p>
+                </div>
+            </div>
         </div>
     </template>
 
@@ -190,21 +220,49 @@
             menuData: {},
             categoryOrder: [
                 "Cafés", "Cappuccinos", "Especiais", "Chocolates Quentes", "Chás", "Cafés Gelados",
-                "Sucos Naturais", "Frapês", "Sanduíches & Lanches", "Pães de Queijo & Porções",
-                "Pratos Principais", "Espetinhos", "Pizzas", "Bebidas", "Soda Italiana & Drinks"
+                "Sucos Naturais", "Frapês", "Sanduíches", "Lanches", "Pães de Queijo", "Porções",
+                "Pratos Principais", "Espetinhos", "Pizzas", "Bebidas", "Soda Italiana", "Drinks"
             ],
             orderItems: [],
             currentProductData: null,
+            currentQty: 1,
 
             async init() {
                 try {
+                    // Força cache bust para garantir json novo
                     const ts = new Date().getTime();
                     const res = await fetch(`menu.json?v=${ts}`);
-                    if (!res.ok) throw new Error();
+                    if (!res.ok) throw new Error("Falha ao carregar menu.json");
                     this.menuData = await res.json();
                     this.onDomReady();
                 } catch (e) {
-                    document.getElementById('menu-container').innerHTML = `<div class="text-center p-10 text-red-500">Erro ao carregar cardápio.</div>`;
+                    console.error(e);
+                    document.getElementById('menu-container').innerHTML = 
+                        `<div class="flex flex-col items-center justify-center py-20 text-center px-4">
+                            <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
+                            <h3 class="text-xl font-bold mb-2">Ops! O cardápio está indisponível.</h3>
+                            <p class="text-gray-500">Tente recarregar a página.</p>
+                            <button onclick="location.reload()" class="mt-4 bg-[#0033A0] text-white px-6 py-2 rounded-full">Recarregar</button>
+                        </div>`;
+                }
+            },
+
+            utils: {
+                // Parseia preços suportando "R$ 10,00" e "Grátis"
+                parsePrice(str) { 
+                    if (!str) return 0;
+                    if (typeof str === 'number') return str;
+                    // Se for "Grátis", retorna 0
+                    if (str.toLowerCase().includes('grátis') || str.toLowerCase().includes('gratis')) return 0;
+                    // Limpa caracteres e converte vírgula
+                    const clean = str.replace('R$', '').replace('Adicionais', '').trim();
+                    return parseFloat(clean.replace('.', '').replace(',', '.')) || 0;
+                },
+                fmtPrice(val) { return val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); },
+                genId(str) { return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-'); },
+                highRes(url) { 
+                    if(!url || url.includes('placehold')) return "https://placehold.co/800x600?text=Sem+Foto";
+                    return url.replace('/150/', '/800/'); 
                 }
             },
 
@@ -212,67 +270,71 @@
                 this.renderMenu();
                 this.initEvents();
                 this.initTheme();
-            },
-
-            utils: {
-                parsePrice(str) { return parseFloat(String(str).replace('R$', '').replace(',', '.').trim()) || 0; },
-                fmtPrice(val) { return val.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); },
-                genId(str) { return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-'); },
-                highRes(url) { return url && url.includes('/150/') ? url.replace('/150/', '/800/') : url; }
+                this.initModalLogic();
             },
 
             renderMenu() {
                 const container = document.getElementById('menu-container');
-                const desktopLinks = document.getElementById('category-links-desktop');
-                const mobileLinks = document.getElementById('category-links-mobile');
+                const deskLinks = document.getElementById('category-links-desktop');
+                const mobLinks = document.getElementById('category-links-mobile');
                 const tplCard = document.getElementById('product-card-template');
 
-                container.innerHTML = ''; desktopLinks.innerHTML = ''; mobileLinks.innerHTML = '';
+                container.innerHTML = ''; deskLinks.innerHTML = ''; mobLinks.innerHTML = '';
 
-                // Mescla ordem fixa com categorias extras que vierem no JSON
-                const allCats = [...this.categoryOrder, ...Object.keys(this.menuData).filter(k => !this.categoryOrder.includes(k))];
+                // Mescla ordem manual com o que vier do JSON
+                const availableCats = Object.keys(this.menuData);
+                const sortedCats = [...this.categoryOrder.filter(c => availableCats.some(ac => ac.includes(c))), ...availableCats.filter(ac => !this.categoryOrder.some(oc => ac.includes(oc)))];
+                // Remove duplicatas (gambiarra simples)
+                const uniqueCats = [...new Set(sortedCats)];
 
-                allCats.forEach(catName => {
+                availableCats.forEach(catName => {
                     const catData = this.menuData[catName];
-                    if (!catData) return;
+                    if (!catData || catData.items.length === 0) return;
 
                     const catId = this.utils.genId(catName);
                     
-                    // Links de Navegação
-                    const linkHTML = `<a href="#${catId}" class="whitespace-nowrap px-4 py-2 rounded-full text-white hover:bg-[#FFD100] hover:text-[#0033A0] transition-colors">${catData.emoji || ''} ${catName}</a>`;
-                    desktopLinks.insertAdjacentHTML('beforeend', linkHTML);
+                    // Link Desktop
+                    deskLinks.insertAdjacentHTML('beforeend', 
+                        `<a href="#${catId}" class="px-5 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-[#FFD100] hover:text-[#0033A0] dark:hover:text-[#0033A0] transition-all font-medium text-sm shadow-sm whitespace-nowrap border border-gray-100 dark:border-gray-700">${catData.emoji || ''} ${catName}</a>`
+                    );
                     
+                    // Link Mobile
                     const mobLink = document.createElement('a');
                     mobLink.href = `#${catId}`;
-                    mobLink.className = "drawer-link block p-4 border-b border-gray-100 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800";
-                    mobLink.innerHTML = `${catData.emoji || ''} ${catName}`;
-                    mobileLinks.appendChild(mobLink);
+                    mobLink.className = "flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors";
+                    mobLink.innerHTML = `<span class="mr-3 text-xl">${catData.emoji || '🍽️'}</span><span class="font-medium">${catName}</span>`;
+                    mobLink.onclick = () => document.getElementById('category-drawer').classList.add('hidden');
+                    mobLinks.appendChild(mobLink);
 
                     // Seção
                     const section = document.createElement('section');
                     section.id = catId;
-                    section.className = "category-section py-6 scroll-mt-24";
-                    section.innerHTML = `<h2 class="text-2xl font-bold mb-4 border-b-2 border-[#FFD100] inline-block pb-1">${catData.emoji || ''} ${catName}</h2>`;
+                    section.className = "mb-10 scroll-mt-28 animate-fade-in";
+                    section.innerHTML = `
+                        <div class="flex items-center mb-4 pb-2 border-b border-gray-200 dark:border-gray-700">
+                            <span class="text-2xl mr-2">${catData.emoji || ''}</span>
+                            <h2 class="text-xl md:text-2xl font-bold text-gray-800 dark:text-gray-100">${catName}</h2>
+                        </div>
+                    `;
 
                     const grid = document.createElement('div');
-                    grid.className = "grid grid-cols-1 md:grid-cols-2 gap-4";
+                    grid.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4";
 
                     catData.items.forEach(prod => {
                         const clone = tplCard.content.cloneNode(true);
                         const card = clone.querySelector('.product-card');
-                        card.productData = prod; // Guarda dados no elemento
+                        card.productData = prod; 
 
                         card.querySelector('h3').textContent = prod.name;
                         card.querySelector('p').textContent = prod.description;
                         card.querySelector('.price').textContent = prod.price;
                         
                         const img = card.querySelector('img');
-                        if(prod.image) img.src = prod.image;
-                        else img.style.display = 'none';
+                        img.src = this.utils.highRes(prod.image);
 
-                        // VERIFICAÇÃO DE ADICIONAIS (Compatível com formato antigo e novo)
-                        // Aceita 'addons' ou 'options' (como na caipirinha)
-                        if ((prod.addons && prod.addons.length > 0) || prod.options) {
+                        // Lógica de badge de opções
+                        // O Python retorna "addons" preenchido se houver
+                        if ((prod.addons && prod.addons.length > 0)) {
                             card.querySelector('.options-badge').classList.remove('hidden');
                         }
 
@@ -284,7 +346,7 @@
                 });
             },
 
-            initModal() {
+            initModalLogic() {
                 const modal = document.getElementById('product-modal');
                 const els = {
                     img: document.getElementById('modal-image'),
@@ -292,46 +354,65 @@
                     desc: document.getElementById('modal-description'),
                     addons: document.getElementById('modal-addons-container'),
                     total: document.getElementById('modal-total-price'),
-                    addBtn: document.getElementById('add-to-order-button')
+                    addBtn: document.getElementById('add-to-order-button'),
+                    qtyVal: document.getElementById('qty-value'),
+                    btnMinus: document.getElementById('qty-minus'),
+                    btnPlus: document.getElementById('qty-plus')
                 };
+                
                 let basePrice = 0;
 
                 const updateTotal = () => {
-                    let total = basePrice;
-                    els.addons.querySelectorAll('input:checked').forEach(el => total += parseFloat(el.dataset.price));
-                    els.total.textContent = this.utils.fmtPrice(total);
+                    let totalAddons = 0;
+                    els.addons.querySelectorAll('input:checked').forEach(el => {
+                        // Importante: dataset armazena string, converte pra float
+                        totalAddons += parseFloat(el.dataset.priceVal) || 0;
+                    });
+                    
+                    const unitPrice = basePrice + totalAddons;
+                    const finalTotal = unitPrice * this.currentQty;
+                    
+                    els.total.textContent = this.utils.fmtPrice(finalTotal);
                 };
 
-                // Lógica de abrir modal
                 this.openModal = (prod) => {
                     this.currentProductData = prod;
+                    this.currentQty = 1;
                     basePrice = this.utils.parsePrice(prod.price);
                     
                     els.img.src = this.utils.highRes(prod.image);
                     els.name.textContent = prod.name;
                     els.desc.textContent = prod.description;
+                    els.qtyVal.textContent = "1";
+                    
                     els.addons.innerHTML = '';
 
-                    // === LÓGICA HÍBRIDA DE ADICIONAIS ===
-                    // O JSON do usuário tem "addons" com "title" e "items".
-                    // O Python gera "addons" com "group_name" e "options".
-                    // Vamos suportar os dois.
-                    
+                    // Compatibilidade com estrutura do Python
+                    // O Python gera: { group_name: "...", options: [...], required: true }
                     if (prod.addons && Array.isArray(prod.addons)) {
                         prod.addons.forEach((group, idx) => {
                             const tmpl = document.getElementById('addon-section-template').content.cloneNode(true);
                             
-                            // Normaliza nomes das chaves
+                            // Normalização de chaves (suporta json antigo e novo)
                             const title = group.group_name || group.title || "Opções";
                             const items = group.options || group.items || [];
-                            const isRequired = group.required === true;
+                            const isRequired = group.required === true; // Garante booleano
                             const max = group.max || 99;
+                            const min = group.min || 0;
 
-                            const headerText = `${title} ${isRequired ? '<span class="text-red-500 text-xs ml-2">*Obrigatório</span>' : ''}`;
-                            tmpl.querySelector('.addon-header span').innerHTML = headerText;
+                            // Badge
+                            const badge = tmpl.querySelector('.badge');
+                            if (isRequired) {
+                                badge.textContent = "OBRIGATÓRIO";
+                                badge.classList.add('bg-red-500');
+                            } else {
+                                badge.textContent = "OPCIONAL";
+                                badge.classList.add('bg-gray-400');
+                            }
+                            
+                            tmpl.querySelector('.addon-header h4').textContent = title;
                             
                             const container = tmpl.querySelector('.addon-items');
-                            // Se max=1 usa Radio, senão Checkbox
                             const type = max === 1 ? 'radio' : 'checkbox';
                             const groupName = `addon-grp-${idx}`;
 
@@ -341,22 +422,26 @@
                                 const inp = itmTmpl.querySelector('input');
                                 
                                 itmTmpl.querySelector('.addon-name').textContent = opt.name;
-                                itmTmpl.querySelector('.addon-price').textContent = opt.price.includes('Grátis') ? '' : `+ ${opt.price}`;
+                                itmTmpl.querySelector('.addon-price').textContent = opt.price.toLowerCase().includes('grátis') ? 'Grátis' : `+ ${opt.price}`;
                                 
                                 inp.type = type;
                                 inp.name = groupName;
-                                // Normaliza preço do item
-                                inp.dataset.price = this.utils.parsePrice(opt.price);
+                                // SALVA O PREÇO LIMPO NO DATASET PARA CALCULO
+                                inp.dataset.priceVal = this.utils.parsePrice(opt.price); 
                                 inp.dataset.name = opt.name;
-                                inp.dataset.optPriceStr = opt.price;
+                                inp.dataset.rawPrice = opt.price;
 
-                                inp.addEventListener('change', updateTotal);
+                                inp.addEventListener('change', () => {
+                                    // Comportamento Radio "Fake" se necessário ou validações extras
+                                    updateTotal();
+                                });
                                 container.appendChild(itmTmpl);
                             });
                             
-                            // Salva metadados para validação
+                            // Metadados para validação
                             const sectionDiv = tmpl.querySelector('.addon-section');
                             sectionDiv.dataset.required = isRequired;
+                            sectionDiv.dataset.groupName = title;
                             
                             els.addons.appendChild(tmpl);
                         });
@@ -366,54 +451,87 @@
                     modal.classList.remove('hidden');
                 };
 
-                // Adicionar ao pedido
+                els.btnMinus.onclick = () => { if(this.currentQty > 1) { this.currentQty--; els.qtyVal.textContent = this.currentQty; updateTotal(); } };
+                els.btnPlus.onclick = () => { this.currentQty++; els.qtyVal.textContent = this.currentQty; updateTotal(); };
+
                 els.addBtn.onclick = () => {
                     const selected = [];
-                    let valid = true;
+                    let errors = [];
 
-                    // Validação simples
                     els.addons.querySelectorAll('.addon-section').forEach(sec => {
-                        if (sec.dataset.required === 'true' && !sec.querySelector('input:checked')) {
-                            valid = false;
-                            sec.classList.add('border', 'border-red-500');
+                        const checked = sec.querySelectorAll('input:checked');
+                        if (sec.dataset.required === 'true' && checked.length === 0) {
+                            errors.push(`Selecione uma opção em "${sec.dataset.groupName}"`);
+                            sec.classList.add('ring-2', 'ring-red-500', 'rounded-lg', 'p-1');
                         } else {
-                            sec.classList.remove('border', 'border-red-500');
+                            sec.classList.remove('ring-2', 'ring-red-500', 'rounded-lg', 'p-1');
                         }
+                        
+                        checked.forEach(inp => {
+                            selected.push({ 
+                                name: inp.dataset.name, 
+                                priceVal: parseFloat(inp.dataset.priceVal),
+                                rawPrice: inp.dataset.rawPrice
+                            });
+                        });
                     });
 
-                    if (!valid) return alert("Selecione os itens obrigatórios.");
+                    if (errors.length > 0) {
+                        // Treme a tela ou alerta simples
+                        alert(errors.join('\n'));
+                        return;
+                    }
 
-                    els.addons.querySelectorAll('input:checked').forEach(inp => {
-                        selected.push({ name: inp.dataset.name, price: inp.dataset.optPriceStr });
-                    });
+                    // Calcula total unitario real
+                    let unitTotal = basePrice;
+                    selected.forEach(s => unitTotal += s.priceVal);
 
                     this.orderItems.push({
                         ...this.currentProductData,
-                        finalPrice: this.utils.parsePrice(els.total.textContent),
+                        unitPrice: unitTotal,
+                        qty: this.currentQty,
+                        finalPrice: unitTotal * this.currentQty,
                         selectedAddons: selected
                     });
 
                     this.updateCartUI();
                     modal.classList.add('hidden');
+                    
+                    // Feedback visual
+                    const fab = document.getElementById('cart-fab');
+                    fab.classList.add('scale-125');
+                    setTimeout(() => fab.classList.remove('scale-125'), 200);
                 };
             },
 
             updateCartUI() {
                 const list = document.getElementById('order-summary-items');
                 const totalEl = document.getElementById('order-grand-total');
+                const subEl = document.getElementById('order-subtotal');
                 const badge = document.getElementById('cart-badge');
-                
+                const emptyMsg = document.getElementById('empty-cart-msg');
+                const fab = document.getElementById('cart-fab');
+
                 list.innerHTML = '';
                 let grandTotal = 0;
+
+                if (this.orderItems.length === 0) {
+                    emptyMsg.classList.remove('hidden');
+                    fab.classList.add('hidden');
+                } else {
+                    emptyMsg.classList.add('hidden');
+                    fab.classList.remove('hidden');
+                }
 
                 this.orderItems.forEach((item, idx) => {
                     const tmpl = document.getElementById('order-item-template').content.cloneNode(true);
                     tmpl.querySelector('.name').textContent = item.name;
                     tmpl.querySelector('.price').textContent = this.utils.fmtPrice(item.finalPrice);
+                    tmpl.querySelector('.qty-display').textContent = item.qty;
                     
                     const addonsDiv = tmpl.querySelector('.addons');
                     item.selectedAddons.forEach(add => {
-                        addonsDiv.innerHTML += `<div>+ ${add.name}</div>`;
+                        addonsDiv.innerHTML += `<div class="flex justify-between"><span>+ ${add.name}</span><span>${add.rawPrice.includes('Grátis') ? '' : add.rawPrice}</span></div>`;
                     });
 
                     tmpl.querySelector('.remove-item-btn').onclick = () => {
@@ -425,82 +543,111 @@
                     grandTotal += item.finalPrice;
                 });
 
-                totalEl.textContent = this.utils.fmtPrice(grandTotal);
-                badge.textContent = this.orderItems.length;
-                
-                const fab = document.getElementById('cart-fab');
-                if (this.orderItems.length > 0) fab.classList.remove('hidden');
-                else fab.classList.add('hidden');
+                const totalFmt = this.utils.fmtPrice(grandTotal);
+                totalEl.textContent = totalFmt;
+                subEl.textContent = totalFmt;
+                badge.textContent = this.orderItems.reduce((acc, it) => acc + it.qty, 0);
             },
 
             initEvents() {
-                // Clique no card abre modal
                 document.getElementById('menu-container').addEventListener('click', e => {
                     const card = e.target.closest('.product-card');
                     if(card) this.openModal(card.productData);
                 });
 
-                // Fechar Modais
                 document.querySelectorAll('.close-button, #product-modal').forEach(el => {
                     el.addEventListener('click', e => {
-                        if (e.target === el) document.getElementById('product-modal').classList.add('hidden');
+                        if (e.target === el || e.target.closest('.close-button')) document.getElementById('product-modal').classList.add('hidden');
                     });
                 });
 
-                // Drawer Categorias
+                // Drawers
                 const catDrawer = document.getElementById('category-drawer');
-                document.getElementById('category-drawer-button').onclick = () => catDrawer.classList.remove('hidden');
-                document.getElementById('close-drawer-button').onclick = () => catDrawer.classList.add('hidden');
-                document.getElementById('drawer-backdrop').onclick = () => catDrawer.classList.add('hidden');
-                document.getElementById('category-links-mobile').onclick = () => catDrawer.classList.add('hidden');
-
-                // Drawer Pedido
                 const orderDrawer = document.getElementById('order-summary-drawer');
-                document.getElementById('cart-fab').onclick = () => orderDrawer.classList.remove('hidden');
-                document.getElementById('close-order-drawer-button').onclick = () => orderDrawer.classList.add('hidden');
-                document.getElementById('order-drawer-backdrop').onclick = () => orderDrawer.classList.add('hidden');
+                
+                const toggleDrawer = (id, show) => {
+                    const el = document.getElementById(id);
+                    if(show) el.classList.remove('hidden');
+                    else el.classList.add('hidden');
+                };
 
-                // Botão topo
-                const btnTop = document.getElementById('back-to-top');
-                window.onscroll = () => btnTop.classList.toggle('hidden', window.scrollY < 300);
-                btnTop.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
+                document.getElementById('category-drawer-button').onclick = () => toggleDrawer('category-drawer', true);
+                document.getElementById('close-drawer-button').onclick = () => toggleDrawer('category-drawer', false);
+                document.getElementById('drawer-backdrop').onclick = () => toggleDrawer('category-drawer', false);
 
-                // Scroll spy (Menu Sticky)
+                document.getElementById('cart-fab').onclick = () => toggleDrawer('order-summary-drawer', true);
+                document.getElementById('close-order-drawer-button').onclick = () => toggleDrawer('order-summary-drawer', false);
+                document.getElementById('order-drawer-backdrop').onclick = () => toggleDrawer('order-summary-drawer', false);
+
+                // Scroll nav sticky logic
                 window.addEventListener('scroll', () => {
                     const header = document.getElementById('header');
                     const sticky = document.getElementById('mobile-sticky-nav');
-                    if (window.scrollY > header.offsetHeight) sticky.classList.remove('-translate-y-full');
-                    else sticky.classList.add('-translate-y-full');
+                    const btnTop = document.getElementById('back-to-top');
+                    
+                    if (window.scrollY > header.offsetHeight) {
+                        sticky.classList.remove('-translate-y-full');
+                        btnTop.classList.remove('hidden');
+                    } else {
+                        sticky.classList.add('-translate-y-full');
+                        btnTop.classList.add('hidden');
+                    }
                 });
+                
+                document.getElementById('back-to-top').onclick = () => window.scrollTo({top:0, behavior:'smooth'});
             },
 
             initTheme() {
                 const toggle = document.getElementById('theme-toggle');
+                const html = document.documentElement;
                 const set = (dark) => {
-                    document.documentElement.classList.toggle('dark', dark);
+                    if(dark) html.classList.add('dark'); else html.classList.remove('dark');
+                    localStorage.setItem('theme', dark ? 'dark' : 'light');
                     toggle.checked = dark;
                 };
+                
+                const saved = localStorage.getItem('theme');
+                if(saved) set(saved === 'dark');
+                else set(window.matchMedia('(prefers-color-scheme: dark)').matches);
+
                 toggle.onchange = () => set(toggle.checked);
-                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) set(true);
             }
         };
 
-        // Função global para enviar zap
         window.enviarPedidoWhatsApp = () => {
-            if (app.orderItems.length === 0) return;
-            let msg = "*Olá! Gostaria de fazer um pedido:*\n\n";
+            if (app.orderItems.length === 0) return alert("Seu carrinho está vazio!");
+            
+            let msg = `*PEDIDO - CAFÉ YPIRANGA*\n----------------------------\n`;
             let total = 0;
+            
             app.orderItems.forEach(item => {
-                msg += `*1x ${item.name}*\n`;
-                item.selectedAddons.forEach(a => msg += `  + ${a.name}\n`);
-                msg += `  Valor: ${app.utils.fmtPrice(item.finalPrice)}\n\n`;
+                msg += `*${item.qty}x ${item.name}*\n`;
+                if(item.selectedAddons.length > 0) {
+                    item.selectedAddons.forEach(a => msg += `  + ${a.name}\n`);
+                }
+                msg += `  Subtotal: ${app.utils.fmtPrice(item.finalPrice)}\n\n`;
                 total += item.finalPrice;
             });
-            msg += `*Total: ${app.utils.fmtPrice(total)}*`;
-            window.open(`https://wa.me/554532681492?text=${encodeURIComponent(msg)}`, '_blank');
+            
+            msg += `----------------------------\n*TOTAL: ${app.utils.fmtPrice(total)}*\n`;
+            
+            const url = `https://wa.me/554532681492?text=${encodeURIComponent(msg)}`;
+            window.open(url, '_blank');
         };
 
         app.init();
     </script>
+    
+    <style>
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-fade-in { animation: fadeIn 0.3s ease-out; }
+        .animate-fade-in-up { animation: fadeInUp 0.3s ease-out; }
+        
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(156, 163, 175, 0.5); border-radius: 20px; }
+        .dark .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(75, 85, 99, 0.5); }
+    </style>
 </body>
 </html>
