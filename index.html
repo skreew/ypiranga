@@ -12,58 +12,35 @@
     
     <script>
         tailwind.config = {
-            darkMode: 'class', // Enable dark mode based on the 'dark' class on the HTML element
+            darkMode: 'class', 
         }
     </script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
 
     <style>
-        /* Estilos customizados que complementam o Tailwind */
-        body {
-            font-family: 'Inter', sans-serif;
-            scroll-behavior: smooth;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        /* Animações */
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes fadeOut { from { opacity: 1; } to { opacity: 0; } }
         @keyframes scaleIn { from { opacity: 0; transform: scale(0.95); } to { transform: scale(1); } }
         @keyframes slideInLeft { from { transform: translateX(-100%); } to { transform: translateX(0); } }
         @keyframes slideInRight { from { transform: translateX(100%); } to { transform: translateX(0); } }
-        @keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } to { opacity: 1; } }
 
         .animate-fade-in { animation: fadeIn 0.3s ease-out; }
-        .animate-fade-out { animation: fadeOut 0.3s ease-out forwards; }
         .animate-scale-in { animation: scaleIn 0.3s ease-out; }
         .animate-slide-in-left { animation: slideInLeft 0.3s ease-out; }
         .animate-slide-in-right { animation: slideInRight 0.3s ease-out; }
-        .animate-slide-down { animation: slideDown 0.3s ease-out forwards; }
 
-        /* Scrollbar customizada */
         #category-nav::-webkit-scrollbar, #modal-addons-container::-webkit-scrollbar, #order-summary-items::-webkit-scrollbar { height: 4px; width: 4px; }
         #category-nav::-webkit-scrollbar-track, #modal-addons-container::-webkit-scrollbar-track, #order-summary-items::-webkit-scrollbar-track { background: transparent; }
         #category-nav::-webkit-scrollbar-thumb, #modal-addons-container::-webkit-scrollbar-thumb, #order-summary-items::-webkit-scrollbar-thumb { background-color: #FFD100; border-radius: 20px; }
 
-        /* Garante que a barra de navegação móvel fique no topo */
-        #mobile-sticky-nav.is-sticky {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 20; /* Abaixo do header principal, mas acima do conteúdo */
-        }
+        #mobile-sticky-nav.is-sticky { position: fixed; top: 0; left: 0; right: 0; z-index: 20; }
         
-        /* NOVO: Estilo para itens fora do horário de funcionamento */
         .product-card.closed-visual-only {
-            opacity: 0.6; /* Diminui a opacidade para indicar indisponibilidade */
-            cursor: default; /* Remove o cursor de link */
-            /* Remove os efeitos de hover */
+            opacity: 0.6; 
+            cursor: default; 
             transform: none !important;
             transition: none !important;
         }
@@ -82,7 +59,7 @@
                     <button id="category-drawer-button" class="md:hidden mr-3 p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors">
                         <i class="fas fa-bars text-xl text-[#0033A0] dark:text-[#FFD100]"></i>
                     </button>
-                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" alt="Logo do CAFÉ YPIRANGA" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200 dark:border-gray-600 flex-shrink-0 object-cover">
+                    <img src="https://yt3.googleusercontent.com/ytc/AIdro_lABDL1T80crmzs6j6f_W72qzhDXXQhcO9Qk_WzBagcHQ=s900-c-k-c0x00ffffff-no-rj" alt="Logo" class="w-12 h-12 rounded-full mr-4 border-2 border-stone-200 dark:border-gray-600 flex-shrink-0 object-cover">
                     <div class="min-w-0">
                         <h1 class="text-xl sm:text-2xl font-bold text-[#0033A0] dark:text-[#FFD100] truncate">CAFÉ YPIRANGA</h1>
                         <div class="text-xs text-gray-500 dark:text-gray-400 mt-1 flex items-center">
@@ -90,8 +67,8 @@
                             <span>Avenida Brasil, 751, Santa Helena, PR</span>
                         </div>
                         <div class="flex items-center space-x-4 mt-2">
-                            <a href="https://wa.me/554532681492" target="_blank" aria-label="WhatsApp" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
-                            <a href="https://www.instagram.com/postorabaioli/" target="_blank" aria-label="Instagram" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-instagram text-xl"></i></a>
+                            <a href="https://wa.me/554532681492" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-whatsapp text-xl"></i></a>
+                            <a href="https://www.instagram.com/postorabaioli/" target="_blank" class="text-gray-600 dark:text-gray-400 hover:text-[#0033A0] dark:hover:text-[#FFD100] transition-colors"><i class="fab fa-instagram text-xl"></i></a>
                         </div>
                     </div>
                 </div>
@@ -107,11 +84,9 @@
             </div>
             <div id="search-input-container" class="hidden py-2">
                 <div class="relative">
-                    <input type="text" id="search-input" placeholder="Buscar no cardápio..." class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FFD100] dark:focus:ring-[#0033A0] text-gray-800 dark:text-white transition-all duration-300">
+                    <input type="text" id="search-input" placeholder="Buscar..." class="w-full pl-10 pr-4 py-2 rounded-full bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-[#FFD100] dark:focus:ring-[#0033A0] text-gray-800 dark:text-white transition-all duration-300">
                     <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-300"></i>
-                    <button id="clear-search-button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 hidden">
-                        <i class="fas fa-times-circle"></i>
-                    </button>
+                    <button id="clear-search-button" class="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 dark:text-gray-400 hover:text-gray-700 hidden"><i class="fas fa-times-circle"></i></button>
                 </div>
             </div>
         </div>
@@ -130,7 +105,6 @@
         </div>
     </div>
 
-
     <main id="menu-container" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10"></main>
 
     <footer class="bg-gray-800 dark:bg-black text-gray-300 dark:text-gray-400 py-6 text-center">
@@ -143,7 +117,7 @@
             <i class="fas fa-shopping-cart"></i>
             <span id="cart-badge" class="absolute -top-1 -right-1 bg-red-600 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center">0</span>
         </button>
-        <button id="back-to-top" aria-label="Voltar ao topo" class="hidden bg-[#0033A0] hover:bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg cursor-pointer transition-opacity duration-300 active:scale-90">
+        <button id="back-to-top" class="hidden bg-[#0033A0] hover:bg-blue-800 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl shadow-lg cursor-pointer transition-opacity duration-300 active:scale-90">
             <i class="fas fa-arrow-up"></i>
         </button>
     </div>
@@ -153,9 +127,7 @@
         <div class="relative w-4/5 max-w-sm h-full bg-stone-50 dark:bg-gray-900 shadow-xl flex flex-col animate-slide-in-left">
             <div class="flex items-center justify-between p-4 border-b border-stone-200 dark:border-gray-700">
                 <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Categorias</h2>
-                <button id="close-drawer-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
+                <button id="close-drawer-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors"><i class="fas fa-times text-xl"></i></button>
             </div>
             <nav id="category-links-mobile" class="flex-1 overflow-y-auto"></nav>
         </div>
@@ -166,9 +138,7 @@
         <div class="relative ml-auto w-full max-w-sm h-full bg-white dark:bg-gray-900 shadow-xl flex flex-col animate-slide-in-right">
             <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
                 <h2 class="text-xl font-bold text-[#0033A0] dark:text-[#FFD100]">Resumo do Pedido</h2>
-                <button id="close-order-drawer-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors">
-                    <i class="fas fa-times text-xl"></i>
-                </button>
+                <button id="close-order-drawer-button" class="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 active:bg-gray-300 transition-colors"><i class="fas fa-times text-xl"></i></button>
             </div>
             <div id="order-summary-items" class="flex-1 overflow-y-auto p-4 space-y-4"></div>
             <div class="p-4 border-t border-gray-200 dark:border-gray-700">
@@ -213,7 +183,7 @@
 
     <template id="product-card-template">
         <div class="product-card flex items-start space-x-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-1 transition-all duration-300 cursor-pointer group active:scale-[0.98]">
-            <img loading="lazy" alt="" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/112x112/EEE/333?text=Imagem';">
+            <img loading="lazy" class="w-24 h-24 md:w-28 md:h-28 object-cover rounded-md flex-shrink-0" onerror="this.onerror=null;this.src='https://placehold.co/112x112/EEE/333?text=Imagem';">
             <div class="flex-1 flex flex-col h-full">
                 <h3 class="text-lg font-bold mb-1 truncate group-hover:text-[#0033A0] dark:group-hover:text-[#FFD100]"></h3>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-2 text-ellipsis overflow-hidden" style="display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical;"></p>
@@ -255,7 +225,7 @@
 
     <template id="order-item-template">
         <div class="order-item bg-gray-50 dark:bg-gray-800 p-3 rounded-lg flex items-center space-x-3">
-            <img src="" alt="" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
+            <img src="" class="w-16 h-16 object-cover rounded-md flex-shrink-0">
             <div class="flex-1">
                 <p class="font-bold text-md"></p>
                 <div class="text-xs text-gray-500 dark:text-gray-400 space-y-1 mt-1"></div>
@@ -269,7 +239,7 @@
 
     <script>
         const app = {
-            menuData: {}, // This will be loaded from menu.json
+            menuData: {},
             categoryOrder: [
                 "Cafés", "Cappuccinos", "Especiais", "Chocolates Quentes", "Chás", "Cafés Gelados",
                 "Sucos Naturais", "Frapês", "Sanduíches & Lanches", "Pães de Queijo & Porções",
@@ -283,25 +253,15 @@
 
             async init() {
                 const self = this;
-                // Load menu data from JSON file with timestamp to prevent caching
                 try {
                     const timestamp = new Date().getTime(); 
                     const response = await fetch(`menu.json?v=${timestamp}`);
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
+                    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
                     self.menuData = await response.json();
-                    console.log('Menu data loaded:', self.menuData);
+                    console.log('Menu loaded:', self.menuData);
                 } catch (error) {
-                    console.error('Failed to load menu data:', error);
-                    document.getElementById('menu-container').innerHTML = `
-                        <div class="text-center p-8 bg-red-100 dark:bg-red-900/50 rounded-lg border-2 border-dashed border-red-300 dark:border-red-700">
-                            <i class="fas fa-exclamation-triangle text-4xl text-red-400 dark:text-red-500 mb-4"></i>
-                            <h4 class="text-xl font-bold text-red-700 dark:text-red-300">Erro ao carregar o cardápio.</h4>
-                            <p class="text-red-500 dark:text-gray-400">Verifique se o arquivo "menu.json" foi gerado corretamente.</p>
-                        </div>
-                    `;
+                    console.error('Failed to load menu:', error);
+                    document.getElementById('menu-container').innerHTML = `<div class="text-center p-8 bg-red-100 text-red-700 rounded-lg">Erro ao carregar cardápio.</div>`;
                     return;
                 }
 
@@ -324,18 +284,16 @@
             },
 
             utils: {
-                parsePrice(priceString) { return parseFloat(String(priceString).replace('R$', '').replace(',', '.').trim()); },
+                parsePrice(priceString) { return parseFloat(String(priceString).replace('R$', '').replace(',', '.').trim()) || 0; },
                 formatCurrency(value) { return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); },
                 generateCategoryId(name) { return name.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, ""); },
                 isTimeInRange(startTime, endTime) {
                     const now = new Date();
-                    const [startHour, startMinute] = startTime.split(':').map(Number);
-                    const [endHour, endMinute] = endTime.split(':').map(Number);
-                    const startDate = new Date();
-                    startDate.setHours(startHour, startMinute, 0, 0);
-                    const endDate = new Date();
-                    endDate.setHours(endHour, endMinute, 0, 0);
-                    return now >= startDate && now <= endDate;
+                    const [sh, sm] = startTime.split(':').map(Number);
+                    const [eh, em] = endTime.split(':').map(Number);
+                    const start = new Date(); start.setHours(sh, sm, 0, 0);
+                    const end = new Date(); end.setHours(eh, em, 0, 0);
+                    return now >= start && now <= end;
                 },
                 showToast(message) {
                     const toast = document.getElementById('toast-notification');
@@ -348,29 +306,19 @@
                         toast.addEventListener('animationend', () => toast.classList.add('hidden'), { once: true });
                     }, 2000);
                 },
-                normalizeText(text) {
-                    if (!text) return '';
-                    return String(text).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-                },
-                getImageHighResUrl(url) {
-                    if (url && url.includes('/images/150/')) {
-                        return url.replace('/images/150/', '/images/800/');
-                    }
-                    return url;
-                }
+                normalizeText(text) { return text ? String(text).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase() : ''; },
+                getImageHighResUrl(url) { return url && url.includes('/images/150/') ? url.replace('/images/150/', '/images/800/') : url; }
             },
 
             renderMenu() {
                 const self = this;
                 const menuContainer = document.getElementById('menu-container');
-                const desktopLinksContainer = document.getElementById('category-links-desktop');
-                const mobileLinksContainer = document.getElementById('category-links-mobile');
-                const productCardTemplate = document.getElementById('product-card-template');
-                const closedMessageTemplate = document.getElementById('closed-message-template');
+                const desktopLinks = document.getElementById('category-links-desktop');
+                const mobileLinks = document.getElementById('category-links-mobile');
+                const cardTemplate = document.getElementById('product-card-template');
+                const closedTemplate = document.getElementById('closed-message-template');
 
-                menuContainer.innerHTML = '';
-                desktopLinksContainer.innerHTML = '';
-                mobileLinksContainer.innerHTML = '';
+                menuContainer.innerHTML = ''; desktopLinks.innerHTML = ''; mobileLinks.innerHTML = '';
                 
                 if (self.isSearching && self.searchQuery.length > 0) {
                     self.renderSearchResults();
@@ -378,166 +326,67 @@
                 }
 
                 const jsonKeys = Object.keys(self.menuData);
-                const dynamicCategories = jsonKeys.filter(key => !self.categoryOrder.includes(key));
-                const finalCategoryOrder = [...self.categoryOrder, ...dynamicCategories];
+                const dynamicCats = jsonKeys.filter(key => !self.categoryOrder.includes(key));
+                const finalOrder = [...self.categoryOrder, ...dynamicCats];
 
-                finalCategoryOrder.forEach(categoryName => {
-                    const category = self.menuData[categoryName];
+                finalOrder.forEach(catName => {
+                    const category = self.menuData[catName];
                     if (!category) return;
 
-                    const categoryId = self.utils.generateCategoryId(categoryName);
-                    const categoryTitle = categoryName;
+                    const catId = self.utils.generateCategoryId(catName);
+                    const linkClass = "block shrink-0 py-2 px-4 text-white font-medium rounded-full transition-all duration-300 hover:bg-[#FFD100] hover:text-[#0033A0]";
+                    
+                    const dLink = document.createElement('a');
+                    dLink.href = `#${catId}`; dLink.className = linkClass;
+                    dLink.innerHTML = `${category.emoji} ${catName}`;
+                    desktopLinks.appendChild(dLink);
 
-                    const navLinkDesktop = document.createElement('a');
-                    navLinkDesktop.href = `#${categoryId}`;
-                    navLinkDesktop.className = "block shrink-0 py-2 px-4 text-white font-medium rounded-full transition-all duration-300 hover:bg-[#FFD100] hover:text-[#0033A0]";
-                    navLinkDesktop.innerHTML = `${category.emoji} ${categoryTitle}`;
-                    desktopLinksContainer.appendChild(navLinkDesktop);
-
-                    const navLinkMobile = navLinkDesktop.cloneNode(true);
-                    navLinkMobile.className = "drawer-link block text-lg font-medium p-4 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 w-full text-left text-gray-800 dark:text-white";
-                    mobileLinksContainer.appendChild(navLinkMobile);
+                    const mLink = dLink.cloneNode(true);
+                    mLink.className = "drawer-link block text-lg font-medium p-4 transition-colors duration-300 hover:bg-gray-200 dark:hover:bg-gray-700 w-full text-left text-gray-800 dark:text-white";
+                    mobileLinks.appendChild(mLink);
 
                     const section = document.createElement('section');
-                    section.id = categoryId;
-                    section.className = 'category-section pt-24 -mt-24 mb-12 scroll-mt-24';
-
+                    section.id = catId; section.className = 'category-section pt-24 -mt-24 mb-12 scroll-mt-24';
+                    
                     const title = document.createElement('h2');
                     title.className = 'text-3xl font-bold mb-6 pb-2 border-b-2 border-[#0033A0] dark:border-[#FFD100]';
-                    title.innerHTML = `${category.emoji} ${categoryTitle}`;
+                    title.innerHTML = `${category.emoji} ${catName}`;
                     section.appendChild(title);
 
-                    const isScheduled = category.schedule;
-                    const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
+                    const isOpen = category.schedule ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
+
+                    if (!isOpen && category.schedule) {
+                        const closedMsg = closedTemplate.content.cloneNode(true);
+                        closedMsg.querySelector('.time-start').textContent = category.schedule.start;
+                        closedMsg.querySelector('.time-end').textContent = category.schedule.end;
+                        section.appendChild(closedMsg);
+                        section.appendChild(document.createElement('div')).className = 'my-6';
+                    }
 
                     const grid = document.createElement('div');
                     grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
 
-                    if (!isOpen && isScheduled) {
-                        const closedMessageClone = closedMessageTemplate.content.cloneNode(true);
-                        closedMessageClone.querySelector('.time-start').textContent = category.schedule.start;
-                        closedMessageClone.querySelector('.time-end').textContent = category.schedule.end;
-                        section.appendChild(closedMessageClone);
+                    category.items.forEach(prod => {
+                        const card = cardTemplate.content.cloneNode(true);
+                        const el = card.querySelector('.product-card');
+                        el.productData = prod;
+                        el.dataset.isOpen = isOpen.toString();
                         
-                        const spacer = document.createElement('div');
-                        spacer.className = 'my-6';
-                        section.appendChild(spacer);
-                    }
+                        if (!isOpen) el.classList.add('closed-visual-only');
 
-                    category.items.forEach(product => {
-                        const cardClone = productCardTemplate.content.cloneNode(true);
-                        const cardElement = cardClone.querySelector('.product-card');
-                        cardElement.productData = product; 
-                        
-                        cardElement.dataset.isOpen = isOpen.toString();
-                        if (!isOpen) {
-                            cardElement.classList.add('closed-visual-only');
+                        el.querySelector('img').src = prod.image;
+                        el.querySelector('h3').textContent = prod.name;
+                        el.querySelector('p').textContent = prod.description;
+                        el.querySelector('.price').textContent = prod.price;
+
+                        if (prod.addons && prod.addons.length > 0) {
+                            el.querySelector('.options-badge').classList.remove('hidden');
                         }
-                        
-                        cardElement.querySelector('img').src = product.image;
-                        cardElement.querySelector('img').alt = product.name;
-                        cardElement.querySelector('h3').textContent = product.name;
-                        cardElement.querySelector('p').textContent = product.description;
-                        cardElement.querySelector('.price').textContent = product.price;
-
-                        if (product.options || (product.addons && product.addons.length > 0)) {
-                            cardElement.querySelector('.options-badge').classList.remove('hidden');
-                        }
-
-                        grid.appendChild(cardElement);
+                        grid.appendChild(el);
                     });
-                    
                     section.appendChild(grid);
                     menuContainer.appendChild(section);
                 });
-            },
-
-            initTheme() {
-                const themeToggle = document.getElementById('theme-toggle');
-                const htmlElement = document.documentElement;
-
-                const applyTheme = (theme) => {
-                    htmlElement.classList.toggle('dark', theme === 'dark');
-                    themeToggle.checked = theme === 'dark';
-                };
-
-                themeToggle.addEventListener('change', () => {
-                    const newTheme = themeToggle.checked ? 'dark' : 'light';
-                    localStorage.setItem('theme', newTheme);
-                    applyTheme(newTheme);
-                });
-
-                const savedTheme = localStorage.getItem('theme');
-                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const initialTheme = savedTheme || (systemPrefersDark ? 'dark' : 'light');
-                applyTheme(initialTheme);
-            },
-
-            initOrderSummary() {
-                const self = this;
-                const cartFab = document.getElementById('cart-fab');
-                const orderDrawer = document.getElementById('order-summary-drawer');
-                const closeOrderDrawerButton = document.getElementById('close-order-drawer-button');
-                const orderDrawerBackdrop = document.getElementById('order-drawer-backdrop');
-
-                const renderSummary = () => {
-                    const orderItemsContainer = document.getElementById('order-summary-items');
-                    const cartBadge = document.getElementById('cart-badge');
-                    const grandTotalEl = document.getElementById('order-grand-total');
-                    const orderItemTemplate = document.getElementById('order-item-template');
-                    
-                    orderItemsContainer.innerHTML = '';
-                    if (self.orderItems.length === 0) {
-                        orderItemsContainer.innerHTML = '<p class="text-gray-500 dark:text-gray-400 text-center">Seu pedido está vazio.</p>';
-                        cartFab.classList.add('hidden');
-                        grandTotalEl.textContent = self.utils.formatCurrency(0);
-                        return;
-                    }
-
-                    cartFab.classList.remove('hidden');
-                    cartBadge.textContent = self.orderItems.length;
-
-                    let grandTotal = 0;
-                    self.orderItems.forEach((item, index) => {
-                        const itemClone = orderItemTemplate.content.cloneNode(true);
-                        const itemEl = itemClone.querySelector('.order-item');
-                        itemEl.dataset.index = index;
-
-                        itemEl.querySelector('img').src = item.image;
-                        itemEl.querySelector('img').alt = item.name;
-                        itemEl.querySelector('.flex-1 p').textContent = item.name;
-                        itemEl.querySelector('.text-right p').textContent = self.utils.formatCurrency(item.itemTotal);
-
-                        const addonsList = itemEl.querySelector('.text-xs');
-                        if(item.addons.length > 0) {
-                            item.addons.forEach(addon => {
-                               const addonP = document.createElement('p');
-                               addonP.textContent = `+ ${addon.name} (${addon.price})`;
-                               addonsList.appendChild(addonP);
-                            });
-                        }
-                        orderItemsContainer.appendChild(itemClone);
-                        grandTotal += item.itemTotal;
-                    });
-                    grandTotalEl.textContent = self.utils.formatCurrency(grandTotal);
-                };
-
-                window.renderOrderSummary = renderSummary;
-
-                orderDrawer.addEventListener('click', (e) => {
-                    if(e.target.classList.contains('remove-item-btn')) {
-                        const itemIndex = parseInt(e.target.closest('.order-item').dataset.index, 10);
-                        self.orderItems.splice(itemIndex, 1);
-                        renderSummary();
-                    }
-                });
-
-                const openDrawer = () => orderDrawer.classList.remove('hidden');
-                const closeDrawer = () => orderDrawer.classList.add('hidden');
-
-                cartFab.addEventListener('click', openDrawer);
-                closeOrderDrawerButton.addEventListener('click', closeDrawer);
-                orderDrawerBackdrop.addEventListener('click', closeDrawer);
             },
 
             initModal() {
@@ -545,403 +394,303 @@
                 const modal = document.getElementById('product-modal');
                 if (!modal) return;
                 
-                const modalImage = document.getElementById('modal-image');
-                const fullscreenOverlay = document.getElementById('fullscreen-image-overlay');
-                const fullscreenImage = document.getElementById('fullscreen-image');
-                const closeFullscreenButton = document.getElementById('close-fullscreen-button');
-                const menuContainer = document.getElementById('menu-container');
-                const addonsContainer = document.getElementById('modal-addons-container');
-                const totalPriceEl = document.getElementById('modal-total-price');
-                const addToOrderButton = document.getElementById('add-to-order-button');
-                const closeModalButtons = modal.querySelectorAll('.close-button');
+                const els = {
+                    img: document.getElementById('modal-image'),
+                    name: document.getElementById('modal-name'),
+                    desc: document.getElementById('modal-description'),
+                    addons: document.getElementById('modal-addons-container'),
+                    total: document.getElementById('modal-total-price'),
+                    addBtn: document.getElementById('add-to-order-button')
+                };
                 
-                let currentProductBasePrice = 0;
+                let basePrice = 0;
 
-                const updateTotalPrice = () => {
-                    let total = currentProductBasePrice;
-                    const selectedAddons = addonsContainer.querySelectorAll('input:checked');
-                    selectedAddons.forEach(input => {
-                        total += self.utils.parsePrice(input.dataset.price);
-                    });
-                    totalPriceEl.textContent = self.utils.formatCurrency(total);
+                const updateTotal = () => {
+                    let total = basePrice;
+                    els.addons.querySelectorAll('input:checked').forEach(i => total += self.utils.parsePrice(i.dataset.price));
+                    els.total.textContent = self.utils.formatCurrency(total);
                 };
 
-                addToOrderButton.onclick = () => {
-                    const selectedAddons = [];
-                    // Validação de itens obrigatórios
+                els.addBtn.onclick = () => {
+                    const selected = [];
                     let valid = true;
-                    const groups = addonsContainer.querySelectorAll('.addon-section');
                     
-                    groups.forEach(group => {
-                        const isRequired = group.dataset.required === 'true';
-                        if (isRequired) {
-                            const hasSelection = group.querySelector('input:checked');
-                            if (!hasSelection) {
-                                valid = false;
-                                group.classList.add('border-red-500', 'border-2');
-                            } else {
-                                group.classList.remove('border-red-500', 'border-2');
-                            }
+                    els.addons.querySelectorAll('.addon-section').forEach(group => {
+                        if (group.dataset.required === 'true' && !group.querySelector('input:checked')) {
+                            valid = false;
+                            group.classList.add('border-red-500', 'border-2');
+                        } else {
+                            group.classList.remove('border-red-500', 'border-2');
                         }
                     });
 
-                    if (!valid) {
-                        self.utils.showToast("Por favor, selecione os itens obrigatórios.");
-                        return;
-                    }
+                    if (!valid) return self.utils.showToast("Selecione os itens obrigatórios.");
 
-                    addonsContainer.querySelectorAll('input:checked').forEach(input => {
-                        const nameEl = input.closest('label').querySelector('.addon-name');
-                        selectedAddons.push({
-                            name: nameEl.textContent,
-                            price: input.dataset.price
-                        });
+                    els.addons.querySelectorAll('input:checked').forEach(i => {
+                        selected.push({ name: i.closest('label').querySelector('.addon-name').textContent, price: i.dataset.price });
                     });
 
-                    const orderItem = {
+                    self.orderItems.push({
                         id: Date.now(),
                         name: self.currentProductData.name,
                         image: self.utils.getImageHighResUrl(self.currentProductData.image),
                         basePrice: self.utils.parsePrice(self.currentProductData.price),
-                        addons: selectedAddons,
-                        itemTotal: self.utils.parsePrice(totalPriceEl.textContent)
-                    };
+                        addons: selected,
+                        itemTotal: self.utils.parsePrice(els.total.textContent)
+                    });
 
-                    self.orderItems.push(orderItem);
-                    closeModal();
-                    self.utils.showToast("Item adicionado ao pedido!");
+                    modal.classList.add('hidden');
+                    self.utils.showToast("Adicionado ao pedido!");
                     window.renderOrderSummary();
                 };
 
                 const openModal = (card) => {
-                    const product = card.productData;
-                    if (!product) return;
-                    self.currentProductData = product;
+                    const p = card.productData;
+                    self.currentProductData = p;
+                    els.img.src = self.utils.getImageHighResUrl(p.image);
+                    els.name.textContent = p.name;
+                    els.desc.textContent = p.description;
+                    basePrice = self.utils.parsePrice(p.price);
+                    els.addons.innerHTML = '';
 
-                    modalImage.src = self.utils.getImageHighResUrl(product.image);
-                    document.getElementById('modal-name').textContent = product.name;
-                    document.getElementById('modal-description').textContent = product.description;
-                    currentProductBasePrice = self.utils.parsePrice(product.price);
+                    // LÓGICA DE ADICIONAIS CORRIGIDA
+                    if (p.addons && p.addons.length > 0) {
+                        p.addons.forEach((group, idx) => {
+                            const tmpl = document.getElementById('addon-section-template').content.cloneNode(true);
+                            const sec = tmpl.querySelector('.addon-section');
+                            const reqHtml = group.required ? '<span class="text-red-500 text-xs font-bold">(Obrigatório)</span>' : '<span class="text-gray-400 text-xs">(Opcional)</span>';
+                            
+                            sec.dataset.required = group.required;
+                            sec.querySelector('.addon-header span').innerHTML = `${group.group_name} ${reqHtml}`;
+                            
+                            const container = sec.querySelector('.addon-items');
+                            const type = (group.max === 1) ? 'radio' : 'checkbox';
+                            const gName = `g-${idx}`;
 
-                    addonsContainer.innerHTML = '';
-                    
-                    // =========================================================
-                    // LÓGICA CORRIGIDA: Usa 'group_name' e 'options' do Python
-                    // =========================================================
-                    if (product.addons && product.addons.length > 0) {
-                        product.addons.forEach((addonGroup, groupIndex) => {
-                            const sectionTemplate = document.getElementById('addon-section-template').content.cloneNode(true);
-                            const sectionEl = sectionTemplate.querySelector('.addon-section');
-                            
-                            // 1. Título e Obrigatoriedade (Lê 'group_name' e 'required')
-                            const isRequired = addonGroup.required;
-                            const maxSelect = addonGroup.max || 99;
-                            const groupTitle = `${addonGroup.group_name} ${isRequired ? '<span class="text-red-500 text-xs font-bold">(Obrigatório)</span>' : '<span class="text-gray-400 text-xs">(Opcional)</span>'}`;
-                            
-                            sectionEl.dataset.required = isRequired;
-                            sectionEl.querySelector('.addon-header span').innerHTML = groupTitle;
-                            
-                            const itemsContainer = sectionEl.querySelector('.addon-items');
-                            
-                            // Define se é Radio (1 escolha) ou Checkbox (Vários)
-                            const inputType = maxSelect === 1 ? 'radio' : 'checkbox';
-                            const groupNameId = `addon-group-${groupIndex}`; 
-
-                            // 2. Renderiza as Opções (Lê 'options' do Python)
-                            if (addonGroup.options) {
-                                addonGroup.options.forEach(item => {
-                                    const itemTemplate = document.getElementById('addon-item-template').content.cloneNode(true);
-                                    const itemEl = itemTemplate.querySelector('.addon-item');
+                            if (group.options) {
+                                group.options.forEach(opt => {
+                                    const itm = document.getElementById('addon-item-template').content.cloneNode(true);
+                                    const lbl = itm.querySelector('.addon-item');
+                                    lbl.querySelector('.addon-name').textContent = opt.name;
+                                    lbl.querySelector('.addon-price').textContent = opt.price.includes('Grátis') ? '+ R$ 0,00' : `+ ${opt.price}`;
                                     
-                                    itemEl.querySelector('.addon-name').textContent = item.name;
+                                    const inp = lbl.querySelector('input');
+                                    inp.type = type;
+                                    inp.name = gName;
+                                    inp.dataset.price = opt.price;
                                     
-                                    const priceText = item.price.includes('Grátis') ? 'Grátis' : item.price;
-                                    itemEl.querySelector('.addon-price').textContent = item.price === 'Grátis' ? '+ R$ 0,00' : `+ ${item.price}`;
-                                    
-                                    const input = itemEl.querySelector('input');
-                                    input.type = inputType;
-                                    input.name = groupNameId; 
-                                    input.dataset.price = item.price;
-                                    
-                                    if (inputType === 'checkbox') {
-                                        input.addEventListener('change', () => {
-                                            const checkedCount = itemsContainer.querySelectorAll(`input[name="${groupNameId}"]:checked`).length;
-                                            if (checkedCount > maxSelect) {
-                                                input.checked = false;
-                                                self.utils.showToast(`Máximo de ${maxSelect} opções.`);
-                                                updateTotalPrice();
+                                    if (type === 'checkbox') {
+                                        inp.addEventListener('change', () => {
+                                            if (container.querySelectorAll(`input[name="${gName}"]:checked`).length > (group.max || 99)) {
+                                                inp.checked = false;
+                                                self.utils.showToast(`Máximo de ${group.max} opções.`);
+                                                updateTotal();
                                             }
                                         });
                                     }
-
-                                    input.addEventListener('change', updateTotalPrice);
-                                    itemsContainer.appendChild(itemEl);
+                                    inp.addEventListener('change', updateTotal);
+                                    container.appendChild(lbl);
                                 });
                             }
-                            addonsContainer.appendChild(sectionEl);
+                            els.addons.appendChild(sec);
                         });
                     }
-
-                    updateTotalPrice();
+                    updateTotal();
                     modal.classList.remove('hidden');
                 };
 
-                const closeModal = () => modal.classList.add('hidden');
-                
-                const openFullscreenImage = () => {
-                    fullscreenImage.src = modalImage.src;
-                    fullscreenOverlay.classList.remove('hidden');
-                };
-
-                const closeFullscreenImage = () => fullscreenOverlay.classList.add('hidden');
-
-                modalImage.addEventListener('click', openFullscreenImage);
-                closeFullscreenButton.addEventListener('click', closeFullscreenImage);
-                fullscreenOverlay.addEventListener('click', (e) => { if (e.target === fullscreenOverlay) closeFullscreenImage(); });
-                
-                menuContainer.addEventListener('click', (event) => {
-                    const card = event.target.closest('.product-card');
+                document.getElementById('menu-container').addEventListener('click', e => {
+                    const card = e.target.closest('.product-card');
                     if (card) {
-                        if (card.dataset.isOpen === 'false') {
-                             self.utils.showToast(`O item "${card.querySelector('h3').textContent}" não está disponível para pedido agora.`);
-                             return; 
-                        }
+                        if (card.dataset.isOpen === 'false') return self.utils.showToast("Indisponível no momento.");
                         openModal(card);
                     }
                 });
 
-                closeModalButtons.forEach(btn => btn.addEventListener('click', closeModal));
-                modal.addEventListener('click', (event) => { if (event.target === modal) closeModal(); });
-                window.addEventListener('keydown', (event) => { if (event.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+                modal.querySelectorAll('.close-button').forEach(b => b.onclick = () => modal.classList.add('hidden'));
+                modal.onclick = e => { if(e.target === modal) modal.classList.add('hidden'); };
+                
+                // Fullscreen Image Logic
+                const fsOverlay = document.getElementById('fullscreen-image-overlay');
+                const fsImg = document.getElementById('fullscreen-image');
+                els.img.onclick = () => { fsImg.src = els.img.src; fsOverlay.classList.remove('hidden'); };
+                document.getElementById('close-fullscreen-button').onclick = () => fsOverlay.classList.add('hidden');
+                fsOverlay.onclick = e => { if(e.target === fsOverlay) fsOverlay.classList.add('hidden'); };
+            },
+
+            initTheme() {
+                const toggle = document.getElementById('theme-toggle');
+                const set = (t) => { document.documentElement.classList.toggle('dark', t === 'dark'); toggle.checked = t === 'dark'; };
+                toggle.onchange = () => { const t = toggle.checked ? 'dark' : 'light'; localStorage.setItem('theme', t); set(t); };
+                set(localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
+            },
+
+            initOrderSummary() {
+                const self = this;
+                const drawer = document.getElementById('order-summary-drawer');
+                const list = document.getElementById('order-summary-items');
+                const totalEl = document.getElementById('order-grand-total');
+                const badge = document.getElementById('cart-badge');
+                const fab = document.getElementById('cart-fab');
+
+                const render = () => {
+                    list.innerHTML = '';
+                    if (self.orderItems.length === 0) {
+                        list.innerHTML = '<p class="text-center text-gray-500 mt-4">Vazio</p>';
+                        fab.classList.add('hidden');
+                        totalEl.textContent = self.utils.formatCurrency(0);
+                        return;
+                    }
+                    fab.classList.remove('hidden');
+                    badge.textContent = self.orderItems.length;
+                    
+                    let gTotal = 0;
+                    self.orderItems.forEach((item, i) => {
+                        const el = document.getElementById('order-item-template').content.cloneNode(true).querySelector('.order-item');
+                        el.dataset.index = i;
+                        el.querySelector('img').src = item.image;
+                        el.querySelector('.flex-1 p').textContent = item.name;
+                        el.querySelector('.text-right p').textContent = self.utils.formatCurrency(item.itemTotal);
+                        
+                        const sub = el.querySelector('.text-xs');
+                        item.addons.forEach(a => {
+                            const p = document.createElement('p');
+                            p.textContent = `+ ${a.name} (${a.price})`;
+                            sub.appendChild(p);
+                        });
+                        
+                        el.querySelector('.remove-item-btn').onclick = () => {
+                            self.orderItems.splice(i, 1);
+                            render();
+                        };
+                        list.appendChild(el);
+                        gTotal += item.itemTotal;
+                    });
+                    totalEl.textContent = self.utils.formatCurrency(gTotal);
+                };
+                window.renderOrderSummary = render;
+                
+                fab.onclick = () => drawer.classList.remove('hidden');
+                document.getElementById('close-order-drawer-button').onclick = () => drawer.classList.add('hidden');
+                document.getElementById('order-drawer-backdrop').onclick = () => drawer.classList.add('hidden');
             },
 
             initCategoryDrawer() {
-                const drawer = document.getElementById('category-drawer');
-                const openButton = document.getElementById('category-drawer-button');
-                const closeButton = document.getElementById('close-drawer-button');
-                const backdrop = document.getElementById('drawer-backdrop');
-                const mobileLinksContainer = document.getElementById('category-links-mobile');
-
-                const openDrawer = () => drawer.classList.remove('hidden');
-                const closeDrawer = () => drawer.classList.add('hidden');
-
-                openButton.addEventListener('click', openDrawer);
-                closeButton.addEventListener('click', closeDrawer);
-                backdrop.addEventListener('click', closeDrawer);
-
-                mobileLinksContainer.addEventListener('click', (e) => {
-                    if (e.target.closest('.drawer-link')) {
-                        closeDrawer();
-                    }
-                });
+                const d = document.getElementById('category-drawer');
+                const open = () => d.classList.remove('hidden');
+                const close = () => d.classList.add('hidden');
+                document.getElementById('category-drawer-button').onclick = open;
+                document.getElementById('close-drawer-button').onclick = close;
+                document.getElementById('drawer-backdrop').onclick = close;
+                document.getElementById('category-links-mobile').onclick = e => { if(e.target.closest('a')) close(); };
             },
 
             initBackToTopButton() {
-                const backToTopButton = document.getElementById('back-to-top');
-                window.addEventListener('scroll', () => {
-                    backToTopButton.classList.toggle('hidden', window.scrollY <= 300);
-                });
-                backToTopButton.addEventListener('click', () => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
+                const btn = document.getElementById('back-to-top');
+                window.onscroll = () => btn.classList.toggle('hidden', window.scrollY <= 300);
+                btn.onclick = () => window.scrollTo({top:0, behavior:'smooth'});
             },
 
             initScrollObserver() {
-                const self = this;
                 const header = document.getElementById('header');
-                const mobileStickyNav = document.getElementById('mobile-sticky-nav');
-                const currentCategoryStickyEl = document.getElementById('current-category-sticky');
-                const nextCategoryStickyEl = document.getElementById('next-category-sticky');
-                const nextCategoryLink = document.getElementById('next-category-link');
-                if (!header) return;
-
-                const checkAndObserve = () => {
-                    const sections = document.querySelectorAll('.category-section');
-                    if (sections.length === 0) {
-                        setTimeout(() => checkAndObserve(), 100);
-                        return;
-                    }
+                const sticky = document.getElementById('mobile-sticky-nav');
+                const cur = document.getElementById('current-category-sticky');
+                
+                const check = () => {
+                    const sects = document.querySelectorAll('.category-section');
+                    if(!sects.length) return setTimeout(check, 100);
                     
-                    const headerHeight = header.offsetHeight;
-                    window.addEventListener('scroll', () => {
-                        if (window.scrollY > headerHeight) {
-                            mobileStickyNav.style.transform = 'translateY(0)';
-                        } else {
-                            mobileStickyNav.style.transform = 'translateY(-100%)';
-                        }
-                    });
-
-                    const validHeaderHeight = isNaN(headerHeight) ? 0 : headerHeight;
-                    const observer = new IntersectionObserver((entries) => {
-                        entries.forEach(entry => {
-                            const id = entry.target.getAttribute('id');
-                            const desktopLinks = document.querySelectorAll('#category-links-desktop a');
-                            const mobileLinks = document.querySelectorAll('#category-links-mobile a');
-
-                            if (entry.isIntersecting) {
-                                desktopLinks.forEach(link => {
-                                    const isActive = link.hash === `#${id}`;
-                                    link.classList.toggle('bg-[#FFD100]', isActive);
-                                    link.classList.toggle('text-[#0033A0]', isActive);
-                                    link.classList.toggle('shadow-md', isActive);
-                                    if (isActive) link.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
-                                });
-
-                                mobileLinks.forEach(link => {
-                                   const isActive = link.hash === `#${id}`;
-                                   link.classList.toggle('bg-gray-200', isActive);
-                                   link.classList.toggle('dark:bg-gray-700', isActive);
-                                });
-                                
-                                const currentCategory = self.categoryOrder.find(cat => self.utils.generateCategoryId(cat) === id);
-                                const finalCategoryName = currentCategory || Object.keys(self.menuData).find(cat => self.utils.generateCategoryId(cat) === id);
-                                
-                                currentCategoryStickyEl.textContent = finalCategoryName;
-
-                                const jsonKeys = Object.keys(self.menuData);
-                                const dynamicCategories = jsonKeys.filter(key => !self.categoryOrder.includes(key));
-                                const fullList = [...self.categoryOrder, ...dynamicCategories];
-                                const currentIndex = fullList.indexOf(finalCategoryName);
-
-                                if (currentIndex !== -1 && currentIndex < fullList.length - 1) {
-                                    const nextCategoryName = fullList[currentIndex + 1];
-                                    nextCategoryStickyEl.textContent = `Próximo: ${nextCategoryName}`;
-                                    nextCategoryLink.href = `#${self.utils.generateCategoryId(nextCategoryName)}`;
-                                    nextCategoryLink.style.display = 'flex';
-                                } else {
-                                    nextCategoryLink.style.display = 'none';
-                                }
-                            }
+                    window.onscroll = () => {
+                        sticky.style.transform = window.scrollY > header.offsetHeight ? 'translateY(0)' : 'translateY(-100%)';
+                        
+                        let current = '';
+                        sects.forEach(s => {
+                            if (window.scrollY >= (s.offsetTop - 150)) current = s.id;
                         });
-                    }, { rootMargin: `-${validHeaderHeight}px 0px 0px 0px`, threshold: 0.1 });
-                    
-                    sections.forEach(section => observer.observe(section));
+                        
+                        if(current) {
+                            document.querySelectorAll('#category-links-desktop a').forEach(a => {
+                                const active = a.getAttribute('href') === '#'+current;
+                                a.classList.toggle('bg-[#FFD100]', active);
+                                a.classList.toggle('text-[#0033A0]', active);
+                            });
+                            const activeLink = document.querySelector(`#category-links-desktop a[href="#${current}"]`);
+                            if(activeLink) cur.textContent = activeLink.textContent.trim();
+                        }
+                    };
                 };
-                checkAndObserve();
+                check();
             },
 
             initSearch() {
                 const self = this;
-                const searchToggleButton = document.getElementById('search-toggle-button');
-                const searchInputContainer = document.getElementById('search-input-container');
-                const searchInput = document.getElementById('search-input');
-                const clearSearchButton = document.getElementById('clear-search-button');
-                const categoryNav = document.getElementById('category-nav');
-                const mobileStickyNav = document.getElementById('mobile-sticky-nav');
-                let searchTimeout;
-
-                const toggleSearchVisibility = () => {
-                    const isHidden = searchInputContainer.classList.toggle('hidden');
-                    self.isSearching = !isHidden;
-
-                    if (self.isSearching) {
-                        searchInput.focus();
-                        categoryNav.classList.add('hidden');
-                        mobileStickyNav.style.transform = 'translateY(-100%)';
+                const input = document.getElementById('search-input');
+                const container = document.getElementById('search-input-container');
+                const btn = document.getElementById('search-toggle-button');
+                
+                btn.onclick = () => {
+                    container.classList.toggle('hidden');
+                    if(!container.classList.contains('hidden')) {
+                        input.focus();
+                        self.isSearching = true;
+                        document.getElementById('category-nav').classList.add('hidden');
                     } else {
-                        searchInput.value = '';
+                        self.isSearching = false;
                         self.searchQuery = '';
-                        clearSearchButton.classList.add('hidden');
-                        categoryNav.classList.remove('hidden');
+                        input.value = '';
+                        document.getElementById('category-nav').classList.remove('hidden');
+                        self.renderMenu();
                     }
-                    self.renderMenu();
                 };
 
-                const performSearch = () => {
-                    const query = self.utils.normalizeText(searchInput.value);
-                    self.searchQuery = query;
-
-                    if (query === '') {
-                        clearSearchButton.classList.add('hidden');
+                let timeout;
+                input.oninput = () => {
+                    clearTimeout(timeout);
+                    timeout = setTimeout(() => {
+                        const q = self.utils.normalizeText(input.value);
+                        self.searchQuery = q;
                         self.searchResults = [];
-                    } else {
-                        clearSearchButton.classList.remove('hidden');
-                        self.searchResults = [];
-                        for (const categoryName in self.menuData) {
-                            if (self.menuData.hasOwnProperty(categoryName)) {
-                                const category = self.menuData[categoryName];
-                                const isScheduled = category.schedule;
-                                const isOpen = isScheduled ? self.utils.isTimeInRange(category.schedule.start, category.schedule.end) : true;
-
-                                category.items.forEach(product => {
-                                    const normalizedProductName = self.utils.normalizeText(product.name);
-                                    const normalizedProductDescription = self.utils.normalizeText(product.description);
-                                    
-                                    if (normalizedProductName.includes(query) || normalizedProductDescription.includes(query)) {
-                                        self.searchResults.push({ 
-                                            productData: product,
-                                            isOpen: isOpen
-                                        });
+                        
+                        if(q) {
+                            Object.values(self.menuData).forEach(cat => {
+                                const isOpen = cat.schedule ? self.utils.isTimeInRange(cat.schedule.start, cat.schedule.end) : true;
+                                cat.items.forEach(p => {
+                                    if(self.utils.normalizeText(p.name).includes(q) || self.utils.normalizeText(p.description).includes(q)) {
+                                        self.searchResults.push({ productData: p, isOpen: isOpen });
                                     }
                                 });
-                            }
+                            });
                         }
-                    }
-                    self.renderMenu();
+                        self.renderSearchResults();
+                    }, 300);
                 };
-                
+
                 self.renderSearchResults = () => {
-                    const menuContainer = document.getElementById('menu-container');
-                    const productCardTemplate = document.getElementById('product-card-template');
-                    menuContainer.innerHTML = '';
-
-                    const searchResultsSection = document.createElement('section');
-                    searchResultsSection.className = 'mb-12';
-                    const title = document.createElement('h2');
-                    title.className = 'text-3xl font-bold mb-6 pb-2 border-b-2 border-[#0033A0] dark:border-[#FFD100]';
+                    const cont = document.getElementById('menu-container');
+                    cont.innerHTML = `<h2 class="text-3xl font-bold mb-6">Resultados para "${self.searchQuery}"</h2>`;
+                    const grid = document.createElement('div');
+                    grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
                     
-                    if (self.searchResults.length > 0) {
-                        title.innerHTML = `🔎 Resultados da Busca para "<strong>${self.searchQuery}</strong>"`;
-                        searchResultsSection.appendChild(title);
-
-                        const grid = document.createElement('div');
-                        grid.className = 'grid grid-cols-1 md:grid-cols-2 gap-4';
-                        self.searchResults.forEach(result => {
-                            const product = result.productData;
-                            const isOpen = result.isOpen;
-
-                            const cardClone = productCardTemplate.content.cloneNode(true);
-                            const cardElement = cardClone.querySelector('.product-card');
-                            cardElement.productData = product;
-                            
-                            cardElement.dataset.isOpen = isOpen.toString();
-                            if (!isOpen) {
-                                cardElement.classList.add('closed-visual-only');
-                            }
-                            
-                            cardElement.querySelector('img').src = product.image;
-                            cardElement.querySelector('img').alt = product.name;
-                            cardElement.querySelector('h3').textContent = product.name;
-                            cardElement.querySelector('p').textContent = product.description;
-                            cardElement.querySelector('.price').textContent = product.price;
-                            if (product.options || (product.addons && product.addons.length > 0)) {
-                                cardElement.querySelector('.options-badge').classList.remove('hidden');
-                            }
-                            grid.appendChild(cardElement);
-                        });
-                        searchResultsSection.appendChild(grid);
-                    } else {
-                        searchResultsSection.innerHTML = `
-                            <div class="text-center p-8 bg-gray-100 dark:bg-gray-800/50 rounded-lg border-2 border-dashed border-gray-300 dark:border-gray-700">
-                                <i class="fas fa-exclamation-circle text-4xl text-gray-400 dark:text-gray-500 mb-4"></i>
-                                <h4 class="text-xl font-bold text-gray-700 dark:text-gray-300">Nenhum resultado para "<strong>${self.searchQuery}</strong>"</h4>
-                                <p class="text-gray-500 dark:text-gray-400">Tente outra palavra-chave.</p>
-                            </div>`;
+                    if(!self.searchResults.length) {
+                        cont.innerHTML += '<p class="text-gray-500">Nenhum resultado.</p>';
+                        return;
                     }
-                    menuContainer.appendChild(searchResultsSection);
+
+                    self.searchResults.forEach(res => {
+                        const el = document.getElementById('product-card-template').content.cloneNode(true).querySelector('.product-card');
+                        const p = res.productData;
+                        el.productData = p;
+                        el.dataset.isOpen = res.isOpen;
+                        if(!res.isOpen) el.classList.add('closed-visual-only');
+                        
+                        el.querySelector('img').src = p.image;
+                        el.querySelector('h3').textContent = p.name;
+                        el.querySelector('p').textContent = p.description;
+                        el.querySelector('.price').textContent = p.price;
+                        grid.appendChild(el);
+                    });
+                    cont.appendChild(grid);
                 };
-
-                searchToggleButton.addEventListener('click', toggleSearchVisibility);
-
-                searchInput.addEventListener('input', () => {
-                    clearTimeout(searchTimeout);
-                    searchTimeout = setTimeout(performSearch, 300);
-                });
-
-                clearSearchButton.addEventListener('click', () => {
-                    searchInput.value = '';
-                    performSearch();
-                });
             }
         };
 
