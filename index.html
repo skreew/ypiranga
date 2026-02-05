@@ -16,7 +16,6 @@
         .product-card.closed-visual-only { opacity: 0.6; cursor: default; transform: none !important; }
         #category-nav::-webkit-scrollbar { height: 4px; }
         #category-nav::-webkit-scrollbar-thumb { background-color: #FFD100; border-radius: 20px; }
-        /* Esconde a barra de rolagem mas mantém funcionalidade */
         .no-scrollbar::-webkit-scrollbar { display: none; }
         .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
@@ -87,8 +86,7 @@
                     <p id="modal-description" class="text-gray-600 dark:text-gray-300 text-sm mb-4 max-h-24 overflow-y-auto"></p>
                 </div>
                 
-                <div id="modal-addons-container" class="flex-1 overflow-y-auto pr-2 mb-4 space-y-5 border-t border-b border-gray-200 dark:border-gray-700 py-4 custom-scrollbar">
-                    </div>
+                <div id="modal-addons-container" class="flex-1 overflow-y-auto pr-2 mb-4 space-y-5 border-t border-b border-gray-200 dark:border-gray-700 py-4 custom-scrollbar"></div>
                 
                 <div class="mt-auto flex flex-col gap-4 bg-gray-50 dark:bg-gray-700/30 -m-6 p-6 border-t border-gray-100 dark:border-gray-700">
                     <div class="flex items-center justify-between">
@@ -103,10 +101,50 @@
                             <button id="qty-plus" class="w-10 h-10 text-gray-500 hover:text-[#0033A0] text-lg font-bold">+</button>
                         </div>
                         <button id="add-to-order-button" class="flex-1 bg-[#FFD100] text-[#0033A0] font-bold py-3 px-6 rounded-lg hover:bg-yellow-400 transition-colors shadow-sm active:scale-[0.98]">
-                            Adicionar <span class="hidden sm:inline">ao Pedido</span>
+                            Adicionar
                         </button>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal-pizza-builder" class="hidden fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md overflow-hidden flex flex-col max-h-[90vh]">
+            <div class="bg-[#0033A0] p-4 text-white flex justify-between items-center">
+                <h3 class="font-bold text-lg"><i class="fas fa-pizza-slice mr-2"></i>Montar Pizza</h3>
+                <button onclick="document.getElementById('modal-pizza-builder').classList.add('hidden')" class="text-white hover:text-gray-300"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="p-6 overflow-y-auto flex-1 space-y-6">
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">1º SABOR (Obrigatório)</label>
+                    <select id="pizza-sabor-1" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FFD100] dark:text-white" onchange="atualizarPrecoPizza()">
+                        </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">2º SABOR (Opcional)</label>
+                    <select id="pizza-sabor-2" class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-[#FFD100] dark:text-white" onchange="atualizarPrecoPizza()">
+                        <option value="" data-price="0">-- Inteira (Apenas 1 sabor) --</option>
+                        </select>
+                </div>
+                
+                <div>
+                    <label class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Observações</label>
+                    <input type="text" id="pizza-obs-custom" placeholder="Ex: Sem cebola, massa fina..." class="w-full p-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-lg dark:text-white">
+                </div>
+
+                <div class="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg flex justify-between items-center border border-yellow-200 dark:border-yellow-700">
+                    <span class="text-yellow-800 dark:text-yellow-500 font-bold">Valor Final</span>
+                    <span id="pizza-preco-final" class="text-2xl font-bold text-[#0033A0] dark:text-[#FFD100]">R$ 0,00</span>
+                </div>
+            </div>
+
+            <div class="p-4 bg-gray-50 dark:bg-gray-700/50 border-t border-gray-100 dark:border-gray-700">
+                <button onclick="confirmarPizza()" class="w-full bg-[#FFD100] text-[#0033A0] font-bold py-3 rounded-lg hover:bg-yellow-400 transition-colors shadow-lg">
+                    ADICIONAR AO PEDIDO
+                </button>
             </div>
         </div>
     </div>
@@ -222,10 +260,152 @@
     </template>
 
     <script>
-        // ⚠️ CONFIGURAÇÃO DO SERVIDOR LOCAL (IP DA MÁQUINA RODANDO PYTHON)
-        const SERVIDOR_PYTHON_URL = "http://127.0.0.1:5000/api/pedido"; 
-        // Se for testar no celular, troque 127.0.0.1 pelo IP ex: "http://192.168.0.15:5000/api/pedido"
+        // --- ⚠️ CONFIGURAÇÕES INICIAIS ⚠️ ---
+        const SERVIDOR_PYTHON_URL = "http://127.0.0.1:5000/api/pedido"; // TROQUE PELO SEU IP REAL
+        const GARCONS = ['Camila', 'Ryan', 'João', 'Maria', 'Extra'];
+        let listaPizzasCache = [];
 
+        // --- FUNÇÕES DE IDENTIFICAÇÃO DE GARÇOM ---
+        function verificarIdentidadeGarcom() {
+            const nomeAtual = localStorage.getItem('garcom_atual');
+            if (!nomeAtual) {
+                mostrarModalGarcom();
+            } else {
+                mostrarBadgeGarcom(nomeAtual);
+            }
+        }
+
+        function mostrarModalGarcom() {
+            if(document.getElementById('modal-garcom')) return;
+            const modal = document.createElement('div');
+            modal.id = 'modal-garcom';
+            modal.className = "fixed inset-0 z-[60] bg-black/95 flex flex-col items-center justify-center p-4";
+            
+            let html = `
+                <h2 class="text-white text-2xl font-bold mb-8 text-center">QUEM ESTÁ USANDO? 📱</h2>
+                <div class="grid grid-cols-2 gap-4 w-full max-w-sm">
+            `;
+            GARCONS.forEach(nome => {
+                html += `
+                    <button onclick="selecionarGarcom('${nome}')" 
+                        class="bg-[#FFD100] hover:bg-yellow-400 text-black font-bold text-lg py-6 rounded-xl shadow-lg transform active:scale-95 transition-all">
+                        ${nome}
+                    </button>
+                `;
+            });
+            html += `</div>`;
+            modal.innerHTML = html;
+            document.body.appendChild(modal);
+        }
+
+        window.selecionarGarcom = (nome) => {
+            localStorage.setItem('garcom_atual', nome);
+            document.getElementById('modal-garcom').remove();
+            mostrarBadgeGarcom(nome);
+        };
+
+        function mostrarBadgeGarcom(nome) {
+            if(document.getElementById('badge-garcom')) document.getElementById('badge-garcom').remove();
+            const badge = document.createElement('div');
+            badge.id = 'badge-garcom';
+            badge.className = "fixed bottom-2 left-2 z-50 bg-black/70 text-white px-3 py-1 rounded-full text-xs cursor-pointer hover:bg-red-600 transition-colors border border-white/20";
+            badge.innerHTML = `<i class="fas fa-user mr-1"></i> ${nome}`;
+            badge.onclick = () => {
+                if(confirm(`Sair da conta de ${nome}?`)) {
+                    localStorage.removeItem('garcom_atual');
+                    location.reload();
+                }
+            };
+            document.body.appendChild(badge);
+        }
+
+        // --- LÓGICA DE PIZZA MEIO A MEIO ---
+        window.abrirConstrutorPizza = function() {
+            // Tenta achar categoria Pizza com variações de nome
+            const catPizzas = app.menuData['Pizzas'] || app.menuData['PIZZA'] || app.menuData['PIZZAS'] || app.menuData['Pizza'];
+            
+            if (!catPizzas) return alert("Categoria de Pizzas não encontrada no JSON!");
+            
+            listaPizzasCache = catPizzas.items;
+            const select1 = document.getElementById('pizza-sabor-1');
+            const select2 = document.getElementById('pizza-sabor-2');
+            
+            select1.innerHTML = '<option value="" disabled selected>Selecione o 1º sabor</option>';
+            select2.innerHTML = '<option value="" data-price="0">-- Inteira (Sabor Único) --</option>';
+            
+            listaPizzasCache.forEach((pizza, index) => {
+                const precoNum = app.utils.parsePrice(pizza.price);
+                const html = `<option value="${index}" data-price="${precoNum}">${pizza.name} (${pizza.price})</option>`;
+                select1.innerHTML += html;
+                select2.innerHTML += html;
+            });
+            
+            document.getElementById('pizza-obs-custom').value = "";
+            document.getElementById('pizza-preco-final').textContent = "R$ 0,00";
+            document.getElementById('modal-pizza-builder').classList.remove('hidden');
+        };
+
+        window.atualizarPrecoPizza = function() {
+            const s1 = document.getElementById('pizza-sabor-1');
+            const s2 = document.getElementById('pizza-sabor-2');
+            
+            const idx1 = s1.value;
+            const idx2 = s2.value;
+            
+            if (idx1 === "") return;
+            
+            const preco1 = parseFloat(s1.options[s1.selectedIndex].dataset.price || 0);
+            let precoFinal = preco1;
+            
+            if (idx2 !== "") {
+                const preco2 = parseFloat(s2.options[s2.selectedIndex].dataset.price || 0);
+                precoFinal = Math.max(preco1, preco2);
+            }
+            
+            document.getElementById('pizza-preco-final').textContent = app.utils.fmtPrice(precoFinal);
+        };
+
+        window.confirmarPizza = function() {
+            const s1 = document.getElementById('pizza-sabor-1');
+            const s2 = document.getElementById('pizza-sabor-2');
+            const obsInput = document.getElementById('pizza-obs-custom');
+            
+            const idx1 = s1.value;
+            const idx2 = s2.value;
+            
+            if (idx1 === "") { alert("Selecione pelo menos o 1º sabor!"); return; }
+            
+            const item1 = listaPizzasCache[idx1];
+            let nomeFinal = `PIZZA ${item1.name}`;
+            let precoFinal = parseFloat(s1.options[s1.selectedIndex].dataset.price);
+            
+            if (idx2 !== "") {
+                const item2 = listaPizzasCache[idx2];
+                nomeFinal = `PIZZA 1/2 ${item1.name} + 1/2 ${item2.name}`;
+                const p2 = parseFloat(s2.options[s2.selectedIndex].dataset.price);
+                precoFinal = Math.max(precoFinal, p2);
+            }
+            
+            app.orderItems.push({
+                name: nomeFinal,
+                description: "Pizza Montada",
+                image: item1.image,
+                unitPrice: precoFinal,
+                qty: 1,
+                finalPrice: precoFinal,
+                selectedAddons: obsInput.value ? [{ name: `Obs: ${obsInput.value}`, rawPrice: "" }] : []
+            });
+            
+            app.updateCartUI();
+            document.getElementById('modal-pizza-builder').classList.add('hidden');
+            
+            const fab = document.getElementById('cart-fab');
+            fab.classList.remove('hidden');
+            fab.classList.add('scale-125');
+            setTimeout(() => fab.classList.remove('scale-125'), 200);
+        };
+
+        // --- APP PRINCIPAL ---
         const app = {
             menuData: {},
             categoryOrder: [
@@ -244,13 +424,13 @@
                     if (!res.ok) throw new Error("Falha ao carregar menu.json");
                     this.menuData = await res.json();
                     this.onDomReady();
+                    verificarIdentidadeGarcom(); // Chama a verificação ao iniciar
                 } catch (e) {
                     console.error(e);
                     document.getElementById('menu-container').innerHTML = 
                         `<div class="flex flex-col items-center justify-center py-20 text-center px-4">
                             <i class="fas fa-exclamation-triangle text-4xl text-yellow-500 mb-4"></i>
                             <h3 class="text-xl font-bold mb-2">Ops! O cardápio está indisponível.</h3>
-                            <p class="text-gray-500">Tente recarregar a página.</p>
                             <button onclick="location.reload()" class="mt-4 bg-[#0033A0] text-white px-6 py-2 rounded-full">Recarregar</button>
                         </div>`;
                 }
@@ -324,7 +504,13 @@
                     catData.items.forEach(prod => {
                         const clone = tplCard.content.cloneNode(true);
                         const card = clone.querySelector('.product-card');
-                        card.productData = prod; 
+                        
+                        // LÓGICA DE DETECÇÃO DE PIZZA
+                        if (catName.toUpperCase().includes("PIZZA")) {
+                            card.dataset.isPizza = "true";
+                        } else {
+                            card.productData = prod; 
+                        }
 
                         card.querySelector('h3').textContent = prod.name;
                         card.querySelector('p').textContent = prod.description;
@@ -369,7 +555,6 @@
                     
                     const unitPrice = basePrice + totalAddons;
                     const finalTotal = unitPrice * this.currentQty;
-                    
                     els.total.textContent = this.utils.fmtPrice(finalTotal);
                 };
 
@@ -382,13 +567,11 @@
                     els.name.textContent = prod.name;
                     els.desc.textContent = prod.description;
                     els.qtyVal.textContent = "1";
-                    
                     els.addons.innerHTML = '';
 
                     if (prod.addons && Array.isArray(prod.addons)) {
                         prod.addons.forEach((group, idx) => {
                             const tmpl = document.getElementById('addon-section-template').content.cloneNode(true);
-                            
                             const title = group.group_name || group.title || "Opções";
                             const items = group.options || group.items || [];
                             const isRequired = group.required === true; 
@@ -404,14 +587,12 @@
                             }
                             
                             tmpl.querySelector('.addon-header h4').textContent = title;
-                            
                             const container = tmpl.querySelector('.addon-items');
                             const type = max === 1 ? 'radio' : 'checkbox';
                             const groupName = `addon-grp-${idx}`;
 
                             items.forEach(opt => {
                                 const itmTmpl = document.getElementById('addon-item-template').content.cloneNode(true);
-                                const lbl = itmTmpl.querySelector('label');
                                 const inp = itmTmpl.querySelector('input');
                                 
                                 itmTmpl.querySelector('.addon-name').textContent = opt.name;
@@ -423,20 +604,16 @@
                                 inp.dataset.name = opt.name;
                                 inp.dataset.rawPrice = opt.price;
 
-                                inp.addEventListener('change', () => {
-                                    updateTotal();
-                                });
+                                inp.addEventListener('change', () => updateTotal());
                                 container.appendChild(itmTmpl);
                             });
                             
                             const sectionDiv = tmpl.querySelector('.addon-section');
                             sectionDiv.dataset.required = isRequired;
                             sectionDiv.dataset.groupName = title;
-                            
                             els.addons.appendChild(tmpl);
                         });
                     }
-
                     updateTotal();
                     modal.classList.remove('hidden');
                 };
@@ -456,28 +633,13 @@
                         } else {
                             sec.classList.remove('ring-2', 'ring-red-500', 'rounded-lg', 'p-1');
                         }
-                        
-                        checked.forEach(inp => {
-                            selected.push({ 
-                                name: inp.dataset.name, 
-                                priceVal: parseFloat(inp.dataset.priceVal),
-                                rawPrice: inp.dataset.rawPrice
-                            });
-                        });
+                        checked.forEach(inp => selected.push({ name: inp.dataset.name, priceVal: parseFloat(inp.dataset.priceVal), rawPrice: inp.dataset.rawPrice }));
                     });
 
-                    if (errors.length > 0) {
-                        alert(errors.join('\n'));
-                        return;
-                    }
+                    if (errors.length > 0) { alert(errors.join('\n')); return; }
 
                     let unitTotal = basePrice;
                     selected.forEach(s => unitTotal += s.priceVal);
-
-                    // Adiciona o item N vezes dependendo da quantidade
-                    // Isso simplifica o envio para o Sischef (envia 1 por 1)
-                    // Ou mantemos agrupado aqui e desagrupamos no envio.
-                    // Mantendo agrupado visualmente é melhor.
                     
                     this.orderItems.push({
                         ...this.currentProductData,
@@ -489,7 +651,6 @@
 
                     this.updateCartUI();
                     modal.classList.add('hidden');
-                    
                     const fab = document.getElementById('cart-fab');
                     fab.classList.add('scale-125');
                     setTimeout(() => fab.classList.remove('scale-125'), 200);
@@ -544,7 +705,14 @@
             initEvents() {
                 document.getElementById('menu-container').addEventListener('click', e => {
                     const card = e.target.closest('.product-card');
-                    if(card) this.openModal(card.productData);
+                    if(card) {
+                        // DETECTA SE É PIZZA OU PRODUTO NORMAL
+                        if (card.dataset.isPizza === "true") {
+                            abrirConstrutorPizza();
+                        } else {
+                            this.openModal(card.productData);
+                        }
+                    }
                 });
 
                 document.querySelectorAll('.close-button, #product-modal').forEach(el => {
@@ -571,7 +739,6 @@
                     const header = document.getElementById('header');
                     const sticky = document.getElementById('mobile-sticky-nav');
                     const btnTop = document.getElementById('back-to-top');
-                    
                     if (window.scrollY > header.offsetHeight) {
                         sticky.classList.remove('-translate-y-full');
                         btnTop.classList.remove('hidden');
@@ -592,44 +759,36 @@
                     localStorage.setItem('theme', dark ? 'dark' : 'light');
                     toggle.checked = dark;
                 };
-                
                 const saved = localStorage.getItem('theme');
                 if(saved) set(saved === 'dark');
                 else set(window.matchMedia('(prefers-color-scheme: dark)').matches);
-
                 toggle.onchange = () => set(toggle.checked);
             }
         };
 
-        // --- NOVA FUNÇÃO DE ENVIO PARA O PYTHON ---
+        // --- FUNÇÃO DE ENVIO ---
         window.enviarPedidoSistema = async () => {
             if (app.orderItems.length === 0) return alert("Seu carrinho está vazio!");
             
             const inputMesa = document.getElementById('input-mesa');
             const mesa = inputMesa.value;
+            const garcom = localStorage.getItem('garcom_atual') || "Desconhecido";
 
-            if (!mesa) {
-                alert("Por favor, informe o número da mesa!");
-                inputMesa.focus();
-                return;
-            }
-
+            if (!mesa) { alert("Por favor, informe o número da mesa!"); inputMesa.focus(); return; }
             if (!confirm(`Confirmar envio de ${app.orderItems.length} itens para a Mesa ${mesa}?`)) return;
 
             let erros = 0;
             let enviados = 0;
 
-            // Envia item por item (sequencialmente para não engasgar o servidor)
             for (const item of app.orderItems) {
-                // Monta observação com adicionais
                 let obsFinal = "";
                 if(item.selectedAddons.length > 0) {
                     obsFinal = item.selectedAddons.map(a => a.name).join(', ');
                 }
+                
+                // Anexa o Garçom na Observação
+                obsFinal += ` (Garçom: ${garcom})`;
 
-                // Repete o envio se qty > 1 (ou o backend precisaria tratar qty)
-                // Vamos enviar N requisições se for quantidade 2, por exemplo, 
-                // para garantir que a impressora solte 2 papeis ou o sistema conte certo.
                 for (let i = 0; i < item.qty; i++) {
                     const payload = {
                         mesa: mesa,
@@ -643,10 +802,8 @@
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify(payload)
                         });
-
                         if (response.ok) enviados++;
                         else erros++;
-
                     } catch (error) {
                         console.error("Erro de conexão:", error);
                         erros++;
@@ -655,13 +812,13 @@
             }
 
             if (erros === 0) {
-                alert(`✅ Sucesso! Todos os pedidos enviados para a mesa ${mesa}.`);
+                alert(`✅ Pedido enviado! Mesa ${mesa} - Garçom: ${garcom}`);
                 app.orderItems = [];
                 app.updateCartUI();
                 document.getElementById('order-summary-drawer').classList.add('hidden');
-                inputMesa.value = ""; // Limpa mesa
+                inputMesa.value = "";
             } else {
-                alert(`⚠️ Atenção: ${enviados} itens enviados, mas ${erros} falharam. Verifique o servidor.`);
+                alert(`⚠️ Atenção: ${enviados} enviados, ${erros} falhas.`);
             }
         };
 
@@ -673,7 +830,6 @@
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
         .animate-fade-in { animation: fadeIn 0.3s ease-out; }
         .animate-fade-in-up { animation: fadeInUp 0.3s ease-out; }
-        
         .custom-scrollbar::-webkit-scrollbar { width: 6px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }
         .custom-scrollbar::-webkit-scrollbar-thumb { background-color: rgba(156, 163, 175, 0.5); border-radius: 20px; }
