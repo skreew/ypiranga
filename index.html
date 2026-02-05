@@ -143,12 +143,18 @@
                     <span>Subtotal</span>
                     <span id="order-subtotal">R$ 0,00</span>
                 </div>
-                <div class="flex justify-between items-center text-2xl font-bold text-gray-800 dark:text-white mb-6">
+                <div class="flex justify-between items-center text-2xl font-bold text-gray-800 dark:text-white mb-4">
                     <span>Total</span>
                     <span id="order-grand-total">R$ 0,00</span>
                 </div>
-                <button onclick="enviarPedidoWhatsApp()" class="w-full bg-[#25D366] text-white font-bold py-4 rounded-xl hover:bg-[#128C7E] transition-all shadow-lg hover:shadow-green-500/30 flex items-center justify-center text-lg">
-                    <i class="fab fa-whatsapp text-2xl mr-2"></i> Enviar Pedido
+                
+                <div class="mb-4">
+                    <label for="input-mesa" class="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">Número da Mesa:</label>
+                    <input type="number" id="input-mesa" class="w-full p-3 border border-gray-300 rounded-lg dark:bg-gray-800 dark:text-white dark:border-gray-600 focus:ring-2 focus:ring-[#0033A0]" placeholder="Ex: 15">
+                </div>
+
+                <button onclick="enviarPedidoSistema()" class="w-full bg-[#0033A0] dark:bg-[#FFD100] text-white dark:text-[#0033A0] font-bold py-4 rounded-xl hover:opacity-90 transition-all shadow-lg flex items-center justify-center text-lg">
+                    <i class="fas fa-check-circle text-2xl mr-2"></i> Enviar para Cozinha
                 </button>
             </div>
         </div>
@@ -216,6 +222,10 @@
     </template>
 
     <script>
+        // ⚠️ CONFIGURAÇÃO DO SERVIDOR LOCAL (IP DA MÁQUINA RODANDO PYTHON)
+        const SERVIDOR_PYTHON_URL = "http://127.0.0.1:5000/api/pedido"; 
+        // Se for testar no celular, troque 127.0.0.1 pelo IP ex: "http://192.168.0.15:5000/api/pedido"
+
         const app = {
             menuData: {},
             categoryOrder: [
@@ -229,7 +239,6 @@
 
             async init() {
                 try {
-                    // Força cache bust para garantir json novo
                     const ts = new Date().getTime();
                     const res = await fetch(`menu.json?v=${ts}`);
                     if (!res.ok) throw new Error("Falha ao carregar menu.json");
@@ -248,13 +257,10 @@
             },
 
             utils: {
-                // Parseia preços suportando "R$ 10,00" e "Grátis"
                 parsePrice(str) { 
                     if (!str) return 0;
                     if (typeof str === 'number') return str;
-                    // Se for "Grátis", retorna 0
                     if (str.toLowerCase().includes('grátis') || str.toLowerCase().includes('gratis')) return 0;
-                    // Limpa caracteres e converte vírgula
                     const clean = str.replace('R$', '').replace('Adicionais', '').trim();
                     return parseFloat(clean.replace('.', '').replace(',', '.')) || 0;
                 },
@@ -281,10 +287,8 @@
 
                 container.innerHTML = ''; deskLinks.innerHTML = ''; mobLinks.innerHTML = '';
 
-                // Mescla ordem manual com o que vier do JSON
                 const availableCats = Object.keys(this.menuData);
                 const sortedCats = [...this.categoryOrder.filter(c => availableCats.some(ac => ac.includes(c))), ...availableCats.filter(ac => !this.categoryOrder.some(oc => ac.includes(oc)))];
-                // Remove duplicatas (gambiarra simples)
                 const uniqueCats = [...new Set(sortedCats)];
 
                 availableCats.forEach(catName => {
@@ -293,12 +297,10 @@
 
                     const catId = this.utils.genId(catName);
                     
-                    // Link Desktop
                     deskLinks.insertAdjacentHTML('beforeend', 
                         `<a href="#${catId}" class="px-5 py-2 rounded-full bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 hover:bg-[#FFD100] hover:text-[#0033A0] dark:hover:text-[#0033A0] transition-all font-medium text-sm shadow-sm whitespace-nowrap border border-gray-100 dark:border-gray-700">${catData.emoji || ''} ${catName}</a>`
                     );
                     
-                    // Link Mobile
                     const mobLink = document.createElement('a');
                     mobLink.href = `#${catId}`;
                     mobLink.className = "flex items-center p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 transition-colors";
@@ -306,7 +308,6 @@
                     mobLink.onclick = () => document.getElementById('category-drawer').classList.add('hidden');
                     mobLinks.appendChild(mobLink);
 
-                    // Seção
                     const section = document.createElement('section');
                     section.id = catId;
                     section.className = "mb-10 scroll-mt-28 animate-fade-in";
@@ -332,8 +333,6 @@
                         const img = card.querySelector('img');
                         img.src = this.utils.highRes(prod.image);
 
-                        // Lógica de badge de opções
-                        // O Python retorna "addons" preenchido se houver
                         if ((prod.addons && prod.addons.length > 0)) {
                             card.querySelector('.options-badge').classList.remove('hidden');
                         }
@@ -365,7 +364,6 @@
                 const updateTotal = () => {
                     let totalAddons = 0;
                     els.addons.querySelectorAll('input:checked').forEach(el => {
-                        // Importante: dataset armazena string, converte pra float
                         totalAddons += parseFloat(el.dataset.priceVal) || 0;
                     });
                     
@@ -387,20 +385,15 @@
                     
                     els.addons.innerHTML = '';
 
-                    // Compatibilidade com estrutura do Python
-                    // O Python gera: { group_name: "...", options: [...], required: true }
                     if (prod.addons && Array.isArray(prod.addons)) {
                         prod.addons.forEach((group, idx) => {
                             const tmpl = document.getElementById('addon-section-template').content.cloneNode(true);
                             
-                            // Normalização de chaves (suporta json antigo e novo)
                             const title = group.group_name || group.title || "Opções";
                             const items = group.options || group.items || [];
-                            const isRequired = group.required === true; // Garante booleano
+                            const isRequired = group.required === true; 
                             const max = group.max || 99;
-                            const min = group.min || 0;
 
-                            // Badge
                             const badge = tmpl.querySelector('.badge');
                             if (isRequired) {
                                 badge.textContent = "OBRIGATÓRIO";
@@ -426,19 +419,16 @@
                                 
                                 inp.type = type;
                                 inp.name = groupName;
-                                // SALVA O PREÇO LIMPO NO DATASET PARA CALCULO
                                 inp.dataset.priceVal = this.utils.parsePrice(opt.price); 
                                 inp.dataset.name = opt.name;
                                 inp.dataset.rawPrice = opt.price;
 
                                 inp.addEventListener('change', () => {
-                                    // Comportamento Radio "Fake" se necessário ou validações extras
                                     updateTotal();
                                 });
                                 container.appendChild(itmTmpl);
                             });
                             
-                            // Metadados para validação
                             const sectionDiv = tmpl.querySelector('.addon-section');
                             sectionDiv.dataset.required = isRequired;
                             sectionDiv.dataset.groupName = title;
@@ -477,15 +467,18 @@
                     });
 
                     if (errors.length > 0) {
-                        // Treme a tela ou alerta simples
                         alert(errors.join('\n'));
                         return;
                     }
 
-                    // Calcula total unitario real
                     let unitTotal = basePrice;
                     selected.forEach(s => unitTotal += s.priceVal);
 
+                    // Adiciona o item N vezes dependendo da quantidade
+                    // Isso simplifica o envio para o Sischef (envia 1 por 1)
+                    // Ou mantemos agrupado aqui e desagrupamos no envio.
+                    // Mantendo agrupado visualmente é melhor.
+                    
                     this.orderItems.push({
                         ...this.currentProductData,
                         unitPrice: unitTotal,
@@ -497,7 +490,6 @@
                     this.updateCartUI();
                     modal.classList.add('hidden');
                     
-                    // Feedback visual
                     const fab = document.getElementById('cart-fab');
                     fab.classList.add('scale-125');
                     setTimeout(() => fab.classList.remove('scale-125'), 200);
@@ -561,10 +553,6 @@
                     });
                 });
 
-                // Drawers
-                const catDrawer = document.getElementById('category-drawer');
-                const orderDrawer = document.getElementById('order-summary-drawer');
-                
                 const toggleDrawer = (id, show) => {
                     const el = document.getElementById(id);
                     if(show) el.classList.remove('hidden');
@@ -579,7 +567,6 @@
                 document.getElementById('close-order-drawer-button').onclick = () => toggleDrawer('order-summary-drawer', false);
                 document.getElementById('order-drawer-backdrop').onclick = () => toggleDrawer('order-summary-drawer', false);
 
-                // Scroll nav sticky logic
                 window.addEventListener('scroll', () => {
                     const header = document.getElementById('header');
                     const sticky = document.getElementById('mobile-sticky-nav');
@@ -614,25 +601,68 @@
             }
         };
 
-        window.enviarPedidoWhatsApp = () => {
+        // --- NOVA FUNÇÃO DE ENVIO PARA O PYTHON ---
+        window.enviarPedidoSistema = async () => {
             if (app.orderItems.length === 0) return alert("Seu carrinho está vazio!");
             
-            let msg = `*PEDIDO - CAFÉ YPIRANGA*\n----------------------------\n`;
-            let total = 0;
-            
-            app.orderItems.forEach(item => {
-                msg += `*${item.qty}x ${item.name}*\n`;
+            const inputMesa = document.getElementById('input-mesa');
+            const mesa = inputMesa.value;
+
+            if (!mesa) {
+                alert("Por favor, informe o número da mesa!");
+                inputMesa.focus();
+                return;
+            }
+
+            if (!confirm(`Confirmar envio de ${app.orderItems.length} itens para a Mesa ${mesa}?`)) return;
+
+            let erros = 0;
+            let enviados = 0;
+
+            // Envia item por item (sequencialmente para não engasgar o servidor)
+            for (const item of app.orderItems) {
+                // Monta observação com adicionais
+                let obsFinal = "";
                 if(item.selectedAddons.length > 0) {
-                    item.selectedAddons.forEach(a => msg += `  + ${a.name}\n`);
+                    obsFinal = item.selectedAddons.map(a => a.name).join(', ');
                 }
-                msg += `  Subtotal: ${app.utils.fmtPrice(item.finalPrice)}\n\n`;
-                total += item.finalPrice;
-            });
-            
-            msg += `----------------------------\n*TOTAL: ${app.utils.fmtPrice(total)}*\n`;
-            
-            const url = `https://wa.me/554532681492?text=${encodeURIComponent(msg)}`;
-            window.open(url, '_blank');
+
+                // Repete o envio se qty > 1 (ou o backend precisaria tratar qty)
+                // Vamos enviar N requisições se for quantidade 2, por exemplo, 
+                // para garantir que a impressora solte 2 papeis ou o sistema conte certo.
+                for (let i = 0; i < item.qty; i++) {
+                    const payload = {
+                        mesa: mesa,
+                        nome_produto: item.name,
+                        obs: obsFinal
+                    };
+
+                    try {
+                        const response = await fetch(SERVIDOR_PYTHON_URL, {
+                            method: "POST",
+                            headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify(payload)
+                        });
+
+                        if (response.ok) enviados++;
+                        else erros++;
+
+                    } catch (error) {
+                        console.error("Erro de conexão:", error);
+                        erros++;
+                    }
+                }
+            }
+
+            if (erros === 0) {
+                alert(`✅ Sucesso! Todos os pedidos enviados para a mesa ${mesa}.`);
+                app.orderItems = [];
+                app.updateCartUI();
+                document.getElementById('order-summary-drawer').classList.add('hidden');
+                inputMesa.value = ""; // Limpa mesa
+            } else {
+                alert(`⚠️ Atenção: ${enviados} itens enviados, mas ${erros} falharam. Verifique o servidor.`);
+            }
         };
 
         app.init();
