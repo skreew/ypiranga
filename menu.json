@@ -1221,6 +1221,13 @@
                 "price": "R$ 17,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/809ac36f-d0e5-43f8-b30d-95936968409c.webp",
                 "addons": []
+            },
+            {
+                "name": "Bolinho de carne SECA 300g",
+                "description": "",
+                "price": "R$ 52,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     },
@@ -1572,62 +1579,6 @@
                 "description": "Uma combinação deliciosa de ovo, queijo parmesão e bacon em cubos. Acompanha pão de forma crocante.",
                 "price": "R$ 22,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/61da7f61-7cf8-468f-8c21-2e73288da324.webp",
-                "addons": [
-                    {
-                        "group_name": "Turbine seu lanche",
-                        "required": false,
-                        "min": 0,
-                        "max": 5,
-                        "options": [
-                            {
-                                "name": "Bacon (3 fatias)",
-                                "price": "R$ 5,00"
-                            },
-                            {
-                                "name": "Queijo Extra",
-                                "price": "R$ 2,00"
-                            },
-                            {
-                                "name": "Hambúrguer Extra",
-                                "price": "R$ 8,00"
-                            },
-                            {
-                                "name": "Fritas (100g)",
-                                "price": "R$ 10,00"
-                            }
-                        ]
-                    },
-                    {
-                        "group_name": "Molhos",
-                        "required": false,
-                        "min": 0,
-                        "max": 3,
-                        "options": [
-                            {
-                                "name": "Maionese da Casa",
-                                "price": "Grátis"
-                            },
-                            {
-                                "name": "Ketchup",
-                                "price": "Grátis"
-                            },
-                            {
-                                "name": "Barbecue",
-                                "price": "Grátis"
-                            },
-                            {
-                                "name": "Mostarda",
-                                "price": "Grátis"
-                            }
-                        ]
-                    }
-                ]
-            },
-            {
-                "name": "CROQUE MADAME",
-                "description": "A Elegância Francesa em Cada Camada! Deixe-se seduzir por este clássico sanduíche de pão de forma, recheado com queijo duplo e presunto. A magia acontece com a cobertura generosa de molho bechamel cremoso, queijo gratinado à perfeição. Sabor, sofisticação e indulgência garantidos.",
-                "price": "R$ 22,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3ab65826-7e7a-4980-895c-3c059b196945.webp",
                 "addons": [
                     {
                         "group_name": "Turbine seu lanche",
