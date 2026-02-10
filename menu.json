@@ -3739,5 +3739,121 @@
                 ]
             }
         ]
+    },
+    "CHOPP": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CHOPP 300 ML",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHOPP 500 ML",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "LONG NECK": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "HEINEKEN LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/66f3bb48-fc88-4803-9ee7-0b10e16b2b06.webp",
+                "addons": []
+            },
+            {
+                "name": "HEINEKEN ZERO LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d1b40bac-7a6f-4694-b942-f49d94e13ee7.webp",
+                "addons": []
+            },
+            {
+                "name": "SOL LONG NECK",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/82d53918-b645-4129-98af-a7dbb29ad19a.webp",
+                "addons": []
+            },
+            {
+                "name": "SOL ZERO LONG NECK",
+                "description": "",
+                "price": "R$ 6,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/97474885-b8a5-41a6-8234-1538191c485e.webp",
+                "addons": []
+            },
+            {
+                "name": "BUDWEISER LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/09eef05d-52fa-4d35-9b2f-b1ba39d201d6.webp",
+                "addons": []
+            },
+            {
+                "name": "CORONA LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d2b90f30-c7e7-4c56-89ae-d5275e1d6763.webp",
+                "addons": []
+            },
+            {
+                "name": "THEREZOPOLIS LONG NECK",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/dbc52412-35af-4987-896e-891825d78568.webp",
+                "addons": []
+            },
+            {
+                "name": "STELLA ARTOIS LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f2bedd18-f32b-4b65-8f77-3fc1ad6df4dd.webp",
+                "addons": []
+            },
+            {
+                "name": "STELLA ARTOIS GOLD LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/690d3dcc-08f3-48ab-9e4b-9dd3be2a592b.webp",
+                "addons": []
+            },
+            {
+                "name": "ESTRELLA GALÍCIA LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7a3bb375-2875-4a77-beaf-f9ba9299461e.webp",
+                "addons": []
+            },
+            {
+                "name": "BRAHMA MALZBIER LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/dc65dbb9-1c15-4d96-bc2b-71218eeaf050.webp",
+                "addons": []
+            },
+            {
+                "name": "EISENBAHN LONG NECK",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3e5dfa5f-361b-4b43-9466-d0cc3d57773b.webp",
+                "addons": []
+            }
+        ]
     }
 }
