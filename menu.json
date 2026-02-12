@@ -3855,5 +3855,42 @@
                 "addons": []
             }
         ]
+    },
+    "BALCÃO": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "COXINHA",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "EMPADÃO CARNE",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "EMPADÃO FRANGO",
+                "description": "",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "QUICHE",
+                "description": "",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
     }
 }
