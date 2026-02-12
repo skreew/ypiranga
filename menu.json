@@ -3867,7 +3867,7 @@
                 "name": "COXINHA",
                 "description": "",
                 "price": "R$ 8,00",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d2cbf3ff-d9d6-4675-b522-a9b1f825b666.webp",
                 "addons": []
             },
             {
@@ -3880,12 +3880,147 @@
             {
                 "name": "EMPADÃO FRANGO",
                 "description": "",
+                "price": "R$ 14,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/dbc72fcf-3fe6-4e4c-8416-8300cddb05d4.webp",
+                "addons": []
+            },
+            {
+                "name": "QUICHE BROCOLIS COM BACON",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/cce35bee-be38-46a7-9f23-4d8097f7ce22.webp",
+                "addons": []
+            },
+            {
+                "name": "QUICHE DE CARNE SECA",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/026177a9-4d7d-45de-9945-ff092c1e33c1.webp",
+                "addons": []
+            },
+            {
+                "name": "QUICHE ALHO PORO",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTINHA DE FRANGO",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/33667fdb-3ec3-44ac-847a-5ff36a3dd792.webp",
+                "addons": []
+            },
+            {
+                "name": "QUICHE DE QUEIJO E BACON",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/90f1615e-0422-4860-978f-d6b68ac14579.webp",
+                "addons": []
+            },
+            {
+                "name": "EMPADA DE CARNE COM BANANA",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA DE PISTACHE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA OREO",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA DOCE DE LEITE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA LIMÃO TRUFADO",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COOKIE TRADICIONL",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COOKIE RECHEADO",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA MORANGOFF",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA DE LIMÃO",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA BANOFFE",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "REFRIGERANTES": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "COCA-COLA 250ML VIDRO",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "Produto 2",
+                "description": "",
                 "price": "R$ A consultar",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
             },
             {
-                "name": "QUICHE",
+                "name": "Produto 3",
+                "description": "",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "Produto 4",
                 "description": "",
                 "price": "R$ A consultar",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
