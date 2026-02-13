@@ -4284,14 +4284,21 @@
                 "name": "STARBUCKS CAFÉ CLÁSSICO",
                 "description": "",
                 "price": "R$ 12,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/52d8f2c0-db2d-4775-91c6-1b620726b59d.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f8de9408-aa32-4eb7-a57e-cfc03a765795.webp",
                 "addons": []
             },
             {
                 "name": "STABUCKS MOCHA",
                 "description": "",
                 "price": "R$ 12,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2d33be8c-2abc-4a76-bead-eb53df56f6b7.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2c32c7c3-fa53-4769-919c-e3aca0990866.webp",
+                "addons": []
+            },
+            {
+                "name": "STARBUCKS CARAMELO",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/0b8bf91f-7b56-47b8-9477-262926f3b14e.webp",
                 "addons": []
             },
             {
