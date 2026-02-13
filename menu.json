@@ -3748,7 +3748,7 @@
         },
         "items": [
             {
-                "name": "CHOPP 300 ML",
+                "name": "CHOPP 310 ML",
                 "description": "",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ac20a00c-45cf-4042-be4b-484ac6234ebc.webp",
@@ -3999,171 +3999,171 @@
         },
         "items": [
             {
+                "name": "COCA COLA MINI 200ml PET",
+                "description": "",
+                "price": "R$ 2,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/23566201-9bf1-47c7-9269-4b544b5f367f.webp",
+                "addons": []
+            },
+            {
                 "name": "COCA-COLA 250ML VIDRO",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c5832014-bd77-4e5f-9fcc-9dd66c31f29d.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/68566a32-11f1-4c87-97b7-9c6d2226b368.webp",
                 "addons": []
             },
             {
                 "name": "COCA-COLA 250ML VIDRO ZERO",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/dd567b02-b863-44f9-a44b-4072951055b7.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4efc857c-32c0-4367-8cbf-c84b60c23ff1.webp",
                 "addons": []
             },
             {
                 "name": "COCA COLA 1L",
                 "description": "",
                 "price": "R$ 9,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a1c7b230-5d38-4153-88e6-0081103adafc.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a0d74371-4503-4111-bb8d-3981327cfa71.webp",
                 "addons": []
             },
             {
                 "name": "COCA COLA 1L ZERO",
                 "description": "",
                 "price": "R$ 9,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a3e6bf89-e02b-44a9-bb3d-588f1793b820.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1ce92fd2-8810-4ce1-9ff4-644f196dd88f.webp",
                 "addons": []
             },
             {
                 "name": "COCA COLA 600",
                 "description": "",
                 "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1926a7f5-6fc4-49d9-855c-b9244a655958.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6e8be581-7527-481c-9cd6-034ec173aeb7.webp",
                 "addons": []
             },
             {
                 "name": "COCA COLA 600 ZERO",
                 "description": "",
                 "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c3aef656-1e1e-4e2b-8e4e-670588253c25.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5595af23-0649-4569-b08b-16604aa85980.webp",
                 "addons": []
             },
             {
-                "name": "SPRIT 600",
+                "name": "SPRITE 600ml",
                 "description": "",
                 "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b3813252-1aaf-4be9-8376-2269622183e1.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/485b3f4c-963e-484e-aa5f-15da45a67148.webp",
                 "addons": []
             },
             {
-                "name": "FANTA LARANJA 600",
+                "name": "SPRITE 600ml LEMON FRESH",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b027abb6-331c-4f9e-9297-1c8f9c31b713.webp",
+                "addons": []
+            },
+            {
+                "name": "FANTA LARANJA 600ml",
                 "description": "",
                 "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/036c3841-1b19-4818-8eb1-e3cab745a15f.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/06974f0e-494d-4be4-90c6-310434ea9301.webp",
                 "addons": []
             },
             {
-                "name": "TÔNICA VIDRO",
+                "name": "TÔNICA VIDRO 250ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/673785a7-e240-4b11-a36d-73f3c5953a0a.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b70f4d13-c6e6-4638-8b9f-608cde26179b.webp",
                 "addons": []
             },
             {
-                "name": "CÍTRUS VIDRO",
+                "name": "CÍTRUS VIDRO 250ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b0bd587e-a289-4229-af35-a283bd0dd968.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8e3e2b2d-3bfa-4601-9364-88c3781f5bfa.webp",
                 "addons": []
             },
             {
-                "name": "ADES 200ml",
+                "name": "ADES PÊSSEGO 200ml",
                 "description": "",
                 "price": "R$ 4,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a5987dd3-6de0-4f1f-9cd2-214c389eb1d0.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c19019b3-ce03-49dd-b777-89232bea7f11.webp",
                 "addons": []
             },
             {
                 "name": "MINI REFRIS 220ml",
                 "description": "",
                 "price": "R$ 4,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/40fa0db2-3d08-434d-b847-78b33255b29f.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2c1efa05-e9cd-4254-ad73-646072604d5e.webp",
                 "addons": []
             },
             {
                 "name": "TÔNICA LATA",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4a44b0a6-021d-4af9-b0df-b72222e6b181.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9badd3dd-2476-493e-b7c6-137ce86668b4.webp",
                 "addons": []
             },
             {
                 "name": "COCA LATA 350ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/01924846-87cc-4e0f-99c2-4fe5486d360e.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5a552c00-6032-4663-8283-38554aed745e.webp",
                 "addons": []
             },
             {
                 "name": "COCA LATA 350ml ZERO",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2787e0ba-17a2-46a7-a99d-32d9df3091d2.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9fbe923d-f6b6-4c51-ba61-1b2f1836e894.webp",
                 "addons": []
             },
             {
                 "name": "FANTA CHUCKY 350ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b21f9056-9d3d-4b40-b0b7-b5a676f47586.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2db635cb-032d-4d79-a03d-a6c871f09fe6.webp",
                 "addons": []
             },
             {
-                "name": "FANTA LARANJA",
+                "name": "FANTA LARANJA LATA 350ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d82cfa37-530b-4cf3-a064-5fe42454f0f4.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4a9277f2-75e5-43ff-8fbb-ff58764bfe70.webp",
                 "addons": []
             },
             {
-                "name": "SPRIT LATA 350ml",
+                "name": "SPRITE LATA 350ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ebaf73b5-50b0-4083-81c6-915b468be6bb.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/62ac3ddd-3390-4625-bdf3-275be2800989.webp",
                 "addons": []
             },
             {
                 "name": "FATA UVA LATA 350ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/40e99bcd-b6dd-425e-94e7-199038d7ddca.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/47cbdc9a-acdf-4a3c-b7ae-a140c7fc444e.webp",
                 "addons": []
             },
             {
-                "name": "QUARANA KUAT LATA 350ml",
+                "name": "GUARANA KUAT LATA 350ml",
                 "description": "",
                 "price": "R$ 5,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f66aa8d2-46ac-4b5d-a89a-1723f5cb9300.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/60361931-1fd3-49a7-80e4-12fbeeb177e3.webp",
                 "addons": []
             },
             {
                 "name": "COCA COLA 2L ZERO",
                 "description": "",
                 "price": "R$ 14,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1a71c632-d23d-4d56-ab82-648c7b23fb24.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/018162ec-a924-4ac1-95a0-b90fa9a289d4.webp",
                 "addons": []
             },
             {
                 "name": "COCA COLA 2L",
                 "description": "",
                 "price": "R$ 14,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7c7f8ac1-cb8c-4733-8426-08fa330661a4.webp",
-                "addons": []
-            },
-            {
-                "name": "COCA COLA MINI 200ml PET",
-                "description": "",
-                "price": "R$ 2,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f0feb33f-3ea5-4ac6-ba31-b3a3c4556341.webp",
-                "addons": []
-            },
-            {
-                "name": "COCA COLA MINI 200ml PET ZERO",
-                "description": "",
-                "price": "R$ 2,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7413250d-583c-4031-a4dd-fd17438d15a2.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5e1e6f0a-f8bc-4f51-a443-0fc2881f75ec.webp",
                 "addons": []
             }
         ]
