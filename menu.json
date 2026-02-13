@@ -2020,14 +2020,7 @@
                 "addons": []
             },
             {
-                "name": "MAÇÃ VERDE",
-                "description": "Xarope de maçã verde, água com gás e gelo.",
-                "price": "R$ 14,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4cb00595-419c-428b-8007-5db4f60d4101.webp",
-                "addons": []
-            },
-            {
-                "name": "LIMÃO",
+                "name": "LIMÃO SICILIANO",
                 "description": "Xarope de limão, água com gás e gelo.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/af095a0c-a537-4732-8363-c50dd6bffa56.webp",
@@ -4006,10 +3999,38 @@
                 "addons": []
             },
             {
-                "name": "COCA COLA MINI 200ML",
+                "name": "COCA COLA 600ML",
                 "description": "",
-                "price": "R$ 2,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/23566201-9bf1-47c7-9269-4b544b5f367f.webp",
+                "price": "R$ 7,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6e8be581-7527-481c-9cd6-034ec173aeb7.webp",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 600ML ZERO",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5595af23-0649-4569-b08b-16604aa85980.webp",
+                "addons": []
+            },
+            {
+                "name": "SPRITE 600ML",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/485b3f4c-963e-484e-aa5f-15da45a67148.webp",
+                "addons": []
+            },
+            {
+                "name": "SPRITE 550ML LEMON FRESH",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b027abb6-331c-4f9e-9297-1c8f9c31b713.webp",
+                "addons": []
+            },
+            {
+                "name": "FANTA LARANJA 600ML",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/06974f0e-494d-4be4-90c6-310434ea9301.webp",
                 "addons": []
             },
             {
@@ -4031,6 +4052,13 @@
                 "description": "",
                 "price": "R$ 4,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f88ebb33-2cf4-4869-86ac-cc5d5e9b1a90.webp",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA MINI 200ML",
+                "description": "",
+                "price": "R$ 2,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/23566201-9bf1-47c7-9269-4b544b5f367f.webp",
                 "addons": []
             },
             {
@@ -4139,41 +4167,6 @@
                 "addons": []
             },
             {
-                "name": "SPRITE 550ML LEMON FRESH",
-                "description": "",
-                "price": "R$ 5,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b027abb6-331c-4f9e-9297-1c8f9c31b713.webp",
-                "addons": []
-            },
-            {
-                "name": "SPRITE 600ML",
-                "description": "",
-                "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/485b3f4c-963e-484e-aa5f-15da45a67148.webp",
-                "addons": []
-            },
-            {
-                "name": "COCA COLA 600ML",
-                "description": "",
-                "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6e8be581-7527-481c-9cd6-034ec173aeb7.webp",
-                "addons": []
-            },
-            {
-                "name": "COCA COLA 600ML ZERO",
-                "description": "",
-                "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/5595af23-0649-4569-b08b-16604aa85980.webp",
-                "addons": []
-            },
-            {
-                "name": "FANTA LARANJA 600ML",
-                "description": "",
-                "price": "R$ 7,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/06974f0e-494d-4be4-90c6-310434ea9301.webp",
-                "addons": []
-            },
-            {
                 "name": "COCA COLA 1L",
                 "description": "",
                 "price": "R$ 9,00",
@@ -4246,35 +4239,35 @@
         },
         "items": [
             {
-                "name": "SEM GÁS 500ML",
+                "name": "CRYSTAL SEM GÁS 500ML",
                 "description": "",
                 "price": "R$ 3,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7aa572ab-6eb7-46c4-91ed-1c225d077d53.webp",
                 "addons": []
             },
             {
-                "name": "COM GÁS 500ML",
+                "name": "CRYSTAL COM GÁS 500ML",
                 "description": "",
                 "price": "R$ 3,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8e0ceb78-0612-4fba-a09d-e83b1e685c3f.webp",
                 "addons": []
             },
             {
-                "name": "SEM GÁS 1L",
+                "name": "CRYSTAL SEM GÁS 1L",
                 "description": "",
                 "price": "R$ 4,00",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/70d933de-e7be-4c76-8ba0-bca79810ca7d.webp",
                 "addons": []
             },
             {
-                "name": "COM GÁS 1,5L",
+                "name": "CRYSTAL COM GÁS 1,5L",
                 "description": "",
                 "price": "R$ 5,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c13d0276-0734-42c9-9cf8-bd28d471cd3d.webp",
                 "addons": []
             },
             {
-                "name": "SEM GÁS 1,5L",
+                "name": "CRYSTAL SEM GÁS 1,5L",
                 "description": "",
                 "price": "R$ 5,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9e029d15-fdac-42bd-ba9f-2a6d0ce79054.webp",
@@ -4376,13 +4369,6 @@
                 "description": "",
                 "price": "R$ 10,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/cabb89c4-68f8-49f4-8932-a2cc1a9dd5ac.webp",
-                "addons": []
-            },
-            {
-                "name": "DEL VALLE LATA 290ml",
-                "description": "",
-                "price": "R$ 5,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9b2639df-2855-4f18-b54e-a2ecf2b35328.webp",
                 "addons": []
             }
         ]
