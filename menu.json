@@ -176,7 +176,7 @@
         },
         "items": [
             {
-                "name": "TRADICIONAL",
+                "name": "CAPPUCCINOS TRADICIONAL",
                 "description": "A combinação clássica do nosso espresso intenso com leite vaporizado, uma camada generosa de espuma cremosa e um toque sutil de canela",
                 "price": "R$ 12,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8238a6b1-78f0-41ca-a84b-61cbb0f06d5c.webp",
@@ -208,7 +208,7 @@
                 ]
             },
             {
-                "name": "BRASILEIRO",
+                "name": "CAPPUCCINOS BRASILEIRO",
                 "description": "A versão que abraça o paladar! Nosso espresso encontra o leite cremoso, um toque de chocolate e o calor da canela.",
                 "price": "R$ 13,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f0566d3f-6448-44e7-b52d-e38ac795849a.webp",
@@ -240,7 +240,7 @@
                 ]
             },
             {
-                "name": "NUTELLA",
+                "name": "CAPPUCCINOS NUTELLA",
                 "description": "O abraço quente do café encontra a cremosidade do leite e a indulgência inconfundível da Nutella. Uma xícara de puro praze",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1ea71e88-1951-4d12-a4bd-098336bca706.webp",
@@ -587,35 +587,35 @@
         },
         "items": [
             {
-                "name": "CAMOMILA",
+                "name": "CHÁS CAMOMILA",
                 "description": "Desfrute do Chá de Camomila: A delicadeza das flores de camomila em uma infusão que acalma o corpo e a mente. Seu ritual diário de relaxamento.",
                 "price": "R$ 7,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7205cf78-45ff-4e3c-9133-5b8d3f4d0767.webp",
                 "addons": []
             },
             {
-                "name": "ABACAXI COM HORTELÃ",
+                "name": "CHÁS ABACAXI COM HORTELÃ",
                 "description": "A doçura suculenta do abacaxi se harmoniza perfeitamente com a leveza e o toque refrescante da hortelã. Ideal para revigorar seu dia",
                 "price": "R$ 7,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ec3176a0-3fbc-4fcb-b60e-38e3c1385fd7.webp",
                 "addons": []
             },
             {
-                "name": "GENGIBRE COM ESPECIARIAS",
+                "name": "CHÁS GENGIBRE COM ESPECIARIAS",
                 "description": "Chá Gengibre com Especiarias: Um abraço quente e aromático. Gengibre e uma seleção de especiarias se unem em uma infusão levemente picante, perfeita para aquecer o corpo e estimular os sentidos a qualquer hora.",
                 "price": "R$ 7,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ad3e7afc-a55c-4d45-a1f1-9db2963f560c.webp",
                 "addons": []
             },
             {
-                "name": "FRUTAS VERMELHAS",
+                "name": "CHÁS FRUTAS VERMELHAS",
                 "description": "Uma infusão vibrantemente colorida e cheia de sabor. Desfrute da doçura natural e dos benefícios antioxidantes de um delicioso mix de frutas vermelhas, perfeito para um momento revigorante e saudável.",
                 "price": "R$ 7,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c7014903-4f08-4b41-8123-e76a017569cf.webp",
                 "addons": []
             },
             {
-                "name": "ERVA DOCE E ESPECIARIAS",
+                "name": "CHÁS ERVA DOCE E ESPECIARIAS",
                 "description": "Uma infusão delicadamente aromática e reconfortante. A doçura suave da erva doce harmoniza-se com uma seleção de especiarias, criando uma bebida perfeita para acalmar e auxiliar na digestão.",
                 "price": "R$ 7,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/d02f3692-288a-4400-b609-fc938f2f84f0.webp",
@@ -775,49 +775,49 @@
         },
         "items": [
             {
-                "name": "ABACAXI",
+                "name": "SUCO ABACAXI",
                 "description": "Suco puro e refrescante de abacaxi, uma explosão tropical de sabor.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a684d638-7ad5-48a2-8075-85b5e5a2dc48.webp",
                 "addons": []
             },
             {
-                "name": "ABACAXI E HORTELÃ",
+                "name": "SUCO ABACAXI E HORTELÃ",
                 "description": "A combinação clássica e revigorante do abacaxi com o toque fresco da hortelã.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7d886e0e-89da-4986-b259-eade23cd5a66.webp",
                 "addons": []
             },
             {
-                "name": "LIMÃO",
+                "name": "SUCO LIMÃO",
                 "description": "Suco cítrico e refrescante de limão espremido na hora, perfeito para matar a sede.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f5cd2877-98c4-4107-9d24-6f31283e05f9.webp",
                 "addons": []
             },
             {
-                "name": "LARANJA",
+                "name": "SUCO LARANJA",
                 "description": "Puro suco de laranja natural, rico em vitamina C e sabor.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/c9bfd3ed-fafd-46a7-96c8-1684586a3404.webp",
                 "addons": []
             },
             {
-                "name": "MARACUJÁ",
+                "name": "SUCO MARACUJÁ",
                 "description": "Suco calmante e saboroso de maracujá fresco, ideal para relaxar.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6e262497-9b6e-46c4-83b1-b79fa997712d.webp",
                 "addons": []
             },
             {
-                "name": "MORANGO",
+                "name": "SUCO MORANGO",
                 "description": "Delicioso e vibrante suco de morangos frescos e selecionados.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3a2c4a53-22c5-4bd9-b7c5-e248ccf8cdb4.webp",
                 "addons": []
             },
             {
-                "name": "LARANJA COM MORANGO",
+                "name": "SUCO LARANJA COM MORANGO",
                 "description": "A doçura do morango encontra a acidez da laranja numa combinação perfeita e saborosa.",
                 "price": "R$ 15,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ef87098b-2f3f-43f8-9fb9-9b61f7f3e716.webp",
