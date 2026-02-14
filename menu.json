@@ -840,7 +840,7 @@
         },
         "items": [
             {
-                "name": "Baunilha",
+                "name": "FRAPÊ Baunilha",
                 "description": "A suavidade clássica da baunilha em uma bebida gelada e cremosa.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1341ffbf-d448-4683-b320-ff40bf3e6639.webp",
@@ -872,7 +872,7 @@
                 ]
             },
             {
-                "name": "Cappuccino",
+                "name": "FRAPÊ Cappuccino",
                 "description": "Seu cappuccino favorito transformado em um frapê gelado e delicioso.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/fe932254-2714-4c1e-81b5-4cec2628d173.webp",
@@ -904,7 +904,7 @@
                 ]
             },
             {
-                "name": "Morango",
+                "name": "FRAPÊ Morango",
                 "description": "A doçura do morango em uma textura de frapê incrivelmente refrescante.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ae213a2d-6cf0-472e-8be9-d5feab6eb37b.webp",
@@ -936,7 +936,7 @@
                 ]
             },
             {
-                "name": "Maracujá",
+                "name": "FRAPÊ Maracujá",
                 "description": "O sabor tropical e levemente ácido do maracujá em um frapê cremoso.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/31bdc343-8306-42f3-8ebf-ae1d7790b5bf.webp",
@@ -968,7 +968,7 @@
                 ]
             },
             {
-                "name": "Menta com limão",
+                "name": "FRAPÊ Menta com limão",
                 "description": "Uma explosão de frescor com a combinação vibrante de menta e limão.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ef0b5f4e-d3b3-47d5-a041-9681f51112fb.webp",
@@ -1000,7 +1000,7 @@
                 ]
             },
             {
-                "name": "Frutas vermelhas",
+                "name": "FRAPÊ Frutas vermelhas",
                 "description": "Um mix delicioso e gelado das nossas melhores frutas vermelhas.",
                 "price": "R$ 23,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4279afe5-88b8-4bec-9f2c-17bf9a103ef6.webp",
@@ -1032,7 +1032,7 @@
                 ]
             },
             {
-                "name": "Chocolate",
+                "name": "FRAPÊ Chocolate",
                 "description": "Para os amantes de chocolate, um frapê rico, cremoso e irresistível.",
                 "price": "R$ 26,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/13581447-5ba1-438e-8ed5-7bfb16529a6a.webp",
@@ -1064,7 +1064,7 @@
                 ]
             },
             {
-                "name": "Nutella",
+                "name": "FRAPÊ Nutella",
                 "description": "Aveludado frapê com o sabor inconfundível de Nutella. Pura tentação!",
                 "price": "R$ 26,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/39201254-9c1d-435d-958e-d98c0cfc928b.webp",
@@ -2013,42 +2013,49 @@
         },
         "items": [
             {
-                "name": "CRAMBERRY",
+                "name": "SODA CRAMBERRY",
                 "description": "Xarope de cramberry, água com gás e gelo.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b1f805b7-1dc8-4293-b6a2-e10866401a33.webp",
                 "addons": []
             },
             {
-                "name": "LIMÃO SICILIANO",
+                "name": "SODA MAÇÃ VERDE",
+                "description": "Xarope de maçã verde, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/4cb00595-419c-428b-8007-5db4f60d4101.webp",
+                "addons": []
+            },
+            {
+                "name": "SODA LIMÃO SICILIANO",
                 "description": "Xarope de limão, água com gás e gelo.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/af095a0c-a537-4732-8363-c50dd6bffa56.webp",
                 "addons": []
             },
             {
-                "name": "MENTA",
+                "name": "SODA MENTA",
                 "description": "Xarope de menta, água com gás e gelo",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/56840eac-f336-42e2-aea9-ad2e22bf19c5.webp",
                 "addons": []
             },
             {
-                "name": "MORANGO",
+                "name": "SODA MORANGO",
                 "description": "Xarope de morango, água com gás e gelo.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ab0ea880-c3a1-4a85-bf65-c80cd005b9cf.webp",
                 "addons": []
             },
             {
-                "name": "MARACUJÁ",
+                "name": "SODA MARACUJÁ",
                 "description": "Xarope de maracujá, água com gás e gelo.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/8b9558d5-1e67-4169-9735-ec9c3c4927e7.webp",
                 "addons": []
             },
             {
-                "name": "BAUNILHA",
+                "name": "SODA BAUNILHA",
                 "description": "xarope de baunilha, água com gás e gelo.",
                 "price": "R$ 14,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ebe6f5e6-05b4-4dcf-94dc-5a56c26001a6.webp",
@@ -4418,6 +4425,20 @@
                 "description": "",
                 "price": "R$ 5,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9f45e63c-fb72-4812-aca0-32258c14d205.webp",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE PÊSSEGO LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a1d8e999-35c1-474f-968b-884155e23b0f.webp",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE MANGA LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e80d8730-9649-4040-97b6-d6377bead5cc.webp",
                 "addons": []
             }
         ]
