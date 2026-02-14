@@ -3895,14 +3895,14 @@
                 "name": "QUICHE ALHO PORO",
                 "description": "",
                 "price": "R$ 11,00",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/65c18025-1aad-4a89-af0d-13f601a13924.webp",
                 "addons": []
             },
             {
                 "name": "TORTINHA DE FRANGO",
                 "description": "",
                 "price": "R$ 11,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/33667fdb-3ec3-44ac-847a-5ff36a3dd792.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/1f471bb0-645a-4ba7-bff1-431a510b35ae.webp",
                 "addons": []
             },
             {
@@ -3916,56 +3916,56 @@
                 "name": "EMPADA DE CARNE COM BANANA",
                 "description": "",
                 "price": "R$ 11,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/ac46ff4a-1806-4f92-8560-d774443360b1.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/2708a82d-9e57-4f40-8183-900e2dd74300.webp",
                 "addons": []
             },
             {
                 "name": "TORTA DE PISTACHE",
                 "description": "",
                 "price": "R$ 16,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/6cd4b90a-46ab-4b8c-863c-282b2a2834c8.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/01101024-5176-47b8-8142-c19e6920ab33.webp",
                 "addons": []
             },
             {
                 "name": "TORTA OREO",
                 "description": "",
                 "price": "R$ 16,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/82b9f9bd-0432-44ff-aa9d-f7f861977837.webp",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
             },
             {
                 "name": "TORTA DOCE DE LEITE",
                 "description": "",
                 "price": "R$ 16,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/fe32840c-697f-4286-87cd-0e606ec20ca6.webp",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
             },
             {
                 "name": "TORTA LIMÃO TRUFADO",
                 "description": "",
                 "price": "R$ 16,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/776462df-4298-4f45-a5d0-d3b525f5a3c0.webp",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
             },
             {
                 "name": "COOKIE TRADICIONL",
                 "description": "",
                 "price": "R$ 12,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/dedda771-ac30-4737-b7dc-6aca7127acda.webp",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e39a64db-49ae-41e9-ae20-dd83ccf8b12d.webp",
                 "addons": []
             },
             {
                 "name": "COOKIE RECHEADO",
                 "description": "",
                 "price": "R$ 16,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/345a755c-22f6-4ff1-bed4-f547651aad1d.webp",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
             },
             {
                 "name": "TORTA MORANGOFF",
                 "description": "",
                 "price": "R$ 16,00",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3f6e7129-bf48-4582-80f7-11beeec4a3ba.webp",
                 "addons": []
             },
             {
@@ -3980,6 +3980,13 @@
                 "description": "",
                 "price": "R$ 14,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA HOLANDESA",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7dafe988-973f-498f-8c97-2bde2cb2638f.webp",
                 "addons": []
             }
         ]
@@ -4411,13 +4418,6 @@
                 "description": "",
                 "price": "R$ 5,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9f45e63c-fb72-4812-aca0-32258c14d205.webp",
-                "addons": []
-            },
-            {
-                "name": "DEL VALLE PÊSSEGO LATA 290ML",
-                "description": "",
-                "price": "R$ 5,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a1d8e999-35c1-474f-968b-884155e23b0f.webp",
                 "addons": []
             }
         ]
