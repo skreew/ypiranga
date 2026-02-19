@@ -3995,6 +3995,13 @@
                 "price": "R$ 16,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/7dafe988-973f-498f-8c97-2bde2cb2638f.webp",
                 "addons": []
+            },
+            {
+                "name": "TORTA CROCANTE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     },
@@ -4439,13 +4446,6 @@
                 "description": "",
                 "price": "R$ 5,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a1d8e999-35c1-474f-968b-884155e23b0f.webp",
-                "addons": []
-            },
-            {
-                "name": "DEL VALLE MANGA LATA 290ML",
-                "description": "",
-                "price": "R$ 5,50",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e80d8730-9649-4040-97b6-d6377bead5cc.webp",
                 "addons": []
             }
         ]
