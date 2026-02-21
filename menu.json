@@ -4447,6 +4447,36 @@
                 "price": "R$ 5,50",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/a1d8e999-35c1-474f-968b-884155e23b0f.webp",
                 "addons": []
+            },
+            {
+                "name": "DEL VALLE MANGA LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/e80d8730-9649-4040-97b6-d6377bead5cc.webp",
+                "addons": []
+            }
+        ]
+    },
+    "CERVEJA LATA": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ANTARTICA ORIGINAL LATA 350ML",
+                "description": "",
+                "price": "R$ 6,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "AMSTEL LARGER LATA 269ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     }
