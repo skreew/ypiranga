@@ -3853,6 +3853,13 @@
                 "price": "R$ 5,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/3e5dfa5f-361b-4b43-9466-d0cc3d57773b.webp",
                 "addons": []
+            },
+            {
+                "name": "AMSTEL ULTRA LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     },
@@ -4473,6 +4480,20 @@
             },
             {
                 "name": "AMSTEL LARGER LATA 269ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BAVARIA LATA 350ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BRAHMA LATA 269ML",
                 "description": "",
                 "price": "R$ 4,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
