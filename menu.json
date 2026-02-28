@@ -1902,6 +1902,62 @@
                         ]
                     }
                 ]
+            },
+            {
+                "name": "ADICIONAL MOLHO",
+                "description": "",
+                "price": "R$ 3,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
             }
         ]
     },
