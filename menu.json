@@ -4556,5 +4556,78 @@
                 "addons": []
             }
         ]
+    },
+    "RODIZIO PIZZA": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ADULTO",
+                "description": "",
+                "price": "R$ 55,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Produto 2",
+                "description": "CRIANÇA DE 7 ATÉ 11",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }
