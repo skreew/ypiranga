@@ -4565,10 +4565,10 @@
         },
         "items": [
             {
-                "name": "ADULTO",
+                "name": "RODIZIO ADULTO",
                 "description": "",
                 "price": "R$ 55,00",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/cafc4500-6455-4251-a45c-07af59b35663.webp",
                 "addons": [
                     {
                         "group_name": "Escolha a Borda",
@@ -4597,10 +4597,10 @@
                 ]
             },
             {
-                "name": "Produto 2",
-                "description": "CRIANÇA DE 7 ATÉ 11",
-                "price": "R$ A consultar",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "name": "RODIZIO CRIANÇA DE 7 ATÉ 10 ANOS",
+                "description": "RODIZIO CRIANÇA DE 7 ATÉ 10 ANOS",
+                "price": "R$ 27,00",
+                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/f85e0ebc-dc9f-46a0-8683-007113722010.webp",
                 "addons": [
                     {
                         "group_name": "Escolha a Borda",
