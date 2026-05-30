@@ -2025,16 +2025,9 @@
                 "addons": []
             },
             {
-                "name": "RISOTO DE ALHO PORO",
-                "description": "Risoto de Alho Poró com Mignon e Demi Glace Uma verdadeira obra-prima gastronômica: nosso risoto cremoso, infundido com a delicadeza e o aroma suave do alho poró. Acompanha generosas fatias de tenro filé mignon, seladas à perfeição, e é finalizado com um molho demi glace clássico e profundamente saboroso, que eleva cada garfada a uma experiência inesquecível.",
+                "name": "PREMIUM STEAK",
+                "description": "Mignon e Demi Glace, purê de batata acompanhado de vegetais.",
                 "price": "R$ 75,00",
-                "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/b5cd6116-03a4-40d9-8cc3-b5ec8b796095.webp",
-                "addons": []
-            },
-            {
-                "name": "STEAK SUPREME",
-                "description": "Steak ancho, 250g purê de batata, mix de vegetais e molho demi glacê.",
-                "price": "R$ 88,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -2058,6 +2051,41 @@
                         ]
                     }
                 ]
+            },
+            {
+                "name": "STEAK PARMEGIANA",
+                "description": ".",
+                "price": "R$ 78,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Produto 8",
+                "description": "",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     },
@@ -4543,13 +4571,6 @@
             },
             {
                 "name": "BAVARIA LATA 350ML",
-                "description": "",
-                "price": "R$ 4,00",
-                "image": "https://placehold.co/400x300?text=Sem+Imagem",
-                "addons": []
-            },
-            {
-                "name": "BRAHMA LATA 269ML",
                 "description": "",
                 "price": "R$ 4,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
