@@ -1223,9 +1223,16 @@
                 "addons": []
             },
             {
-                "name": "Bolinho de carne SECA 300g",
+                "name": "BOLINHO DE LINGUIÇA",
                 "description": "",
-                "price": "R$ 52,00",
+                "price": "R$ 38,90",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "Produto 10",
+                "description": "",
+                "price": "R$ A consultar",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
             }
@@ -3944,6 +3951,13 @@
                 "price": "R$ 8,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": []
+            },
+            {
+                "name": "IMPERIO ULTRA LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     },
@@ -4571,6 +4585,13 @@
             },
             {
                 "name": "BAVARIA LATA 350ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BRAHMA LATA 269ML",
                 "description": "",
                 "price": "R$ 4,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
