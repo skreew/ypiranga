@@ -1156,6 +1156,13 @@
                 "price": "R$ 7,00",
                 "image": "https://d2nagnwby8accc.cloudfront.net/companies/products/images/800/9659f578-ab6f-4551-9c36-a72cb66819a6.webp",
                 "addons": []
+            },
+            {
+                "name": "PASTEL FRITO NA HORA",
+                "description": "",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
             }
         ]
     },
