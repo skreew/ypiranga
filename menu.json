@@ -3839,7 +3839,7 @@
         ]
     },
     "CHOPP": {
-        "emoji": "🍽️",
+        "emoji": "🍺",
         "schedule": {
             "start": "00:00",
             "end": "23:59"
@@ -4371,7 +4371,7 @@
             }
         ]
     },
-    "DIVERSO": {
+    "DIVERSOS": {
         "emoji": "🍽️",
         "schedule": {
             "start": "00:00",
