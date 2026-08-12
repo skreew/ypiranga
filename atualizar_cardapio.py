@@ -86,11 +86,25 @@ def processar_preco(texto):
     limpo = texto.replace('R$', '').replace('Adicionais', '').strip()
     return f"R$ {limpo}"
 
-def extrair_imagem(style):
-    if not style: return "https://placehold.co/400x300?text=Sem+Imagem"
-    match = re.search(r'url\("?\'?([^"\')]+)"?\'?\)', style)
-    if match: return match.group(1)
-    return "https://placehold.co/400x300?text=Sem+Imagem"
+SEM_IMAGEM = "https://placehold.co/400x300?text=Sem+Imagem"
+
+def url_valida(url):
+    """Ignora src vazio, base64 (placeholder de lazy-load) e pixels transparentes."""
+    if not url: return False
+    return url.startswith("http")
+
+def extrair_imagem(src, style=""):
+    """
+    O site usa <img src="..."> nos cards.
+    O background-image (layout antigo, Vuetify) fica como fallback.
+    """
+    if url_valida(src): return src
+
+    if style:
+        match = re.search(r'url\("?\'?([^"\')]+)"?\'?\)', style)
+        if match and url_valida(match.group(1)): return match.group(1)
+
+    return SEM_IMAGEM
 
 def extrair_horario(titulo_categoria):
     match = re.search(r'(\d{2}:\d{2})\s*[-àa]\s*(\d{2}:\d{2})', titulo_categoria)
@@ -197,13 +211,20 @@ def run():
                             const nome = p.querySelector('.product-card__title')?.innerText.trim();
                             const desc = p.querySelector('.product-card__description')?.innerText.trim();
                             const price = p.querySelector('.product__price')?.innerText.trim();
+
+                            // Layout atual: <img src="..."> dentro do card.
+                            const imgEl = p.querySelector('.product-card__image-container img, img.product-image, img');
+                            const imgSrc = imgEl?.currentSrc || imgEl?.getAttribute('src') || imgEl?.getAttribute('data-src') || '';
+
+                            // Layout antigo (Vuetify): background-image num div.
                             const imgStyle = p.querySelector('.v-image__image')?.getAttribute('style');
-                            
+
                             if (nome) {
                                 items.push({
                                     name: nome,
                                     description: desc || '',
                                     price: price || 'A consultar',
+                                    imageSrc: imgSrc,
                                     imageStyle: imgStyle || ''
                                 });
                             }
@@ -236,8 +257,14 @@ def run():
                         }
                     
                     for item in cat['items']:
-                        if item['name'] not in banco_dados_mestre[nome_raw]["items_dict"]:
-                            banco_dados_mestre[nome_raw]["items_dict"][item['name']] = item
+                        itens = banco_dados_mestre[nome_raw]["items_dict"]
+                        existente = itens.get(item['name'])
+
+                        if existente is None:
+                            itens[item['name']] = item
+                        elif not url_valida(existente.get('imageSrc')) and url_valida(item.get('imageSrc')):
+                            # Item foi capturado antes do lazy-load da imagem: completa agora.
+                            existente['imageSrc'] = item['imageSrc']
 
                 page.evaluate("window.scrollBy(0, 600)")
                 time.sleep(1.5)
@@ -276,7 +303,7 @@ def run():
                         "name": item_raw['name'],
                         "description": item_raw['description'],
                         "price": processar_preco(item_raw['price']),
-                        "image": extrair_imagem(item_raw['imageStyle']),
+                        "image": extrair_imagem(item_raw.get('imageSrc'), item_raw.get('imageStyle')),
                         "addons": grupos_adicionais
                     })
                 
@@ -291,8 +318,15 @@ def run():
                     }
                     total_items_count += len(items_lista)
 
-            print(f"📊 Total extraído: {total_items_count} itens.")
-            
+            sem_foto = sum(
+                1 for c in cardapio_final.values()
+                for i in c['items'] if i['image'] == SEM_IMAGEM
+            )
+            print(f"📊 Total extraído: {total_items_count} itens ({total_items_count - sem_foto} com foto, {sem_foto} sem).")
+            if total_items_count and sem_foto == total_items_count:
+                print("❌ Nenhum item veio com foto — o seletor de imagem provavelmente quebrou.")
+                sys.exit(1)
+
             with open('menu.json', 'w', encoding='utf-8') as f:
                 json.dump(cardapio_final, f, ensure_ascii=False, indent=4)
             print("✨ Sucesso. Menu atualizado!")
