@@ -272,5 +272,4338 @@
                 ]
             }
         ]
+    },
+    "ESPECIAIS": {
+        "emoji": "☕️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "MOCHA CARAMELO",
+                "description": "A união perfeita do nosso espresso intenso com chocolate rico, leite vaporizado cremoso e um delicioso toque de caramelo. Criando uma experiência quente e aconchegante para o seu paladar",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "MOCHA CHOCOLATE",
+                "description": "Fusão perfeita do nosso espresso marcante com uma dose generosa de chocolate puro e o leite cremoso.",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "MOCHA MARSHMALLOW",
+                "description": "Adicione um toque gourmet à sua bebida! Nossos marshmallows são delicadamente tostados com maçarico, criando uma casquinha dourada e caramelizada por fora e um interior irresistivelmente derretido.",
+                "price": "R$ 15,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CAFÉ RABAIOLI",
+                "description": "Nosso Café Rabaioli: uma obra-prima em xícara. Espresso marcante, licor Baileys para um toque adocicado e cremoso, leite vaporizado e o frescor do chantilly. Uma celebração de sabores que você só encontra aqui.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IRISH COFFEE",
+                "description": "A clássica e reconfortante combinação do nosso café quente e encorpado com o calor suave do autêntico whisky irlandês e a doçura do açúcar mascavo, finalizado com uma generosa camada de chantilly. Perfeito para aquecer a alma.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "SUBMARINO",
+                "description": "Prepare-se para mergulhar em uma experiência de sabor! Nosso chocolate quente cremoso e reconfortante é a base perfeita para o toque ousado do whisky, coroado por uma generosa nuvem de chantilly e finalizado com deliciosas lascas de chocolate. Uma explosão de prazer a cada gole.",
+                "price": "R$ 22,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "CHOCOLATES QUENTES": {
+        "emoji": "🍫",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CHOCOLATE EUROPEU",
+                "description": "Renda-se à sofisticação do Chocolate Quente Europeu. Elaborado com o exclusivo chocolate cremoso da Santa Monica, cada gole é uma viagem de sabor, com a textura aveludada, rica e delicadamente aerada que só um chocolate de alta qualidade pode oferecer. Perfeito para momentos de puro prazer, elevando sua experiência com uma leveza única.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CHOCOLATE EUROPEU COM NUTELLA",
+                "description": "osso Chocolate Quente Europeu: O clássico cremoso e aerado da Santa Monica. Perfeito puro, ou com adição irresistível de Nutella",
+                "price": "R$ 20,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ACHOCOLATADO",
+                "description": "Achocolatado: A pedida perfeita para quem busca um chocolate mais leve e refrescante. Com 32% de cacau, nossa bebida tem uma textura fluida e deliciosa, ideal para ser apreciada quente ou gelada.",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "CHÁS": {
+        "emoji": "🍵",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CHÁS CAMOMILA",
+                "description": "Desfrute do Chá de Camomila: A delicadeza das flores de camomila em uma infusão que acalma o corpo e a mente. Seu ritual diário de relaxamento.",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHÁS ABACAXI COM HORTELÃ",
+                "description": "A doçura suculenta do abacaxi se harmoniza perfeitamente com a leveza e o toque refrescante da hortelã. Ideal para revigorar seu dia",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHÁS GENGIBRE COM ESPECIARIAS",
+                "description": "Chá Gengibre com Especiarias: Um abraço quente e aromático. Gengibre e uma seleção de especiarias se unem em uma infusão levemente picante, perfeita para aquecer o corpo e estimular os sentidos a qualquer hora.",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHÁS FRUTAS VERMELHAS",
+                "description": "Uma infusão vibrantemente colorida e cheia de sabor. Desfrute da doçura natural e dos benefícios antioxidantes de um delicioso mix de frutas vermelhas, perfeito para um momento revigorante e saudável.",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHÁS ERVA DOCE E ESPECIARIAS",
+                "description": "Uma infusão delicadamente aromática e reconfortante. A doçura suave da erva doce harmoniza-se com uma seleção de especiarias, criando uma bebida perfeita para acalmar e auxiliar na digestão.",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHAI LATTE",
+                "description": "Desperte para o sabor do Oriente com o nosso Chai Latte. A fusão perfeita de chá preto perfumado, leite cremoso e um blend vibrante de especiarias indianas cria uma bebida irresistível, quente e cheia de personalidade.",
+                "price": "R$ 13,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "CAFÉS GELADOS": {
+        "emoji": "🧊",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "AFFOGATO",
+                "description": "Mergulhe nesta experiência onde o café quente se encontra com o sorvete de creme gelado, criando um contraste irresistível. Finalizado com o toque crocante do Ovomaltine e a leveza do chantilly, é a sobremesa perfeita em forma de bebida.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ESPRESSO COM TÔNICA",
+                "description": "Uma experiência refrescante e inusitada. O encontro surpreendente do café espresso puro com a efervescência tônica, criando uma bebida levemente cítrica e estimulante. Perfeito para quem busca um sabor diferente e revigorante.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CAPPUCCINO GELADO",
+                "description": "A refrescância perfeita para o seu dia! Uma combinação deliciosa de leite gelado e nossa mistura especial para cappuccino, resultando em uma bebida cremosa, leve e irresistivelmente fria. Ideal para refrescar com sabor.",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "RABAIOLI FREDO",
+                "description": "fusão perfeita entre café, cremosidade e puro prazer! Nosso exclusivo Cappuccino Gelado ganha um toque especial com a adição de sorvete de creme, uma generosa calda de chocolate e o inconfundível crocante do Ovomaltine. Uma sobremesa em forma de bebida, irresistível a cada gole.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "SUCOS NATURAIS": {
+        "emoji": "🧃",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "SUCO ABACAXI",
+                "description": "Suco puro e refrescante de abacaxi, uma explosão tropical de sabor.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO ABACAXI E HORTELÃ",
+                "description": "A combinação clássica e revigorante do abacaxi com o toque fresco da hortelã.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO LIMÃO",
+                "description": "Suco cítrico e refrescante de limão espremido na hora, perfeito para matar a sede.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO LARANJA",
+                "description": "Puro suco de laranja natural, rico em vitamina C e sabor.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO MARACUJÁ",
+                "description": "Suco calmante e saboroso de maracujá fresco, ideal para relaxar.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO MORANGO",
+                "description": "Delicioso e vibrante suco de morangos frescos e selecionados.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO LARANJA COM MORANGO",
+                "description": "A doçura do morango encontra a acidez da laranja numa combinação perfeita e saborosa.",
+                "price": "R$ 15,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FRUTAS VERMELHAS",
+                "description": "Um mix antioxidante e delicioso de suco com nossas melhores frutas vermelhas da estação.",
+                "price": "R$ 15,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "FRAPÊS": {
+        "emoji": "🥤",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "FRAPÊ Baunilha",
+                "description": "A suavidade clássica da baunilha em uma bebida gelada e cremosa.",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Cappuccino",
+                "description": "Seu cappuccino favorito transformado em um frapê gelado e delicioso.",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Morango",
+                "description": "A doçura do morango em uma textura de frapê incrivelmente refrescante.",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Maracujá",
+                "description": "O sabor tropical e levemente ácido do maracujá em um frapê cremoso.",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Menta com limão",
+                "description": "Uma explosão de frescor com a combinação vibrante de menta e limão.",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Frutas vermelhas",
+                "description": "Um mix delicioso e gelado das nossas melhores frutas vermelhas.",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Chocolate",
+                "description": "Para os amantes de chocolate, um frapê rico, cremoso e irresistível.",
+                "price": "R$ 26,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "FRAPÊ Nutella",
+                "description": "Aveludado frapê com o sabor inconfundível de Nutella. Pura tentação!",
+                "price": "R$ 26,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "SHAKE DE AÇAÍ",
+                "description": "Açaí batido com morango.",
+                "price": "R$ 35,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "PÃES DE QUEIJO": {
+        "emoji": "🧀",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "PÃO DE QUEIJO TRADICIONAL",
+                "description": "A receita da felicidade! 🧀 Quentinho, macio por dentro e com aquela casquinha crocante de dar água na boca. Cada um é feito com carinho para garantir o sabor autêntico que você.",
+                "price": "R$ 6,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "PÃO DE QUEIJO RECHEADO COM SALAME",
+                "description": "ão de Queijo com Salame! A maciez e a crocância do nosso autêntico pão de queijo encontram a intensidade e o sabor marcante do salame. Combinação perfeita!",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "PÃO DE QUEIJO RECHEADO COM NUTELLA",
+                "description": "O conforto do nosso pão de queijo recém-assado encontra a doçura e a maciez da Nutella",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "PASTEL GRANDE FRITO NA HORA",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "PORÇÕES": {
+        "emoji": "🍟",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "FRITAS 100g",
+                "description": "Batata Super Crisp: A porção individual perfeita de batatas fritas! 🍟 Prepare-se para a crocância inigualável e o sabor que só a batata 'Super Crisp' pode oferecer. Graças à nossa técnica de fritura com temperatura ideal, elas chegam à sua mesa sequinhas, douradas e irresistivelmente deliciosas, sem puxar nenhuma gordura.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FRITAS 400g",
+                "description": "A sua dose generosa de felicidade! Com 400g das nossas famosas batatas 'Super Crisp', você tem mais do que gosta: batatas douradas, crocantes e absolutamente sequinhas, sem uma gota de gordura extra. A companhia perfeita para qualquer momento! Acompanha molho de alho.",
+                "price": "R$ 32,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BOLINHO DE CARNE 300g",
+                "description": "O Melhor do Artesanal na Sua Mesa (6 unidades)! Sinta o carinho em cada um dos nossos 6 bolinhos de aproximadamente 50g. A carne, moída com esmero aqui mesmo, se une a um blend secreto de temperos e cheiro verde, criando um sabor inigualável. Produzidos e embalados a vácuo para máxima qualidade, garantimos que, ao chegar em suas mãos, eles estarão sequinhos e no ponto ideal, prontos para você se deliciar. Uma tradição de sabor que encanta.",
+                "price": "R$ 41,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CROQUETE PULLED PORK",
+                "description": "Croquete de Pulled Pork! Mergulhe na nossa especialidade: a suculenta copa lombo, defumada artesanalmente por 6 horas em pit smoker, é desfiada com carinho e transformada em bolinhos únicos. Empanados com farinha panko e fritos no ponto exato, eles oferecem a crocância ideal por fora e a maciez aromática da carne defumada por dentro. Acompanha nosso famoso barbecue defumado, a combinação perfeita para uma mordida de puro prazer.",
+                "price": "R$ 43,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DADINHO DE TAPIOCA 12un",
+                "description": "O clássico nordestino que a gente ama, com um toque agridoce irresistível! ��️ Quadrados de pura crocância por fora e maciez por dentro, com o sabor inconfundível da tapioca e queijo",
+                "price": "R$ 23,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TIRAS DE FRANGO 6un",
+                "description": "Tiras de Frango Artesanais: O petisco perfeito com o toque da nossa cozinha! 🍗🧀 Nossas tiras de frango são cuidadosamente processadas, realçadas com o sabor do queijo ralado e temperadas com o nosso exclusivo rub da casa. Empanadas com farinha panko para aquela crocância irresistível, são ideais para compartilhar ou para se deliciar sozinho",
+                "price": "R$ 28,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "PASTELZINHO DE CUPIM 8un",
+                "description": "O sabor que encanta! 🥟✨ Experimente a crocância inigualável da nossa massa de pastel, que abraça um recheio simplesmente espetacular: suculento cupim defumado e desfiado, preparado artesanalmente para uma maciez sem igual, com um leve toque de queijo cremoso",
+                "price": "R$ 19,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "MANDIOQUINHA CUBO",
+                "description": "",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BOLINHO DE LINGUIÇA",
+                "description": "",
+                "price": "R$ 38,90",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COMBO THERE + CARNE SECA 10",
+                "description": "",
+                "price": "R$ 29,88",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "SANDUÍCHES": {
+        "emoji": "🥪",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "MISTO QUENTE",
+                "description": "A combinação que nunca decepciona: a crocância do pão de forma tostado encontra a maciez do presunto e o sabor irresistível do queijo derretido. Um clássico que todo mundo ama e que entrega o máximo de sabor com o mínimo de complicação.",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "QUEIJO QUENTE",
+                "description": "A Simplicidade Que Encanta! Derreta-se com o clássico que nunca sai de moda. Nosso queijo quente traz a combinação perfeita do pão de forma fresquinho e uma generosa porção DUPLA de queijo derretido.",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "BAURU",
+                "description": "O Clássico que Conquista! 🥖Nosso Bauru é recheado com presunto fatiado, queijo mussarela perfeitamente derretido, rodelas frescas de tomate e finalizado com aquele toque aromático de orégano.",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "BAURU COM OVO",
+                "description": "O Seu Clássico Favorito, Ainda Melhor e Mais Saudável! 🤤 Se você já amava nosso Bauru tradicional, prepare-se para se apaixonar novamente! Mantemos a receita original e adicionamos um ovo feito no forno, transformando seu lanche em uma refeição ainda mais completa, deliciosa e sem gordura do preparo.",
+                "price": "R$ 13,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "OMELETE",
+                "description": "Omelete Enrolada: Sabor e Leveza em Cada Garfada! 🍳🍅Desfrute da nossa omelete, preparada com 3 ovos frescos e o toque vibrante do tomate picado. Por dentro, o queijo derretido abraça tudo, enquanto o orégano adiciona aquele aroma especial. Perfeita para um café da manhã reforçado, um almoço leve ou um jantar rápido e delicioso. Uma opção cheia de sabor e praticidade.",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "OVO CREMOSO",
+                "description": "🥓 Delicie-se com a perfeição dos nossos ovos mexidos, preparados com creme de leite para alcançar uma suavidade e cremosidade incomparáveis. Acompanhados de pão tostado quentinho e fatias de bacon crocante, este é o prato ideal para transformar seu café da manhã ou brunch em um momento de puro prazer.",
+                "price": "R$ 22,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "OVO CARBONARA",
+                "description": "Uma combinação deliciosa de ovo, queijo parmesão e bacon em cubos. Acompanha pão de forma crocante.",
+                "price": "R$ 22,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "LANCHES": {
+        "emoji": "🍔",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "PRIME BURGUER",
+                "description": "Nosso Hambúrguer Artesanal: 150g de blend exclusivo Brisket e Acém, moído na cozinha e temperado com nosso hub especial. Defumado em lenha frutífera, servido em pão brioche macio, com maionese da casa e mussarela derretida. Uma experiência de sabor inigualável a cada mordida!",
+                "price": "R$ 29,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "COMBO PRIME BURGUER",
+                "description": "Nosso Hambúrguer Artesanal: 150g de blend exclusivo Brisket/Acém, moído na casa e temperado com nosso hub especial. Defumado em lenha frutífera, servido em pão brioche macio, com maionese da casa e mussarela derretida. Acompanha 100g de batata supercrisp e uma Coca-Cola 250ml (vidro). Uma experiência completa e sabor inigualável!",
+                "price": "R$ 39,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "SANDUICHE IPIRANGA",
+                "description": "Um Sabor Que Você Nunca Esquece! 🥖🐷 Apresentamos a nossa criação especial: o Sanduíche Ipiranga! Mergulhe no sabor inconfundível do pulled pork suculento e temperado, harmonizado com a nossa maionese especial da casa e o queijo derretido que abraça tudo. Servido em um pão baguete crocante, cada mordida é uma explosão de texturas e sabores. Uma experiência única que você precisa provar.",
+                "price": "R$ 28,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "COMBO IPIRANGA",
+                "description": "A Experiência Completa de Sabor! 🥖🐷🍟🥤 Prepare-se para o melhor do sabor com o nosso Combo Ipiranga! Desfrute do delicioso Sanduíche Ipiranga – com pulled pork suculento, maionese especial e queijo derretido no pão baguete crocante – acompanhado de 100g de batata crocante, sequinha e irresistível, e uma Coca-Cola geladíssima de 250ml em garrafa de vidro.",
+                "price": "R$ 39,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "ADICIONAL MOLHO",
+                "description": "",
+                "price": "R$ 3,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Turbine seu lanche",
+                        "required": false,
+                        "min": 0,
+                        "max": 5,
+                        "options": [
+                            {
+                                "name": "Bacon (3 fatias)",
+                                "price": "R$ 5,00"
+                            },
+                            {
+                                "name": "Queijo Extra",
+                                "price": "R$ 2,00"
+                            },
+                            {
+                                "name": "Hambúrguer Extra",
+                                "price": "R$ 8,00"
+                            },
+                            {
+                                "name": "Fritas (100g)",
+                                "price": "R$ 10,00"
+                            }
+                        ]
+                    },
+                    {
+                        "group_name": "Molhos",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Maionese da Casa",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ketchup",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Barbecue",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Mostarda",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "PRATOS PRINCIPAIS": {
+        "emoji": "🍝",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ESPAGUETE MOLHO BRANCO",
+                "description": "Nosso Espaguete Molho Branco com Frango à Milanesa! 🍝 Uma combinação perfeita de texturas e sabores! Espaguete al dente, abraçado por um molho branco rico e delicado. A estrela do prato? Nossas tiras de frango à milanesa, preparadas com carinho aqui em nossa casa para garantir a máxima qualidade e crocância. Tudo coroado com queijo parmesão ralado.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "ESPAGUETE ROMANO",
+                "description": "Macarrão ao Molho Romano com Carne Moída e Bacon Delicie-se com esta harmoniosa fusão de sabores: massa perfeitamente cozida ao dente, abraçada por um rico e aveludado molho romano, preparado com tomates pelados de alta qualidade, enriquecido com carne moída fresca, preparada diariamente em nossa cozinha, e pedacinhos crocantes de bacon defumado. Um prato reconfortante e irresistível para os amantes da boa gastronomia.",
+                "price": "R$ 33,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COSTELINHA BBQ",
+                "description": "O Sabor Inconfundível da Defumação Perfeita! 🍖🔥 Prepare-se para uma experiência gastronômica memorável com nossa suculenta costelinha de porco (500g), defumada por 8 horas na nossa pit smoker, depois assada e regada generosamente com o nosso molho barbecue especial da casa. Para completar essa festa de sabores, ela chega acompanhada de 400g de batatas fritas crocantes, 2 fatias de pão para saborear o molho e pepinos agridoce para equilibrar.",
+                "price": "R$ 98,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COSTELA GOLDEN RIB",
+                "description": "A Joia da Nossa Culinária! ✨ Apresentamos a nossa espetacular Costela Golden Rib: uma costela bovina defumada lentamente por inacreditáveis 12 horas, garantindo uma maciez incomparável e um sabor profundo. Para elevar ainda mais a experiência, ela é coberta com o nosso luxuoso molho demi-glacê. Acompanha uma generosa porção de 350g de espaguete ao molho branco, que harmoniza perfeitamente com a intensidade da carne. Uma obra-prima para os paladares mais exigentes.",
+                "price": "R$ 88,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "POLPETONE",
+                "description": "Delicie-se com este clássico de raízes italianas, adaptado e amado no Brasil: uma suculenta almôndega recheada com parmesão derretido, empanada e crocante. Servida com molho de tomate pelado artesanal e batatas fritas. Um prato cheio de personalidade e sabor.",
+                "price": "R$ 48,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "PREMIUM STEAK",
+                "description": "Mignon e Demi Glace, purê de batata acompanhado de vegetais.",
+                "price": "R$ 75,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "STEAK PARMEGIANA",
+                "description": ".",
+                "price": "R$ 78,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha o ponto da carne",
+                        "required": true,
+                        "min": 1,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Mal Passado",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Ao Ponto",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Bem Passado",
+                                "price": "Grátis"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Produto 8",
+                "description": "",
+                "price": "R$ A consultar",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "SODA ITALIANA": {
+        "emoji": "🍹",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "SODA CRAMBERRY",
+                "description": "Xarope de cramberry, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SODA MAÇÃ VERDE",
+                "description": "Xarope de maçã verde, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SODA LIMÃO SICILIANO",
+                "description": "Xarope de limão, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SODA MENTA",
+                "description": "Xarope de menta, água com gás e gelo",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SODA MORANGO",
+                "description": "Xarope de morango, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SODA MARACUJÁ",
+                "description": "Xarope de maracujá, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SODA BAUNILHA",
+                "description": "xarope de baunilha, água com gás e gelo.",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "DRINKS": {
+        "emoji": "🍸",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CAIPIRINHA DE LIMÃO",
+                "description": "Vodka ou cachaça, limão, açúcar e gelo.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CAIPIRINHA DE MORANGO",
+                "description": "Vodka ou cachaça, morango, açúcar e gelo.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CAIPIRINHA DE VINHO",
+                "description": "Vodka ou cachaça, vinho, limão, açúcar e gelo.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CAIPIRINHA DE FRUTAS VERMELHAS",
+                "description": "Vodka ou cachaça, frutas vermelhas, limão, açúcar e gelo.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CAIPIRINHA DE ABACAXI",
+                "description": "Vodka ou cachaça, abacaxi, limão, açúcar e gelo.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "MOSCOW MULE",
+                "description": "Refrescância e Sabor em Cada Gole! 🍹 Experimente nosso Moscow Mule, uma fusão perfeita de gelo, água com gás, e a nossa exclusiva espuma de gengibre. A base? Gengibre natural, limão fresco e vodka de qualidade. Um coquetel vibrante,",
+                "price": "R$ 20,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "PINK MULE",
+                "description": "A Refrescância do Gengibre com o Doce das Frutas Vermelhas! 💖�� Nosso Pink Mule é feito com gelo, água com gás, nossa exclusiva espuma de gengibre, e o toque especial das frutas vermelhas. Uma combinação vibrante de gengibre natural, limão e vodka, que entrega um sabor irresistível e uma cor apaixonante.",
+                "price": "R$ 20,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COSMOPOLITAN",
+                "description": "Cosmopolitan, gelo, água com gás. - Cosmopolitan: O clássico da Madonna, com vodka, licor de laranja, cranberry e limão.",
+                "price": "R$ 20,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "MARACUFIRE",
+                "description": "Polpa de maracujá, licor fire, vodka, gelo e açúcar. -Feito a partir da nossa Vodka Standard, a Bacco Fire é um licor de vodka de canela que utiliza apenas insumos naturais em sua fabricação. - Ao utilizarmos métodos de extração tradicionais, garantimos que a essência da canela seja preservada ao máximo. - A Bacco Fire, por sua base neutra de vodka, traz suavidade ao paladar, deixando toda a arte por conta da canela. - Medalha de Prata no Mundial de Licores 2023 em Londres.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "MIDEN ZERO",
+                "description": "Destilado mudem sabor laranja, água tônica ou sprite e gelo. • Bitter, de perfil amargo e refrescante, inspirado nos aperitivos italianos. • Zero álcool, Zero açúcar e Zero calorias. • Emula a sensação de tomar uma bebida alcoólica. • Coloração natural do hibisco.",
+                "price": "R$ 35,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CAIPI JAMBU LIMÃO",
+                "description": "Limão, jambu, vodka, gelo e açúcar - Feito a partir da extração da flor de jambu fresca em base alcoolica de Vodka, nossa especialidade. - Essa base de vodka, traz maior suavidade no paladar, que abre espaço para sentirmos notas herbais que normalmente não seriam percebidas. - Produto incorporado ao portifólio através da compra de uma marca especializada em Jambu.",
+                "price": "R$ 30,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CAMPARI COM LARANJA",
+                "description": "Dose de camapari com suco natural. Campari é uma bebida italiano tinto com um sabor amargo e uma cor vermelha vibrante.",
+                "price": "R$ 40,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TAÇA DE VINHO",
+                "description": "",
+                "price": "R$ 18,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "PIZZA": {
+        "emoji": "🍕",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "01 PORTUGUESA",
+                "description": "Molho de tomate, mussarela, presunto, ovos, azeitona verde, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "06 QUATRO QUEIJOS",
+                "description": "Molho de tomate, mussarela, gorgonzola, provolone e catupiry.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "11 RÚCULA COM TOMATE SECO",
+                "description": "Molho de tomate, mussarela, rúcula e tomate seco.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "17 ARGENTINA",
+                "description": "Molho de tomate, mussarela, catupiry, bacon, milho, palmito e azeitona fatiada.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "18 FRANGO COM CATUPIRY",
+                "description": "Molho de tomate, mussarela, frango desfiado, catupiry e milho.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "21 LOMBO COM ABACAXI",
+                "description": "Molho de tomate, mussarela, abacaxi e lombo canadense.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "29 MARGUERITA",
+                "description": "Molho de tomate, mussarela, manjericão, tomate, azeitona e parmesão.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "30 CALABRESA",
+                "description": "Molho de tomate, mussarela, calabresa.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "32 BRÓCOLIS COM BACON",
+                "description": "Molho de tomate, mussarela, brócolis, bacon, palmito e azeitona.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "35 STROGONOFF DE CARNE",
+                "description": "Molho de tomate, mussarela, carne bovina e batata palha.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "41 SUPREME",
+                "description": "Molho de tomate, mussarela, tomate seco, carne bovina, pepperoni, champignon, pimentão, cebola, azeitona fatiada e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "44 COSTELA",
+                "description": "Molho de tomate, mussarela, bacon, carne de costela desfiada, tomate seco, cebola e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "45 ALHO E OLEO",
+                "description": "Molho de tomate, mussarela, alho e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "46 BAIANA",
+                "description": "Molho de tomate, mussarela, calabresa moída, pimenta, ovo, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "47 ATUM",
+                "description": "Molho de tomate, mussarela, atum, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "48 BACON E MILHO",
+                "description": "Molho de tomate, mussarela, bacon, milho e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "49 BELEZURA",
+                "description": "Molho de tomate, mussarela, tomate seco, molho de alho, calabresa, azeitona e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "59 BRÓCOLIS COM CARNE",
+                "description": "Molho de tomate, mussarela, carne bovina , brócolis, milho verde e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "60 CALABACON",
+                "description": "Molho de tomate, mussarela, calabresa, bacon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "61 CALABRESA COM CEBOLA",
+                "description": "Molho de tomate, mussarela, calabresa, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "62 CALAFRITAS",
+                "description": "Molho de tomate, mussarela, calabresa, batata frita e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "63 CATUFILÉ COM ALHO",
+                "description": "Molho de tomate, mussarela, carne bovina, catupiry, alho e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "64 CHIQUITA",
+                "description": "Molho de tomate, mussarela, peperoni, ovos, pimentão e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "65 DA MAMÃE",
+                "description": "Molho de tomate, mussarela, frango desfiado, bacon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "66 CROTONE",
+                "description": "Molho de tomate, mussarela, purê de batata, bacon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "67 FAUSTÃO",
+                "description": "Molho de tomate, mussarela, presunto, calabresa, lombo, cebola e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "68 FRANGO/BACON E CREAM CHEESE",
+                "description": "Molho de tomate, mussarela, frango desfiado, bacon, cream cheese e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "69 FRANGO XADREZ",
+                "description": "Molho de tomate, mussarela, frango picado em cubos ao molho pimentão e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "70 GOSTOSÃO",
+                "description": "Molho de tomate, mussarela, presunto, calabresa, catupiry, tomate, parmesão e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "71 ITALIANA",
+                "description": "Molho de tomate, mussarela, lombo, pimentão e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "72 LOMBO CANADENSE",
+                "description": "Molho de tomate, mussarela, lombo, catupiry, champignon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "73 NACHO",
+                "description": "Molho de tomate, mussarela, carne moída apimentada, orégano e Doritos.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "74 PALMITO ESPECIAL",
+                "description": "Molho de tomate, mussarela, rodelas de palmito pupunha, tomate seco, azeitona preta sem caroço, cream cheese e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "75 PALMITO",
+                "description": "Molho de tomate, mussarela, palmito e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "76 PEPECHEESE",
+                "description": "Molho de tomate, mussarela, peperoni, cream cheese e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "77 PEPPERONI",
+                "description": "Molho de tomate, mussarela, pepperoni e orégano.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "78 TOSCANA",
+                "description": "Molho de tomate, mussarela, calabresa, champignon e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "79 BANANA NEVADA",
+                "description": "Mussarela, leite condensado, banana, chocolate branco e canela.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "88 MILHO CREMOSO",
+                "description": "Molho de tomate, mussarela, milho cremoso e orégano.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "164 SEDUÇÃO",
+                "description": "Mussarela, chocolate branco, morango e leite condensado.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "156 CAROLINA",
+                "description": "Mussarela, abacaxi, chocolate branco e canela.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "154 SENSAÇÃO",
+                "description": "Mussarela, chocolate preto, morango e leite condensado.",
+                "price": "R$ 65,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "80 BRIGADEIRO",
+                "description": "Mussarela, chocolate ao leite e granulado.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "81 CALIFORNIA",
+                "description": "Mussarela, creme de leite, leite condensado, figo, pêssego e abacaxi em calda.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "83 CHARGE",
+                "description": "Mussarela, chocolate ao leite e amendoim moído.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "84 DOIS AMORES",
+                "description": "Mussarela, chocolate branco, chocolate preto ao leite e morango.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "85 KIDS",
+                "description": "Mussarela, chocolate preto e confeitos coloridos.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "86 PRESTÍGIO",
+                "description": "Mussarela, creme de leite, chocolate preto ao leite e coco ralado.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "87 ROMEU E JULIETA",
+                "description": "Mussarela e goiabada.",
+                "price": "R$ 59,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Escolha a Borda",
+                        "required": false,
+                        "min": 0,
+                        "max": 1,
+                        "options": [
+                            {
+                                "name": "Sem Borda",
+                                "price": "Grátis"
+                            },
+                            {
+                                "name": "Catupiry",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Cheddar",
+                                "price": "R$ 12,00"
+                            },
+                            {
+                                "name": "Chocolate",
+                                "price": "R$ 15,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "CHOPP": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CHOPP 310 ML",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CHOPP 500 ML",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "LONG NECK": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "HEINEKEN LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "HEINEKEN ZERO LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SOL LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SOL ZERO LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BUDWEISER LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CORONA LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "THEREZOPOLIS LONG NECK",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "STELLA ARTOIS LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "STELLA ARTOIS GOLD LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "ESTRELLA GALÍCIA LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BRAHMA MALZBIER LONG NECK",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "EISENBAHN LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "AMSTEL ULTRA LONG NECK",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "IMPERIO ULTRA LONG NECK",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "BALCÃO": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "COXINHA",
+                "description": "",
+                "price": "R$ 8,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "EMPADÃO CARNE",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "EMPADÃO FRANGO",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "QUICHE BROCOLIS COM BACON",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "QUICHE DE CARNE SECA",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "QUICHE ALHO PORO",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTINHA DE FRANGO",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "QUICHE DE QUEIJO E BACON",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "EMPADA DE CARNE COM BANANA",
+                "description": "",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA DE PISTACHE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA OREO",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA DOCE DE LEITE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA LIMÃO TRUFADO",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COOKIE TRADICIONL",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COOKIE RECHEADO",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA MORANGOFF",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA DE LIMÃO",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA BANOFFE",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA HOLANDESA",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TORTA CROCANTE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "REFRIGERANTES": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ADES PÊSSEGO 200ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 600ML",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 600ML ZERO",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SPRITE 600ML",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SPRITE 550ML LEMON FRESH",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA LARANJA 600ML",
+                "description": "",
+                "price": "R$ 7,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA LANRANJA 220ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA UVA 220ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 220ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA MINI 200ML",
+                "description": "",
+                "price": "R$ 2,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA MINI 200ML ZERO",
+                "description": "",
+                "price": "R$ 2,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA CAFÉ 220ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SPRITE 220ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA-COLA 250ML VIDRO",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA-COLA 250ML VIDRO ZERO",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TÔNICA VIDRO 250ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CÍTRUS VIDRO 250ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "TÔNICA LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA LATA 350ML ZERO",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SPRITE LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA CHUCKY LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA LARANJA LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA GUARANÁ LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FATA UVA LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "GUARANA KUAT LATA 350ML",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 1L",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 1L ZERO",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 2L ZERO",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "COCA COLA 2L",
+                "description": "",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA LARANJA 2L",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FANTA UVA 2L",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "FABTA GUARANÁ 2L",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "KUAT GUARANÁ 2L",
+                "description": "",
+                "price": "R$ 10,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SPRITE 2L",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "DIVERSO": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CRYSTAL SEM GÁS 500ML",
+                "description": "",
+                "price": "R$ 3,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CRYSTAL COM GÁS 500ML",
+                "description": "",
+                "price": "R$ 3,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CRYSTAL SEM GÁS 1L",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CRYSTAL COM GÁS 1,5L",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CRYSTAL SEM GÁS 1,5L",
+                "description": "",
+                "price": "R$ 5,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "CRYSTAL SEM GÁS 5L",
+                "description": "",
+                "price": "R$ 10,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO PRATS LARANJA 300ML",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO PRATS UVA 300ML",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "SUCO PRATS LARANJA 900ML",
+                "description": "",
+                "price": "R$ 18,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "AQUA COCO 300ML",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "AQUA COCO 1L",
+                "description": "",
+                "price": "R$ 18,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "ÁGUA DE COCO SOCOCO 330ML",
+                "description": "",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "ÁGUA DE COCO SOCOCO 1L",
+                "description": "",
+                "price": "R$ 18,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "NESTON 280ML",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "NESCAU 280ML",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "ALPINO 280ML",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "NESCAFÉ CAPPUCCINO CLÁSSICO 280ML",
+                "description": "",
+                "price": "R$ 9,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "STARBUCKS CAFÉ CLÁSSICO",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "STABUCKS MOCHA",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "STARBUCKS CARAMELO",
+                "description": "",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "ENGOV AFTER PINK LEMONADE",
+                "description": "",
+                "price": "R$ 16,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE UVA 1L",
+                "description": "",
+                "price": "R$ 10,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE PÊSSEGO 1L",
+                "description": "",
+                "price": "R$ 10,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE UVA LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE MARACUJÁ LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE PÊSSEGO LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "DEL VALLE MANGA LATA 290ML",
+                "description": "",
+                "price": "R$ 5,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
+    },
+    "CERVEJA LATA": {
+        "emoji": "🍽️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ANTARTICA ORIGINAL LATA 350ML",
+                "description": "",
+                "price": "R$ 6,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "AMSTEL LARGER LATA 269ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BAVARIA LATA 350ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            },
+            {
+                "name": "BRAHMA LATA 269ML",
+                "description": "",
+                "price": "R$ 4,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": []
+            }
+        ]
     }
 }
