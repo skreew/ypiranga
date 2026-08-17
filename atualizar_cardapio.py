@@ -1,10 +1,32 @@
-from playwright.sync_api import sync_playwright
 import json
 import re
 import sys
 import time
+import requests
 
-URL_SITE = "https://cafe-ipiranga.ola.click/products"
+# ==============================================================================
+# ⚙️ ORIGEM DOS DADOS
+# ==============================================================================
+# Antes este script abria um navegador (Playwright) e rolava a página do
+# cardápio até o fim. Isso quebrava de duas formas:
+#
+#   1. Quando o ola.click mudava o layout, o seletor da foto parava de achar
+#      a imagem e todos os itens viravam "Sem Imagem".
+#   2. Quando o site demorava a responder, a rolagem terminava cedo e o robô
+#      gravava um cardápio pela metade por cima do bom. Isso aconteceu em 24
+#      dos 165 commits deste arquivo (15%), incluindo 17 cardápios vazios.
+#
+# A API pública devolve o cardápio inteiro numa requisição só, sem rolagem e
+# sem depender de classe de CSS.
+COMPANY_ID = "5f2ce783-e279-49ff-ad44-2ba7b97d6bc0"
+URL_API = f"https://api.olaclick.app/ms-products/public/companies/{COMPANY_ID}/categories"
+
+# A API entrega a foto em 800px (PNG de até 1 MB). O cardápio usa a miniatura
+# de 150px em webp (4 KB) e o próprio index.html troca para 800px quando o
+# cliente abre o item — por isso derivamos a miniatura em vez de usar a URL
+# crua, que deixaria a página ~18x mais pesada no celular.
+BASE_IMAGEM = "https://assets.olaclick.app/companies/products/images/150/"
+SEM_IMAGEM = "https://placehold.co/400x300?text=Sem+Imagem"
 
 # ==============================================================================
 # 🛠️ CONFIGURAÇÃO ESTRUTURADA DOS ADICIONAIS
@@ -81,16 +103,54 @@ GRP_EXTRAS_CAFE = {
 
 # ==============================================================================
 
-def processar_preco(texto):
-    if not texto: return "A consultar"
-    limpo = texto.replace('R$', '').replace('Adicionais', '').strip()
-    return f"R$ {limpo}"
+def processar_preco(variantes):
+    """A API devolve o preço como número (9.5). O cardápio espera 'R$ 9,50'."""
+    if not variantes:
+        return "R$ A consultar"
 
-def extrair_imagem(style):
-    if not style: return "https://placehold.co/400x300?text=Sem+Imagem"
-    match = re.search(r'url\("?\'?([^"\')]+)"?\'?\)', style)
-    if match: return match.group(1)
-    return "https://placehold.co/400x300?text=Sem+Imagem"
+    ordenadas = sorted(variantes, key=lambda v: v.get('position', 0))
+    try:
+        valor = float(ordenadas[0].get('price') or 0)
+    except (TypeError, ValueError):
+        return "R$ A consultar"
+
+    if valor <= 0:
+        return "R$ A consultar"
+
+    formatado = f"{valor:,.2f}"                        # 1,234.56
+    formatado = formatado.replace(',', '§').replace('.', ',').replace('§', '.')
+    return f"R$ {formatado}"                           # R$ 1.234,56
+
+def extrair_imagem(produto):
+    """Monta a URL da miniatura a partir do id da foto que a API informa."""
+    imagens = sorted(produto.get('images') or [], key=lambda i: i.get('position', 0))
+    if not imagens:
+        return SEM_IMAGEM
+
+    url = imagens[0].get('image_url') or ''
+    match = re.search(r'/images/\d+/([0-9a-f-]{36})\.', url)
+    if not match:
+        return SEM_IMAGEM
+    return f"{BASE_IMAGEM}{match.group(1)}.webp"
+
+def limpar_descricao(texto):
+    """
+    A API devolve a descrição crua, com as quebras de linha e espaços duplos
+    que foram digitados no painel. Lendo pelo navegador esses espaços já vinham
+    colapsados — mantemos o mesmo resultado pra não mudar o visual do cardápio.
+    """
+    return re.sub(r'\s+', ' ', texto or '').strip()
+
+def separar_emoji(nome_categoria):
+    """As categorias vêm como '☕️ CAFÉS', '🍹SODA ITALIANA' ou 'LONG NECK'."""
+    match = re.match(r'^([^\w\s]+)?\s*(.*)$', nome_categoria, re.UNICODE)
+    emoji = "🍽️"
+    nome = nome_categoria
+    if match:
+        if match.group(1): emoji = match.group(1)
+        if match.group(2): nome = match.group(2)
+    nome = re.sub(r'\d{2}:\d{2}.*', '', nome).strip().replace('-', '').strip()
+    return emoji, nome
 
 def extrair_horario(titulo_categoria):
     match = re.search(r'(\d{2}:\d{2})\s*[-àa]\s*(\d{2}:\d{2})', titulo_categoria)
@@ -114,16 +174,16 @@ def obter_adicionais(nome_categoria, nome_item):
     # 2. CARNES E HAMBÚRGUERES (Detecta por nome do item ou categoria específica)
     # Palavras-chave que indicam carne que precisa de ponto
     tem_carne_ponto = any(x in item for x in ["BURGUER", "STEAK", "MIGNON", "COSTELA", "PICANHA", "BIFE", "CHORIZO", "ANCHO"])
-    
+
     # Se for hambúrguer ou carne de corte, adiciona PONTO DA CARNE
     if tem_carne_ponto:
         grupos.append(GRP_PONTO_CARNE)
-        
+
         # Se for especificamente Burguer ou estiver numa categoria de lanche/burger, adiciona extras
         if "BURGUER" in item or "LANCHE" in cat or "SANDUÍCHE" in cat or "BURGUER" in cat:
              grupos.append(GRP_EXTRAS_LANCHE)
              grupos.append(GRP_MOLHOS)
-        
+
         return grupos
 
     # 3. CAFÉS E BEBIDAS QUENTES
@@ -142,166 +202,110 @@ def obter_adicionais(nome_categoria, nome_item):
 
     return grupos
 
-def run():
-    print("🔥 Iniciando Atualização (Modo Inteligente)...")
-    
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        
-        context = browser.new_context(
-            user_agent='Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
-            viewport={'width': 390, 'height': 844},
-            device_scale_factor=2
-        )
-        
-        page = context.new_page()
-        
+def buscar_cardapio():
+    """Busca o cardápio na API, com algumas tentativas em caso de instabilidade."""
+    ultimo_erro = None
+    for tentativa in range(1, 4):
         try:
-            print(f"🔄 Acessando: {URL_SITE}")
-            page.goto(URL_SITE, timeout=90000, wait_until="domcontentloaded")
-            
-            try:
-                page.wait_for_selector('.product-card', timeout=20000)
-            except:
-                print("⚠️ Demorou para carregar...")
-
-            banco_dados_mestre = {}
-            previous_height = 0
-            no_change_count = 0
-            
-            print("🚜 Rolando página...")
-            
-            while True:
-                dados_tela = page.evaluate("""() => {
-                    const dados = [];
-                    const cats = document.querySelectorAll('.infinite-products');
-                    
-                    cats.forEach(cat => {
-                        const titleEl = cat.querySelector('.category-view-handler h2');
-                        if (!titleEl) return;
-                        
-                        let catName = titleEl.innerText.trim();
-                        if (catName.includes('Procurar Resultados')) return;
-                        
-                        let emoji = "🍽️";
-                        const emojiMatch = catName.match(/^([^\w\s]+)?\s*(.*)/);
-                        if (emojiMatch) {
-                            if(emojiMatch[1]) emoji = emojiMatch[1];
-                            catName = emojiMatch[2] ? emojiMatch[2] : catName;
-                        }
-
-                        const items = [];
-                        const products = cat.querySelectorAll('.product-card');
-                        
-                        products.forEach(p => {
-                            const nome = p.querySelector('.product-card__title')?.innerText.trim();
-                            const desc = p.querySelector('.product-card__description')?.innerText.trim();
-                            const price = p.querySelector('.product__price')?.innerText.trim();
-                            const imgStyle = p.querySelector('.v-image__image')?.getAttribute('style');
-                            
-                            if (nome) {
-                                items.push({
-                                    name: nome,
-                                    description: desc || '',
-                                    price: price || 'A consultar',
-                                    imageStyle: imgStyle || ''
-                                });
-                            }
-                        });
-
-                        if (items.length > 0) {
-                            dados.push({
-                                category: catName,
-                                emoji: emoji,
-                                items: items
-                            });
-                        }
-                    });
-                    return dados;
-                }""")
-
-                for cat in dados_tela:
-                    nome_raw = cat['category']
-                    if nome_raw not in banco_dados_mestre:
-                        inicio, fim = extrair_horario(nome_raw)
-                        # Limpeza profunda do nome da categoria
-                        nome_limpo = re.sub(r'\d{2}:\d{2}.*', '', nome_raw).strip().replace('-', '').strip()
-                        
-                        banco_dados_mestre[nome_raw] = {
-                            "clean_name": nome_limpo,
-                            "emoji": cat['emoji'],
-                            "start": inicio,
-                            "end": fim,
-                            "items_dict": {}
-                        }
-                    
-                    for item in cat['items']:
-                        if item['name'] not in banco_dados_mestre[nome_raw]["items_dict"]:
-                            banco_dados_mestre[nome_raw]["items_dict"][item['name']] = item
-
-                page.evaluate("window.scrollBy(0, 600)")
-                time.sleep(1.5)
-
-                new_height = page.evaluate("window.scrollY + window.innerHeight")
-                total_height = page.evaluate("document.body.scrollHeight")
-                
-                print(f"   ⬇️  Scroll: {int(new_height)} / {int(total_height)}")
-
-                if new_height >= total_height:
-                    time.sleep(3)
-                    if page.evaluate("document.body.scrollHeight") == total_height:
-                        break
-                
-                if previous_height == new_height:
-                    no_change_count += 1
-                    if no_change_count > 5: break
-                else:
-                    no_change_count = 0
-                previous_height = new_height
-
-            print("📦 Aplicando regras de adicionais...")
-            cardapio_final = {}
-            total_items_count = 0
-            
-            for key_cat, dados_cat in banco_dados_mestre.items():
-                nome_categoria = dados_cat["clean_name"]
-                
-                items_lista = []
-                for nome_item, item_raw in dados_cat["items_dict"].items():
-                    
-                    # AGORA CALCULAMOS ADICIONAIS POR ITEM, NÃO SÓ POR CATEGORIA
-                    grupos_adicionais = obter_adicionais(nome_categoria, nome_item)
-
-                    items_lista.append({
-                        "name": item_raw['name'],
-                        "description": item_raw['description'],
-                        "price": processar_preco(item_raw['price']),
-                        "image": extrair_imagem(item_raw['imageStyle']),
-                        "addons": grupos_adicionais
-                    })
-                
-                if items_lista:
-                    cardapio_final[nome_categoria] = {
-                        "emoji": dados_cat['emoji'],
-                        "schedule": {
-                            "start": dados_cat['start'],
-                            "end": dados_cat['end']
-                        },
-                        "items": items_lista
-                    }
-                    total_items_count += len(items_lista)
-
-            print(f"📊 Total extraído: {total_items_count} itens.")
-            
-            with open('menu.json', 'w', encoding='utf-8') as f:
-                json.dump(cardapio_final, f, ensure_ascii=False, indent=4)
-            print("✨ Sucesso. Menu atualizado!")
-
+            print(f"🔄 Buscando cardápio (tentativa {tentativa}/3)...")
+            resposta = requests.get(URL_API, timeout=30)
+            if resposta.status_code == 200:
+                return resposta.json().get('data', [])
+            ultimo_erro = f"HTTP {resposta.status_code}"
+            print(f"   ⚠️ Resposta inesperada: {ultimo_erro}")
         except Exception as e:
-            print(f"❌ Erro fatal: {e}")
+            ultimo_erro = str(e)
+            print(f"   ⚠️ Falha de conexão: {e}")
+        if tentativa < 3:
+            time.sleep(tentativa * 3)
+    raise RuntimeError(f"Não foi possível baixar o cardápio ({ultimo_erro})")
+
+def run():
+    print("🔥 Iniciando Atualização (API)...")
+
+    try:
+        categorias = buscar_cardapio()
+
+        print("📦 Aplicando regras de adicionais...")
+        cardapio_final = {}
+        total_items_count = 0
+
+        for cat in sorted(categorias, key=lambda c: c.get('position', 0)):
+            if not cat.get('visible', True):
+                continue
+
+            produtos = [p for p in (cat.get('products') or []) if p.get('visible', True)]
+            if not produtos:
+                continue
+
+            emoji, nome_categoria = separar_emoji(cat.get('name', ''))
+            inicio, fim = extrair_horario(cat.get('name', ''))
+
+            items_lista = []
+            for produto in sorted(produtos, key=lambda p: p.get('position', 0)):
+                nome_item = (produto.get('name') or '').strip()
+                if not nome_item:
+                    continue
+
+                items_lista.append({
+                    "name": nome_item,
+                    "description": limpar_descricao(produto.get('description')),
+                    "price": processar_preco(produto.get('product_variants')),
+                    "image": extrair_imagem(produto),
+                    "addons": obter_adicionais(nome_categoria, nome_item)
+                })
+
+            if items_lista:
+                cardapio_final[nome_categoria] = {
+                    "emoji": emoji,
+                    "schedule": {"start": inicio, "end": fim},
+                    "items": items_lista
+                }
+                total_items_count += len(items_lista)
+
+        com_foto = sum(
+            1 for c in cardapio_final.values()
+            for i in c['items'] if i['image'] != SEM_IMAGEM
+        )
+        print(f"📊 Total extraído: {total_items_count} itens ({com_foto} com foto, "
+              f"{total_items_count - com_foto} sem).")
+
+        # ======================================================================
+        # 🛡️ TRAVA ANTI-CARDÁPIO-INCOMPLETO
+        # Um cardápio menor que o atual não pode ser commitado por cima do bom.
+        # Antes desta trava, uma leitura parcial virava commit e o cardápio
+        # publicado ficava vazio até a execução seguinte.
+        # ======================================================================
+        anterior = 0
+        try:
+            with open('menu.json', 'r', encoding='utf-8') as f:
+                anterior = sum(len(c.get('items', [])) for c in json.load(f).values())
+        except Exception:
+            pass
+
+        if total_items_count == 0:
+            print("❌ ABORTADO: nenhum item retornado. O menu.json NÃO foi alterado.")
             sys.exit(1)
-        finally:
-            browser.close()
+
+        if anterior and total_items_count < anterior * 0.8:
+            print("")
+            print("=" * 60)
+            print(f"❌ ABORTADO: vieram apenas {total_items_count} itens, "
+                  f"mas o cardápio atual tem {anterior}.")
+            print("   O menu.json NÃO foi alterado.")
+            print("=" * 60)
+            sys.exit(1)
+
+        with open('menu.json', 'w', encoding='utf-8') as f:
+            json.dump(cardapio_final, f, ensure_ascii=False, indent=4)
+        print("✨ Sucesso. Menu atualizado!")
+
+    except SystemExit:
+        raise
+    except Exception as e:
+        print(f"❌ Erro fatal: {e}")
+        print("   O menu.json NÃO foi alterado.")
+        sys.exit(1)
 
 if __name__ == "__main__":
     run()

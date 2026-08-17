@@ -24,9 +24,7 @@ jobs:
           python-version: '3.9'
 
       - name: Instalar dependências
-        run: |
-          pip install -r requirements.txt
-          playwright install chromium
+        run: pip install -r requirements.txt
 
       - name: Sincronizar com GitHub (Evitar Conflitos)
         run: |
