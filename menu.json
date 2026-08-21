@@ -1,1 +1,276 @@
-{}
+{
+    "CAFÉS": {
+        "emoji": "☕️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "ESPRESSO",
+                "description": "A marca nasceu em 1986 na Fazenda Santa Monica, localizada em Machado, sul de Minas Gerais, uma das regiões produtoras de café mais renomadas do Brasil. A família responsável pela fazenda já tinha uma longa tradição no cultivo de café, e o Café Santa Monica surgiu do desejo de levar diretamente ao consumidor um produto de alta qualidade, controlado desde o plantio até a xícara.",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "EXPRESSO DUPLO",
+                "description": "Nosso café Santa Monica: grãos moídos na hora e extraídos sob pressão para uma xícara perfeita e aromática.\"",
+                "price": "R$ 11,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "COADINHO",
+                "description": "Cada gole é uma celebração: nosso café Santa Monica, moído na hora e cuidadosamente passado, oferece uma experiência mais leve e de intensidade suave, ideal para quem aprecia a delicadeza na xícara.",
+                "price": "R$ 9,50",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CAFÉ COM LEITE",
+                "description": "Café com Leite: o abraço cremoso da combinação perfeita, com leite aerado na máquina para uma textura aveludada",
+                "price": "R$ 10,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "MACCHIATO",
+                "description": "O clássico 'manchado' de sabor! Uma dose dupla do nosso espresso intenso e aromático, delicadamente marcada com uma camada aveludada de espuma de leite vaporizado. Para quem aprecia a pureza do café com um toque sutil de cremosidade.",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    "CAPPUCCINOS": {
+        "emoji": "☕️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "CAPPUCCINOS TRADICIONAL",
+                "description": "A combinação clássica do nosso espresso intenso com leite vaporizado, uma camada generosa de espuma cremosa e um toque sutil de canela",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CAPPUCCINOS BRASILEIRO",
+                "description": "A versão que abraça o paladar! Nosso espresso encontra o leite cremoso, um toque de chocolate e o calor da canela.",
+                "price": "R$ 13,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CAPPUCCINOS NUTELLA",
+                "description": "O abraço quente do café encontra a cremosidade do leite e a indulgência inconfundível da Nutella. Uma xícara de puro praze",
+                "price": "R$ 14,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
