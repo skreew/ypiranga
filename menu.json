@@ -272,5 +272,206 @@
                 ]
             }
         ]
+    },
+    "ESPECIAIS": {
+        "emoji": "☕️",
+        "schedule": {
+            "start": "00:00",
+            "end": "23:59"
+        },
+        "items": [
+            {
+                "name": "MOCHA CARAMELO",
+                "description": "A união perfeita do nosso espresso intenso com chocolate rico, leite vaporizado cremoso e um delicioso toque de caramelo. Criando uma experiência quente e aconchegante para o seu paladar",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "MOCHA CHOCOLATE",
+                "description": "Fusão perfeita do nosso espresso marcante com uma dose generosa de chocolate puro e o leite cremoso.",
+                "price": "R$ 12,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "MOCHA MARSHMALLOW",
+                "description": "Adicione um toque gourmet à sua bebida! Nossos marshmallows são delicadamente tostados com maçarico, criando uma casquinha dourada e caramelizada por fora e um interior irresistivelmente derretido.",
+                "price": "R$ 15,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CAFÉ RABAIOLI",
+                "description": "Nosso Café Rabaioli: uma obra-prima em xícara. Espresso marcante, licor Baileys para um toque adocicado e cremoso, leite vaporizado e o frescor do chantilly. Uma celebração de sabores que você só encontra aqui.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "IRISH COFFEE",
+                "description": "A clássica e reconfortante combinação do nosso café quente e encorpado com o calor suave do autêntico whisky irlandês e a doçura do açúcar mascavo, finalizado com uma generosa camada de chantilly. Perfeito para aquecer a alma.",
+                "price": "R$ 17,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "SUBMARINO",
+                "description": "Prepare-se para mergulhar em uma experiência de sabor! Nosso chocolate quente cremoso e reconfortante é a base perfeita para o toque ousado do whisky, coroado por uma generosa nuvem de chantilly e finalizado com deliciosas lascas de chocolate. Uma explosão de prazer a cada gole.",
+                "price": "R$ 22,00",
+                "image": "https://placehold.co/400x300?text=Sem+Imagem",
+                "addons": [
+                    {
+                        "group_name": "Personalize seu café",
+                        "required": false,
+                        "min": 0,
+                        "max": 3,
+                        "options": [
+                            {
+                                "name": "Leite de Castanha",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Zero Lactose/Aveia",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Nutella",
+                                "price": "R$ 4,00"
+                            },
+                            {
+                                "name": "Chantilly",
+                                "price": "R$ 4,00"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
     }
 }
