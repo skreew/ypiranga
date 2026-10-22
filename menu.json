@@ -2913,7 +2913,7 @@
             {
                 "name": "44 COSTELA",
                 "description": "Molho de tomate, mussarela, bacon, carne de costela desfiada, tomate seco, cebola e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -2945,7 +2945,7 @@
             {
                 "name": "45 ALHO E OLEO",
                 "description": "Molho de tomate, mussarela, alho e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -2977,7 +2977,7 @@
             {
                 "name": "46 BAIANA",
                 "description": "Molho de tomate, mussarela, calabresa moída, pimenta, ovo, cebola e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3009,7 +3009,7 @@
             {
                 "name": "47 ATUM",
                 "description": "Molho de tomate, mussarela, atum, cebola e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3041,7 +3041,7 @@
             {
                 "name": "48 BACON E MILHO",
                 "description": "Molho de tomate, mussarela, bacon, milho e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3073,7 +3073,7 @@
             {
                 "name": "49 BELEZURA",
                 "description": "Molho de tomate, mussarela, tomate seco, molho de alho, calabresa, azeitona e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3105,7 +3105,7 @@
             {
                 "name": "59 BRÓCOLIS COM CARNE",
                 "description": "Molho de tomate, mussarela, carne bovina , brócolis, milho verde e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3137,7 +3137,7 @@
             {
                 "name": "60 CALABACON",
                 "description": "Molho de tomate, mussarela, calabresa, bacon e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3169,7 +3169,7 @@
             {
                 "name": "61 CALABRESA COM CEBOLA",
                 "description": "Molho de tomate, mussarela, calabresa, cebola e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3201,7 +3201,7 @@
             {
                 "name": "62 CALAFRITAS",
                 "description": "Molho de tomate, mussarela, calabresa, batata frita e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3233,7 +3233,7 @@
             {
                 "name": "63 CATUFILÉ COM ALHO",
                 "description": "Molho de tomate, mussarela, carne bovina, catupiry, alho e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3265,7 +3265,7 @@
             {
                 "name": "64 CHIQUITA",
                 "description": "Molho de tomate, mussarela, peperoni, ovos, pimentão e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3297,7 +3297,7 @@
             {
                 "name": "65 DA MAMÃE",
                 "description": "Molho de tomate, mussarela, frango desfiado, bacon e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3329,7 +3329,7 @@
             {
                 "name": "66 CROTONE",
                 "description": "Molho de tomate, mussarela, purê de batata, bacon e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3361,7 +3361,7 @@
             {
                 "name": "67 FAUSTÃO",
                 "description": "Molho de tomate, mussarela, presunto, calabresa, lombo, cebola e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3393,7 +3393,7 @@
             {
                 "name": "68 FRANGO/BACON E CREAM CHEESE",
                 "description": "Molho de tomate, mussarela, frango desfiado, bacon, cream cheese e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3425,7 +3425,7 @@
             {
                 "name": "69 FRANGO XADREZ",
                 "description": "Molho de tomate, mussarela, frango picado em cubos ao molho pimentão e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3457,7 +3457,7 @@
             {
                 "name": "70 GOSTOSÃO",
                 "description": "Molho de tomate, mussarela, presunto, calabresa, catupiry, tomate, parmesão e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3489,7 +3489,7 @@
             {
                 "name": "71 ITALIANA",
                 "description": "Molho de tomate, mussarela, lombo, pimentão e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3521,7 +3521,7 @@
             {
                 "name": "72 LOMBO CANADENSE",
                 "description": "Molho de tomate, mussarela, lombo, catupiry, champignon e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3553,7 +3553,7 @@
             {
                 "name": "73 NACHO",
                 "description": "Molho de tomate, mussarela, carne moída apimentada, orégano e Doritos.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3585,7 +3585,7 @@
             {
                 "name": "74 PALMITO ESPECIAL",
                 "description": "Molho de tomate, mussarela, rodelas de palmito pupunha, tomate seco, azeitona preta sem caroço, cream cheese e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3617,7 +3617,7 @@
             {
                 "name": "75 PALMITO",
                 "description": "Molho de tomate, mussarela, palmito e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3649,7 +3649,7 @@
             {
                 "name": "76 PEPECHEESE",
                 "description": "Molho de tomate, mussarela, peperoni, cream cheese e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3681,7 +3681,7 @@
             {
                 "name": "77 PEPPERONI",
                 "description": "Molho de tomate, mussarela, pepperoni e orégano.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3713,7 +3713,7 @@
             {
                 "name": "78 TOSCANA",
                 "description": "Molho de tomate, mussarela, calabresa, champignon e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3777,7 +3777,7 @@
             {
                 "name": "88 MILHO CREMOSO",
                 "description": "Molho de tomate, mussarela, milho cremoso e orégano.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3809,7 +3809,7 @@
             {
                 "name": "164 SEDUÇÃO",
                 "description": "Mussarela, chocolate branco, morango e leite condensado.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3841,7 +3841,7 @@
             {
                 "name": "156 CAROLINA",
                 "description": "Mussarela, abacaxi, chocolate branco e canela.",
-                "price": "R$ 65,00",
+                "price": "R$ 72,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3873,7 +3873,7 @@
             {
                 "name": "154 SENSAÇÃO",
                 "description": "Mussarela, chocolate preto, morango e leite condensado.",
-                "price": "R$ 65,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3905,7 +3905,7 @@
             {
                 "name": "80 BRIGADEIRO",
                 "description": "Mussarela, chocolate ao leite e granulado.",
-                "price": "R$ 59,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -3969,7 +3969,7 @@
             {
                 "name": "83 CHARGE",
                 "description": "Mussarela, chocolate ao leite e amendoim moído.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -4001,7 +4001,7 @@
             {
                 "name": "84 DOIS AMORES",
                 "description": "Mussarela, chocolate branco, chocolate preto ao leite e morango.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -4033,7 +4033,7 @@
             {
                 "name": "85 KIDS",
                 "description": "Mussarela, chocolate preto e confeitos coloridos.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -4065,7 +4065,7 @@
             {
                 "name": "86 PRESTÍGIO",
                 "description": "Mussarela, creme de leite, chocolate preto ao leite e coco ralado.",
-                "price": "R$ 59,00",
+                "price": "R$ 65,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
@@ -4097,7 +4097,7 @@
             {
                 "name": "87 ROMEU E JULIETA",
                 "description": "Mussarela e goiabada.",
-                "price": "R$ 59,00",
+                "price": "R$ 69,00",
                 "image": "https://placehold.co/400x300?text=Sem+Imagem",
                 "addons": [
                     {
